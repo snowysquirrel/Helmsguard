@@ -212,8 +212,8 @@
 	..()
 
 /obj/structure/fluff/walldeco/customflag
-	name = "Azure Peak flag"
-	desc = "A banner flutters in the breeze in the proud heraldic colors of the Duchy."
+	name = "Helmsguard flag"
+	desc = ""
 	icon_state = "wallflag"
 
 /obj/structure/fluff/walldeco/customflag/Initialize()

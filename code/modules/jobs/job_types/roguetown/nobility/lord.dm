@@ -56,13 +56,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 			SSticker.rulertype = "Grand Duchess"
 		else
 			SSticker.rulertype = "Grand Duke"
-		to_chat(world, "<b><span class='notice'><span class='big'>[L.real_name] is [SSticker.rulertype] of Azure Peak.</span></span></b>")
-		if(istype(SSticker.regentmob, /mob/living/carbon/human))
-			var/mob/living/carbon/human/regentbuddy = SSticker.regentmob
-			to_chat(L, span_notice("Word reached me on the approach that [regentbuddy.real_name], the [regentbuddy.job], served as regent in my absence."))
-		SSticker.regentmob = null //Time for regent to give up the position.
-		
-		addtimer(CALLBACK(L, TYPE_PROC_REF(/mob, lord_marriage_choice)), 50)
+		to_chat(world, "<b><span class='notice'><span class='big'>[L.real_name] is [SSticker.rulertype] of Helmsguard.</span></span></b>")
 		if(STATION_TIME_PASSED() <= 10 MINUTES) //Late to the party? Stuck with default colors, sorry!
 			addtimer(CALLBACK(L, TYPE_PROC_REF(/mob, lord_color_choice)), 50)
 

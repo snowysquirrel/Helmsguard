@@ -131,7 +131,7 @@
 
 	log_game("The round has ended.")
 
-	to_chat(world, "<BR><BR><BR><span class='reallybig'>So ends this tale on Azure Peak.</span>")
+	to_chat(world, "<BR><BR><BR><span class='reallybig'>So ends this tale on Helmsguard.</span>")
 	get_end_reason()
 
 	var/list/key_list = list()
@@ -218,7 +218,7 @@
 	var/end_reason
 
 	if(!check_for_lord())
-		end_reason = pick("Without a Monarch, they were doomed to become slaves of Zizo.",
+		end_reason = pick("Without a Monarch, they were doomed to become slaves of Lhanc.",
 						"Without a Monarch, they were doomed to be eaten by nite creachers.",
 						"Without a Monarch, they were doomed to become victims of Gehenna.",
 						"Without a Monarch, they were doomed to enjoy a mass-suicide.",
