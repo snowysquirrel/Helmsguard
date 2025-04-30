@@ -139,3 +139,4 @@
 		/datum/migrant_role/bandit = 1,
 	)
 
+*/
