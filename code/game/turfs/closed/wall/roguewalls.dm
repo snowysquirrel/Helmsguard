@@ -29,7 +29,7 @@
 
 /turf/closed/wall/mineral/rogue/stone
 	name = "stone wall"
-	desc = "A wall of smooth unyielding stone."
+	desc = "A wall of smooth, unyielding stone."
 	icon = 'icons/turf/walls/stone_wall.dmi'
 	icon_state = "stone"
 	smooth = SMOOTH_MORE
@@ -45,13 +45,9 @@
 	climbdiff = 3
 	damage_deflection = 10
 
-/turf/closed/wall/mineral/rogue/stone/turf_destruction()
-	loud_message("The sound of a crumbling stone wall rings out", hearing_distance = 14)
-	. = ..()
-
 /turf/closed/wall/mineral/rogue/stone/window
 	name = "stone window"
-	desc = "A window with a solid and sturdy stone frame."
+	desc = "A window with solid and sturdy stone frame."
 	opacity = FALSE
 	max_integrity = 1300
 
@@ -74,9 +70,11 @@
 	icon = 'icons/turf/walls/mossy_stone.dmi'
 	climbdiff = 4
 
+// Craftstone Walls and Murder Holes.
+
 /turf/closed/wall/mineral/rogue/craftstone
 	name = "stone wall"
-	desc = "A durable wall made from specially-crafted stone."
+	desc = "A durable wall made from specially crafted stone."
 	icon = 'icons/turf/walls/craftstone.dmi'
 	icon_state = "box"
 	smooth = SMOOTH_MORE
@@ -89,16 +87,33 @@
 	above_floor = /turf/open/floor/rogue/blocks
 	baseturfs = list(/turf/open/floor/rogue/blocks)
 	neighborlay = "dirtedge"
-	climbdiff = 3
+	climbdiff = 4
 	damage_deflection = 10
 
-/turf/closed/wall/mineral/rogue/craftstone/turf_destruction()
-	loud_message("The sound of heavy stone bricks crumbling apart rings out", hearing_distance = 14)
+// Copypasta spaghetti from rogue/stone/window. Just add water.
+
+/turf/closed/wall/mineral/rogue/craftstone/window
+	name = "stone window"
+	desc = "A carefully-carved opening in a formidable stone wall."
+	opacity = FALSE
+	max_integrity = 1800
+
+/turf/closed/wall/mineral/rogue/craftstone/window/CanPass(atom/movable/mover, turf/target)
+	if(istype(mover) && ((mover.pass_flags & PASSTABLE) || (mover.pass_flags & PASSGRILLE)) )
+		return 1
+	return ..()
+
+/turf/closed/wall/mineral/rogue/craftstone/window/Initialize()
 	. = ..()
+	icon_state = "stonewindow"
+	var/mutable_appearance/M = mutable_appearance(icon, "stonehole", layer = ABOVE_NORMAL_TURF_LAYER)
+	add_overlay(M)
+
+// End of Craftstone.
 
 /turf/closed/wall/mineral/rogue/stonebrick
 	name = "brick wall"
-	desc = "Rows of overlapping bricks form this wall."
+	desc = "Several rows of bricks form this wall."
 	icon = 'icons/turf/walls/stonebrick.dmi'
 	icon_state = "stonebrick"
 	smooth = SMOOTH_MORE
@@ -131,12 +146,9 @@
 	neighborlay = "dirtedge"
 	climbdiff = 3
 
-	burn_power = 20
-	spread_chance = 4
-
 /turf/closed/wall/mineral/rogue/wood/window
 	name = "wooden window"
-	desc = "A window with a rough-hewn wood frame."
+	desc = "A window with rough hewn wood frame."
 	opacity = FALSE
 	max_integrity = 550
 
@@ -150,9 +162,27 @@
 	var/mutable_appearance/M = mutable_appearance(icon, "woodhole", layer = ABOVE_NORMAL_TURF_LAYER)
 	add_overlay(M)
 
+/turf/closed/wall/mineral/rogue/wood/tudor
+	name = "timber-framed wall"
+	desc = "A wall made using squared-off and carefully fitted and joined timbers with joints secured by large wooden pegs."
+	icon = 'icons/turf/walls/tudor.dmi'
+	icon_state = "tudor"
+	smooth = SMOOTH_MORE
+	blade_dulling = DULLING_BASHCHOP
+	max_integrity = 1100
+	break_sound = 'sound/combat/hits/onwood/destroywalldoor.ogg'
+	attacked_sound = list('sound/combat/hits/onwood/woodimpact (1).ogg','sound/combat/hits/onwood/woodimpact (2).ogg')
+	canSmoothWith = list(/turf/closed/wall/mineral/rogue/wood, /obj/structure/roguewindow, /obj/structure/roguetent, /turf/closed/wall/mineral/rogue/wooddark)
+//	sheet_type = /obj/item/grown/log/tree/lumber
+	above_floor = /turf/open/floor/rogue/ruinedwood
+	baseturfs = list(/turf/open/floor/rogue/ruinedwood)
+	neighborlay = "dirtedge"
+	climbdiff = 3
+
+
 /turf/closed/wall/mineral/rogue/tent
 	name = "tent"
-	desc = "Made from durable fabric stretched over wooden branches."
+	desc = "Made from durable fabric and wooden branches."
 	icon = 'icons/turf/roguewall.dmi'
 	icon_state = "tent"
 	smooth = SMOOTH_FALSE
@@ -166,9 +196,6 @@
 	baseturfs = list(/turf/open/floor/rogue/twig)
 	neighborlay = "dirtedge"
 	climbdiff = 1
-
-	burn_power = 20
-	spread_chance = 9
 
 /turf/closed/wall/mineral/rogue/wooddark
 	name = "dark wood wall"
@@ -185,8 +212,6 @@
 	baseturfs = list(/turf/open/floor/rogue/ruinedwood)
 	neighborlay = "dirtedge"
 	climbdiff = 3
-	burn_power = 20
-	spread_chance = 4
 
 /turf/closed/wall/mineral/rogue/wooddark/horizontal
 	icon_state = "horizwooddark"
@@ -224,8 +249,6 @@
 	baseturfs = list(/turf/open/floor/rogue/ruinedwood)
 	neighborlay = "dirtedge"
 	climbdiff = 3
-	burn_power = 20
-	spread_chance = 4
 
 /turf/closed/wall/mineral/rogue/roofwall/center
 	icon_state = "roofTurf_I"
@@ -241,7 +264,7 @@
 
 /turf/closed/wall/mineral/rogue/decowood
 	name = "decorated wooden wall"
-	desc = "Meticulously designed by a professional carpenter."
+	desc = "Meticulously designed by an professional carpenter."
 	icon = 'icons/turf/roguewall.dmi'
 	icon_state = "decowood"
 	smooth = SMOOTH_FALSE
@@ -254,8 +277,6 @@
 	baseturfs = list(/turf/open/floor/rogue/ruinedwood)
 	neighborlay = "dirtedge"
 	climbdiff = 3
-	burn_power = 20
-	spread_chance = 4
 
 /turf/closed/wall/mineral/rogue/decowood/Initialize()
 	. = ..()
@@ -303,30 +324,8 @@
 /turf/closed/wall/mineral/rogue/decostone/fluffstone
 	icon_state = "fluffstone"
 
-//Mildly better than stone-wall due to it being harder to make, plus not loose-stone cobbled together. Also higher climbing diff akin to stone-brick wall.
-/turf/closed/wall/mineral/rogue/brick
-	name = "brick wall"
-	desc = "Rows of overlapping bricks held together by mortar form a nigh-impenetrable wall of stone."
-	icon = 'icons/turf/walls/brick_wall.dmi'
-	icon_state = "brick"
-	smooth = SMOOTH_MORE
-	blade_dulling = DULLING_BASH
-	max_integrity = 2000	//200 more than base stone wall
-	sheet_type = /obj/item/natural/brick
-	break_sound = 'sound/combat/hits/onstone/stonedeath.ogg'
-	attacked_sound = list('sound/combat/hits/onstone/wallhit.ogg', 'sound/combat/hits/onstone/wallhit2.ogg', 'sound/combat/hits/onstone/wallhit3.ogg')
-	canSmoothWith = list(/turf/closed/wall/mineral/rogue/brick)
-	above_floor = /turf/open/floor/rogue/tile/brick
-	baseturfs = list(/turf/open/floor/rogue/tile/brick)
-	neighborlay = "dirtedge"
-	climbdiff = 4			//Same as stone-brick wall
-	damage_deflection = 20
 
-/turf/closed/wall/mineral/rogue/brick/window
-	name = "brick window"
-	desc = "A window with a solid and sturdy stone frame."
-	opacity = FALSE
-	max_integrity = 1500
+
 
 /turf/closed/wall/shroud //vines
 	name = "thick treetop"
