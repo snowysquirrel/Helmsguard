@@ -2387,6 +2387,11 @@
 #include "modular_hearthstone\code\modules\mob\living\simple_animal\rogue\orc.dm"
 #include "modular_hearthstone\code\modules\mob\living\simple_animal\rogue\rogue_corpse.dm"
 #include "modular_hearthstone\code\modules\reagents\reagent_containers\lux.dm"
-#include "modular_helmsguard\code\game\objects\items\sund_keys.dm"
 #include "modular_helmsguard\code\game\objects\items\sund_keyrings.dm"
+#include "modular_helmsguard\code\game\objects\items\sund_keys.dm"
+#include "modular_helmsguard\code\game\objects\items\war_horn.dm"
+#include "modular_helmsguard\code\game\objects\structures\ladders.dm"
+#include "modular_helmsguard\code\game\objects\structures\spike barricade.dm"
+#include "modular_helmsguard\code\game\turfs\open\floor\roguefloor.dm"
+#include "modular_helmsguard\code\modules\mobs\farm\horse.dm"
 // END_INCLUDE
