@@ -22,8 +22,8 @@
 	head = /obj/item/lockpick/goldpin/silver
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather/black
-	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/purple
-	wrists = /obj/item/storage/keyring/nightman
+	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/purple // Tunics are far swaggier than shirts
+	wrists = /obj/item/storage/keyring/sund/sund_bawdymaster
 	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	beltl = /obj/item/rogueweapon/whip

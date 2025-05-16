@@ -61,9 +61,14 @@
 
 	if(should_wear_femme_clothes(H))
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
-		shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/random
-		cloak = /obj/item/clothing/cloak/apron/brown
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
+		belt = /obj/item/storage/belt/rogue/leather/rope
+		beltl = /obj/item/roguekey/sund/sund_westfarm	// Two farms on sundmark.
 	else if(should_wear_masc_clothes(H))
 		pants = /obj/item/clothing/under/roguetown/tights/random
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
+		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
+		belt = /obj/item/storage/belt/rogue/leather/rope
+		beltl = /obj/item/roguekey/sund/sund_eastfarm	// Start of a romcom.
