@@ -524,7 +524,7 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/*
+
 /obj/item/clothing/under/roguetown/chainlegs/kilt
 	name = "steel chain kilt"
 	desc = "Interlinked metal rings that drape down all the way to the ankles."
