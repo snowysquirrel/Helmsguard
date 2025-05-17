@@ -541,7 +541,7 @@
 			to_chat(user, span_warning("YOU FOOL! IT IS ANATHEMA TO YOU! GET AWAY!"))
 			H.Stun(40)
 			H.Knockdown(40)
-			if(marty.is_active) //Inhumens are touching this while it's active, very fucking stupid of them
+			if(marty.is_active) //Inhumans are touching this while it's active, very fucking stupid of them
 				visible_message(span_warning("[H] lets out a painful shriek as the sword lashes out at them!"))
 				H.emote("agony")
 				H.adjust_fire_stacks(5)
@@ -573,7 +573,7 @@
 
 /obj/item/clothing/cloak/martyr
 	name = "martyr cloak"
-	desc = "An elegant cloak in the colors of Astrata. Looks like it can only fit Humen-sized people."
+	desc = "An elegant cloak in the colors of Astrata. Looks like it can only fit Human-sized people."
 	color = null
 	icon_state = "martyrcloak"
 	item_state = "martyrcloak"

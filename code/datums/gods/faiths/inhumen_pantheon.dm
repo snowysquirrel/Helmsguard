@@ -1,4 +1,4 @@
-/datum/faith/inhumen
+/datum/faith/inhuman
 	name = "Ascendents"
 	desc = "The Holy Ecclesial is a series of sects formed by a violent schism with the Holy See that split the church in twain. \n\
 		The Holy Ecclesial accepts the Four Ascendents as True Divinity, proof that Mortals can ascend past their limits.  \

@@ -1,6 +1,6 @@
 /datum/patron/inhumen
 	name = null
-	associated_faith = /datum/faith/inhumen
+	associated_faith = /datum/faith/inhuman
 	undead_hater = FALSE
 	var/crafting_recipes = list(/datum/crafting_recipe/roguetown/structure/zizo_shrine)			//Allows construction of unique bad shrine.
 	profane_words = list("cock","dick","fuck","shit","pussy","cuck","cunt","asshole", "pintle")	//Same as master but 'Zizo' is allowed now.

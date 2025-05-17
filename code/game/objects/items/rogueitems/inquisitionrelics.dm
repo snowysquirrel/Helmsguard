@@ -414,7 +414,7 @@ Inquisitorial armory down here
 		
 /datum/component/psyblessed/proc/on_examine(datum/source, mob/user, list/examine_list)
 	if(!is_blessed)
-		examine_list += span_info("<font color = '#cfa446'>This object may be blessed by the lingering shard of COMET SYON. Until then, its impure alloying of silver-and-steel cannot blight inhumen foes on its own.</font>")
+		examine_list += span_info("<font color = '#cfa446'>This object may be blessed by the lingering shard of COMET SYON. Until then, its impure alloying of silver-and-steel cannot blight inhuman foes on its own.</font>")
 	if(is_blessed)
 		examine_list += span_info("<font color = '#46bacf'>This object has been blessed by COMET SYON.</font>")
 		if(silver)
