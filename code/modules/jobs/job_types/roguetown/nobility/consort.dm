@@ -1,5 +1,6 @@
 /datum/job/roguetown/lady
-	title = "Consort"
+	title = "Markgraf Consort"
+	f_title = "Markgräfin Consort"
 	flag = LADY
 	department_flag = NOBLEMEN
 	faction = "Station"
@@ -8,7 +9,7 @@
 
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_NO_CONSTRUCT
-	tutorial = "Picked out of your political value rather than likely any form of love, you have become the Grand Duke's most trusted confidant--and likely friend--throughout your marriage. Your loyalty and perhaps even your love will be tested this day... for the daggers that threaten your beloved are as equally pointed at your own throat."
+	tutorial = "Picked out of your political value rather than likely any form of love, you have become the Markgraf's most trusted confidant--and likely friend--throughout your marriage. Your loyalty and perhaps even your love will be tested this day... for the daggers that threaten your beloved are as equally pointed at your own throat."
 
 	spells = list(/obj/effect/proc_holder/spell/self/convertrole/servant,
 	/obj/effect/proc_holder/spell/self/grant_nobility)

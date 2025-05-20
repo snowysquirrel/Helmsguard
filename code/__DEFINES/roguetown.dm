@@ -340,7 +340,8 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define CTAG_WARDEN			"CAT_WARDEN"		// Warden class - Handles warden class selector.
 #define CTAG_WATCH			"CAT_WATCH"			// Watch class - Handles Town Watch class selector
 #define CTAG_MENATARMS		"CAT_MENATARMS"		// Men-at-Arms class - Handles Men-at-Arms class selector
-#define CTAG_SERGEANT		"CAT_SERGEANT"		// Sergeant class - Handles Sergeant class selector (weapons selection)
+#define CTAG_MASTERATARMS  	"CAT_MASTERATARMS"	// Master-at-Arms class - Handles Master-at-Arms class selector
+#define CTAG_GATEMASTER		"CAT_GATEMASTER"		// Gatemaster class - Handles Gatemaster class selector
 #define CTAG_ROYALGUARD		"CAT_ROYALGUARD"	// Royal Guard class - Handles Royal Guard class selector
 #define CTAG_CONSORT		"CAT_CONSORT"		// Consort/Suitor subclasses
 #define CTAG_MERCENARY		"CAT_MERCENARY"		// Mercenary class - Handles Mercenary class selector
@@ -358,7 +359,8 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define CTAG_GUILDSMASTER 	"CAT_GUILDSMASTER"	// Guildsmaster class - Handles Guildsmaster class selector 
 #define CTAG_GUILDSMEN 		"CAT_GUILDSMEN"		// Guildsmen class - Handles Guildsmen class selector
 #define CTAG_NIGHTMAIDEN	"CAT_NIGHTMAIDEN"	// Bathhouse Attendant's aesthetic choices.
-
+#define CTAG_STEWARD		"CAT_STEWARD"		// Steward's aesthetic choices.
+//#define CTAG_LIGHTFOOT		"CAT_LIGHTFOOT"		// Steward's aesthetic choices.
 /*
 	Defines for the triumph buy datum categories
 */

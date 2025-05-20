@@ -2,8 +2,8 @@ GLOBAL_VAR(lordsurname)
 GLOBAL_LIST_EMPTY(lord_titles)
 
 /datum/job/roguetown/lord
-	title = "Grand Duke"
-	f_title = "Grand Duchess"
+	title = "Markgraf"
+	f_title = "Markgräfin"
 	flag = LORD
 	department_flag = NOBLEMEN
 	faction = "Station"
@@ -33,10 +33,18 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	give_bank_account = 1000
 	required = TRUE
 	cmode_music = 'sound/music/combat_noble.ogg'
-	allowed_patrons = NON_PSYDON_PATRONS
+	allowed_patrons = NON_PSYDON_PATRONS		//No Psydonites - Lore reason: Town is Astratan town, you are crowned by Astrata for right to rule. (Inhuman people pose as Ten worshipers.)
 
-/datum/outfit/job/roguetown/lord
-	job_bitflag = BITFLAG_ROYALTY
+/datum/job/roguetown/exlord //just used to change the lords title
+	title = "Markgraf Emeritus"
+	f_title = "Markgräfin Emeritus"
+	flag = LORD
+	department_flag = NOBLEMEN
+	faction = "Station"
+	total_positions = 0
+	spawn_positions = 0
+	display_order = JDO_LADY
+	give_bank_account = TRUE
 
 /datum/job/roguetown/lord/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	. = ..()
@@ -54,10 +62,10 @@ GLOBAL_LIST_EMPTY(lord_titles)
 			GLOB.lordsurname = "of [L.real_name]"
 		SSticker.rulermob = L
 		if(should_wear_femme_clothes(L))
-			SSticker.rulertype = "Grand Duchess"
+			SSticker.rulertype = "Markgräfin"
 		else
-			SSticker.rulertype = "Grand Duke"
-		to_chat(world, "<b><span class='notice'><span class='big'>[L.real_name] is [SSticker.rulertype] of Helmsguard.</span></span></b>")
+			SSticker.rulertype = "Markgraf"
+		to_chat(world, "<b><span class='notice'><span class='big'>[L.real_name] is [SSticker.rulertype] of Sundmark.</span></span></b>")
 		if(STATION_TIME_PASSED() <= 10 MINUTES) //Late to the party? Stuck with default colors, sorry!
 			addtimer(CALLBACK(L, TYPE_PROC_REF(/mob, lord_color_choice)), 50)
 
