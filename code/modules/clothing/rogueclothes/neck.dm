@@ -343,6 +343,12 @@
 	desc = "In a world full of horror and hardship, all we have is each other."
 	icon_state = "eora"
 
+
+/obj/item/clothing/neck/roguetown/psicross/xylix
+	name = "amulet of Xylix"
+	desc = ""
+	icon_state = "0,0"
+
 /obj/item/clothing/neck/roguetown/psicross/wood
 	name = "wooden psycross"
 	desc = "'A man with nothing can still have faith!'"

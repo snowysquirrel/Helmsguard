@@ -309,6 +309,21 @@
 	max_integrity = 200
 	anvilrepair = /datum/skill/craft/carpentry
 
+/// nordman
+
+
+/obj/item/clothing/gloves/roguetown/angle/nordman
+	name = "fur-lined leather gloves"
+	desc = "Thick, padded gloves made for the harshest of climates, and wildest of beasts encountered in the untamed lands."
+	icon_state = "nordman_raider_gloves"
+	item_state = "nordman_raider_gloves"
+
+/obj/item/clothing/gloves/roguetown/plate/nordman
+	name = "beast claws"
+	desc = "A menacing pair of plated claws, A closely protected tradition of the Shamans. The four claws embodying the four great beasts. Decorated with symbols of the gods they praise and the Gods they reject."
+	icon_state = "nordman_shaman_gloves"
+	item_state = "nordman_shaman_gloves"
+
 //eastern content
 
 /obj/item/clothing/gloves/roguetown/eastgloves1

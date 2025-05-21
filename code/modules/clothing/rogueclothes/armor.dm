@@ -1331,6 +1331,23 @@
 	. = ..()
 	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_WOOD_ARMOR)
 
+
+
+/// NORDMAN
+
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/nordman
+	name = "vagarian hauberk"
+	desc = "The pride of the Hammerhold mercenaries a well crafted blend of chain and leather into a dense protective coat."
+	icon_state = "nordman_raider_mail"
+	item_state = "nordman_raider_mail"
+
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/nordman
+	name = "shamanic coat"
+	desc = "A lightly protective coat, It embodies the second trial of the Northern shamans. To honor the leopard is too desire for more."
+	icon_state = "nordman_shaman_coat"
+	item_state = "nordman_shaman_coat"
+
 //the following changes are apart of a kazengite content update, and uses armor values from ratwood
 //i can move the armor protection values into roguetown.dm if it's requested but i really dont think that's necessary for a bunch of custom values
 
