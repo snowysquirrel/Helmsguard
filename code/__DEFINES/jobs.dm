@@ -260,7 +260,8 @@
 #define JDO_WEAPONSMITH 6.4
 #define JDO_BLACKSMITH 6.5
 #define JDO_APPRENTICE 6.6
-#define JDO_TAILOR 6.7
+#define JDO_ARTISAN 6.7
+#define JDO_TAILOR 6.8
 
 #define JDO_BARKEEP 7
 #define JDO_COOK 7.1
@@ -274,8 +275,7 @@
 #define JDO_PILGRIM 8.3
 #define JDO_MIGRANT 8.4
 #define JDO_BANDIT 8.5
-#define JDO_COURTAGENT 8.6
-#define JDO_WRETCH 8.7
+#define JDO_WRETCH 8.6
 
 #define JDO_MERCENARY 9
 #define JDO_GRENZELHOFT 9.1
