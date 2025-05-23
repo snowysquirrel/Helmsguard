@@ -2,7 +2,7 @@
 	title = "Knight" //Back to proper knights.
 	f_title = "Dame"
 	flag = KNIGHT
-	department_flag = NOBLEMEN
+	department_flag = GARRISON
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 3
@@ -11,6 +11,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 	tutorial = "Having proven yourself both loyal and capable, you have been knighted to serve the realm as the royal family's sentry. \
 				You listen to your Liege, the Marshal, and the Knight Captain, defending your Lord and realm - the last beacon of chivalry in these dark times."
+	selection_color = JCOLOR_SOLDIER	
 	display_order = JDO_KNIGHT
 	whitelist_req = TRUE
 	outfit = /datum/outfit/job/roguetown/knight
@@ -113,7 +114,7 @@
 	H.change_stat("intelligence", 1)
 
 	H.adjust_blindness(-3)
-	var/weapons = list("Halberd","Bardische","Glaive")
+	var/weapons = list("Halberd","Bardische","Eaglebeak")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
@@ -123,8 +124,8 @@
 		if("Bardische")
 			r_hand =  /obj/item/rogueweapon/halberd/bardiche
 			backl = /obj/item/gwstrap
-		if("Glaive")
-			r_hand = /obj/item/rogueweapon/halberd/glaive
+		if("Eaglebeak")
+			r_hand = /obj/item/rogueweapon/eaglebeak
 			backl = /obj/item/gwstrap
 		if("Partizan")
 			r_hand = /obj/item/rogueweapon/spear/partizan
@@ -202,16 +203,16 @@
 	H.change_stat("intelligence", 1)
 
 	H.adjust_blindness(-3)
-	var/weapons = list("Zweihander","Romphaia","Steel Greatsword")
+	var/weapons = list("Zweihander","Bastard Sword","Steel Greatsword")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Zweihander")
 			r_hand = /obj/item/rogueweapon/greatsword/zwei
 			backl = /obj/item/gwstrap
-		if("Romphaia")
-			r_hand =  /obj/item/rogueweapon/sword/long/romphaia
-			backl = /obj/item/gwstrap
+		if("Bastard Sword")
+			r_hand =  /obj/item/rogueweapon/sword/long
+			backl = /obj/item/rogueweapon/shield/heater
 		if("Steel Greatsword")
 			r_hand = /obj/item/rogueweapon/greatsword
 			backl = /obj/item/gwstrap
