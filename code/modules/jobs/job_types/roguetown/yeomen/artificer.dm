@@ -1,7 +1,7 @@
 /datum/job/roguetown/artificer
 	title = "Artificer"
 	flag = ARTIFICER
-	department_flag = YEOMEN
+	department_flag = TOWNER
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 2

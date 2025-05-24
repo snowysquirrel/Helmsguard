@@ -2,7 +2,7 @@
 // IF YOU'RE READING THIS, THIS VERSION OF BUTCHER IS UNUSED!! YOU'RE LOOKIKG FOR "tbutcher.dm"!!!!!
 	title = "Butcher"
 	flag = BUTCHER
-	department_flag = PEASANTS
+	department_flag = RABBLE
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1

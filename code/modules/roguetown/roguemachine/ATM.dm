@@ -116,7 +116,7 @@
 				return
 			var/can_anyone_know = FALSE
 			for(var/mob/living/carbon/human/HJ in GLOB.player_list)
-				if(HJ.job == "Steward" || HJ.job == "Grand Duke")
+				if(HJ.job == "Steward" || HJ.job == "Markgraf")
 					can_anyone_know = TRUE
 			if(!can_anyone_know)
 				to_chat(user, span_info("There is no one important for the transaction to flow through."))

@@ -107,6 +107,11 @@
 	desc = "Typical fashion of the best engineers."
 	icon_state = "artishirt"
 
+/obj/item/clothing/suit/roguetown/shirt/undershirt/builder
+	name = "builder suit"
+	desc = "Typical fashion of a builder."
+	icon_state = "artishirt"
+
 /obj/item/clothing/suit/roguetown/shirt/undershirt/lowcut
 	name = "low cut tunic"
 	desc = "A tunic exposing much of the neck and... shoulders?! How scandalous..."

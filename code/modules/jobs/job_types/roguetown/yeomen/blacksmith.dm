@@ -1,10 +1,10 @@
 /datum/job/roguetown/armorsmith
 	title = "Armorer"
 	flag = ARMORSMITH
-	department_flag = YEOMEN
+	department_flag = TOWNER
 	faction = "Station"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 
 	allowed_races = RACES_ALL_KINDS
 
@@ -65,10 +65,10 @@
 /datum/job/roguetown/weaponsmith
 	title = "Weaponsmith"
 	flag = WEAPONSMITH
-	department_flag = YEOMEN
+	department_flag = TOWNER
 	faction = "Station"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 
 	allowed_races = RACES_ALL_KINDS
 
@@ -128,10 +128,10 @@
 /datum/job/roguetown/blacksmith
 	title = "Blacksmith"
 	flag = BLACKSMITH
-	department_flag = YEOMEN
+	department_flag = TOWNER
 	faction = "Station"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 
 	allowed_races = RACES_ALL_KINDS
 

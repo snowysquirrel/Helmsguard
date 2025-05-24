@@ -1,12 +1,13 @@
 /datum/job/roguetown/villager
 	title = "Serf"
-	flag = VILLAGER
-	department_flag = PEASANTS
+	flag = SERF
+	department_flag = PEASANTRY
 	faction = "Station"
 	total_positions = 75
 	spawn_positions = 75
 	allowed_races = RACES_ALL_KINDS
-	tutorial = "You've lived in this shithole for effectively all your life. You are not an explorer, nor exactly a warrior in many cases. You're just some average poor bastard who thinks they'll be something someday. Respect the nobles and yeomen alike for they are your superiors - should you find yourself in trouble your Elder is your best hope."
+	selection_color = JCOLOR_PEASANT
+	tutorial = "You've lived in this shithole for effectively all your life. You are not an explorer, nor exactly a warrior in many cases. You're just some average poor bastard who thinks they'll be something someday."
 	advclass_cat_rolls = list(CTAG_TOWNER = 20)
 	outfit = null
 	outfit_female = null
@@ -34,7 +35,7 @@
 /*
 /datum/job/roguetown/adventurer/villager/New()
 	. = ..()
-	for(var/X in GLOB.peasant_positions)
+	for(var/X in GLOB.rabble_positions)
 		peopleiknow += X
 		peopleknowme += X
 	for(var/X in GLOB.yeoman_positions)

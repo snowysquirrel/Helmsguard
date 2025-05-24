@@ -1,11 +1,7 @@
 /datum/job/roguetown/squire
 	title = "Squire"
 	flag = SQUIRE
-<<<<<<<< HEAD:code/modules/jobs/job_types/roguetown/garrison/squire.dm
 	department_flag = GARRISON
-========
-	department_flag = APPRENTICE
->>>>>>>> 17df90f08 (Motherload):code/modules/jobs/job_types/roguetown/apprentice/squire.dm
 	faction = "Station"
 	total_positions = 4
 	spawn_positions = 4

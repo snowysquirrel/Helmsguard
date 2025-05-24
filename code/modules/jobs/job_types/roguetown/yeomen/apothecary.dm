@@ -1,7 +1,7 @@
 /datum/job/roguetown/apothecary
 	title = "Apothecary"
 	flag = APOTHECARY
-	department_flag = APPRENTICE
+	department_flag = TOWNER
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
