@@ -27,39 +27,50 @@
 	job_bitflag = BITFLAG_ROYALTY | BITFLAG_GARRISON	//Same as Captain, you get decent combat stats so might as well be garrison.
 
 /datum/outfit/job/roguetown/marshal/pre_equip(mob/living/carbon/human/H)
-	..()
-	r_hand = /obj/item/rogueweapon/sword
+	..() 
 	head = /obj/item/clothing/head/roguetown/helmet/sallet
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/bailiff
+	cloak = /obj/item/clothing/cloak/raincloak/furcloak/red
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot
 	backr = /obj/item/rogueweapon/shield/buckler	
 	backl = /obj/item/storage/backpack/rogue/satchel
 	beltr = /obj/item/rogueweapon/mace/cudgel
-	beltl = /obj/item/storage/keyring/guard
+	beltl = /obj/item/rogueweapon/sword
 	belt = /obj/item/storage/belt/rogue/leather/black
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	id = /obj/item/scomstone
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/signal_horn = 1)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
-	H.change_stat("strength", 2) //important leadership role, but SHOULDN'T be frontlining
-	H.change_stat("perception", 2)
-	H.change_stat("intelligence", 3)
-	H.change_stat("constitution", 1)
-	H.change_stat("endurance", 1)
-	H.change_stat("speed", 1)
-	H.change_stat("fortune", 1)
-	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/storage/keyring/guard = 1, /obj/item/signal_horn = 1)
+	if(H.mind)
+		
+		H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
+		H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
+		H.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
+		H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
+		H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+		H.adjust_skillrank(/datum/skill/combat/firearms, 1, TRUE)
+		H.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
+		H.adjust_skillrank(/datum/skill/combat/slings, 1, TRUE)
+		H.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
+		H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+		H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+		H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+		H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
+		H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+		H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+		H.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
+		H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
+		H.change_stat("strength", 2) //important leadership role, but SHOULDN'T be frontlining
+		H.change_stat("perception", 2)
+		H.change_stat("intelligence", 3)
+		H.change_stat("constitution", 1)
+		H.change_stat("endurance", 1)
+		H.change_stat("speed", 1)
+		H.change_stat("fortune", 1)
+	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_PERFECT_TRACKER, TRAIT_GENERIC)
 	H.verbs |= /mob/proc/haltyell
