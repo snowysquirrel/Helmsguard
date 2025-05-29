@@ -169,8 +169,8 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/dread/forgottenkeep)
 "bN" = (
+/obj/structure/closet/crate/chest/crafted,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
-/obj/effect/spawner/dungeons/maybechest,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/dread/forgottenkeep)
 "bV" = (
@@ -850,12 +850,6 @@
 /obj/structure/bars/cemetery,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/dread/dreadwoods)
-"hQ" = (
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/tile{
-	icon_state = "greenstone"
-	},
-/area/rogue/indoors/dread/forgottenkeep)
 "hR" = (
 /obj/structure/ladder,
 /turf/open/floor/rogue/blocks/platform,
@@ -1233,10 +1227,6 @@
 "kF" = (
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/dread/nightkeep)
-"kI" = (
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/blocks/stone,
-/area/rogue/indoors/dread/forgottenkeep)
 "kK" = (
 /obj/effect/decal/remains/human,
 /turf/open/water/swamp,
@@ -1603,11 +1593,6 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/dread/toll)
-"oK" = (
-/obj/effect/decal/cleanable/dirt/cobweb,
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors/dread/forgottenkeep)
 "oO" = (
 /obj/structure/spacevine,
 /obj/structure/spacevine,
@@ -1676,7 +1661,6 @@
 	pixel_x = 23;
 	icon_state = "chains5"
 	},
-/obj/effect/spawner/dungeons/maybechest,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/dread/forgottenkeep)
 "pv" = (
@@ -2407,10 +2391,6 @@
 /obj/structure/roguemachine/musicbox,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/dread/forgottenkeep)
-"vD" = (
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/cobble,
-/area/rogue/indoors/dread/forgottenkeep)
 "vK" = (
 /obj/structure/chair/wood/rogue/throne,
 /turf/open/floor/rogue/carpet/lord/center,
@@ -2438,7 +2418,6 @@
 /area/rogue/indoors/dread/forgottenkeep)
 "vW" = (
 /obj/effect/decal/cleanable/dirt/cobweb,
-/obj/effect/spawner/dungeons/maybechest,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/indoors/dread/forgottenkeep)
 "vY" = (
@@ -2482,7 +2461,6 @@
 /area/rogue/indoors/dread/nightkeep)
 "wE" = (
 /obj/machinery/light/rogue/firebowl,
-/obj/effect/spawner/grave,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/dread/dreadwoods)
 "wH" = (
@@ -2750,11 +2728,6 @@
 	dir = 4
 	},
 /area/rogue/outdoors/dread/dreadwoods)
-"zc" = (
-/obj/machinery/light/rogue/wallfire/candle/blue/l,
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors/dread/forgottenkeep)
 "ze" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/ruinedwood,
@@ -2998,13 +2971,8 @@
 "AM" = (
 /turf/open/floor/rogue/blocks/stone/stonepattern2,
 /area/rogue/indoors/dread/nightkeep)
-"AO" = (
-/obj/machinery/light/rogue/wallfire/candle/blue,
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors/dread/forgottenkeep)
 "AS" = (
-/obj/effect/spawner/dungeons/maybechest,
+/obj/structure/closet/crate/chest/crafted,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/dread/forgottenkeep)
 "AV" = (
@@ -3019,10 +2987,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/indoors/dread/toll)
-"Bb" = (
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors/dread/forgottenkeep)
 "Bd" = (
 /obj/structure/spacevine,
 /turf/open/floor/rogue/cobble/mossy,
@@ -3269,11 +3233,6 @@
 "Dq" = (
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/under/cavewet/dreadcave)
-"Dr" = (
-/obj/structure/table/wood/crafted,
-/obj/structure/rack/rogue/shelf,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors/dread/gobcamp)
 "Dv" = (
 /obj/structure/roguewindow/openclose,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -3679,10 +3638,6 @@
 /obj/machinery/light/rogue/wallfire/candle/blue,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/dread/forgottenkeep)
-"Gy" = (
-/obj/effect/spawner/grave,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/dread/dreadwoods)
 "GB" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -3766,10 +3721,6 @@
 /obj/effect/decal/cleanable/dirt/cobweb,
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/blocks/stone,
-/area/rogue/indoors/dread/forgottenkeep)
-"Hh" = (
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/tile,
 /area/rogue/indoors/dread/forgottenkeep)
 "Hk" = (
 /obj/structure/bed/rogue/inn/wool,
@@ -3911,10 +3862,6 @@
 "IB" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/dread/nightkeep)
-"IE" = (
-/obj/structure/rack/rogue/shelf,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors/dread/forgottenkeep)
 "IJ" = (
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/structure/spider/stickyweb{
@@ -4087,10 +4034,6 @@
 	dir = 4
 	},
 /area/rogue/under/cavewet/dreadcave)
-"Kf" = (
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors/dread/forgottenkeep)
 "Kg" = (
 /obj/effect/decal/wood/ruinedwood/turned{
 	dir = 1
@@ -4406,12 +4349,6 @@
 "MQ" = (
 /obj/structure/chair/wood/rogue,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors/dread/forgottenkeep)
-"MR" = (
-/obj/item/grown/log/tree/small,
-/obj/item/grown/log/tree/small,
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/cobble,
 /area/rogue/indoors/dread/forgottenkeep)
 "MT" = (
 /turf/closed/wall/mineral/rogue/decostone,
@@ -4874,11 +4811,6 @@
 "Rl" = (
 /turf/open/transparent/openspace,
 /area/rogue/indoors/dread/gobcamp)
-"Rm" = (
-/obj/structure/rack/rogue/shelf,
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/blocks,
-/area/rogue/indoors/dread/forgottenkeep)
 "Ro" = (
 /obj/structure/spider/stickyweb{
 	icon_state = "stickyweb2"
@@ -5003,10 +4935,6 @@
 /obj/structure/well,
 /turf/open/floor/rogue/blocks/nosmooth,
 /area/rogue/indoors/dread/nightkeep)
-"Sj" = (
-/obj/structure/bars/grille,
-/turf/open/floor/rogue/blocks,
-/area/rogue/indoors/dread/forgottenkeep)
 "Sk" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -5020,15 +4948,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/dread/toll)
-"Sm" = (
-/obj/structure/chair/wood/rogue{
-	dir = 4
-	},
-/obj/structure/rack/rogue/shelf,
-/turf/open/floor/rogue/ruinedwood{
-	icon_state = "vertw"
-	},
-/area/rogue/indoors/dread/forgottenkeep)
 "Sn" = (
 /obj/structure/mineral_door/bars,
 /turf/open/floor/rogue/cobble,
@@ -5038,7 +4957,6 @@
 /area/rogue/indoors/dread/nightkeep)
 "Sw" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/structure/bars/grille,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/dread/forgottenkeep)
 "Sx" = (
@@ -5192,10 +5110,6 @@
 /obj/structure/fluff/walldeco/painting/seraphina,
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/indoors/dread/forgottenkeep)
-"Ty" = (
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/blocks/stone/stonepattern3,
-/area/rogue/indoors/dread/forgottenkeep)
 "Tz" = (
 /obj/structure/bookcase/random/archive,
 /obj/structure/spider/stickyweb{
@@ -5262,19 +5176,10 @@
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/dread/forgottenkeep)
-"Ue" = (
-/obj/structure/closet/crate/drawer,
-/obj/structure/rack/rogue/shelf,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors/dread/forgottenkeep)
 "Uf" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/blocks/paving,
 /area/rogue/indoors/dread/toll)
-"Ug" = (
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/tile/masonic/inverted,
-/area/rogue/indoors/dread/forgottenkeep)
 "Uh" = (
 /obj/structure/fluff/walldeco/chains{
 	pixel_x = 23;
@@ -5321,10 +5226,6 @@
 	},
 /turf/open/floor/rogue/cobble2,
 /area/rogue/indoors/dread/nightkeep)
-"Ux" = (
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/water/swamp/deep,
-/area/rogue/indoors/dread/forgottenkeep)
 "Uy" = (
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/dread/dreadwoods)
@@ -5649,10 +5550,6 @@
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/dread/nightkeep)
-"Xq" = (
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/blocks/platform,
-/area/rogue/indoors/dread/forgottenkeep)
 "Xr" = (
 /obj/structure/roguetent,
 /turf/open/floor/rogue/wood,
@@ -5831,14 +5728,6 @@
 	dir = 4
 	},
 /area/rogue/indoors/dread/gobcamp)
-"Zk" = (
-/obj/structure/spider/stickyweb{
-	dir = 8;
-	icon_state = "stickyweb2"
-	},
-/obj/effect/spawner/dungeons/maybechest,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors/dread/forgottenkeep)
 "Zl" = (
 /obj/structure/fluff/statue/knight,
 /turf/open/floor/rogue/blocks,
@@ -19427,7 +19316,7 @@ VN
 VN
 VN
 cj
-vD
+dV
 NN
 pi
 pi
@@ -20491,7 +20380,7 @@ go
 ZH
 ZH
 NN
-kI
+FZ
 FZ
 FZ
 FZ
@@ -21393,7 +21282,7 @@ eV
 eV
 eV
 NN
-oK
+ko
 dV
 dV
 ZH
@@ -22082,7 +21971,7 @@ NN
 Wp
 ZH
 ZH
-vD
+dV
 NN
 AE
 Td
@@ -22600,7 +22489,7 @@ pi
 pi
 pi
 NN
-Ug
+LD
 VN
 VN
 VN
@@ -22628,7 +22517,7 @@ ZH
 jO
 Sy
 zX
-AS
+zX
 vV
 pi
 MT
@@ -23523,7 +23412,7 @@ pi
 pi
 pi
 NN
-vD
+dV
 ZH
 ZH
 ZH
@@ -23675,13 +23564,13 @@ NN
 xo
 sE
 zi
-Bb
+ui
 ta
 ZH
 Td
 BN
 Rx
-Kf
+ZH
 Bo
 dV
 dV
@@ -24043,7 +23932,7 @@ NN
 eV
 eV
 ur
-AO
+Gu
 ZH
 NN
 pi
@@ -24750,7 +24639,7 @@ dV
 bI
 dV
 dV
-zc
+fP
 dV
 dV
 NN
@@ -25442,7 +25331,7 @@ pi
 pi
 pi
 NN
-vD
+dV
 dV
 ZH
 dV
@@ -25462,7 +25351,7 @@ dV
 dV
 dV
 CW
-Ty
+Ne
 ZH
 xn
 NN
@@ -25631,7 +25520,7 @@ dV
 dV
 ZH
 dV
-vD
+dV
 NN
 ZH
 ui
@@ -26170,7 +26059,7 @@ hG
 dV
 ZH
 rP
-Ty
+Ne
 Ne
 Dn
 NN
@@ -27398,7 +27287,7 @@ ta
 NN
 NN
 Tr
-vD
+dV
 LE
 ZJ
 Td
@@ -28278,7 +28167,7 @@ pi
 pi
 pi
 NN
-hQ
+ta
 ZH
 ZH
 ta
@@ -46519,18 +46408,18 @@ pi
 ur
 vr
 zX
-Sj
 zX
-Sj
+zX
+zX
 zX
 NN
 pj
-MR
+rT
 pj
 gU
 Qr
 Qr
-Kf
+ZH
 NN
 lQ
 lQ
@@ -46878,7 +46767,7 @@ zp
 mn
 zX
 NN
-IE
+ZH
 ZH
 dV
 ZH
@@ -47394,7 +47283,7 @@ pi
 pi
 pi
 NN
-Rm
+zX
 SQ
 FD
 qY
@@ -47763,7 +47652,7 @@ Tz
 Ii
 ap
 NN
-IE
+ZH
 ZH
 ZH
 ZH
@@ -47938,9 +47827,9 @@ dV
 dV
 Lx
 dV
-vD
+dV
 NN
-IE
+ZH
 Td
 Td
 ZH
@@ -48117,7 +48006,7 @@ Wt
 pm
 ap
 ur
-Kf
+ZH
 Td
 Td
 Td
@@ -48462,7 +48351,7 @@ fP
 ZH
 up
 up
-Ux
+Lx
 Lx
 NN
 NN
@@ -49519,7 +49408,7 @@ NN
 MT
 fO
 Lx
-Ux
+Lx
 ZH
 Lx
 Td
@@ -49881,7 +49770,7 @@ Lx
 Lx
 Lx
 NN
-AS
+zX
 zX
 zX
 qY
@@ -49897,7 +49786,7 @@ ZH
 NN
 Pw
 ep
-Zk
+yv
 NN
 pi
 pi
@@ -50061,7 +49950,7 @@ MT
 zX
 zX
 zX
-AS
+zX
 MT
 NN
 NN
@@ -50242,7 +50131,7 @@ zX
 NN
 SR
 ZH
-Kf
+ZH
 hT
 Rz
 NN
@@ -50588,7 +50477,7 @@ FD
 zX
 NN
 mG
-Kf
+ZH
 ca
 Sx
 AS
@@ -50600,7 +50489,7 @@ dV
 dV
 ZH
 NN
-Ue
+Fx
 ZH
 NN
 ZH
@@ -50764,7 +50653,7 @@ IJ
 zX
 zX
 NN
-Ig
+zX
 zX
 ZH
 zX
@@ -51659,7 +51548,7 @@ MT
 ZH
 ZH
 ur
-Sj
+zX
 Nv
 GY
 hp
@@ -51821,7 +51710,7 @@ pi
 pi
 pi
 NN
-vD
+dV
 wo
 wo
 dV
@@ -52013,13 +51902,13 @@ Sn
 dV
 ZH
 ur
-Sj
+zX
 Nv
 CQ
 QH
 xq
 JK
-Sj
+zX
 eV
 pi
 pi
@@ -52175,7 +52064,7 @@ lQ
 lQ
 pi
 NN
-Sm
+eP
 eP
 eP
 eP
@@ -52885,7 +52774,7 @@ lQ
 NN
 dV
 OM
-vD
+dV
 OM
 NN
 xx
@@ -53067,10 +52956,10 @@ dV
 NN
 pu
 zX
-Sj
+zX
 NN
 sn
-Hh
+tZ
 Rw
 cU
 zX
@@ -53416,7 +53305,7 @@ lQ
 NN
 dV
 OM
-vD
+dV
 OM
 NN
 fv
@@ -53598,7 +53487,7 @@ NN
 NN
 nf
 GS
-Sj
+zX
 NN
 Bi
 ZH
@@ -62503,17 +62392,17 @@ Uy
 Uy
 Uy
 dN
-Gy
-Gy
-Gy
-Gy
-Gy
-Gy
-Gy
-Gy
+Al
+Al
+Al
+Al
+Al
+Al
+Al
+Al
 eZ
-Gy
-Gy
+Al
+Al
 hO
 Uy
 Uy
@@ -62680,17 +62569,17 @@ Uy
 Uy
 Uy
 dN
-Gy
-Gy
-Gy
-Gy
-Gy
-Gy
-Gy
-Gy
+Al
+Al
+Al
+Al
+Al
+Al
+Al
+Al
 eZ
-Gy
-Gy
+Al
+Al
 hO
 Uy
 Uy
@@ -62857,17 +62746,17 @@ Uy
 Uy
 Uy
 dN
-Gy
-Gy
-Gy
-Gy
-Gy
-Gy
-Gy
-Gy
+Al
+Al
+Al
+Al
+Al
+Al
+Al
+Al
 eZ
-Gy
-Gy
+Al
+Al
 hO
 Uy
 Uy
@@ -63211,17 +63100,17 @@ Uy
 Uy
 Uy
 dN
-Gy
-Gy
-Gy
+Al
+Al
+Al
 wE
 eZ
-Gy
-Gy
-Gy
-Gy
-Gy
-Gy
+Al
+Al
+Al
+Al
+Al
+Al
 hO
 Uy
 Uy
@@ -63388,17 +63277,17 @@ Uy
 Uy
 Uy
 dN
-Gy
-Gy
-Gy
-Gy
+Al
+Al
+Al
+Al
 eZ
-Gy
-Gy
-Gy
-Gy
-Gy
-Gy
+Al
+Al
+Al
+Al
+Al
+Al
 hO
 Uy
 Uy
@@ -63565,17 +63454,17 @@ Uy
 Uy
 Uy
 jG
-Gy
-Gy
-Gy
-Gy
+Al
+Al
+Al
+Al
 eZ
-Gy
-Gy
-Gy
-Gy
-Gy
-Gy
+Al
+Al
+Al
+Al
+Al
+Al
 jG
 Uy
 Uy
@@ -74680,7 +74569,7 @@ eV
 DX
 DX
 Gt
-Dr
+jX
 eQ
 eQ
 eQ
@@ -74857,7 +74746,7 @@ eV
 DX
 DX
 Gt
-Dr
+jX
 eQ
 eQ
 eQ
@@ -75034,7 +74923,7 @@ qY
 DX
 DX
 Gt
-Dr
+jX
 jk
 eQ
 eQ
@@ -75196,7 +75085,7 @@ LF
 fV
 RO
 Ho
-Xq
+Ho
 jO
 LS
 QQ

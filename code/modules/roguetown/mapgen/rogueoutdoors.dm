@@ -28,7 +28,7 @@
 							/obj/structure/closet/dirthole/closed/loot=3,
 							/obj/structure/flora/roguegrass/pyroclasticflowers = 3)
 	spawnableTurfs = list(/turf/open/floor/rogue/dirt/road=5, /turf/open/floor/rogue/grassyel=5)
-	allowed_areas = list(/area/rogue/outdoors/rtfield)
+	allowed_areas = list(/area/rogue/outdoors/rtfield, /area/rogue/sund/wilderness/woods, /area/rogue/sund/wilderness/field)
 
 /datum/mapGeneratorModule/roguetownfield/road
 	clusterCheckFlags = CLUSTER_CHECK_DIFFERENT_ATOMS
@@ -40,11 +40,21 @@
 
 /datum/mapGeneratorModule/roguetownfield/grass
 	clusterCheckFlags = CLUSTER_CHECK_NONE
-	allowed_turfs = list(/turf/open/floor/rogue/dirt, /turf/open/floor/rogue/grassyel)
+	allowed_turfs = list(/turf/open/floor/rogue/dirt, /turf/open/floor/rogue/grass, /turf/open/floor/rogue/grassyel)
 	excluded_turfs = list(/turf/open/floor/rogue/dirt/road)
 	spawnableTurfs = list(/turf/open/floor/rogue/grass = 15)
 	spawnableAtoms = list()
-	allowed_areas = list(/area/rogue/outdoors/rtfield)
+	allowed_areas = list(/area/rogue/outdoors/rtfield, /area/rogue/sund/wilderness/woods, /area/rogue/sund/wilderness/field)
+
+/datum/mapGeneratorModule/roguetownfloras
+	clusterCheckFlags = CLUSTER_CHECK_DIFFERENT_ATOMS
+	allowed_turfs = list(/turf/open/floor/rogue/dirt,/turf/open/floor/rogue/grass,/turf/open/floor/rogue/grassred,/turf/open/floor/rogue/grassyel,/turf/open/floor/rogue/grasscold)
+	excluded_turfs = list(/turf/open/floor/rogue/dirt/road)
+	spawnableAtoms = list(/obj/structure/flora/roguetree/elder = 30,
+						/obj/structure/flora/roguetree = 20,
+						/obj/structure/flora/roguegrass/bush/random = 41,
+						/obj/effect/spawner/lootdrop/ausflora = 50,)
+	allowed_areas = list(/area/rogue/outdoors/rtfield, /area/rogue/sund/wilderness/woods, /area/rogue/sund/wilderness/field)
 
 /datum/mapGeneratorModule/roguetowngrass
 	clusterCheckFlags = CLUSTER_CHECK_DIFFERENT_ATOMS
@@ -56,7 +66,8 @@
 						/obj/structure/flora/roguegrass/herb/random = 25,
 						/obj/effect/spawner/lootdrop/ausflora = 30,
 						/obj/structure/flora/roguegrass/maneater = 7,
-						/obj/item/natural/stone = 18,
-						/obj/item/grown/log/tree/stick = 17)
-	allowed_areas = list(/area/rogue/outdoors/town,/area/rogue/outdoors/rtfield)
+						/obj/item/natural/stone = 26,
+						/obj/item/natural/rock = 26,  
+						/obj/item/grown/log/tree/stick = 27)
+	allowed_areas = list(/area/rogue/outdoors/rtfield, /area/rogue/sund/wilderness/woods, /area/rogue/sund/wilderness/field)
 

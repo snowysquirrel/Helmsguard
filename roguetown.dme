@@ -2373,6 +2373,7 @@
 #include "modular_hearthstone\code\modules\mob\living\simple_animal\rogue\rogue_corpse.dm"
 #include "modular_hearthstone\code\modules\reagents\reagent_containers\lux.dm"
 #include "modular_helmsguard\code\helm_landmarks.dm"
+#include "modular_helmsguard\code\game\area\dread_areas.dm"
 #include "modular_helmsguard\code\game\area\sund_areas.dm"
 #include "modular_helmsguard\code\game\objects\items\cloaks.dm"
 #include "modular_helmsguard\code\game\objects\items\sund_keyrings.dm"
