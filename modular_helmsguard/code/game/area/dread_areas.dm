@@ -17,7 +17,7 @@
 	ambush_mobs = list(
 				/mob/living/carbon/human/species/skeleton/npc/ambush = 20,
 				/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 60,
-				/mob/living/simple_animal/hostile/retaliate/rogue/trollbog = 20,
+				/mob/living/simple_animal/hostile/retaliate/rogue/troll/bog = 20,
 				/mob/living/simple_animal/hostile/retaliate/rogue/spider = 40,
 				/mob/living/carbon/human/species/skeleton/npc/bogguard = 20,
 				/mob/living/carbon/human/species/goblin/npc/ambush/cave = 30)
