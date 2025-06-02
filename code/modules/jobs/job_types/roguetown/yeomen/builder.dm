@@ -40,7 +40,7 @@
 	head = /obj/item/clothing/head/roguetown/articap
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/jacket
 	cloak = /obj/item/clothing/cloak/apron/waist/brown
-	gloves = /obj/item/clothing/gloves/roguetown/freigloves/blacksmith
+	gloves = /obj/item/clothing/gloves/roguetown/angle/grenzelgloves/blacksmith
 	pants =  /obj/item/clothing/under/roguetown/trou
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/builder
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather

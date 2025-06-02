@@ -26,7 +26,7 @@
 	ADD_TRAIT(H, TRAIT_SEEPRICES, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_TRAINED_SMITH, TRAIT_GENERIC)
 	head = /obj/item/clothing/head/roguetown/chaperon/noble/guildmaster
-	gloves = /obj/item/clothing/gloves/roguetown/freigloves/blacksmith
+	gloves = /obj/item/clothing/gloves/roguetown/angle/grenzelgloves/blacksmith
 	if(H.mind)
 		// Skillset is a combo of Artificer + Blacksmith with Labor Skills. 
 		// And Tailor / Leathercrafting

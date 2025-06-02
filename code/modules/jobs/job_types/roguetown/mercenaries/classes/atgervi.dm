@@ -46,7 +46,7 @@
 			H.change_stat("perception", 1)
 			H.change_stat("speed", -1)	
 
-			head = /obj/item/clothing/head/roguetown/helmet/bascinet/atgervi
+			head = /obj/item/clothing/head/roguetown/helmet/bascinet/nordman
 			gloves = /obj/item/clothing/gloves/roguetown/angle/atgervi
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/atgervi	//This is in armor and not shirt just to avoid seeing titty through it.

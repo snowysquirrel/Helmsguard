@@ -244,7 +244,7 @@
 	sewrepair = TRUE
 	salvage_result = null
 
-/obj/item/clothing/gloves/roguetown/freigloves/blacksmith
+/obj/item/clothing/gloves/roguetown/angle/grenzelgloves/blacksmith
 	name = "forge gauntlets"
 	desc = "Long gloves for guarding your wrists against sparks and slag."
 

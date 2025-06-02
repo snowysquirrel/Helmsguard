@@ -335,6 +335,41 @@
 	color = CLOTHING_BLACK
 	detail_color = CLOTHING_WHITE
 
+/obj/item/clothing/cloak/tabard/random/Initialize()
+	color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	detail_color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	..()
+
 //Eora content from Stonekeep
 
 /obj/item/clothing/cloak/tabard/crusader/eora
@@ -622,6 +657,41 @@
 	if(ismob(loc))
 		var/mob/L = loc
 		L.update_inv_cloak()
+	
+/obj/item/clothing/cloak/stabard/random/Initialize()
+	color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	detail_color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	..()
 
 //////////////////////////
 /// SURCOATS
@@ -745,6 +815,46 @@
 /obj/item/clothing/cloak/stabard/surcoat/guard/Destroy()
 	GLOB.lordcolor -= src
 	return ..()
+
+
+/obj/item/clothing/cloak/stabard/surcoat/random/Initialize()
+	color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	detail_color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	..()
+
+
+
+
 
 /obj/item/clothing/cloak/lordcloak
 	name = "lordly cloak"
@@ -1070,6 +1180,24 @@
 	GLOB.lordcolor -= src
 	return ..()
 
+/obj/item/clothing/cloak/cape/random/Initialize()
+	color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	..()
 
 /obj/item/clothing/cloak/cape/puritan
 	icon_state = "puritan_cape"
@@ -1207,6 +1335,25 @@
 
 /obj/item/clothing/cloak/half/red
 	color = CLOTHING_RED
+
+/obj/item/clothing/cloak/half/random/Initialize()
+	color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	..()
 
 /obj/item/clothing/cloak/half/masteratarms
 	name = "master-at-arms cloak"

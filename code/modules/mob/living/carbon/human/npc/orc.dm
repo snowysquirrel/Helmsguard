@@ -23,6 +23,12 @@
 	wander = FALSE
 	cmode_music = FALSE
 
+/// ROT STUFF
+	rot_type = /datum/component/rot/corpse
+	rot_time = 5 MINUTES
+	skeletonize_time = 8 MINUTES
+	dust_time = 10 MINUTES  // From rot to dust in the span of 10 minutes.
+
 /datum/outfit/job/roguetown/orc/npc/pre_equip(mob/living/carbon/human/H) //gives some default skills and equipment for player controlled orcs
 	..()
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
