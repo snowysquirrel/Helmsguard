@@ -1,7 +1,7 @@
 /datum/job/roguetown/dungeoneer
 	title = "Dungeoneer"
 	flag = DUNGEONEER
-	department_flag = CITYWATCH
+	department_flag = COURTIERS
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1

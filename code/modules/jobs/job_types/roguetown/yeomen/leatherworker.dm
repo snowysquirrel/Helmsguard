@@ -34,10 +34,10 @@
 	pants = /obj/item/clothing/under/roguetown/tights
 	belt = /obj/item/storage/belt/rogue/leather/cloth
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/mid
-	beltl = /obj/item/rogueweapon/huntingknife/scissors/steel
+	beltl = /obj/item/storage/keyring/sund/sund_tailor
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	backr = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/needle = 1, /obj/item/natural/hide/cured = 2)
+	backpack_contents = list(/obj/item/needle = 1, /obj/item/natural/hide/cured = 2, /obj/item/rogueweapon/huntingknife/scissors/steel = 1)
 	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/silkdress
 	else if(H.gender == MALE)
