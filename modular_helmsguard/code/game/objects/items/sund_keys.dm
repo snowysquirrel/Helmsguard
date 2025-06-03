@@ -205,6 +205,18 @@
 	icon_state = "hornkey"
 	lockid = "sund_tailor"
 
+/obj/item/roguekey/sund/sund_apoth
+	name = "stained brass key"
+	desc = "This key smells of smoke and herbs."
+	icon_state = "cheesekey"
+	lockid = "sund_apoth"
+
+/obj/item/roguekey/sund/sund_butcher
+	name = "cowhorn key"
+	desc = "Carved cowhorn decorates the head of this key."
+	icon_state = "hornkey"
+	lockid = "sund_butcher"
+
 /obj/item/roguekey/sund/sund_innkeep
 	name = "carved antler key"
 	desc = "A bit of carved antler makes this key stand out to the touch."
