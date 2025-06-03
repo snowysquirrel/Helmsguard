@@ -155,7 +155,7 @@
 				they_replace = "they"
 				man_replace = "person"
 				him_replace = "them"
-			if (THEY_THEM_F)
+	/*		if (THEY_THEM_F)
 				they_replace = "they"
 				man_replace = "person"
 				him_replace = "them"
@@ -164,6 +164,7 @@
 				man_replace = "creacher"
 				him_replace = "it"
 	// LETHALSTONE EDIT END
+*/
 	string = replacetext(string, "%THEY%", they_replace)
 	if(they_replace == "they")
 		string = replacetext(string, "%HAVE%", "have")

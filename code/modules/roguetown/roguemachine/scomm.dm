@@ -107,9 +107,9 @@
 	var/canread = user.can_read(src, TRUE)
 	var/contents
 	if(SSticker.rulertype == "")
-		contents += "<center>MARKGRAF'S DECREES<BR>"
+		contents += "<center>LORD CASTELLAN'S DECREES<BR>"
 	else
-		contents += "<center>MARKGRAFIN'S DECREES<BR>"
+		contents += "<center>LADY CASTELLAN'S DECREES<BR>"
 	contents += "-----------<BR><BR></center>"
 	for(var/i = GLOB.lord_decrees.len to 1 step -1)
 		contents += "[i]. <span class='info'>[GLOB.lord_decrees[i]]</span><BR>"
