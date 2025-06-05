@@ -203,6 +203,7 @@
 #define JCOLOR_GUILD "#6e6259"
 #define JCOLOR_PEASANT "#b09262"
 #define JCOLOR_MERCENARY "#c86e3a"
+#define JCOLOR_RABBLE "#a7a412"
 #define JCOLOR_INQUISITION "#FF0000"
 
 // job display orders //

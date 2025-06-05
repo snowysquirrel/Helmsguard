@@ -26,8 +26,8 @@
 	jobspawn_override = list(
 	"Court Physician",
 	"Jester",
-	"Servant",
-	"Dungeoneer"
+	"Keep Servant",
+	"Dungeoneer",
 	)
 	delete_after_roundstart = FALSE
 
@@ -97,7 +97,7 @@
 	icon_state = "arrow"
 	jobspawn_override = list(
 	"Bawdyhouse Master",
-	"Wench",
+	"Rake",
 	"Gutterfolk",
 	)
 	delete_after_roundstart = FALSE
@@ -107,7 +107,8 @@
 	name = "Adventurer Late (Helm)"
 	icon_state = "arrow"
 	jobspawn_override = list(
-	"Adventurer"
+	"Adventurer",
+	"Mercenary",
 	)
 	delete_after_roundstart = FALSE
 
@@ -146,7 +147,7 @@
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/helms/court/servant
-	name = "Servant"
+	name = "Keep Servant"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/helms/garrison/knight
@@ -263,10 +264,13 @@
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/helms/rabble/wench
-	name = "Wench"
+	name = "Rake"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/helms/rabble/gutterfolk
 	name = "Gutterfolk"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/helms/rabble/servingwench
+	name = "Serving Lad"
+	icon_state = "arrow"
