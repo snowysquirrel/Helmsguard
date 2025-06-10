@@ -10,7 +10,7 @@
 	min_mobs = 2
 	max_mobs = 3
 	mob_types = list(
-	/mob/living/carbon/human/species/skeleton/npc = 3,
+	/mob/living/carbon/human/species/skeleton/npc = 1,
 	/mob/living/simple_animal/hostile/rogue/skeleton/bow = 3,
 	/mob/living/carbon/human/species/dwarfskeleton = 2,
 	/mob/living/carbon/human/species/skeleton/npc/dungeon = 2,

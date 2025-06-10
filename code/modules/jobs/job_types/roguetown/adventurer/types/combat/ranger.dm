@@ -1,12 +1,13 @@
 /datum/advclass/ranger
-	name = "Ranger"
-	tutorial = "Rangers prefer to keep their enemies at a distance and rely on bows and ranged weaponry."
+	name = "Poacher"
+	tutorial = "Hunters turned scouts often live among each other, as these bow-wielding \
+	hunters look out for bigger prey than just the occasional saiga."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/ranger
 	traits_applied = list(TRAIT_OUTLANDER)
 	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT)
-	classes = list("Sentinel" = "You are a ranger well-versed in traversing untamed lands, with years of experience taking odd jobs as a pathfinder and bodyguard in areas of wilderness untraversable to common soldiery.",
+/*	classes = list("Sentinel" = "You are a ranger well-versed in traversing untamed lands, with years of experience taking odd jobs as a pathfinder and bodyguard in areas of wilderness untraversable to common soldiery.",
 					"Assassin" = "You've lived the life of a hired killer and have spent your time training with blades and crossbows alike.",
 					"Bombadier" = "Bombs? You've got them. Plenty of them - and the skills to make more. You've spent years training under skilled alchemists and have found the perfect mix to create some chaos - now go blow something up!",
 					"Biome Wanderer" = "The dangers of the wilds vary upon the plains they rest upon, You happen to be experienced in many.")

@@ -93,8 +93,8 @@
 // THIEF
 
 /datum/advclass/thief
-	name = "Thief"
-	tutorial = "You are a scroundrel and a thief, a master at picking locks and getting into places you shouldn't be to take what is not yours."
+	name = "Rogue"
+	tutorial = "A petty thief or pickpocket fleeing their home to escape the gallows, a common thief wishing to climb higher. Remember, murder may just get you in more trouble."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/gutterfolk/thief
@@ -102,10 +102,22 @@
 
 /datum/outfit/job/roguetown/gutterfolk/thief/pre_equip(mob/living/carbon/human/H)
 	..()
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/axes, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/misc/lockpicking, 3, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/craft/traps, 1, TRUE)
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
+	gloves = /obj/item/clothing/gloves/roguetown/fingerless
 	pants = /obj/item/clothing/under/roguetown/trou/leather
-	armor = /obj/item/clothing/suit/roguetown/armor/leather
-	cloak = /obj/item/clothing/cloak/raincloak/mortus
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
+	shoes = /obj/item/clothing/shoes/roguetown/boots
 	backl = /obj/item/storage/backpack/rogue/satchel
 	belt = /obj/item/storage/belt/rogue/leather/knifebelt/iron
 	gloves = /obj/item/clothing/gloves/roguetown/fingerless
@@ -128,13 +140,13 @@
 	H.adjust_skillrank(/datum/skill/misc/lockpicking, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/traps, 4, TRUE)
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_SEEPRICES, TRAIT_GENERIC)
-	H.change_stat("strength", -1)
-	H.change_stat("intelligence", 1)
-	H.change_stat("perception", 1)
+	ADD_TRAIT(H, TRAIT_LIGHT_STEP, TRAIT_GENERIC)
+	H.change_stat("strength", -2)
+	H.change_stat("perception", 2)
 	H.change_stat("endurance", 1)
-	H.change_stat("speed", 3)
-
+	H.change_stat("speed", 2)
+	H.grant_language(/datum/language/thievescant)
+	to_chat(H, "<span class='info'>I can gesture in thieves' cant with ,t before my speech.</span>")
 /// BEGGAR
 
 /datum/advclass/beggar

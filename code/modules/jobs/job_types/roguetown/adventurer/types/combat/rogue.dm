@@ -1,3 +1,4 @@
+/* COPIED TO THE "THIEF" CLASS FOR THE GUTTERFOLK
 /datum/advclass/rogue
 	name = "Rogue"
 	tutorial = "Thieves, scoundrels, and silver-tongued charlatans from all walks of life."
