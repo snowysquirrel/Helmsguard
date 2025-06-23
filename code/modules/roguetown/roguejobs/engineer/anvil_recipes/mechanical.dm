@@ -76,7 +76,6 @@
 
 /datum/anvil_recipe/engineering/bronze/wrench
 	name = "Engineering Wrench (+1 cog)"
-	category = "Engineering"
 	req_bar = /obj/item/ingot/bronze
 	created_item = /obj/item/contraption/linker
 	additional_items = list(/obj/item/roguegear)
@@ -142,7 +141,6 @@
 
 /datum/anvil_recipe/engineering/bronze/grappler
 	name = "Grappler (+Pick, +Chain, +3 Cog)"
-	category = "Engineering"
 	req_bar = /obj/item/ingot/bronze
 	created_item = /obj/item/grapplinghook
 	additional_items = list(/obj/item/rogueweapon/pick, /obj/item/roguegear, /obj/item/roguegear, /obj/item/roguegear, /obj/item/rope/chain)
