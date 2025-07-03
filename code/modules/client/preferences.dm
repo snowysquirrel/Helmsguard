@@ -833,7 +833,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			HTML += "<tr bgcolor='#000000'><td width='60%' align='right'>"
 			var/rank = job.title
 			var/used_name = "[job.title]"
-			if((pronouns == SHE_HER || pronouns == THEY_THEM_F) && job.f_title)
+			if((pronouns == SHE_HER) && job.f_title)
 				used_name = "[job.f_title]"
 			lastJob = job
 			if(is_banned_from(user.ckey, rank))
@@ -1059,7 +1059,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 			jpval = null
 		else
 			var/used_name = "[job.title]"
-			if((pronouns == SHE_HER || pronouns == THEY_THEM_F) && job.f_title)
+			if((pronouns == SHE_HER) && job.f_title)
 				used_name = "[job.f_title]"
 			to_chat(user, "<font color='red'>You have too low PQ for [used_name] (Min PQ: [job.min_pq]), you may only set it to low.</font>")
 			jpval = JP_LOW

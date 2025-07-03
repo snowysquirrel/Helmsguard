@@ -1188,11 +1188,7 @@ SUBSYSTEM_DEF(gamemode)
 			switch(human_mob.pronouns)
 				if(HE_HIM)
 					GLOB.azure_round_stats[STATS_MALE_POPULATION]++
-				if(HE_HIM_F)
-					GLOB.azure_round_stats[STATS_MALE_POPULATION]++
 				if(SHE_HER)
-					GLOB.azure_round_stats[STATS_FEMALE_POPULATION]++
-				if(SHE_HER_M)
 					GLOB.azure_round_stats[STATS_FEMALE_POPULATION]++
 				else
 					GLOB.azure_round_stats[STATS_OTHER_GENDER]++

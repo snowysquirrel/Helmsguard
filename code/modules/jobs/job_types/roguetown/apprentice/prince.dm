@@ -78,11 +78,11 @@
 	..()
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ARCYNE_T1, TRAIT_GENERIC)
-	if(should_wear_masc_clothes(H))
+	if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights/random
 		armor = /obj/item/clothing/suit/roguetown/armor/longcoat
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/royal/prince
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		pants = /obj/item/clothing/under/roguetown/tights/stockings/silk/random
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/royal/princess
 	head = /obj/item/clothing/head/roguetown/circlet
@@ -125,12 +125,12 @@
 	beltl = /obj/item/storage/keyring/sund/sund_heir
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	backr = /obj/item/storage/backpack/rogue/satchel
-	if(should_wear_masc_clothes(H))
+	if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/royal/prince
 		belt = /obj/item/storage/belt/rogue/leather
 		shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
 		head = /obj/item/clothing/head/roguetown/hennin
 		armor = /obj/item/clothing/suit/roguetown/armor/silkcoat
@@ -170,12 +170,12 @@
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/storage/keyring/sund/sund_heir
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
-	if(should_wear_masc_clothes(H))
+	if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/royal/prince
 		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
 		shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
 		head = /obj/item/clothing/head/roguetown/hennin
 		armor = /obj/item/clothing/suit/roguetown/armor/silkcoat

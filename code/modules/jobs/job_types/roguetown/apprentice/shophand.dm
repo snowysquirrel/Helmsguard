@@ -22,7 +22,7 @@
 /datum/outfit/job/roguetown/shophand/pre_equip(mob/living/carbon/human/H)
 	..()
 	ADD_TRAIT(H, TRAIT_SEEPRICES_SHITTY, "[type]")
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		pants = /obj/item/clothing/under/roguetown/tights
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/blue
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
@@ -30,7 +30,7 @@
 		beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 		beltl = /obj/item/storage/keyring/sund/sund_shop
 		backr = /obj/item/storage/backpack/rogue/satchel
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes

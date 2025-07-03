@@ -54,8 +54,8 @@
 	H.change_stat("constitution", 1)
 	H.change_stat("endurance", 2)
 
-	if(should_wear_masc_clothes(H))
+	if(H.gender == MALE)
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor/nightman
 		H.dna.species.soundpack_m = new /datum/voicepack/male/zeth()
-	else if(should_wear_femme_clothes(H))
+	else if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/armor/armordress/alt

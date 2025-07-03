@@ -8,7 +8,7 @@
 	traits_applied = list(TRAIT_OUTLANDER)
 
 /datum/advclass/mercenary/vaquero/equipme(mob/living/carbon/human/H)
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled
 	return ..()
 

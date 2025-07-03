@@ -33,7 +33,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	neck = /obj/item/clothing/neck/roguetown/gorget
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		pants = /obj/item/clothing/under/roguetown/tights/black
 		beltr = /obj/item/rogueweapon/sword/sabre
 	H.adjust_skillrank(/datum/skill/misc/swimming, rand(1,5), TRUE)

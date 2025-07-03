@@ -149,7 +149,7 @@
 		//Coronate new King (or Queen)
 		HU.mind.assigned_role = "Lord Castellan"
 		HU.job = "Lord Castellan"
-		if(should_wear_femme_clothes(HU))
+		if(HU.gender == FEMALE)
 			SSticker.rulertype = "Lord Castellanin"
 		else
 			SSticker.rulertype = "Lord Castellan"

@@ -49,11 +49,11 @@
 	r_hand = /obj/item/soap/bath
 	belt =	/obj/item/storage/belt/rogue/leather/cloth
 	beltl = /obj/item/storage/keyring/sund/sund_bawdyroom
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy/random
 		pants = /obj/item/clothing/under/roguetown/skirt/brown
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/random
 	backpack_contents = list(
 		/obj/item/soap/bath = 1

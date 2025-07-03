@@ -46,7 +46,7 @@
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
 //		SSticker.rulermob = H
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		beltl = /obj/item/storage/keyring/sund/sund_consort
 		neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
@@ -55,7 +55,7 @@
 		pants = /obj/item/clothing/under/roguetown/tights/stockings/silk/random
 		id = /obj/item/scomstone/garrison
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		head = /obj/item/clothing/head/roguetown/nyle/consortcrown
 		pants = /obj/item/clothing/under/roguetown/tights
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard

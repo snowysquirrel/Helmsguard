@@ -50,7 +50,7 @@
 /datum/outfit/job/roguetown/shophand/pre_equip(mob/living/carbon/human/H)
 	..()
 	ADD_TRAIT(H, TRAIT_SEEPRICES_SHITTY, "[type]")
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		pants = /obj/item/clothing/under/roguetown/tights
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/blue
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
@@ -58,7 +58,7 @@
 		beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 		beltl = /obj/item/storage/keyring/sund/sund_shop
 		backr = /obj/item/storage/backpack/rogue/satchel
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
@@ -113,7 +113,7 @@
 		H.adjust_skillrank(/datum/skill/craft/smelting, 4, TRUE)
 		H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
 		H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
@@ -122,7 +122,7 @@
 		cloak = /obj/item/clothing/cloak/apron/brown
 		backr = /obj/item/storage/backpack/rogue/satchel
 		backpack_contents = list(/obj/item/rogueweapon/hammer = 1, /obj/item/rogueweapon/tongs = 1)
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights/random
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 		shirt = null
@@ -153,7 +153,7 @@
 		H.adjust_skillrank(/datum/skill/labor/farming, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/craft/tanning, 3, TRUE)
 		H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
@@ -162,7 +162,7 @@
 		backr = /obj/item/storage/backpack/rogue/satchel
 		backpack_contents = list(/obj/item/needle/thorn = 1, /obj/item/natural/cloth = 2,
 						/obj/item/natural/bundle/fibers/full = 1,)
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights/random
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
@@ -195,7 +195,7 @@
 		H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
 		H.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
 		H.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
@@ -203,7 +203,7 @@
 		armor = /obj/item/clothing/suit/roguetown/shirt/robe/apprentice
 		backr = /obj/item/storage/backpack/rogue/satchel
 		backpack_contents = list(/obj/item/reagent_containers/glass/bottle = 1, /obj/item/reagent_containers/glass/bottle/alchemical = 1)
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights/random
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt

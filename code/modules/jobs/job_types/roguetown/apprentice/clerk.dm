@@ -39,9 +39,9 @@
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/appraise/secular)
 
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/silkdress/green
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		armor = /obj/item/clothing/cloak/tabard/knight
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 

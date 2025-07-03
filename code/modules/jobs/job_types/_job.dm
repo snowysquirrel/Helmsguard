@@ -184,7 +184,7 @@
 		for(var/S in spells)
 			H.mind.AddSpell(new S)
 
-	if(H.pronouns == SHE_HER || H.pronouns == THEY_THEM_F)
+	if(H.pronouns == SHE_HER)
 		if(jobstats_f)
 			for(var/S in jobstats_f)
 				H.change_stat(S, jobstats_f[S])
@@ -204,7 +204,7 @@
 
 	if(H.islatejoin && announce_latejoin)
 		var/used_title = title
-		if((H.pronouns == SHE_HER || H.pronouns == THEY_THEM_F) && f_title)
+		if((H.pronouns == SHE_HER) && f_title)
 			used_title = f_title
 		scom_announce("[H.real_name] the [used_title] arrives to Sundmark.")
 
@@ -301,7 +301,7 @@
 	H.dna.species.before_equip_job(src, H, visualsOnly)
 	if(!outfit_override && visualsOnly && visuals_only_outfit)
 		outfit_override = visuals_only_outfit
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		if(outfit_override || outfit_female)
 			H.equipOutfit(outfit_override ? outfit_override : outfit_female, visualsOnly)
 		else
@@ -404,10 +404,12 @@
 	return list()
 
 // LETHALSTONE EDIT: Helper functions for pronoun-based clothing selection
+/*
 /proc/should_wear_masc_clothes(mob/living/carbon/human/H)
 	return (H.pronouns == HE_HIM || H.pronouns == THEY_THEM || H.pronouns == IT_ITS || H.pronouns == SHE_HER_M)
 
 /proc/should_wear_femme_clothes(mob/living/carbon/human/H)
-	return (H.pronouns == SHE_HER || H.pronouns == THEY_THEM_F || H.pronouns == HE_HIM_F)
+	return (H.pronouns == SHE_HER )
+*/
 // LETHALSTONE EDIT END
 

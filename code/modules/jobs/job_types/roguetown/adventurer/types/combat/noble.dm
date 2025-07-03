@@ -29,11 +29,11 @@
 			neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 			id = /obj/item/clothing/ring/silver
 			beltl = /obj/item/rogueweapon/sword/sabre/dec
-			if(should_wear_masc_clothes(H))
+			if(H.gender == MALE)
 				cloak = /obj/item/clothing/cloak/half/red
 				shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/red
 				pants = /obj/item/clothing/under/roguetown/tights/black
-			if(should_wear_femme_clothes(H))
+			if(H.gender == FEMALE)
 				shirt = /obj/item/clothing/suit/roguetown/shirt/dress/gen/purple
 				pants = /obj/item/clothing/under/roguetown/tights/stockings/silk/purple
 				cloak = /obj/item/clothing/cloak/raincloak/purple

@@ -31,12 +31,12 @@
 	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 	H.cmode_music = 'sound/music/combat_holy.ogg'
 	neck = /obj/item/clothing/neck/roguetown/psicross
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		head = /obj/item/clothing/head/roguetown/armingcap
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 		beltl = /obj/item/storage/keyring/sund/sund_vestal
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/robe
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 		beltl = /obj/item/storage/keyring/sund/sund_monk

@@ -35,10 +35,10 @@
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	backr = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/needle, /obj/item/storage/keyring/sund/sund_tailor)
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/silkdress
 		head = /obj/item/clothing/head/roguetown/shawl
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/tunic/random
 	H.change_stat("intelligence", 2)
 	H.change_stat("perception", 1)

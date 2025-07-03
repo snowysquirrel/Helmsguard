@@ -42,10 +42,10 @@
 	head = /obj/item/clothing/head/roguetown/cookhat
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
-	if(should_wear_masc_clothes(H))
+	if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights/black
 		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random
-	else if(should_wear_femme_clothes(H))
+	else if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
 	backpack_contents = list(
 		/obj/item/recipe_book/survival,

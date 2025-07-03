@@ -47,10 +47,10 @@
 	beltl = /obj/item/storage/keyring/sund/sund_innrooms
 	beltr = /obj/item/storage/keyring/sund/sund_innkeep
 
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress
 		cloak = /obj/item/clothing/cloak/apron/waist
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor
 	backpack_contents = list(

@@ -41,7 +41,7 @@
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
 	beltr = /obj/item/storage/keyring/sund/sund_butler
 	id = /obj/item/scomstone/bad
-	if(should_wear_femme_clothes(H)) 
+	if(H.gender == FEMALE) 
 		armor = /obj/item/clothing/suit/roguetown/armor/silkcoat
 		neck = /obj/item/roguekey/sund/sund_ladymaid
 	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)

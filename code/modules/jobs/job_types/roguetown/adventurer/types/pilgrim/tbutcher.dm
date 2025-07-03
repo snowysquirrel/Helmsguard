@@ -31,7 +31,7 @@
 						/obj/item/recipe_book/survival = 1,
 						/obj/item/reagent_containers/food/snacks/fat = 2 // make sausages :)
 						)
-	if(H.pronouns == SHE_HER || H.pronouns == THEY_THEM_F)
+	if(H.gender == FEMALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
 	else
 		pants = /obj/item/clothing/under/roguetown/trou

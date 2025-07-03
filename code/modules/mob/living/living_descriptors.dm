@@ -139,15 +139,7 @@
 				they_replace = "he"
 				man_replace = "man"
 				him_replace = "him"
-			if (HE_HIM_F)
-				they_replace = "he"
-				man_replace = "man"
-				him_replace = "him"
 			if (SHE_HER)
-				they_replace = "she"
-				man_replace = "woman"
-				him_replace = "her"
-			if (SHE_HER_M)
 				they_replace = "she"
 				man_replace = "woman"
 				him_replace = "her"

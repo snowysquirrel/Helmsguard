@@ -61,7 +61,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		else
 			GLOB.lordsurname = "of [L.real_name]"
 		SSticker.rulermob = L
-		if(should_wear_femme_clothes(L))
+		if(L.gender == FEMALE)
 			SSticker.rulertype = "Markgräfin"
 		else
 			SSticker.rulertype = "Lord Castellan"
@@ -85,14 +85,14 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		head = /obj/item/clothing/head/roguetown/crown/serpcrown
 	else
 		to_chat(H, span_warning("My crown must be yet in the realm. I shall search it out."))
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		pants = /obj/item/clothing/under/roguetown/tights/black
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/royal
 		cloak = /obj/item/clothing/cloak/lordcloak/ladycloak
 		wrists = /obj/item/clothing/wrists/roguetown/royalsleeves
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights/black
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/black

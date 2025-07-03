@@ -47,10 +47,10 @@
 	cloak = /obj/item/clothing/cloak/apron/waist
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	if(should_wear_masc_clothes(H))
+	if(H.gender == MALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
 		pants = /obj/item/clothing/under/roguetown/tights/black
-	else if(should_wear_femme_clothes(H))
+	else if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/rags
 	backpack_contents = list(
 		/obj/item/bottle_kit
