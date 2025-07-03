@@ -132,7 +132,7 @@ GLOBAL_VAR_INIT(max_total_spawned_mobs, 400) // New global variable for the tota
 		/mob/living/simple_animal/hostile/rogue/skeleton/guard/crypt_guard = 20,
 		/mob/living/simple_animal/hostile/rogue/skeleton/guard/crypt_guard_spear = 20,
 		/mob/living/carbon/human/species/skeleton/dwarf = 20,
-		/mob/living/carbon/human/species/skeleton/dwarf/npc/dungeon = 20,
+		/mob/living/carbon/human/species/dwarfskeleton/dungeon = 20,
 		/mob/living/carbon/human/species/skeleton/npc/dungeon = 30,
 			)
 

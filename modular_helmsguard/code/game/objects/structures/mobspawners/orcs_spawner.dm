@@ -23,9 +23,7 @@
 	density = FALSE
 	min_mobs = 2
 	max_mobs = 3
-	mob_types = list(
-	/mob/living/carbon/human/species/halforc/orc_raider/savage_orc = 6,
-	/mob/living/carbon/human/species/halforc/orc_raider = 5,		//archer
+	mob_types = list(		//archer
 	/mob/living/simple_animal/hostile/retaliate/rogue/orc/ranged = 5		//archer
 	)
 	text_faction = "Orcs"
@@ -40,10 +38,7 @@
 	max_mobs = 5
 	mob_types = list(
 	/mob/living/carbon/human/species/goblin/npc = 5,
-	/mob/living/simple_animal/hostile/retaliate/rogue/goblin/cave = 4,		//archer
-	/mob/living/simple_animal/hostile/retaliate/rogue/goblin = 4,	//archer
-	/mob/living/carbon/human/species/halforc/orc_raider/savage_orc = 6,
-	/mob/living/carbon/human/species/halforc/orc_raider = 4,
+	/mob/living/simple_animal/hostile/retaliate/rogue/goblin/cave = 4,		//archer	//archer
 	/mob/living/simple_animal/hostile/retaliate/rogue/orc/ranged = 3		//archer
 	)
 	text_faction = "Greenskins"
@@ -60,10 +55,7 @@
 	max_mobs = 10
 	mob_types = list(
 	/mob/living/carbon/human/species/goblin/npc = 5,
-	/mob/living/simple_animal/hostile/retaliate/rogue/goblin/cave = 4,		//archer
-	/mob/living/simple_animal/hostile/retaliate/rogue/goblin = 4,	//archer
-	/mob/living/carbon/human/species/halforc/orc_raider/savage_orc = 6,
-	/mob/living/carbon/human/species/halforc/orc_raider = 4,
+	/mob/living/simple_animal/hostile/retaliate/rogue/goblin/cave = 4,		//archer	//archer
 	/mob/living/simple_animal/hostile/retaliate/rogue/orc/ranged = 3		//archer
 	)
 	text_faction = "Greenskins"
@@ -90,9 +82,6 @@
 	mob_types = list(
 	/mob/living/carbon/human/species/goblin/npc = 5,
 	/mob/living/simple_animal/hostile/retaliate/rogue/goblin/cave = 4,		//archer
-	/mob/living/simple_animal/hostile/retaliate/rogue/goblin = 4,	//archer
-	/mob/living/carbon/human/species/halforc/orc_raider/savage_orc = 6,
-	/mob/living/carbon/human/species/halforc/orc_raider = 4,
 	/mob/living/simple_animal/hostile/retaliate/rogue/orc/ranged = 3		//archer
 	)
 	text_faction = "Greenskins"	

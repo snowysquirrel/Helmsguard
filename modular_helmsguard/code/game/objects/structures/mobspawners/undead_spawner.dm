@@ -12,10 +12,10 @@
 	mob_types = list(
 	/mob/living/carbon/human/species/skeleton/npc = 3,
 	/mob/living/simple_animal/hostile/rogue/skeleton/bow = 3,
-	/mob/living/carbon/human/species/skeleton/dwarf/npc = 2,
+	/mob/living/carbon/human/species/dwarfskeleton = 2,
 	/mob/living/carbon/human/species/skeleton/npc/dungeon = 2,
 	/mob/living/simple_animal/hostile/rogue/skeleton/guard/xbow = 2,
-	/mob/living/carbon/human/species/skeleton/dwarf/npc/dungeon = 2,
+	/mob/living/carbon/human/species/dwarfskeleton = 2,
 	/mob/living/simple_animal/hostile/rogue/skeleton/axe = 5,
 	/mob/living/simple_animal/hostile/rogue/skeleton/bow = 4,
 	/mob/living/simple_animal/hostile/rogue/skeleton/spear = 6,
@@ -41,10 +41,10 @@
 	mob_types = list(
 	/mob/living/carbon/human/species/skeleton/npc = 6,
 	/mob/living/simple_animal/hostile/rogue/skeleton/bow = 4,
-	/mob/living/carbon/human/species/skeleton/dwarf/npc = 4,
+	/mob/living/carbon/human/species/dwarfskeleton = 4,
 	/mob/living/carbon/human/species/skeleton/npc/dungeon = 3,
 	/mob/living/simple_animal/hostile/rogue/skeleton/guard/xbow = 3,
-	/mob/living/carbon/human/species/skeleton/dwarf/npc/dungeon = 2)
+	/mob/living/carbon/human/species/dwarfskeleton = 2)
 	text_faction = "Skeletons"
 	objfaction = list("undead")
 

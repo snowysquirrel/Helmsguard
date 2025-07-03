@@ -1,8 +1,3 @@
-GLOBAL_LIST_INIT(orcraider_quotes, world.file2list("strings/rt/orcraiderlines.txt"))
-GLOBAL_LIST_INIT(orcraider_aggro, world.file2list("strings/rt/orcraideraggrolines.txt"))
-
-
-
 /mob/living/carbon/human/species/halforc/orc_raider
 	aggressive=1
 	mode = AI_IDLE
@@ -67,6 +62,7 @@ GLOBAL_LIST_INIT(orcraider_aggro, world.file2list("strings/rt/orcraideraggroline
 	job = "Orc Raider"
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_INFINITE_ENERGY, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	equipOutfit(new /datum/outfit/job/roguetown/human/species/halforc/orc_raider)
@@ -90,12 +86,6 @@ GLOBAL_LIST_INIT(orcraider_aggro, world.file2list("strings/rt/orcraideraggroline
 		say(pick(GLOB.orcraider_quotes))
 	if(prob(12))
 		emote(pick("laugh","burp","yawn","grumble","mumble","blink_r","clap"))
-
-/mob/living/carbon/human/species/halforc/orc_raider/handle_combat()
-	if(mode == AI_HUNT)
-		if(prob(50))
-			emote("rage")
-	. = ..()
 
 /datum/outfit/job/roguetown/human/species/halforc/savage_orc/pre_equip(mob/living/carbon/human/H)
 	if(prob(20))
