@@ -50,7 +50,7 @@
 	mask = /obj/item/clothing/mask/rogue/spectacles/golden
 	backl = /obj/item/storage/backpack/rogue/backpack
 	backpack_contents = list(
-						/obj/item/rogueweapon/hammer/claw = 1,
+						/obj/item/rogueweapon/hammer/iron = 1,
 						/obj/item/lockpickring/mundane = 1,
 						/obj/item/clothing/cloak/apron/blacksmith = 1
 						)

@@ -742,7 +742,7 @@
 /obj/item/natural/stone{
 	pixel_y = -14
 	},
-/obj/item/rogueweapon/hammer/claw,
+/obj/item/rogueweapon/hammer/iron,
 /turf/open/floor/rogue/greenstone,
 /area/rogue/under/cave/dungeon1/gethsmane/inner)
 "fX" = (

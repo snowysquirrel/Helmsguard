@@ -195,6 +195,7 @@
 #define TESTER		(1<<0)
 #define DEATHKNIGHT (1<<1)
 #define SKELETON	(1<<2)
+#define GOBLIN		(1<<3)
 
 #define INQUISITION (1<<10)
 #define ORTHODOXIST	(1<<1)
