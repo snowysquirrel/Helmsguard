@@ -164,7 +164,7 @@
 			return FALSE
 		return TRUE
 	// Allows prayer if the user has more than 100 mammon on them.
-	var/mammon_count = get_mammons_in_atom(follower)
+	var/mammon_count = get_groschen_in_atom(follower)
 	if(mammon_count >= 100)
 		return TRUE
 	// Spend 5/10 mammon to pray. Megachurch pastors be like.....
