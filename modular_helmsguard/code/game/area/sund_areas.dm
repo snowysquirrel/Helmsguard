@@ -1,7 +1,3 @@
-GLOBAL_LIST_EMPTY(chosen_music)
-
-GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town,/area/rogue/outdoors/town,/area/rogue/under/town)) //hey
-
 /area/rogue/sund
 	name = "sundmark"
 	location_name = "the distance"	// Should only occur as a fail condition if child objects lack more specific locations names, or areas are meant to be secret.
@@ -330,7 +326,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	ambush_mobs = list(
 				/mob/living/carbon/human/species/skeleton/npc/ambush = 20,
 				/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 60,
-				/mob/living/simple_animal/hostile/retaliate/rogue/trollbog = 20,
+				/mob/living/simple_animal/hostile/retaliate/rogue/troll/bog = 20,
 				/mob/living/simple_animal/hostile/retaliate/rogue/spider = 40,
 				/mob/living/carbon/human/species/skeleton/npc/bogguard = 20,
 				/mob/living/carbon/human/species/goblin/npc/ambush/cave = 30)
