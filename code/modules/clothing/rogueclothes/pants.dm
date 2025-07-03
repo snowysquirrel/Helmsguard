@@ -608,7 +608,7 @@
 /// NORDMAN
 
 
-/obj/item/clothing/under/roguetown/trou/leather/nordman
+/obj/item/clothing/under/roguetown/trou/leather/atgervi
 	name = "fur pants"
 	desc = "Thick fur pants made to endure the coldest winds, offering a share of protection from fang and claw of beast or men alike."
 	icon_state = "nordman_pants"

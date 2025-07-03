@@ -228,6 +228,7 @@
 #define JDO_PHYSICIAN 2.1
 #define JDO_JESTER 2.2
 #define JDO_SERVANT 2.3
+#define JDO_COUNCILLOR 2.4
 
 // RETINUE	
 #define JDO_KNIGHT 3
@@ -288,6 +289,11 @@
 #define JDO_PRISONERB 11.1
 #define JDO_HOSTAGE 11.2
 #define JDO_LUNATIC 11.3
+
+#define BITFLAG_CHURCH (1<<0)
+#define BITFLAG_ROYALTY (1<<1)
+#define BITFLAG_CONSTRUCTOR (1<<2)
+#define BITFLAG_GARRISON (1<<3)
 
 #define MANOR_ROLES \
 	/datum/job/roguetown/jester,\

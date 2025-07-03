@@ -21,7 +21,7 @@
 	give_bank_account = 50
 	min_pq = 6
 	max_pq = null
-	cmode_music = 'sound/music/combat_guard2.ogg'
+	cmode_music = 'sound/music/combat_bog.ogg'
     
 
 /datum/outfit/job/roguetown/masteratarms
@@ -374,7 +374,7 @@
 	chargedrain = 1
 	chargetime = 15
 	releasedrain = 80 // This is quite costy. Shouldn't be able to really spam them right off the cuff, combined with having to type out an order. Should prevent VERY occupied officers from ALSO ordering
-	charge_max = 2 MINUTES
+	recharge_time = 2 MINUTES
 	miracle = FALSE
 	sound = 'sound/magic/inspire_02.ogg'
 
@@ -391,13 +391,13 @@
 		if(!msg)
 			to_chat(user, span_alert("I must say something to give an order!"))
 			return
-		if(HAS_TRAIT(user, TRAIT_GUARDSMAN))
-			if(!HAS_TRAIT(target, TRAIT_GUARDSMAN))
+		if(user.job == "Master-at-Arms")
+			if(!target.job == "Man at Arms")
 				to_chat(user, span_alert("I cannot order one not of my ranks!"))
 				return
 		if(user.job == "Knight Captain")
-			if(!HAS_TRAIT(target, TRAIT_KNIGHTSMAN))
-				to_chat(user, span_alert("I cannot order one not of my noble ranks!"))
+			if(!(target.job in list("Knight")))
+				to_chat(user, span_alert("I cannot order one not of my ranks!"))
 				return		
 		if(target == user)
 			to_chat(user, span_alert("I cannot order myself!"))
@@ -453,14 +453,14 @@
 		if(!msg)
 			to_chat(user, span_alert("I must say something to give an order!"))
 			return
-		if(HAS_TRAIT(user, TRAIT_GUARDSMAN)) // If we are MAA, we need to order MAA. If we are GC, we need to order RG.
-			if(!HAS_TRAIT(target, TRAIT_GUARDSMAN))
+		if(user.job == "Master-at-Arms")
+			if(!target.job == "Man at Arms")
 				to_chat(user, span_alert("I cannot order one not of my ranks!"))
 				return
 		if(user.job == "Knight Captain")
-			if(!HAS_TRAIT(target, TRAIT_KNIGHTSMAN))
-				to_chat(user, span_alert("I cannot order one not of my noble ranks!"))
-				return
+			if(!(target.job in list("Knight")))
+				to_chat(user, span_alert("I cannot order one not of my ranks!"))
+				return		
 		if(target == user)
 			to_chat(user, span_alert("I cannot order myself!"))
 			return
@@ -484,14 +484,14 @@
 		if(!msg)
 			to_chat(user, span_alert("I must say something to give an order!"))
 			return
-		if(HAS_TRAIT(user, TRAIT_GUARDSMAN))
-			if(!HAS_TRAIT(target, TRAIT_GUARDSMAN))
+		if(user.job == "Master-at-Arms")
+			if(!target.job == "Man at Arms")
 				to_chat(user, span_alert("I cannot order one not of my ranks!"))
 				return
 		if(user.job == "Knight Captain")
-			if(!HAS_TRAIT(target, TRAIT_KNIGHTSMAN))
-				to_chat(user, span_alert("I cannot order one not of my noble ranks!"))
-				return
+			if(!(target.job in list("Knight")))
+				to_chat(user, span_alert("I cannot order one not of my ranks!"))
+				return		
 		if(target == user)
 			to_chat(user, span_alert("I cannot order myself!"))
 			return
@@ -542,14 +542,14 @@
 		if(!msg)
 			to_chat(user, span_alert("I must say something to give an order!"))
 			return
-		if(HAS_TRAIT(user, TRAIT_GUARDSMAN)) // If we are MAA, we need to order MAA. If we are GC, we need to order RG.
-			if(!HAS_TRAIT(target, TRAIT_GUARDSMAN))
+		if(user.job == "Master-at-Arms")
+			if(!target.job == "Man at Arms")
 				to_chat(user, span_alert("I cannot order one not of my ranks!"))
 				return
 		if(user.job == "Knight Captain")
-			if(!HAS_TRAIT(target, TRAIT_KNIGHTSMAN))
-				to_chat(user, span_alert("I cannot order one not of my noble ranks!"))
-				return
+			if(!(target.job in list("Knight")))
+				to_chat(user, span_alert("I cannot order one not of my ranks!"))
+				return		
 		if(target == user)
 			to_chat(user, span_alert("I cannot order myself!"))
 			return

@@ -4,7 +4,6 @@
 	valid_positions += GLOB.noble_positions
 	valid_positions += GLOB.courtier_positions
 	valid_positions += GLOB.church_positions
-	valid_positions += GLOB.inquisition_positions
 	valid_positions += GLOB.garrison_positions
 	valid_positions += GLOB.peasant_positions
 	valid_positions += GLOB.mercenary_positions

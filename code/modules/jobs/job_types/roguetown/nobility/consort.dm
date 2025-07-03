@@ -22,6 +22,10 @@
 	max_pq = null
 	round_contrib_points = 3
 
+
+/datum/outfit/job/roguetown/lady
+	job_bitflag = BITFLAG_ROYALTY
+
 /datum/job/roguetown/exlady //just used to change the ladys title
 	title = "Markgraf Dowager"
 	f_title = "Markgrafin Dowager"

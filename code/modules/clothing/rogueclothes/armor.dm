@@ -1336,13 +1336,13 @@
 /// NORDMAN
 
 
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/nordman
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/atgervi
 	name = "vagarian hauberk"
 	desc = "The pride of the Hammerhold mercenaries a well crafted blend of chain and leather into a dense protective coat."
 	icon_state = "nordman_raider_mail"
 	item_state = "nordman_raider_mail"
 
-/obj/item/clothing/suit/roguetown/armor/leather/heavy/nordman
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/atgervi
 	name = "shamanic coat"
 	desc = "A lightly protective coat, It embodies the second trial of the Northern shamans. To honor the leopard is too desire for more."
 	icon_state = "nordman_shaman_coat"

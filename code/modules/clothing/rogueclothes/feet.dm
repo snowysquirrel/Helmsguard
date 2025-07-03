@@ -449,7 +449,7 @@
 /// ATGEVERI
 
 
-/obj/item/clothing/shoes/roguetown/boots/leather/nordman
+/obj/item/clothing/shoes/roguetown/boots/leather/atgervi
 	name = "heavy leather boots"
 	desc = "A pair of strong leather boots, designed to endure battle and the chill of the north both."
 	icon_state = "nordman_boots"

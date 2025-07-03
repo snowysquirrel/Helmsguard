@@ -19,7 +19,7 @@
 	round_contrib_points = 2
 
 	advclass_cat_rolls = list(CTAG_GATEMASTER = 20)	
-	cmode_music = 'sound/music/combat_guard2.ogg'
+	cmode_music = 'sound/music/combat_bog.ogg'
 
 /datum/job/roguetown/gatemaster/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
