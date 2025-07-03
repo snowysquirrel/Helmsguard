@@ -1483,7 +1483,6 @@
 #include "code\modules\jobs\job_types\roguetown\courtier\butler.dm"
 #include "code\modules\jobs\job_types\roguetown\courtier\councillor.dm"
 #include "code\modules\jobs\job_types\roguetown\courtier\jester.dm"
-#include "code\modules\jobs\job_types\roguetown\courtier\magician.dm"
 #include "code\modules\jobs\job_types\roguetown\courtier\physician.dm"
 #include "code\modules\jobs\job_types\roguetown\garrison\bogguard.dm"
 #include "code\modules\jobs\job_types\roguetown\garrison\dungeoneer.dm"
@@ -1501,7 +1500,6 @@
 #include "code\modules\jobs\job_types\roguetown\mercenaries\classes\atgervi.dm"
 #include "code\modules\jobs\job_types\roguetown\mercenaries\classes\blackoak.dm"
 #include "code\modules\jobs\job_types\roguetown\mercenaries\classes\condottiero.dm"
-#include "code\modules\jobs\job_types\roguetown\mercenaries\classes\desertrider.dm"
 #include "code\modules\jobs\job_types\roguetown\mercenaries\classes\forlorn.dm"
 #include "code\modules\jobs\job_types\roguetown\mercenaries\classes\freifechter.dm"
 #include "code\modules\jobs\job_types\roguetown\mercenaries\classes\grenzelhoft.dm"
@@ -2389,4 +2387,6 @@
 #include "modular_hearthstone\code\modules\mob\living\simple_animal\rogue\orc.dm"
 #include "modular_hearthstone\code\modules\mob\living\simple_animal\rogue\rogue_corpse.dm"
 #include "modular_hearthstone\code\modules\reagents\reagent_containers\lux.dm"
+#include "modular_helmsguard\code\game\objects\items\sund_keys.dm"
+#include "modular_helmsguard\code\game\objects\items\sund_keyrings.dm"
 // END_INCLUDE
