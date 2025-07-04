@@ -35,8 +35,8 @@
 
 /datum/objective/vampire
 	name = "conquer"
-	explanation_text = "Put an end to the werewolf menace in Sundmark, or unite with them against the forces of the Nine."
-	team_explanation_text = "The feud between werewolves and vampires reaches back to the dawn of time. Will the two factions destroy each other, or find a way to coexist and face the mortals of Sundmark together?"
+	explanation_text = "Put an end to the werewolf menace in Helmsguard, or unite with them against the forces of the Nine."
+	team_explanation_text = "The feud between werewolves and vampires reaches back to the dawn of time. Will the two factions destroy each other, or find a way to coexist and face the mortals of Helmsguard together?"
 	triumph_count = 5
 
 /datum/objective/vampire/check_completion()

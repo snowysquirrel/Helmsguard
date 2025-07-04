@@ -1,8 +1,8 @@
-// This file is for creating custom keys that will belong to the Sundmark map. Use sund_ as the prefix to all lockids made here and on the Sundmark map.
+// This file is for creating custom keys that will belong to the Helmsguard map. Use sund_ as the prefix to all lockids made here and on the Helmsguard map.
 // Each faction will have its own keys so this anticipates the overlap we would otherwise have, that is, orc keys unlocking human doors.
 
 
-// Sundmark's clockwork key replaces the old Master key with something with an in-world logic.
+// Helmsguard's clockwork key replaces the old Master key with something with an in-world logic.
 
 /obj/item/roguekey/sund/clockwork
 	name = "Clockwork Key"
@@ -43,7 +43,7 @@
 
 /obj/item/roguekey/sund/sund_ruler
 	name = "Castellan's key"
-	desc = "This key is emblazoned with Sundmark's arms in gold."
+	desc = "This key is emblazoned with Helmsguard's arms in gold."
 	icon_state = "bosskey"
 	lockid = "sund_ruler"
 
@@ -123,7 +123,7 @@
 
 /obj/item/roguekey/sund/sund_wall
 	name = "simple bronze key"
-	desc = "Sturdy and well-worn, this key bears the town seal of Sundmark."
+	desc = "Sturdy and well-worn, this key bears the town seal of Helmsguard."
 	icon_state = "brownkey"
 	lockid = "sund_wall"
 

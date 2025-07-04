@@ -61,7 +61,7 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 
 GLOBAL_LIST_INIT(noble_positions, list(
 	"Grand Duke",
-	"Consort",
+	"Lord Consort",
 	"Lord Heir",
 	"Hand",
 	"Steward",
@@ -84,7 +84,7 @@ GLOBAL_LIST_INIT(garrison_positions, list(
 GLOBAL_LIST_INIT(church_positions, list(
 	"Priest",
 	"Inquisitor",
-	"Monk",
+	"Acolyte",
 	"Chapter Master",
 	"Knight Templar",
 	"Templar Sergeant",

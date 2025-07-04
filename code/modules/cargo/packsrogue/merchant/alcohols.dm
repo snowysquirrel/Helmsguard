@@ -88,7 +88,7 @@
 	cost = 400
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/elfblue)
 
-//AZURE DRINKS
+//HELMSGUARD DRINKS
 /datum/supply_pack/rogue/alcohol/jagdtrunk
 	name = "Jagdtrunk Herbal Schnapps"
 	cost = 80
@@ -100,7 +100,7 @@
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/apfelweinheim)
 
 /datum/supply_pack/rogue/alcohol/rtoper
-	name = "Rockhill Toper (Lirvas Beer)"
+	name = "Helmsguard Toper (Lirvas Beer)"
 	cost = 20
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/rtoper)
 

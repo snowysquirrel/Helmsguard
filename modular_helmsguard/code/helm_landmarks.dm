@@ -5,14 +5,14 @@
 
 
 ///////////////////////
-/* LATEJOIN SUNDMARK */
+/* LATEJOIN HELMSGUARD */
 ///////////////////////
 
 /obj/effect/landmark/start/helms/late/noble
 	name = "Noble Late (Helm)"
 	icon_state = "arrow"
 	jobspawn_override = list(
-	"Lord Castellan",
+	"Grand Duke",
 	"Lord Consort",
 	"Lord Heir",
 	"Hand",
@@ -125,7 +125,7 @@
 //These are roles exclusive to Helmsguard//
 
 /obj/effect/landmark/start/helms/noble/markgraf
-	name = "Lord Castellan"
+	name = "Grand Duke"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/helms/noble/consort

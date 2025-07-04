@@ -1,13 +1,13 @@
-// Sundmark Areas
+// Helmsguard Areas
 
 /area/rogue/indoors/sund
-	name = "sundmark"
+	name = "helmsguard"
 	location_name = "the distance"	// Should only occur as a fail condition if child objects lack more specific locations names, or areas are meant to be secret.
 	icon = 'modular_helmsguard/icons/turf/sund_areas.dmi'	// Redirect to the modular icons.
 	icon_state = "rogue"
 
 /area/rogue/outdoors/sund
-	name = "sundmark"
+	name = "helmsguard"
 	location_name = "the distance"	// Should only occur as a fail condition if child objects lack more specific locations names, or areas are meant to be secret.
 	icon = 'modular_helmsguard/icons/turf/sund_areas.dmi'	// Redirect to the modular icons.
 	icon_state = "rogue"
@@ -122,7 +122,7 @@
 // Castle
 
 /area/rogue/outdoors/sund/castle
-	location_name = "the Sundburg"
+	location_name = "the Helmskeep"
 	keep_area = TRUE
 	town_area = TRUE
 	ambientsounds = AMB_TOWNDAY
@@ -167,41 +167,41 @@
 
 // Town Walls
 /area/rogue/outdoors/sund/walls
-	name = "Sundburg Walls"
+	name = "Helmsburg Walls"
 	location_name = "the walls"
 	icon_state = "walls_exterior"
 	town_area = TRUE
 	converted_type = /area/rogue/indoors/sund/walls
 
 /area/rogue/outdoors/sund/walls/walls_exterior
-	name = "Sundburg Walls"
+	name = "Helmsburg Walls"
 	location_name = "the walls"
 
 /area/rogue/outdoors/sund/walls/gatehouse
-	name = "Sundburg Gatehouse"
+	name = "Helmsburg Gatehouse"
 	location_name = "the city gates"
 
 /area/rogue/indoors/sund/walls
-	name = "Sundburg Walls"
+	name = "Helmsburg Walls"
 	location_name = "the walls"
 	town_area = TRUE
 	icon_state = "walls"
 	converted_type = /area/rogue/outdoors/sund/walls
 
 /area/rogue/indoors/sund/walls/walls_interior
-	name = "Sundburg Walls"
+	name = "Helmsburg Walls"
 	location_name = "the walls"
 
 /area/rogue/indoors/sund/walls/gatehouse
-	name = "Sundburg Gatehouse"
+	name = "Helms Gatehouse"
 	location_name = "the city gates"
 
-// Sundmark Streets
+// Helmsguard Streets
 
 /area/rogue/outdoors/sund/streets
-	name = "Sundburg Streets"
-	location_name = "the streets of Sundburg"
-	first_time_text = "Sundburg"
+	name = "Helmsburg Streets"
+	location_name = "the streets of Helmsburg"
+	first_time_text = "Helmsburg"
 	icon_state = "streets"
 	town_area = TRUE
 	ambientrain = RAIN_OUT
@@ -383,14 +383,14 @@
 // Town Houses
 
 /area/rogue/outdoors/sund/houses
-	name = "Sundburg Houses"
-	location_name = "a house in Sundmark"
+	name = "Helmsburg Houses"
+	location_name = "a house in Helmsburg"
 	icon_state = "houses"
 	town_area = TRUE
 
 /area/rogue/outdoors/sund/houses/exterior
-	name = "Sundburg House Rooftops"
-	location_name = "above the houses of Sundburg"
+	name = "Helmsburg House Rooftops"
+	location_name = "above the houses of Helmsburg"
 	icon_state = "houses_exterior"
 	spookysounds = SPOOKY_CROWS
 	spookynight = SPOOKY_GEN
@@ -400,14 +400,14 @@
 	soundenv = 16
 
 /area/rogue/indoors/sund/houses
-	name = "Sundburg Houses"
-	location_name = "a house in Sundmark"
+	name = "Helmsburg Houses"
+	location_name = "a house in Helmsburg"
 	icon_state = "houses"
 	town_area = TRUE
 
 /area/rogue/indoors/sund/houses/interior
-	name = "Sundburg House Interior"
-	location_name = "within the houses of Sundburg"
+	name = "Helmsburg House Interior"
+	location_name = "within the houses of Helmsburg"
 	ambientrain = RAIN_IN
 	ambientsounds = AMB_INGEN
 	ambientnight = AMB_INGEN
@@ -425,7 +425,7 @@
 	icon_state = "bawdy"
 
 /area/rogue/outdoors/sund/bawdy/exterior
-	name = "Sundburg House Rooftops"
+	name = "Helmsburg House Rooftops"
 	location_name = "above the houses of Sundburg"	// Deliberate obfuscation with other town houses.
 	icon_state = "bawdy_exterior"
 	outdoors = TRUE
@@ -440,7 +440,7 @@
 	soundenv = 16
 
 /area/rogue/indoors/sund/bawdy/interior
-	name = "Sundburg Bawdyhouse"
+	name = "Helmsburg Bawdyhouse"
 	location_name = "within the bawdyhouse"
 	ambientrain = RAIN_IN
 	ambientsounds = AMB_INGEN
@@ -454,7 +454,7 @@
 	plane = INDOOR_PLANE
 
 /area/rogue/indoors/sund/bath/interior/baths
-	name = "Sundburg Baths"
+	name = "Helmsburg Baths"
 	location_name = "within the bawdyhouse"	// Deliberate obfuscation with the upstairs.
 	icon_state = "baths"
 	ambientsounds = AMB_CAVEWATER
@@ -469,9 +469,9 @@
 // Sundburg Outskirts		No-ambush, safe areas around Sundburg's walls.
 
 /area/rogue/outdoors/sund/outskirts
-	name = "Sundburg Outskirts"
+	name = "Helmsburg Outskirts"
 	icon_state = "outskirts"
-	location_name = "the outskirts of Sundburg"
+	location_name = "the outskirts of Helmsburg"
 	outdoors = TRUE
 	ambientrain = RAIN_OUT
 	spookysounds = SPOOKY_CROWS
@@ -480,25 +480,25 @@
 	droning_sound_night = 'sound/music/area/field.ogg'
 
 /area/rogue/outdoors/sund/outskirts/farmlands
-	name = "Sundburg Farmlands"
-	location_name = "the farms of Sundburg"
+	name = "Helmsburg Farmlands"
+	location_name = "the farms of Helmsburg"
 	icon_state = "outskirts_road"
 
 /area/rogue/outdoors/sund/outskirts/gateroad
-	name = "Sundburg Gate Road"
-	location_name = "outside the gates of Sundburg"
+	name = "Helmsburg Gate Road"
+	location_name = "outside the gates of Helmsburg"
 	icon_state = "outskirts_road"
 
 /area/rogue/outdoors/sund/outskirts/wallroad
-	name = "Sundburg Wall Road"
-	location_name = "outside the walls of Sundburg"
+	name = "Helmsburg Wall Road"
+	location_name = "outside the walls of Helmsburg"
 	icon_state = "outskirts_road"
 
 /area/rogue/outdoors/sund/outskirts/bridge
-	name = "Sundburg Bridge"
-	location_name = "outside the walls of Sundburg"
+	name = "Helmsburg Bridge"
+	location_name = "outside the walls of Helmsburg"
 	icon_state = "outskirts_road"
-	first_time_text = "The Bridge of Sundburg"
+	first_time_text = "The Bridge of Helmsburg"
 	ambientsounds = AMB_RIVERDAY
 	ambientnight = AMB_RIVERNIGHT
 	spookysounds = SPOOKY_GEN
@@ -508,8 +508,8 @@
 	droning_sound_night = 'sound/music/area/bog.ogg'
 
 /area/rogue/indoors/sund/outskirts/interior
-	name = "Sundburg Farmhouses"
-	location_name = "the farmhouses around Sundburg"
+	name = "Helmsburg Farmhouses"
+	location_name = "the farmhouses around Helmsburg"
 	icon_state = "outskirts_interior"
 	ambientrain = RAIN_IN
 	ambientsounds = AMB_INGEN
@@ -521,7 +521,7 @@
 	plane = INDOOR_PLANE
 
 /area/rogue/indoors/sund/outskirts/interior/barge
-	name = "Sundburg Outbuildings"
+	name = "Helmsburg Outbuildings"
 	icon_state = "outskirts_interior"
 	ambientrain = RAIN_IN
 	ambientsounds = AMB_RIVERDAY
@@ -545,14 +545,14 @@
 // Ambush Wilderness (All Ambush Zones Within, Please!!!)
 
 /area/rogue/outdoors/sund/wilderness
-	name = "Sundmark Wildnerness"
-	location_name = "the wilds of Sundmark"
+	name = "Helmsguard Wildnerness"
+	location_name = "the wilds of Helmsguard"
 	icon_state = "wilderness"
 	soundenv = 19
 
 /area/rogue/outdoors/sund/wilderness/field
-	name = "Sundmark Field"
-	location_name = "the fields of Sundmark"
+	name = "Helmsguard Field"
+	location_name = "the fields of Helmsguard"
 	icon_state = "wilderness_field"
 	ambush_times = list("night")
 	ambush_types = list(
@@ -580,8 +580,8 @@
 	converted_type = /area/rogue/indoors/shelter/woods
 
 /area/rogue/outdoors/sund/wilderness/woods
-	name = "Sundmark Forest"
-	location_name = "the forests of Sundmark"
+	name = "Helmsguard Forest"
+	location_name = "the forests of Helmsguard"
 	first_time_text = "The Asenwald"
 	icon_state = "wilderness_woods"
 	ambientsounds = AMB_FORESTDAY
@@ -603,9 +603,9 @@
 				/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 30)
 
 /area/rogue/outdoors/sund/wilderness/mountain
-	name = "Sundmark Mountains"
-	location_name = "the mountains of Sundmark"
-	first_time_text = "Mountains of Sundmark"
+	name = "Helmsguard Mountains"
+	location_name = "the mountains of Helmsguard"
+	first_time_text = "Mountains of Helmsguard"
 	icon_state = "wilderness_mountain"
 	ambush_types = list(
 				/turf/open/floor/rogue/dirt)
@@ -624,7 +624,7 @@
 	soundenv = 17
 
 /area/rogue/outdoors/sund/wilderness/mountain/danger
-	name = "Sundmark Peaks"
+	name = "Helmsguard Highlands"
 	icon_state = "wilderness_mountains"
 	ambush_types = list(
 				/turf/open/floor/rogue/dirt)

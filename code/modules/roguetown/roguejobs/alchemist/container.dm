@@ -140,7 +140,7 @@
 	list_reagents = list(/datum/reagent/consumable/ethanol/elfblue = 48)
 	desc = "A bottle gilded with a golden cork-seal. This is the legendary Valmora Blue from the Vineyard of Valmora, headed by a sainted Dark-Elf swordsmaster. This bottle would swoon Gods over!"
 
-//AZURE DRINKS
+//HELMSGUARD DRINKS
 /obj/item/reagent_containers/glass/bottle/rogue/beer/jagdtrunk
 	list_reagents = list(/datum/reagent/consumable/ethanol/jagdtrunk = 48)
 	desc = "A bottle with a Saigabuck cork-seal. This dark liquid is the strongest alcohol coming out of Grenzelhoft available. A herbal schnapps, sure to burn out any disease."

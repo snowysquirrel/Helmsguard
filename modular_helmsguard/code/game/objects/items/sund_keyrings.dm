@@ -1,6 +1,6 @@
 /////////////////// KEYRING ////////////////////
 
-// This file defines the keyrings assigned to jobs and keys for the Sundmark map. For clarity use the subfolder keyring/sund/.
+// This file defines the keyrings assigned to jobs and keys for the Helmsguard map. For clarity use the subfolder keyring/sund/.
 // Keys on the keys = list that aren't in the roguekey/sund/ subfolder will not work on sundmark.dmm by design.
 
 // Keep keychains.

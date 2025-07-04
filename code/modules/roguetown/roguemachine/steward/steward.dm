@@ -78,7 +78,7 @@
 		SStreasury.total_import += amt
 		SStreasury.log_to_steward("-[amt] imported [D.name]")
 		if(amt >= 100) //Only announce big spending.
-			scom_announce("Sundmark imports [D.name] for [amt] groschen.", )
+			scom_announce("Helmsguard imports [D.name] for [amt] groschen.", )
 		D.raise_demand()
 		addtimer(CALLBACK(src, PROC_REF(do_import), D.type), 10 SECONDS)
 	if(href_list["export"])

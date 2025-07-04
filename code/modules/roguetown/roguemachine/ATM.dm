@@ -1,6 +1,6 @@
 /obj/structure/roguemachine/atm
 	name = "MEISTER"
-	desc = "Stores and withdraws currency for accounts managed by the stewardry of Sundmark."
+	desc = "Stores and withdraws currency for accounts managed by the stewardry of Helmsguard."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "atm"
 	density = FALSE
@@ -116,7 +116,7 @@
 				return
 			var/can_anyone_know = FALSE
 			for(var/mob/living/carbon/human/HJ in GLOB.player_list)
-				if(HJ.job == "Steward" || HJ.job == "Lord Castellan")
+				if(HJ.job == "Steward" || HJ.job == "Grand Duke")
 					can_anyone_know = TRUE
 			if(!can_anyone_know)
 				to_chat(user, span_info("There is no one important for the transaction to flow through."))

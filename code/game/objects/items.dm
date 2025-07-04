@@ -752,7 +752,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	
 	if (isliving(user) && slot != ITEM_SLOT_HANDS)
 		var/mob/living/living_user = user
-		living_user.rebuild_obscured_flags() // AZURE EDIT: cache our equipped items `flags_inv` values
+		living_user.rebuild_obscured_flags() // HELMSGUARD EDIT: cache our equipped items `flags_inv` values
 
 	update_transform()
 

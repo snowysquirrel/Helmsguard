@@ -1,6 +1,6 @@
 We will organize areas into commented headers for our own logical convenience.
 
-Sundmark's geography lends itself to ringed domains and areas will reflect that.
+Helmsguard's geography lends itself to ringed domains and areas will reflect that.
 
 The principle concern of areas is warhorn alarm reports being informative.
 The secondary concern of areas is sound design and lighting.
@@ -176,7 +176,7 @@ Bath and Bawdy Werks
 		Bawdy Dungeon
 		Bawdy Hidden Suite
 
-Sundmark Outskirts
+Helmsguard Outskirts
 	Farmlands*
 		Farmland House
 		Farmland Barn

@@ -656,7 +656,7 @@
 	if(!user.is_literate())
 		. += "I have no idea what it says."
 	else
-		. += "It says \"SUNDMARK\""
+		. += "It says \"HELMSGUARD\""
 
 /obj/structure/fluff/buysign
 	icon_state = "signwrote"

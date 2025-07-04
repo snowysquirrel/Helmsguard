@@ -395,7 +395,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/leather/hide/warden
 	name = "forestry armor"
-	desc = "A light armor worn by the Wardens of the Sundmark. Far more durable than leather."
+	desc = "A light armor worn by the Wardens of the Helmsguard. Far more durable than leather."
 	icon = 'icons/roguetown/clothing/special/warden.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/warden.dmi'
 	icon_state = "foresthide"

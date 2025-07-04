@@ -10,7 +10,7 @@
 	allowed_races = NOBLE_RACES_TYPES
 	allowed_sexes = list(MALE, FEMALE)
 	display_order = JDO_STEWARD
-	tutorial = "Coin, Coin, Coin! Oh beautiful coin: You're addicted to it, and you hold the position as the Markgraf's personal treasurer of both coin and information. You know the power silver and gold has on a man's mortal soul, and you know just what lengths they'll go to in order to get even more. Keep your festering economy alive- for it is the only thing you can weigh any trust into anymore."
+	tutorial = "Coin, Coin, Coin! Oh beautiful coin: You're addicted to it, and you hold the position as the Duke's personal treasurer of both coin and information. You know the power silver and gold has on a man's mortal soul, and you know just what lengths they'll go to in order to get even more. Keep your festering economy alive- for it is the only thing you can weigh any trust into anymore."
 	outfit = /datum/outfit/job/roguetown/steward
 	give_bank_account = 22
 	noble_income = 16
@@ -201,7 +201,7 @@
 	f_title = "Mistress of Coin"
 	allowed_races = RACES_ALL_KINDS
 	allowed_sexes = list(MALE, FEMALE)
-	tutorial = "Reserved only for the steadfast dwarves of Sundmark, the Master of Coin is both the keeper and steward of the realm's wealth. \
+	tutorial = "Reserved only for the steadfast dwarves of Helmsguard, the Master of Coin is both the keeper and steward of the realm's wealth. \
 	Your fingers are as skilled with gold as they are with a crossbow, and your knowledge of coin and trade is unmatched. Despite your impressive skills, \
 	you are not a noble, and your authority is limited to the realm's treasury."
 	outfit = /datum/outfit/job/roguetown/mastercoin
@@ -277,5 +277,5 @@ GLOBAL_VAR_INIT(steward_tax_cooldown, -50000) // Antispam
 		if(stat)
 			return
 		SStreasury.tax_value = newtax / 100
-		priority_announce("The new tax in Azure Peak shall be [newtax] percent.", "The Steward Meddles", pick('sound/misc/royal_decree.ogg', 'sound/misc/royal_decree2.ogg'), "Captain")
+		priority_announce("The new tax in Helmsguard shall be [newtax] percent.", "The Steward Meddles", pick('sound/misc/royal_decree.ogg', 'sound/misc/royal_decree2.ogg'), "Captain")
 		GLOB.steward_tax_cooldown = world.time

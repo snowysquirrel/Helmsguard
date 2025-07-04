@@ -9,7 +9,7 @@
 	selection_color = JCOLOR_CHURCH
 	f_title = "Priestess"
 	allowed_races = TOLERATED_CLEARANCE	//Too recent arrivals to ascend to priesthood. 
-	allowed_patrons = ALL_DIVINE_PATRONS
+	allowed_patrons = /datum/patron/old_god
 	allowed_sexes = list(MALE, FEMALE)
 	tutorial = "The Divine is all that matters in a world of the immoral. The Weeping God left his children to rule over us mortals--and you will preach their wisdom to any who still heed their will. The faithless are growing in number. It is up to you to shepard them toward a Gods-fearing future; for you are a priest of Astrata."
 	whitelist_req = FALSE
@@ -128,7 +128,7 @@
 	for(var/mob/living/carbon/human/HU in get_step(src, src.dir))
 		if(!HU.mind)
 			continue
-		if(HU.mind.assigned_role == "Lord Castellan")
+		if(HU.mind.assigned_role == "Grand Duke")
 			continue
 		if(!HU.head)
 			continue
@@ -138,21 +138,21 @@
 		//Abdicate previous King
 		for(var/mob/living/carbon/human/HL in GLOB.human_list)
 			if(HL.mind)
-				if(HL.mind.assigned_role == "Lord Castellan" || HL.mind.assigned_role == "Lord Consort")
+				if(HL.mind.assigned_role == "Grand Duke" || HL.mind.assigned_role == "Lord Consort")
 					HL.mind.assigned_role = "Towner" //So they don't get the innate traits of the king
 			//would be better to change their title directly, but that's not possible since the title comes from the job datum
-			if(HL.job == "Lord Castellan")
-				HL.job = "Lord Castellan Emeritus"
+			if(HL.job == "Grand Duke")
+				HL.job = "Grand Duke Emeritus"
 			if(HL.job == "Lord Consort")
-				HL.job = "Lord Castellan Dowager"
+				HL.job = "Grand Duke Dowager"
 
 		//Coronate new King (or Queen)
-		HU.mind.assigned_role = "Lord Castellan"
-		HU.job = "Lord Castellan"
+		HU.mind.assigned_role = "Grand Duke"
+		HU.job = "Grand Duke"
 		if(HU.gender == FEMALE)
 			SSticker.rulertype = "Lord Castellanin"
 		else
-			SSticker.rulertype = "Lord Castellan"
+			SSticker.rulertype = "Grand Duke"
 		SSticker.rulermob = HU
 		SSticker.regentmob = null
 		var/dispjob = mind.assigned_role

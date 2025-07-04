@@ -125,7 +125,7 @@
 
 	clear_typing_indicator()
 
-	// AZURE EDIT BEGIN: necra acolyte/priest deathsight trait
+	// HELMSGUARD EDIT BEGIN: necra acolyte/priest deathsight trait
 	// this was a player that just died, so do the honors
 	if (client)
 		if (!gibbed)
@@ -138,7 +138,7 @@
 						to_chat(player, span_warning("I feel the faint passage of disjointed life essence as it flees [locale]."))
 					else
 						to_chat(player, span_warning("Veiled whispers herald the Undermaiden's gaze in my mind's eye as it turn towards [locale] for but a brief, singular moment."))
-	// AZURE EDIT END
+	// HELMSGUARD EDIT END
 
 	return TRUE
 
@@ -155,7 +155,7 @@
 		if ("coast", "coastforest")
 			locale = "somewhere betwixt Abyssor's realm and Dendor's bounty"
 		if ("indoors", "shop", "physician", "outdoors", "roofs", "manor", "wizard's tower", "garrison", "dungeon cell", "baths", "tavern")
-			locale = "the city of  Sundmark and all its bustling souls"
+			locale = "the city of  Helmsguard and all its bustling souls"
 		if ("church")
 			locale = "a hallowed place, sworn to the Ten" // special bit for the church since it's sacred ground
 	
