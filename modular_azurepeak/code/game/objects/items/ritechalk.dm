@@ -13,12 +13,10 @@
 
 	var/ritechoices = list()
 	switch (user.patron?.type)
-		if(/datum/patron/inhumen/graggar)
-			ritechoices+="Rune of Violence"
 		if(/datum/patron/inhumen/zizo)
-			ritechoices+="Rune of ZIZO" 
+			ritechoices+="Rune of the Undead"
 		if(/datum/patron/inhumen/matthios)
-			ritechoices+="Rune of Transaction" 
+			ritechoices+="Rune of Transaction"
 		if(/datum/patron/divine/astrata)
 			ritechoices+="Rune of Sun"
 		if(/datum/patron/divine/noc)

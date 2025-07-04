@@ -393,7 +393,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 			Zs_yell = TRUE
 		if(say_test(message) == "3")	//Big "!!" shout
 			Zs_all = TRUE
-	// AZURE EDIT: thaumaturgical loudness (from orisons)
+	// HELMSGUARD EDIT: thaumaturgical loudness (from orisons)
 	if (has_status_effect(/datum/status_effect/thaumaturgy))
 		spans |= SPAN_REALLYBIG
 		var/datum/status_effect/thaumaturgy/buff = locate() in status_effects
@@ -408,7 +408,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 				S.verb_exclaim = initial(S.verb_exclaim)
 				S.verb_yell = initial(S.verb_yell)
 		remove_status_effect(/datum/status_effect/thaumaturgy)
-	// AZURE EDIT END
+	// HELMSGUARD EDIT END
 	var/list/listening = get_hearers_in_view(message_range+eavesdrop_range, source)
 	var/list/the_dead = list()
 //	var/list/yellareas	//CIT CHANGE - adds the ability for yelling to penetrate walls and echo throughout areas

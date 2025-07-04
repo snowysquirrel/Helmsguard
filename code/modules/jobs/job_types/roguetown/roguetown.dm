@@ -4,10 +4,13 @@
 /datum/job/roguetown/New()
 	. = ..()
 	if(give_bank_account)
+		for(var/X in GLOB.rabble_positions)
+			peopleiknow += X
+			peopleknowme += X
 		for(var/X in GLOB.peasant_positions)
 			peopleiknow += X
 			peopleknowme += X
-		for(var/X in GLOB.yeoman_positions)
+		for(var/X in GLOB.watch_positions)
 			peopleiknow += X
 			peopleknowme += X
 		for(var/X in GLOB.church_positions)
@@ -16,13 +19,13 @@
 		for(var/X in GLOB.garrison_positions)
 			peopleiknow += X
 			peopleknowme += X
+		for(var/X in GLOB.towner_positions)
+			peopleiknow += X
+			peopleknowme += X		
 		for(var/X in GLOB.noble_positions)
 			peopleiknow += X
 			peopleknowme += X
 		for(var/X in GLOB.courtier_positions)
-			peopleiknow += X
-			peopleknowme += X
-		for(var/X in GLOB.youngfolk_positions)
 			peopleiknow += X
 			peopleknowme += X
 		for(var/X in GLOB.mercenary_positions)

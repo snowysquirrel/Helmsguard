@@ -762,6 +762,27 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	..()
 	update_icon()
 
+/mob/living/simple_animal/hostile/user_unbuckle_mob(mob/living/M, mob/user)
+	if(user != M)
+		return
+	var/time2mount = 12
+	if(M.mind)
+		var/amt = M.get_skill_level(/datum/skill/misc/riding)
+		if(amt)
+			if(amt > 3)
+				time2mount = 0
+		else
+			time2mount = 30
+	if(ssaddle)
+		playsound(src, 'sound/foley/saddledismount.ogg', 100, TRUE)
+	if(!move_after(M,time2mount, target = src))
+		M.Paralyze(50)
+		M.Stun(50)
+		playsound(src.loc, 'sound/foley/zfall.ogg', 100, FALSE)
+		M.visible_message(span_danger("[M] falls off [src]!"))
+	..()
+	update_icon()
+
 /mob/living/simple_animal/hostile/user_buckle_mob(mob/living/M, mob/user)
 	if(user != M)
 		return

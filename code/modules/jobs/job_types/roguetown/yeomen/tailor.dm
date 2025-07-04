@@ -1,7 +1,7 @@
 /datum/job/roguetown/tailor
 	title = "Tailor"
 	flag = TAILOR
-	department_flag = YEOMEN
+	department_flag = TOWNER
 	faction = "Station"
 	tutorial = "You have worked sleepless nights on honing your craft. From sacks, to tapestry and luxurious clothing, there is little you cannot sew into existence. Use your storefront to turn even the ugliest peasant into a proper gentleman; who knows, even the nobility may pay you a visit."
 	total_positions = 1
@@ -9,7 +9,14 @@
 	display_order = 6
 	min_pq = 0
 	selection_color = JCOLOR_YEOMAN
-	allowed_races = RACES_ALL_KINDS
+	allowed_races = list(\
+	/datum/species/human/northern,\
+	/datum/species/human/halfelf,\
+	/datum/species/elf/wood,\
+	/datum/species/dwarf/mountain,\
+	/datum/species/demihuman,\
+	/datum/species/tieberian,\
+	)
 	display_order = JDO_TAILOR
 	outfit = /datum/outfit/job/roguetown/tailor
 	give_bank_account = 16
@@ -34,16 +41,11 @@
 	beltl = /obj/item/rogueweapon/huntingknife/scissors/steel
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	backr = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(
-		/obj/item/needle, 
-		/obj/item/storage/keyring/tailor,
-		/obj/item/dye_brush, 
-		/obj/item/recipe_book/sewing, 
-		/obj/item/recipe_book/leatherworking
-		)
-	if(should_wear_femme_clothes(H))
+	backpack_contents = list(/obj/item/needle, /obj/item/storage/keyring/sund/sund_tailor)
+	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/silkdress
-	else if(should_wear_masc_clothes(H))
+		head = /obj/item/clothing/head/roguetown/shawl
+	else if(H.gender == MALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/tunic/random
 	H.change_stat("intelligence", 2)
 	H.change_stat("perception", 1)

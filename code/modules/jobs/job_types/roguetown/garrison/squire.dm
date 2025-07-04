@@ -1,7 +1,11 @@
 /datum/job/roguetown/squire
 	title = "Squire"
 	flag = SQUIRE
+<<<<<<<< HEAD:code/modules/jobs/job_types/roguetown/garrison/squire.dm
 	department_flag = GARRISON
+========
+	department_flag = APPRENTICE
+>>>>>>>> 17df90f08 (Motherload):code/modules/jobs/job_types/roguetown/apprentice/squire.dm
 	faction = "Station"
 	total_positions = 4
 	spawn_positions = 4
@@ -26,7 +30,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
 	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/storage/keyring/guardcastle
+	beltl = /obj/item/storage/keyring/sund/sund_knight
 	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
 	id = /obj/item/scomstone/bad/garrison
 	job_bitflag = BITFLAG_GARRISON		//Move this role to garrison section later. Shouldn't be under youngroles for transparancy they are garrison.

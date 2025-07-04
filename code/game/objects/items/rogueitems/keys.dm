@@ -140,7 +140,7 @@
 		SSroguemachine.key = src
 
 /obj/item/roguekey/lord/proc/anti_stall()
-	src.visible_message(span_warning("The Key of Azure Peak crumbles to dust, the ashes spiriting away in the direction of the Keep."))
+	src.visible_message(span_warning("The Key of Helmsguard crumbles to dust, the ashes spiriting away in the direction of the Keep."))
 	SSroguemachine.key = null //Do not harddel.
 	qdel(src) //Anti-stall
 
@@ -179,11 +179,11 @@
 	icon_state = "spikekey"
 	lockid = "garrison"
 
-/obj/item/roguekey/sergeant
-	name = "sergeant key"
-	desc = "This key belongs to the sergeant of the Men-at-Arms."
+/obj/item/roguekey/masteratarms
+	name = "master-at-arms key"
+	desc = "This key belongs to the Master-at-Arms."
 	icon_state = "spikekey"
-	lockid = "sergeant"
+	lockid = "maa"
 
 /obj/item/roguekey/warden
 	name = "watchtower key"
@@ -484,7 +484,7 @@
 	name = "ancient key"
 	desc = "A ancient, rusty key. There's no telling where this leads."
 	icon_state = "rustkey"
-	lockid = "inhumen"
+	lockid = "inhuman"
 
 /obj/item/roguekey/hand
 	name = "hand's key"

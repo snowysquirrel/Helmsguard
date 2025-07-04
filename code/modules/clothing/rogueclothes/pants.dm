@@ -553,6 +553,15 @@
 	naledicolor = TRUE
 	salvage_result = /obj/item/natural/hide/cured
 
+/// NORDMAN
+
+
+/obj/item/clothing/under/roguetown/trou/leather/atgervi
+	name = "fur pants"
+	desc = "Thick fur pants made to endure the coldest winds, offering a share of protection from fang and claw of beast or men alike."
+	icon_state = "nordman_pants"
+	item_state = "nordman_pants"
+
 /obj/item/clothing/under/roguetown/trou/leather/pontifex/raneshen
 	name = "baggy desert pants"
 	desc = "A handmade pair of baggy, thin leather pants. Keeps sand out of your boots, sun off your legs, and a creacher's fangs from piercing your ankles."

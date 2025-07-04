@@ -35,10 +35,9 @@
 	C.grant_miracles(H, cleric_tier = CLERIC_T2, passive_gain = FALSE, devotion_limit = CLERIC_REQ_1)	//Capped to T2 miracles. It's just a self-heal.
 
 /datum/outfit/job/roguetown/disciple/proc/brute_equip(mob/living/carbon/human/H)
-	backpack_contents = list(/obj/item/roguekey/inquisition = 1)
-	belt = /obj/item/storage/belt/rogue/leather/rope
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
+	backpack_contents = list(/obj/item/storage/keyring/sund/sund_inquisitor = 1)
+	gloves = /obj/item/clothing/gloves/roguetown/chain/psydon
+	armor = /obj/item/clothing/suit/roguetown/armor/skin_armor/monk_skin
 	cloak = /obj/item/clothing/cloak/psydontabard/alt
 	H.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 5, TRUE)
@@ -62,7 +61,7 @@
 	H.grant_language(/datum/language/otavan)
 
 /datum/outfit/job/roguetown/disciple/proc/naledi_equip(mob/living/carbon/human/H)
-	backpack_contents = list(/obj/item/roguekey/inquisition = 1)
+	backpack_contents = list(/obj/item/storage/keyring/sund/sund_inquisitor = 1)
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
 	belt = /obj/item/storage/belt/rogue/leather/black

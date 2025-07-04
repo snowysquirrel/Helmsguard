@@ -246,6 +246,7 @@
 
 /obj/item/clothing/gloves/roguetown/angle/grenzelgloves/blacksmith
 	name = "forge gauntlets"
+	desc = "Long gloves for guarding your wrists against sparks and slag."
 
 //---------------- BLACKSTEEL ---------------------
 
@@ -307,6 +308,21 @@
 	blocksound = SOFTHIT
 	max_integrity = 200
 	anvilrepair = /datum/skill/craft/carpentry
+
+/// nordman
+
+
+/obj/item/clothing/gloves/roguetown/angle/atgervi
+	name = "fur-lined leather gloves"
+	desc = "Thick, padded gloves made for the harshest of climates, and wildest of beasts encountered in the untamed lands."
+	icon_state = "nordman_raider_gloves"
+	item_state = "nordman_raider_gloves"
+
+/obj/item/clothing/gloves/roguetown/plate/atgervi
+	name = "beast claws"
+	desc = "A menacing pair of plated claws, A closely protected tradition of the Shamans. The four claws embodying the four great beasts. Decorated with symbols of the gods they praise and the Gods they reject."
+	icon_state = "nordman_shaman_gloves"
+	item_state = "nordman_shaman_gloves"
 
 //eastern content
 

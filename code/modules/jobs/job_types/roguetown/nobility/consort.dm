@@ -1,13 +1,14 @@
 /datum/job/roguetown/lady
-	title = "Consort"
+	title = "Lord Consort"
+	f_title = "Lady Consort"
 	flag = LADY
 	department_flag = NOBLEMEN
 	faction = "Station"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = RACES_NO_CONSTRUCT
+	allowed_races = NOBLE_RACES_TYPES
 	tutorial = "Picked out of your political value rather than likely any form of love, you have become the Grand Duke's most trusted confidant--and likely friend--throughout your marriage. Your loyalty and perhaps even your love will be tested this day... for the daggers that threaten your beloved are as equally pointed at your own throat."
 
 	spells = list(/obj/effect/proc_holder/spell/self/convertrole/servant,
@@ -21,8 +22,13 @@
 	max_pq = null
 	round_contrib_points = 3
 
-/datum/job/roguetown/exlady
-	title = "Consort Dowager"
+
+/datum/outfit/job/roguetown/lady
+	job_bitflag = BITFLAG_ROYALTY
+
+/datum/job/roguetown/exlady //just used to change the ladys title
+	title = "Lord Consort Dowager"
+	f_title = "Lady Consort Dowager"
 	flag = LADY
 	department_flag = NOBLEMEN
 	faction = "Station"
@@ -40,8 +46,8 @@
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
 //		SSticker.rulermob = H
-	if(should_wear_femme_clothes(H))
-		beltl = /obj/item/storage/keyring/royal
+	if(H.gender == FEMALE)
+		beltl = /obj/item/storage/keyring/sund/sund_consort
 		neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
 		head = /obj/item/clothing/head/roguetown/nyle/consortcrown
@@ -49,14 +55,14 @@
 		pants = /obj/item/clothing/under/roguetown/tights/stockings/silk/random
 		id = /obj/item/scomstone/garrison
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		head = /obj/item/clothing/head/roguetown/nyle/consortcrown
 		pants = /obj/item/clothing/under/roguetown/tights
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
 		armor = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
 		belt = /obj/item/storage/belt/rogue/leather
-		beltl = /obj/item/storage/keyring/royal
+		beltl = /obj/item/storage/keyring/sund/sund_consort
 		beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 		backr = /obj/item/storage/backpack/rogue/satchel
 		id = /obj/item/clothing/ring/silver

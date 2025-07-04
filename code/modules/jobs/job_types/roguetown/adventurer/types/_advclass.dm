@@ -1,5 +1,7 @@
 /datum/advclass
 	var/name
+	var/title
+	var/f_title
 	var/list/classes
 	var/outfit
 	var/tutorial = "Choose me!"
@@ -36,8 +38,14 @@
 
 	post_equip(H)
 
-	H.advjob = name
-
+	if(title)
+		if((f_title) && H.gender == FEMALE)
+			H.advjob = f_title
+		else
+			H.advjob = title
+	else
+		H.advjob = name
+		
 	var/turf/TU = get_turf(H)
 	if(TU)
 		if(horse)

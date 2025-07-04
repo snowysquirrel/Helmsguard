@@ -67,7 +67,7 @@
 /obj/item/psydonmusicbox/examine(mob/user)
 	. = ..()
 	if(HAS_TRAIT(usr, TRAIT_INQUISITION))
-		desc = "A relic from the bowels of the Otavan cathedral's thaumaturgical workshops. Fourteen souls of heretics, all bound together, they will scream and protect us from magicks. It would be wise to not teach the heretics of its true nature, to only bring it to bear in dire circumstances."
+		desc = "A relic from the bowels of the Shepherd Church's thaumaturgical workshops. Fourteen souls of heretics, all bound together, they will scream and protect us from magicks. It would be wise to not teach the heretics of its true nature, to only bring it to bear in dire circumstances."
 	else
 		desc = "A cranked music box, it has the seal of the Otavan Inquisition on the side. It carries a somber feeling to it..."
 
@@ -414,7 +414,7 @@ Inquisitorial armory down here
 		
 /datum/component/psyblessed/proc/on_examine(datum/source, mob/user, list/examine_list)
 	if(!is_blessed)
-		examine_list += span_info("<font color = '#cfa446'>This object may be blessed by the lingering shard of COMET SYON. Until then, its impure alloying of silver-and-steel cannot blight inhumen foes on its own.</font>")
+		examine_list += span_info("<font color = '#cfa446'>This object may be blessed by the lingering shard of COMET SYON. Until then, its impure alloying of silver-and-steel cannot blight inhuman foes on its own.</font>")
 	if(is_blessed)
 		examine_list += span_info("<font color = '#46bacf'>This object has been blessed by COMET SYON.</font>")
 		if(silver)

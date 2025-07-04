@@ -1,10 +1,12 @@
 /datum/job/roguetown/beggar
 	title = "Beggar"
 	flag = BEGGAR
-	department_flag = PEASANTS
+	department_flag = RABBLE
 	faction = "Station"
 	total_positions = 0
 	spawn_positions = 0
+
+	selection_color = JCOLOR_RABBLE
 
 	allowed_races = RACES_ALL_KINDS
 	allowed_ages = ALL_AGES_LIST
@@ -92,9 +94,9 @@
 		gloves = /obj/item/clothing/gloves/roguetown/fingerless
 	else
 		gloves = null
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/rags
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		armor = null
 		pants = /obj/item/clothing/under/roguetown/tights/vagrant
 		if(prob(50))

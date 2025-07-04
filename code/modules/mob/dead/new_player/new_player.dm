@@ -162,6 +162,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 			if(SSticker.job_change_locked)
 				return
 		if(SSticker.current_state <= GAME_STATE_PREGAME)
+/* minimum flavor text and ooc notes checks
 			if(tready == PLAYER_READY_TO_PLAY)
 				if(length(client.prefs.flavortext) < MINIMUM_FLAVOR_TEXT)
 					to_chat(src, span_boldwarning("You need a minimum of [MINIMUM_FLAVOR_TEXT] characters in your flavor text in order to play."))
@@ -169,9 +170,11 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 				if(length(client.prefs.ooc_notes) < MINIMUM_OOC_NOTES)
 					to_chat(src, span_boldwarning("You need at least a few words in your OOC notes in order to play."))
 					return
-
+*/
 			if(ready != tready)
 				ready = tready
+				if(ready && client && client.prefs.defiant)
+					to_chat(src, span_userdanger("Remember : Defiant ERP protection is only enabled while COMBAT mode is active. AHELP if necessary."))
 		//if it's post initialisation and they're trying to observe we do the needful
 		if(!SSticker.current_state < GAME_STATE_PREGAME && tready == PLAYER_READY_TO_OBSERVE)
 			ready = tready
@@ -261,7 +264,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 		if(client && client.prefs.is_active_migrant())
 			to_chat(usr, span_boldwarning("You are in the migrant queue."))
 			return
-
+/* minimum flavor text and ooc notes checks
 		if(length(client.prefs.flavortext) < MINIMUM_FLAVOR_TEXT)
 			to_chat(usr, span_boldwarning("You need a minimum of [MINIMUM_FLAVOR_TEXT] characters in your flavor text in order to play."))
 			return
@@ -269,7 +272,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 		if(length(client.prefs.ooc_notes) < MINIMUM_OOC_NOTES)
 			to_chat(src, span_boldwarning("You need at least a few words in your OOC notes in order to play."))
 			return
-
+*/
 		AttemptLateSpawn(href_list["SelectedJob"])
 		return
 
@@ -299,7 +302,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 	var/list/dat = list()
 	dat += GLOB.roleplay_readme
 	if(dat)
-		var/datum/browser/popup = new(src, "Primer", "AZURE PEAK", 460, 550)
+		var/datum/browser/popup = new(src, "Primer", "HELMSGUARD", 460, 550)
 		popup.set_content(dat.Join())
 		popup.open()
 
@@ -588,6 +591,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 	for(var/datum/job/prioritized_job in SSjob.prioritized_jobs)
 		if(prioritized_job.current_positions >= prioritized_job.total_positions)
 			SSjob.prioritized_jobs -= prioritized_job
+	if(client && client.prefs.defiant)
+		to_chat(src, span_userdanger("Remember : Defiant ERP protection is only enabled while COMBAT mode is active. AHELP if necessary."))
 	dat += "<table><tr><td valign='top'>"
 	var/column_counter = 0
 
@@ -596,11 +601,11 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 	omegalist += list(GLOB.courtier_positions)
 	omegalist += list(GLOB.garrison_positions)
 	omegalist += list(GLOB.church_positions)
-	omegalist += list(GLOB.inquisition_positions)
-	omegalist += list(GLOB.yeoman_positions)
+	omegalist += list(GLOB.watch_positions)
 	omegalist += list(GLOB.peasant_positions)
+	omegalist += list(GLOB.towner_positions)
+	omegalist += list(GLOB.rabble_positions)
 	omegalist += list(GLOB.mercenary_positions)
-	omegalist += list(GLOB.youngfolk_positions)
 
 	for(var/list/category in omegalist)
 		if(!SSjob.name_occupations[category[1]])
@@ -627,20 +632,22 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 					cat_name = "Nobles"
 				if (COURTIERS)
 					cat_name = "Courtiers"
+				if (CITYWATCH)
+					cat_name = "City Watch"
 				if (GARRISON)
-					cat_name = "Garrison"
+					cat_name = "Retinue"
 				if (CHURCHMEN)
 					cat_name = "Churchmen"
-				if (YEOMEN)
-					cat_name = "Yeomen"
-				if (PEASANTS)
-					cat_name = "Peasants"
-				if (YOUNGFOLK)
-					cat_name = "Sidefolk"
+				if (PEASANTRY)
+					cat_name = "Peasant"
+				if (RABBLE)
+					cat_name = "Rabble"
+				if (TOWNER)
+					cat_name = "Towner"
 				if (MERCENARIES)
 					cat_name = "Mercenaries"
-				if (INQUISITION)
-					cat_name = "Inquisition"
+/*				if (INQUISITION)
+					cat_name = "Inquisition"*/
 			//	if (GOBLIN)
 			//		cat_name = "Goblins"
 

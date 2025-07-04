@@ -1,5 +1,6 @@
 /datum/advclass/cheesemaker
 	name = "Cheesemaker"
+	title = "Cheesemaker"
 	tutorial = "Cheese cheese cheese! You have a rare wheel of cheese and know how to make more of the rare delicacy \
 	As very skilled cook you come with some ingredients to make food and feed the masses. \
 	cook up some cuisine with food gathered from the local flora and fauna"
@@ -28,6 +29,7 @@
 	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 	mouth = /obj/item/rogueweapon/huntingknife
 	belt = /obj/item/storage/belt/rogue/leather
+	beltr = /obj/item/roguekey/sund/sund_butcher
 	pants = /obj/item/clothing/under/roguetown/tights/random
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random
 	cloak = /obj/item/clothing/cloak/apron

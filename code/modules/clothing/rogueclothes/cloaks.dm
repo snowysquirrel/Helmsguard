@@ -335,6 +335,41 @@
 	color = CLOTHING_BLACK
 	detail_color = CLOTHING_WHITE
 
+/obj/item/clothing/cloak/tabard/random/Initialize()
+	color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	detail_color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	..()
+
 //Eora content from Stonekeep
 
 /obj/item/clothing/cloak/tabard/crusader/eora
@@ -601,6 +636,9 @@
 	detail_color = CLOTHING_RED
 	detail_tag = "_box"
 
+/obj/item/clothing/cloak/stabard/watchman
+	color = CLOTHING_RED
+
 /obj/item/clothing/cloak/stabard/dungeon
 	color = CLOTHING_BLACK
 
@@ -619,6 +657,41 @@
 	if(ismob(loc))
 		var/mob/L = loc
 		L.update_inv_cloak()
+	
+/obj/item/clothing/cloak/stabard/random/Initialize()
+	color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	detail_color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	..()
 
 //////////////////////////
 /// SURCOATS
@@ -633,6 +706,7 @@
 
 /obj/item/clothing/cloak/stabard/surcoat/councillor
 	color = "#2d2d2d"
+
 
 /obj/item/clothing/cloak/stabard/surcoat/attack_right(mob/user)
 	if(picked)
@@ -741,6 +815,46 @@
 /obj/item/clothing/cloak/stabard/surcoat/guard/Destroy()
 	GLOB.lordcolor -= src
 	return ..()
+
+
+/obj/item/clothing/cloak/stabard/surcoat/random/Initialize()
+	color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	detail_color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	..()
+
+
+
+
 
 /obj/item/clothing/cloak/lordcloak
 	name = "lordly cloak"
@@ -869,6 +983,9 @@
 
 /obj/item/clothing/cloak/apron/brown
 	color = CLOTHING_BROWN
+
+/obj/item/clothing/cloak/apron/tailor
+	color = "#1f5330"
 
 /obj/item/clothing/cloak/apron/waist
 	name = "apron"
@@ -1003,9 +1120,15 @@
 /obj/item/clothing/cloak/raincloak/furcloak/brown
 	color = "#685542"
 
+/obj/item/clothing/cloak/raincloak/furcloak/purple
+	color = "#460d86"
+
 /obj/item/clothing/cloak/raincloak/furcloak/black
 	color = "#2b292e"
-	
+
+/obj/item/clothing/cloak/raincloak/furcloak/red
+	color = CLOTHING_RED
+
 /obj/item/clothing/cloak/raincloak/furcloak/darkgreen
 	color = "#264d26"
 
@@ -1035,8 +1158,11 @@
 /obj/item/clothing/cloak/cape/knight
 	color = CLOTHING_WHITE
 
+/obj/item/clothing/cloak/cape/steward
+	color = CLOTHING_PURPLE	
+
 /obj/item/clothing/cloak/cape/guard
-	color = CLOTHING_AZURE
+	color = CLOTHING_RED
 
 /obj/item/clothing/cloak/cape/guard/Initialize()
 	. = ..()
@@ -1054,6 +1180,24 @@
 	GLOB.lordcolor -= src
 	return ..()
 
+/obj/item/clothing/cloak/cape/random/Initialize()
+	color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	..()
 
 /obj/item/clothing/cloak/cape/puritan
 	icon_state = "puritan_cape"
@@ -1192,6 +1336,41 @@
 /obj/item/clothing/cloak/half/red
 	color = CLOTHING_RED
 
+/obj/item/clothing/cloak/half/random/Initialize()
+	color = pick(
+				CLOTHING_RED,
+				CLOTHING_PURPLE,
+				CLOTHING_BLACK,
+				CLOTHING_GREY,
+				CLOTHING_BROWN,
+				CLOTHING_GREEN,
+				CLOTHING_DARK_GREEN,
+				CLOTHING_BLUE,
+				CLOTHING_YELLOW,
+				CLOTHING_TEAL,
+				CLOTHING_AZURE,
+				CLOTHING_WHITE,
+				CLOTHING_ORANGE,
+				CLOTHING_MAGENTA,
+				)
+	..()
+
+/obj/item/clothing/cloak/half/masteratarms
+	name = "master-at-arms cloak"
+	desc = "A cloak worn by the master-at-arms of the castle."
+	color = CLOTHING_RED
+
+/obj/item/clothing/cloak/half/masteratarms/Initialize()
+	. = ..()
+	if(GLOB.lordprimary)
+		lordcolor(GLOB.lordprimary,GLOB.lordsecondary)
+	GLOB.lordcolor += src
+
+/obj/item/clothing/cloak/half/masteratarms/Destroy()
+	GLOB.lordcolor -= src
+	return ..()
+
+
 /obj/item/clothing/cloak/half/orange
 	color = CLOTHING_ORANGE
 
@@ -1209,7 +1388,7 @@
 /obj/item/clothing/cloak/half/vet
 	name = "town watch cloak"
 	icon_state = "guardcloak"
-	color = CLOTHING_AZURE
+	color = CLOTHING_RED
 	allowed_sex = list(MALE, FEMALE)
 	allowed_race = NON_DWARVEN_RACE_TYPES
 	inhand_mod = FALSE
@@ -1701,7 +1880,7 @@
 
 /obj/item/clothing/cloak/wardencloak
 	name = "warden cloak"
-	desc = "A cloak worn by the Wardens of Azuria's Forests"
+	desc = "A cloak worn by the Wardens of the Helmsguard."
 	icon_state = "wardencloak"
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
@@ -1735,7 +1914,7 @@
 
 /obj/item/clothing/cloak/forrestercloak
 	name = "forrester cloak"
-	desc = "A cloak worn by the Black Oaks of Azuria."
+	desc = "A cloak worn by the Black Oaks."
 	icon_state = "forestcloak"
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
@@ -1750,7 +1929,7 @@
 
 /obj/item/clothing/cloak/forrestercloak/snow
 	name = "snow cloak"
-	desc = "A cloak meant to keep one's body warm in the cold of the mountains as well as the dampness of Azuria."
+	desc = "A cloak meant to keep one's body warm in the cold of the mountains."
 	icon_state = "snowcloak"
 
 //eastern update

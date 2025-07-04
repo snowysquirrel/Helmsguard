@@ -165,6 +165,9 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/list/descriptor_entries = list()
 	var/list/custom_descriptors = list()
 
+	var/list/violated = list()
+	var/defiant = TRUE
+
 	var/char_accent = "No accent"
 
 	var/datum/loadout_item/loadout
@@ -446,9 +449,8 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			if(is_legacy)
 				dat += "<br><i><font size = 1>(Legacy)<a href='?_src_=prefs;preference=legacyhelp;task=input'>(?)</a></font></i>"
 
-			dat += "<br><b>[(length(flavortext) < MINIMUM_FLAVOR_TEXT) ? "<font color = '#802929'>" : ""]Flavortext:[(length(flavortext) < MINIMUM_FLAVOR_TEXT) ? "</font>" : ""]</b><a href='?_src_=prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=prefs;preference=flavortext;task=input'>Change</a>"
-
-			dat += "<br><b>[(length(ooc_notes) < MINIMUM_OOC_NOTES) ? "<font color = '#802929'>" : ""]OOC Notes:[(length(ooc_notes) < MINIMUM_OOC_NOTES) ? "</font>" : ""]</b><a href='?_src_=prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=prefs;preference=ooc_notes;task=input'>Change</a>"
+			dat += "<br><b>Flavor Text:</b> <a href='?_src_=prefs;preference=flavortext;task=input'>Change</a>"
+			dat += "<br><b>OOC Notes:</b> <a href='?_src_=prefs;preference=ooc_notes;task=input'>Change</a>"
 
 			dat += "<br><b>OOC Extra:</b> <a href='?_src_=prefs;preference=ooc_extra;task=input'>Change</a>"
 			dat += "<br><a href='?_src_=prefs;preference=ooc_preview;task=input'><b>Preview Examine</b></a>"
@@ -731,6 +733,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 	dat += "</td>"
 	dat += "<td width='33%' align='right'>"
+	dat += "<b>Be defiant:</b> <a href='?_src_=prefs;preference=be_defiant'>[(defiant) ? "Yes":"No"]</a><br>"
 	dat += "<b>Be voice:</b> <a href='?_src_=prefs;preference=schizo_voice'>[(toggles & SCHIZO_VOICE) ? "Enabled":"Disabled"]</a>"
 	dat += "</td>"
 	dat += "</tr>"
@@ -829,7 +832,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			HTML += "<tr bgcolor='#000000'><td width='60%' align='right'>"
 			var/rank = job.title
 			var/used_name = "[job.title]"
-			if((pronouns == SHE_HER || pronouns == THEY_THEM_F) && job.f_title)
+			if((pronouns == SHE_HER) && job.f_title)
 				used_name = "[job.f_title]"
 			lastJob = job
 			if(is_banned_from(user.ckey, rank))
@@ -1055,7 +1058,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 			jpval = null
 		else
 			var/used_name = "[job.title]"
-			if((pronouns == SHE_HER || pronouns == THEY_THEM_F) && job.f_title)
+			if((pronouns == SHE_HER) && job.f_title)
 				used_name = "[job.f_title]"
 			to_chat(user, "<font color='red'>You have too low PQ for [used_name] (Min PQ: [job.min_pq]), you may only set it to low.</font>")
 			jpval = JP_LOW
@@ -1546,18 +1549,14 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 				
 				if("extra_language")
 					var/static/list/selectable_languages = list(
-						/datum/language/elvish,
-						/datum/language/dwarvish,
-						/datum/language/orcish, 
-						/datum/language/hellspeak,
-						/datum/language/draconic,
-						/datum/language/celestial,
-						/datum/language/grenzelhoftian,
-						/datum/language/kazengunese,
-						/datum/language/etruscan,
-						/datum/language/gronnic,
-						/datum/language/otavan,
-						/datum/language/aavnic
+							/datum/language/common,
+							/datum/language/dwarvish,
+							/datum/language/elvish,
+							/datum/language/celestial,
+							/datum/language/hellspeak,
+							/datum/language/orcish,
+							/datum/language/grenzelhoftian,
+							/datum/language/etruscan,
 					)
 					var/list/choices = list("None")
 					for(var/language in selectable_languages)
@@ -2244,6 +2243,13 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					widescreenpref = !widescreenpref
 					user.client.change_view(CONFIG_GET(string/default_view))
 
+				if("be_defiant")
+					defiant = !defiant
+					if(defiant)
+						to_chat(user, span_notice("You will now have resistance from people violating you, but be punished for trying to violate others." + " " + span_boldwarning("(COMBAT Mode will disable ERP interactions. Bypassing this is a bannable offense, AHELP if necessary.)")))
+					else
+						to_chat(user, span_boldwarning("You fully immerse yourself in the grim experience, waiving your resistance from people violating you, but letting you do the same unto other non-defiants"))
+
 				if("schizo_voice")
 					toggles ^= SCHIZO_VOICE
 					if(toggles & SCHIZO_VOICE)
@@ -2361,7 +2367,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 		real_name = pref_species.random_name(gender)
 
 	if(roundstart_checks)
-		if(CONFIG_GET(flag/humans_need_surnames) && ((pref_species.id == "human") || (pref_species.id == "humen")))
+		if(CONFIG_GET(flag/humans_need_surnames) && ((pref_species.id == "human") || (pref_species.id == "human")))
 			var/firstspace = findtext(real_name, " ")
 			var/name_length = length(real_name)
 			if(!firstspace)	//we need a surname

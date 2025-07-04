@@ -5,7 +5,6 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/miner
-
 	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
 
 /datum/outfit/job/roguetown/adventurer/miner/pre_equip(mob/living/carbon/human/H)
@@ -25,10 +24,10 @@
 						/obj/item/recipe_book/survival = 1,
 						/obj/item/recipe_book/builder = 1,
 						)
-	if(H.pronouns == SHE_HER || H.pronouns == THEY_THEM_F)
+	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/brown
-	if(H.pronouns == HE_HIM || H.pronouns == THEY_THEM || H.pronouns == IT_ITS)
+	if(H.gender == MALE)
 		armor = /obj/item/clothing/suit/roguetown/armor/workervest
 		pants = /obj/item/clothing/under/roguetown/trou
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random

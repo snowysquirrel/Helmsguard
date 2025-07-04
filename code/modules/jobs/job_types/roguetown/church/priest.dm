@@ -1,5 +1,6 @@
 /datum/job/roguetown/priest
 	title = "Priest"
+	f_title = "Priestess"
 	flag = PRIEST
 	department_flag = CHURCHMEN
 	faction = "Station"
@@ -7,13 +8,13 @@
 	spawn_positions = 1
 	selection_color = JCOLOR_CHURCH
 	f_title = "Priestess"
-	allowed_races = RACES_NO_CONSTRUCT		//Too recent arrivals to ascend to priesthood.
-	allowed_patrons = ALL_DIVINE_PATRONS
+	allowed_races = TOLERATED_CLEARANCE	//Too recent arrivals to ascend to priesthood. 
+	allowed_patrons = /datum/patron/old_god
 	allowed_sexes = list(MALE, FEMALE)
 	tutorial = "The Divine is all that matters in a world of the immoral. The Weeping God left his children to rule over us mortals--and you will preach their wisdom to any who still heed their will. The faithless are growing in number. It is up to you to shepard them toward a Gods-fearing future; for you are a priest of Astrata."
 	whitelist_req = FALSE
 
-	spells = list(/obj/effect/proc_holder/spell/invoked/cure_rot, /obj/effect/proc_holder/spell/self/convertrole/templar, /obj/effect/proc_holder/spell/self/convertrole/monk)
+	spells = list(/obj/effect/proc_holder/spell/invoked/cure_rot, /obj/effect/proc_holder/spell/self/convertrole/monk)
 	outfit = /datum/outfit/job/roguetown/priest
 
 	display_order = JDO_PRIEST
@@ -36,7 +37,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/priest
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	beltl = /obj/item/storage/keyring/priest
+	beltl = /obj/item/storage/keyring/sund/sund_priest
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	id = /obj/item/clothing/ring/active/nomag
@@ -137,29 +138,27 @@
 		//Abdicate previous King
 		for(var/mob/living/carbon/human/HL in GLOB.human_list)
 			if(HL.mind)
-				if(HL.mind.assigned_role == "Grand Duke")
+				if(HL.mind.assigned_role == "Grand Duke" || HL.mind.assigned_role == "Lord Consort")
 					HL.mind.assigned_role = "Towner" //So they don't get the innate traits of the king
 			//would be better to change their title directly, but that's not possible since the title comes from the job datum
 			if(HL.job == "Grand Duke")
-				HL.job = "Duke Emeritus"
+				HL.job = "Grand Duke Emeritus"
+			if(HL.job == "Lord Consort")
+				HL.job = "Grand Duke Dowager"
 
 		//Coronate new King (or Queen)
 		HU.mind.assigned_role = "Grand Duke"
 		HU.job = "Grand Duke"
-		if(should_wear_femme_clothes(HU))
-			SSticker.rulertype = "Grand Duchess"
+		if(HU.gender == FEMALE)
+			SSticker.rulertype = "Lord Castellanin"
 		else
 			SSticker.rulertype = "Grand Duke"
 		SSticker.rulermob = HU
 		SSticker.regentmob = null
 		var/dispjob = mind.assigned_role
 		removeomen(OMEN_NOLORD)
-		say("By the authority of the gods, I pronounce you Ruler of all Azuria!")
-		priority_announce("[real_name] the [dispjob] has named [HU.real_name] the inheritor of AZURE PEAK!", title = "Long Live [HU.real_name]!", sound = 'sound/misc/bell.ogg')
-		var/datum/job/roguetown/nomoredukes = SSjob.GetJob("Grand Duke")
-		if(nomoredukes)
-			nomoredukes.total_positions = -1000 //We got what we got now.
-
+		say("By the authority of the gods, I pronounce you the Ruler of Helmsguard!")
+		priority_announce("[real_name] the [dispjob] has named [HU.real_name] the inheritor of HELMSGUARD!", title = "Long Live [HU.real_name]!", sound = 'sound/misc/bell.ogg')
 
 /mob/living/carbon/human/proc/churchexcommunicate()
 	set name = "Curse"
@@ -202,18 +201,28 @@
 			return FALSE
 		priority_announce("[inputty]", title = "The Priest Speaks", sound = 'sound/misc/bell.ogg', sender = src)
 
-/obj/effect/proc_holder/spell/self/convertrole/templar
-	name = "Recruit Templar"
-	new_role = "Templar"
+/obj/effect/proc_holder/spell/self/convertrole/knight_hospitaler
+	name = "Recruit Knight Hospitaler"
+	new_role = "Knight Hospitaler"
 	overlay_state = "recruit_templar"
 	recruitment_faction = "Templars"
-	recruitment_message = "Serve the ten, %RECRUIT!"
-	accept_message = "FOR THE TEN!"
+	recruitment_message = "Rise as a Knight of the Hospital, %RECRUIT!"
+	accept_message = "By the Shepherd's Will!"
 	refuse_message = "I refuse."
 
+/obj/effect/proc_holder/spell/self/convertrole/hospitaler_sergeant
+	name = "Recruit Hospitaler Sergeant"
+	new_role = "Hospitaler Sergeant"
+	overlay_state = "recruit_templar"
+	recruitment_faction = "Templars"
+	recruitment_message = "Pledge Thy Sword to the Hospital, %RECRUIT!"
+	accept_message = "By the Shepherd's Will!"
+	refuse_message = "I refuse."
+
+
 /obj/effect/proc_holder/spell/self/convertrole/monk
-	name = "Recruit Acolyte"
-	new_role = "Acolyte"
+	name = "Recruit Disciple"
+	new_role = "Monk"
 	overlay_state = "recruit_acolyte"
 	recruitment_faction = "Church"
 	recruitment_message = "Serve the ten, %RECRUIT!"

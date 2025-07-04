@@ -2,7 +2,7 @@
 /datum/job/roguetown/wretch
 	title = "Wretch"
 	flag = WRETCH
-	department_flag = PEASANTS
+	department_flag = RABBLE
 	faction = "Station"
 	total_positions = 5
 	spawn_positions = 5
@@ -11,6 +11,8 @@
 	outfit = null
 	outfit_female = null
 	display_order = JDO_WRETCH
+	selection_color = JCOLOR_RABBLE
+	
 	show_in_credits = FALSE
 	min_pq = 20
 	max_pq = null

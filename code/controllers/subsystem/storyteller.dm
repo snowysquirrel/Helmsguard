@@ -1188,11 +1188,7 @@ SUBSYSTEM_DEF(gamemode)
 			switch(human_mob.pronouns)
 				if(HE_HIM)
 					GLOB.azure_round_stats[STATS_MALE_POPULATION]++
-				if(HE_HIM_F)
-					GLOB.azure_round_stats[STATS_MALE_POPULATION]++
 				if(SHE_HER)
-					GLOB.azure_round_stats[STATS_FEMALE_POPULATION]++
-				if(SHE_HER_M)
 					GLOB.azure_round_stats[STATS_FEMALE_POPULATION]++
 				else
 					GLOB.azure_round_stats[STATS_OTHER_GENDER]++
@@ -1209,7 +1205,7 @@ SUBSYSTEM_DEF(gamemode)
 				GLOB.azure_round_stats[STATS_ALIVE_GARRISON]++
 			if(human_mob.mind.assigned_role in GLOB.church_positions)
 				GLOB.azure_round_stats[STATS_ALIVE_CLERGY]++
-			if((human_mob.mind.assigned_role in GLOB.yeoman_positions) || (human_mob.mind.assigned_role in GLOB.peasant_positions) || (human_mob.mind.assigned_role in GLOB.mercenary_positions))
+			if((human_mob.mind.assigned_role in GLOB.towner_positions) || (human_mob.mind.assigned_role in GLOB.peasant_positions) || (human_mob.mind.assigned_role in GLOB.mercenary_positions))
 				GLOB.azure_round_stats[STATS_ALIVE_TRADESMEN]++
 			if(human_mob.has_flaw(/datum/charflaw/clingy))
 				GLOB.azure_round_stats[STATS_CLINGY_PEOPLE]++
@@ -1239,30 +1235,18 @@ SUBSYSTEM_DEF(gamemode)
 				GLOB.azure_round_stats[STATS_ALIVE_KOBOLDS]++
 			if(islizard(human_mob))
 				GLOB.azure_round_stats[STATS_ALIVE_LIZARDS]++
-			if(isaasimar(human_mob))
-				GLOB.azure_round_stats[STATS_ALIVE_AASIMAR]++
 			if(istiefling(human_mob))
 				GLOB.azure_round_stats[STATS_ALIVE_TIEFLINGS]++
 			if(ishalfkin(human_mob))
 				GLOB.azure_round_stats[STATS_ALIVE_HALFKIN]++
-			if(iswildkin(human_mob))
-				GLOB.azure_round_stats[STATS_ALIVE_WILDKIN]++
 			if(isconstruct(human_mob))
 				GLOB.azure_round_stats[STATS_ALIVE_CONSTRUCTS]++
-			if(isvermin(human_mob))
-				GLOB.azure_round_stats[STATS_ALIVE_VERMINFOLK]++
-			if(isdracon(human_mob))
-				GLOB.azure_round_stats[STATS_ALIVE_DRACON]++
-			if(isaxian(human_mob))
-				GLOB.azure_round_stats[STATS_ALIVE_AXIAN]++
 			if(istabaxi(human_mob))
 				GLOB.azure_round_stats[STATS_ALIVE_TABAXI]++
 			if(isvulp(human_mob))
 				GLOB.azure_round_stats[STATS_ALIVE_VULPS]++
 			if(islupian(human_mob))
 				GLOB.azure_round_stats[STATS_ALIVE_LUPIANS]++
-			if(ismoth(human_mob))
-				GLOB.azure_round_stats[STATS_ALIVE_MOTHS]++
 
 
 /// Returns total follower influence for the given storyteller

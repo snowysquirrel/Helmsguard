@@ -41,6 +41,7 @@
 		/datum/mob_descriptor/testicles,
 		/datum/mob_descriptor/breasts,
 		/datum/mob_descriptor/vagina,
+		/datum/mob_descriptor/defiant,
 		)
 
 /mob/living/proc/get_descriptor_of_slot(descriptor_slot, list/descs)
@@ -138,15 +139,7 @@
 				they_replace = "he"
 				man_replace = "man"
 				him_replace = "him"
-			if (HE_HIM_F)
-				they_replace = "he"
-				man_replace = "man"
-				him_replace = "him"
 			if (SHE_HER)
-				they_replace = "she"
-				man_replace = "woman"
-				him_replace = "her"
-			if (SHE_HER_M)
 				they_replace = "she"
 				man_replace = "woman"
 				him_replace = "her"
@@ -154,7 +147,7 @@
 				they_replace = "they"
 				man_replace = "person"
 				him_replace = "them"
-			if (THEY_THEM_F)
+	/*		if (THEY_THEM_F)
 				they_replace = "they"
 				man_replace = "person"
 				him_replace = "them"
@@ -163,6 +156,7 @@
 				man_replace = "creacher"
 				him_replace = "it"
 	// LETHALSTONE EDIT END
+*/
 	string = replacetext(string, "%THEY%", they_replace)
 	if(they_replace == "they")
 		string = replacetext(string, "%HAVE%", "have")

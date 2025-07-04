@@ -4,11 +4,11 @@
 	outfit = /datum/outfit/job/roguetown/mercenary/vaquero
 	horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck/tame/saddled
 	cmode_music = 'sound/music/combat_vaquero.ogg'
-	category_tags = list(CTAG_MERCENARY)
+//	category_tags = list(CTAG_MERCENARY)
 	traits_applied = list(TRAIT_OUTLANDER)
 
 /datum/advclass/mercenary/vaquero/equipme(mob/living/carbon/human/H)
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled
 	return ..()
 
@@ -47,8 +47,7 @@
 					/obj/item/storage/belt/rogue/pouch/coins/poor = 1,
 					/obj/item/rogueweapon/huntingknife/idagger/navaja = 1,
 					/obj/item/lockpick = 1,
-					/obj/item/flashlight/flare/torch = 1,
-					/obj/item/roguekey/mercenary = 1
+					/obj/item/flashlight/flare/torch = 1
 					)
 	var/weapons = list("Harp","Lute","Accordion","Guitar","Hurdy-Gurdy","Viola","Vocal Talisman","Flute")
 	var/weapon_choice = input("Choose your instrument.", "TAKE UP ARMS") as anything in weapons

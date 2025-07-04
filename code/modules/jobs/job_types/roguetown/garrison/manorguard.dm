@@ -11,7 +11,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 	tutorial = "Having proven yourself loyal and capable, you are entrusted to defend the town and enforce its laws. \
 				Trained regularly in combat and siege warfare, you deal with threats - both within and without. \
-				Obey your Sergeant-at-Arms, the Marshal, and the Crown. Show the nobles and knights your respect, so that you may earn it in turn. Not as a commoner, but as a soldier.."
+				Obey your Master-at-Arms, the Marshal, and the Crown. Show the nobles and knights your respect, so that you may earn it in turn. Not as a commoner, but as a soldier.."
 	display_order = JDO_CASTLEGUARD
 	whitelist_req = TRUE
 
@@ -53,7 +53,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/black
 	backr = /obj/item/storage/backpack/rogue/satchel/black
 	id = /obj/item/scomstone/bad/garrison
-
+/*
 // Melee goon
 /datum/advclass/manorguard/footsman
 	name = "Footman"
@@ -108,10 +108,8 @@
 		if("Halberd")
 			r_hand = /obj/item/rogueweapon/halberd
 			backl = /obj/item/gwstrap
-		if("Greataxe")
-			r_hand = /obj/item/rogueweapon/greataxe
-			backl = /obj/item/gwstrap
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/guardcastle)
+
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/sund/sund_gate)
 	H.verbs |= /mob/proc/haltyell
 
 	var/helmets = list(
@@ -179,7 +177,7 @@
 			beltr = /obj/item/quiver/sling/iron
 			r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/sling // Both are belt slots and it's not worth setting where the cugel goes for everyone else, sad.
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/guardcastle)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/sund/sund_gate)
 	H.verbs |= /mob/proc/haltyell
 
 	var/helmets = list(
@@ -246,17 +244,6 @@
 			beltr = /obj/item/rogueweapon/sword/sabre
 			backl = /obj/item/rogueweapon/shield/wood
 	
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/guardcastle)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/sund/sund_gate)
 	H.verbs |= /mob/proc/haltyell
-
-	var/helmets = list(
-	"Simple Helmet" 	= /obj/item/clothing/head/roguetown/helmet,
-	"Kettle Helmet" 	= /obj/item/clothing/head/roguetown/helmet/kettle,
-	"Bascinet Helmet"		= /obj/item/clothing/head/roguetown/helmet/bascinet,
-	"Sallet Helmet"		= /obj/item/clothing/head/roguetown/helmet/sallet,
-	"Winged Helmet" 	= /obj/item/clothing/head/roguetown/helmet/winged,
-	"None"
-	)
-	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
-	if(helmchoice != "None")
-		head = helmets[helmchoice]
+*/

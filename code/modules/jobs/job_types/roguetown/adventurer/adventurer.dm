@@ -6,18 +6,19 @@ GLOBAL_VAR_INIT(adventurer_hugbox_duration_still, 3 MINUTES)
 /datum/job/roguetown/adventurer
 	title = "Adventurer"
 	flag = ADVENTURER
-	department_flag = PEASANTS
+	department_flag = RABBLE
 	faction = "Station"
 	total_positions = 20
 	spawn_positions = 20
 	allowed_races = RACES_ALL_KINDS
-	tutorial = "Hero of nothing, a wanderer in foreign lands in search of fame and riches. Whatever led you to this fate is up to the wind to decide, and you've never fancied yourself for much other than the thrill. Some day your pride is going to catch up to you, and you're going to find out why most men don't end up in the annals of history."
+	tutorial = "A wanderer in foreign lands in search of fame and riches. Whatever led you to this fate is up to the wind to decide, and you've never fancied yourself for much other than the thrill. Some day your pride is going to catch up to you, and you're going to find out why most men don't end up in the annals of history."
 
 
 	outfit = null
 	outfit_female = null
 
 	display_order = JDO_ADVENTURER
+	selection_color = JCOLOR_RABBLE
 	show_in_credits = FALSE
 	min_pq = 0
 	max_pq = null

@@ -1,7 +1,7 @@
 /datum/job/roguetown/bandit //pysdon above there's like THREE bandit.dms now I'm so sorry. This one is latejoin bandits, the one in villain is the antag datum, and the one in the 'antag' folder is an old adventurer class we don't use. Good luck!
 	title = "Bandit"
 	flag = BANDIT
-	department_flag = PEASANTS
+	department_flag = RABBLE
 	faction = "Station"
 	total_positions = 0
 	spawn_positions = 0
@@ -14,6 +14,8 @@
 
 	obsfuscated_job = TRUE
 
+
+	selection_color = JCOLOR_RABBLE
 	display_order = JDO_BANDIT
 	announce_latejoin = FALSE
 	min_pq = 3
@@ -59,14 +61,14 @@
 // Changed up proc from Wretch to suit bandits bit more
 /proc/bandit_select_bounty(mob/living/carbon/human/H)
 	var/bounty_poster = input(H, "Who placed a bounty on you?", "Bounty Poster") as anything in list("The Justiciary of Azuria", "The Grenzelhoftian Holy See")
-	var/bounty_severity = input(H, "How notorious are you?", "Bounty Amount") as anything in list("Small Fish", "Bay Butcher", "Azurean Boogeyman")
+	var/bounty_severity = input(H, "How notorious are you?", "Bounty Amount") as anything in list("Small Fish", "Bay Butcher", "Helmsguardian Boogeyman")
 	var/bounty_total = rand(300, 600) // Just in case
 	switch(bounty_severity)
 		if("Small Fish")
 			bounty_total = rand(300, 400)
 		if("Bay Butcher")
 			bounty_total = rand(400, 500)
-		if("Azurean Boogeyman")
+		if("Helmsguardian Boogeyman")
 			bounty_total = rand(500, 600)
 	var/my_crime = input(H, "What is your crime?", "Crime") as text|null
 	if (!my_crime)

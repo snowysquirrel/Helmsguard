@@ -65,11 +65,11 @@
 	H.change_stat("intelligence", 3)
 	ADD_TRAIT(H, TRAIT_SEEPRICES_SHITTY, "[type]")
 	ADD_TRAIT(H, TRAIT_EMPATH, TRAIT_GENERIC)
-	if(should_wear_femme_clothes(H))//Village grandma look.
+	if(H.gender == FEMALE)//Village grandma look.
 		head = /obj/item/clothing/head/roguetown/chaperon/greyscale/elder
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/silkdress
 		backr = /obj/item/clothing/cloak/raincloak/furcloak
-	else if(should_wear_masc_clothes(H))//Bailiff sort of look to it.
+	else if(H.gender == MALE)//Bailiff sort of look to it.
 		head = /obj/item/clothing/head/roguetown/chaperon/greyscale/elder
 		shirt = /obj/item/clothing/suit/roguetown/shirt/tunic
 		gloves = /obj/item/clothing/gloves/roguetown/leather

@@ -107,16 +107,10 @@
 	/datum/species/elf/wood,\
 	/datum/species/dwarf/mountain,\
 	/datum/species/tieberian,\
-	/datum/species/aasimar,\
 	/datum/species/lizardfolk,\
 	/datum/species/lupian,\
 	/datum/species/tabaxi,\
 	/datum/species/vulpkanin,\
-	/datum/species/akula,\
-	/datum/species/moth,\
-	/datum/species/dracon,\
-	/datum/species/anthromorph,\
-	/datum/species/anthromorphsmall,\
 	/datum/species/demihuman,\
 	/datum/species/halforc,\
 	/datum/species/kobold,\
@@ -128,28 +122,23 @@
 	/datum/species/elf/wood,\
 	/datum/species/human/halfelf,\
 	/datum/species/dwarf/mountain,\
-	/datum/species/aasimar,\
-	/datum/species/lupian,\
-	/datum/species/vulpkanin,\
-	/datum/species/moth,\
-	/datum/species/dracon,
 
 #define RACES_TOLERATED \
-	/datum/species/elf/dark,\
-	/datum/species/tieberian,\
-	/datum/species/lizardfolk,\
-	/datum/species/tabaxi,\
-	/datum/species/akula,\
-	/datum/species/anthromorph,\
 	/datum/species/demihuman,\
+	/datum/species/kobold,\
+	/datum/species/elf/wood,\
+	/datum/species/tabaxi,\
+	/datum/species/lupian,\
+	/datum/species/vulpkanin,\
 
 
 #define RACES_SHUNNED \
 	/datum/species/halforc,\
-	/datum/species/anthromorphsmall,\
 	/datum/species/kobold,\
 
 #define RACES_DESPISED \
+	/datum/species/elf/dark,\
+	/datum/species/halforc,\
 	/datum/species/goblinp,\
 
 #define RACES_CONSTRUCT \
@@ -166,25 +155,28 @@
 #define NOBLE_RACES_TYPES list(\
 	/datum/species/human/northern,\
 	/datum/species/human/halfelf,\
-	/datum/species/elf/dark,\
 	/datum/species/elf/wood,\
 	/datum/species/dwarf/mountain,\
-	/datum/species/tieberian,\
-	/datum/species/aasimar,\
-	/datum/species/lizardfolk,\
-	/datum/species/lupian,\
-	/datum/species/tabaxi,\
-	/datum/species/vulpkanin,\
-	/datum/species/akula,\
-	/datum/species/moth,\
-	/datum/species/dracon,\
-	/datum/species/anthromorph,\
-	/datum/species/anthromorphsmall,\
 	/datum/species/demihuman,\
-	/datum/species/kobold,\
-	/datum/species/goblinp,\
-	/datum/species/construct/metal,\
 )
+
+#define TRUSTED_CLEARANCE list(\
+	/datum/species/human/northern,\
+	/datum/species/human/halfelf,\
+	/datum/species/elf/wood,\
+	/datum/species/dwarf/mountain,\
+	/datum/species/demihuman,\
+	/datum/species/halforc,\
+)
+
+#define TOLERATED_CLEARANCE list(\
+	/datum/species/human/northern,\
+	/datum/species/human/halfelf,\
+	/datum/species/elf/wood,\
+	/datum/species/dwarf/mountain,\
+	/datum/species/demihuman,\
+)
+
 
 #define CLOTHED_RACES_TYPES list(\
 	/datum/species/human/northern,\
@@ -193,16 +185,10 @@
 	/datum/species/elf/wood,\
 	/datum/species/dwarf/mountain,\
 	/datum/species/tieberian,\
-	/datum/species/aasimar,\
 	/datum/species/lizardfolk,\
 	/datum/species/lupian,\
 	/datum/species/tabaxi,\
 	/datum/species/vulpkanin,\
-	/datum/species/akula,\
-	/datum/species/moth,\
-	/datum/species/dracon,\
-	/datum/species/anthromorph,\
-	/datum/species/anthromorphsmall,\
 	/datum/species/demihuman,\
 	/datum/species/halforc,\
 	/datum/species/kobold,\
@@ -216,15 +202,10 @@
 	/datum/species/elf/dark,\
 	/datum/species/elf/wood,\
 	/datum/species/tieberian,\
-	/datum/species/aasimar,\
 	/datum/species/lizardfolk,\
 	/datum/species/lupian,\
 	/datum/species/tabaxi,\
 	/datum/species/vulpkanin,\
-	/datum/species/akula,\
-	/datum/species/moth,\
-	/datum/species/dracon,\
-	/datum/species/anthromorph,\
 	/datum/species/demihuman,\
 	/datum/species/halforc,\
 	/datum/species/construct/metal,\
@@ -233,15 +214,10 @@
 #define HUMANLIKE_RACE_TYPES list(\
 	/datum/species/human/northern,\
 	/datum/species/tieberian,\
-	/datum/species/aasimar,\
 	/datum/species/lizardfolk,\
 	/datum/species/lupian,\
 	/datum/species/tabaxi,\
 	/datum/species/vulpkanin,\
-	/datum/species/akula,\
-	/datum/species/moth,\
-	/datum/species/dracon,\
-	/datum/species/anthromorph,\
 	/datum/species/demihuman,\
 	/datum/species/construct/metal,\
 )
@@ -326,6 +302,7 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define CTAG_PILGRIM 		"CAT_PILGRIM"  		// Pilgrim classes
 #define CTAG_ADVENTURER 	"CAT_ADVENTURER"  	// Adventurer classes
 #define CTAG_TOWNER 		"CAT_TOWNER"  		// Villager class - Villagers can use it
+#define CTAG_ARTISAN 		"CAT_ARTISAN"
 #define CTAG_ANTAG 			"CAT_ANTAG"  		// Antag class - results in an antag
 #define CTAG_BANDIT			"CAT_BANDIT"		// Bandit class - Tied to the bandit antag really
 #define CTAG_CHALLENGE 		"CAT_CHALLENGE"  	// Challenge class - Meant to be free for everyone
@@ -340,12 +317,17 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define CTAG_WARDEN			"CAT_WARDEN"		// Warden class - Handles warden class selector.
 #define CTAG_WATCH			"CAT_WATCH"			// Watch class - Handles Town Watch class selector
 #define CTAG_MENATARMS		"CAT_MENATARMS"		// Men-at-Arms class - Handles Men-at-Arms class selector
-#define CTAG_SERGEANT		"CAT_SERGEANT"		// Sergeant class - Handles Sergeant class selector (weapons selection)
+#define CTAG_MASTERATARMS  	"CAT_MASTERATARMS"	// Master-at-Arms class - Handles Master-at-Arms class selector
+#define CTAG_CHAPTERMASTER	"CAT_CHAPTERMASTER"	// Chapter Master class - Handles Chapter Master class selector
+#define CTAG_KNIGHTTEMPLAR	"CAT_KNIGHTTEMPLAR"	// Knight Templar class - Handles Knight Templar class selector
+#define CTAG_TEMPLAR		"CAT_TEMPLAR"		// Templar class - Handles Templar class selector
+#define CTAG_KNIGHTHOSP		"CAT_KNIGHTHOSP"	// Hospitaler class - Handles Hospitaler class selector
+#define CTAG_HOSPITALER		"CAT_HOSPITALER"	// Hospitaler Sergeant class - Handles Hospitaler Sergeant class selector
+#define CTAG_GATEMASTER		"CAT_GATEMASTER"		// Gatemaster class - Handles Gatemaster class selector
 #define CTAG_ROYALGUARD		"CAT_ROYALGUARD"	// Royal Guard class - Handles Royal Guard class selector
 #define CTAG_CONSORT		"CAT_CONSORT"		// Consort/Suitor subclasses
 #define CTAG_MERCENARY		"CAT_MERCENARY"		// Mercenary class - Handles Mercenary class selector
 #define CTAG_HAND			"CAT_HAND"			// Hand class - Handles Hand class selector
-#define CTAG_TEMPLAR		"CAT_TEMPLAR"		// Templar class - Handles Templar class selector
 #define CTAG_HEIR			"CAT_HEIR"			// Prince(cess) class - Handles Heir class selector
 #define CTAG_LORD			"CAT_LORD"			// Lord class - Handles Lord class selector
 #define CTAG_SQUIRE			"CAT_SQUIRE"		// Squire class - Handles Squire class selector
@@ -358,6 +340,9 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define CTAG_GUILDSMASTER 	"CAT_GUILDSMASTER"	// Guildsmaster class - Handles Guildsmaster class selector 
 #define CTAG_GUILDSMEN 		"CAT_GUILDSMEN"		// Guildsmen class - Handles Guildsmen class selector
 #define CTAG_NIGHTMAIDEN	"CAT_NIGHTMAIDEN"	// Bathhouse Attendant's aesthetic choices.
+#define CTAG_STEWARD		"CAT_STEWARD"		// Steward's aesthetic choices.
+#define CTAG_APPRENTICE		"CAT_APPRENTICE"		// Apprentice's class selector.
+#define CTAG_GUTTERFOLK		"CAT_GUTTERFOLK"
 
 /*
 	Defines for the triumph buy datum categories

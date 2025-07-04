@@ -5,7 +5,7 @@
 	var/endTurfX = 0
 	var/endTurfY = 0
 	var/endTurfZ = -1
-	var/mapGeneratorType = /datum/mapGenerator/beach
+	var/mapGeneratorType = /datum/mapGenerator/roguetownfield
 	var/datum/mapGenerator/mapGenerator
 
 /obj/effect/landmark/mapGenerator/Initialize(mapload)

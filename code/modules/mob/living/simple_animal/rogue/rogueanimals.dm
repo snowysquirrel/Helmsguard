@@ -48,9 +48,16 @@
 	var/summon_tier = 0 // Tier of summoning
 	var/summon_primer = null // The message they get when summoned
 
-	//If the creature is doing something they should STOP MOVING.
-	var/can_act = TRUE
 
+//If the creature is doing something they should STOP MOVING.
+
+	var/can_act = TRUE
+	var/charge = 0
+	var/charge_add = 0
+	var/charge_power = 0
+	var/def_prob = 0
+	var/atk_prob = 0
+	
 /mob/living/simple_animal/hostile/retaliate/rogue/Move()
 	//If you cant act and dont have a player stop moving.
 	if(!can_act && !client)
@@ -280,3 +287,16 @@
 		stop_automated_movement = TRUE
 		Goto(user,move_to_delay)
 		addtimer(CALLBACK(src, PROC_REF(return_action)), 3 SECONDS)
+
+/mob/living/simple_animal/hostile/retaliate/rogue/proc/charge_power_add(added as num)
+	charge_power += added
+	return TRUE
+
+/mob/living/simple_animal/hostile/retaliate/rogue/Move()
+	. = ..()
+	if(has_buckled_mobs())
+		var/mob/living/carbon/H = buckled_mobs[1]
+		if(H.m_intent == MOVE_INTENT_RUN)
+			charge_power_add(0.5)
+		if(H.m_intent == MOVE_INTENT_WALK)
+			charge_power = 0

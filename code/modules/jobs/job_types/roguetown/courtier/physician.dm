@@ -1,12 +1,13 @@
 /datum/job/roguetown/physician
 	title = "Court Physician"
 	flag = PHYSICIAN
-	department_flag = NOBLEMEN
+	department_flag = COURTIERS
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
 
-	allowed_races = RACES_ALL_KINDS
+	selection_color = JCOLOR_COURTIER
+	allowed_races = NOBLE_RACES_TYPES
 	allowed_sexes = list(MALE, FEMALE)
 	display_order = JDO_PHYSICIAN
 	tutorial = "You were a child born into good wealth--but poor health. \
@@ -43,7 +44,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltl = /obj/item/storage/belt/rogue/surgery_bag/full/physician
-	beltr = /obj/item/storage/keyring/physician
+	beltr = /obj/item/storage/keyring/sund/sund_noble
 	id = /obj/item/scomstone/bad
 	r_hand = /obj/item/rogueweapon/woodstaff
 	backl = /obj/item/storage/backpack/rogue/satchel/black

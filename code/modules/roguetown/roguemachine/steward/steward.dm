@@ -17,7 +17,7 @@
 	anchored = TRUE
 	layer = BELOW_OBJ_LAYER
 	var/locked = FALSE
-	var/keycontrol = "steward"
+	var/keycontrol = "steward"	// Can be changed in the map editor to say, sund_steward.
 	var/current_tab = TAB_MAIN
 	var/compact = TRUE
 	var/total_deposit = 0
@@ -29,7 +29,7 @@
 /obj/structure/roguemachine/steward/attackby(obj/item/P, mob/user, params)
 	if(istype(P, /obj/item/roguekey))
 		var/obj/item/roguekey/K = P
-		if(K.lockid == keycontrol || istype(K, /obj/item/roguekey/lord)) //Master key
+		if(K.lockid == keycontrol || istype(K, /obj/item/roguekey/lord)) // Old default Master key.
 			locked = !locked
 			playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
 			(locked) ? (icon_state = "steward_machine_off") : (icon_state = "steward_machine")
@@ -71,14 +71,14 @@
 		if(!D)
 			return
 		if(SStreasury.treasury_value < D.get_import_price())
-			say("Insufficient mammon.")
+			say("Insufficient groschen.")
 			return
 		var/amt = D.get_import_price()
 		SStreasury.treasury_value -= amt
 		SStreasury.total_import += amt
 		SStreasury.log_to_steward("-[amt] imported [D.name]")
 		if(amt >= 100) //Only announce big spending.
-			scom_announce("Azure Peak imports [D.name] for [amt] mammon.", )
+			scom_announce("Helmsguard imports [D.name] for [amt] groschen.", )
 		D.raise_demand()
 		addtimer(CALLBACK(src, PROC_REF(do_import), D.type), 10 SECONDS)
 	if(href_list["export"])
@@ -88,6 +88,21 @@
 		if(!SStreasury.do_export(D))
 			say("Insufficient stock.")
 			return
+		var/amt = D.get_export_price()
+
+		// Try to export everything from town stockpile
+		if(D.held_items[1] >= D.importexport_amt)
+			D.held_items[1] -= D.importexport_amt
+		// If not possible, first pull form town stockpile, then bog stockpile
+		else
+			D.held_items[2] -= (D.importexport_amt - D.held_items[1])
+			D.held_items[1] = 0
+
+		SStreasury.treasury_value += amt
+		SStreasury.log_to_steward("+[amt] exported [D.name]")
+		if(amt >= 100) //Only announce big spending.
+			scom_announce("Helmsguard exports [D.name] for [amt] groschen.")
+		D.lower_demand()
 	if(href_list["togglewithdraw"])
 		var/datum/roguestock/D = locate(href_list["togglewithdraw"]) in SStreasury.stockpile_datums
 		if(!D)
@@ -182,7 +197,7 @@
 				SStreasury.give_money_account(-newtax, A, "NERVE MASTER")
 				break
 	if(href_list["payroll"])
-		var/list/L = list(GLOB.noble_positions) + list(GLOB.garrison_positions) + list(GLOB.courtier_positions) + list(GLOB.church_positions) + list(GLOB.yeoman_positions) + list(GLOB.peasant_positions) + list(GLOB.youngfolk_positions) + list(GLOB.inquisition_positions)
+		var/list/L = list(GLOB.noble_positions) + list(GLOB.garrison_positions) + list(GLOB.courtier_positions) + list(GLOB.church_positions) + list(GLOB.towner_positions) + list(GLOB.peasant_positions) + list(GLOB.rabble_positions)
 		var/list/things = list()
 		for(var/list/category in L)
 			for(var/A in category)

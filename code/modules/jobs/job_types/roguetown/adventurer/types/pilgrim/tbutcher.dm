@@ -22,6 +22,7 @@
 	backl = /obj/item/storage/backpack/rogue/satchel
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver // old tbutcher had no knife. as a butcher.
+	beltr = /obj/item/roguekey/sund/sund_butcher
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	backpack_contents = list(
@@ -31,7 +32,7 @@
 						/obj/item/recipe_book/survival = 1,
 						/obj/item/reagent_containers/food/snacks/fat = 2 // make sausages :)
 						)
-	if(H.pronouns == SHE_HER || H.pronouns == THEY_THEM_F)
+	if(H.gender == FEMALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
 	else
 		pants = /obj/item/clothing/under/roguetown/trou

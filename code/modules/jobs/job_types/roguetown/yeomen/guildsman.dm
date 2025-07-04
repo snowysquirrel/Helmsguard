@@ -11,7 +11,7 @@
 
 	allowed_races = RACES_ALL_KINDS
 
-	tutorial = "You are a member of the Azure Peak Guild of Crafts, a massive guild formed to represent the interests of all craftsmen in the township of Azure Peak.\
+	tutorial = "You are a member of the Helmsguard Guild of Crafts, a massive guild formed to represent the interests of all craftsmen in the township of Helmsguard.\
 	As a Guildsman, you hail from the three most important constituent guilds: The Smith's Guild, the Artificer's Guild, and the Architect's Guild. The Guildsmaster has sway over you, but it is not absolute."
 
 	outfit = /datum/outfit/job/roguetown/guildsman
@@ -61,7 +61,7 @@
 		H.adjust_skillrank(/datum/skill/craft/armorsmithing, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/craft/smelting, 1, TRUE)
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		pants = /obj/item/clothing/under/roguetown/trou
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
 		backr = /obj/item/storage/backpack/rogue/satchel
@@ -71,7 +71,7 @@
 		cloak = /obj/item/clothing/cloak/apron/blacksmith
 		beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 		beltr = /obj/item/roguekey/crafterguild
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/trou
 		shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt

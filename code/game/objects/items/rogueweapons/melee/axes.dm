@@ -73,9 +73,10 @@
 	demolition_mod = 1.25
 	w_class = WEIGHT_CLASS_BULKY
 	wlength = WLENGTH_SHORT
-	pickup_sound = 'sound/foley/equip/rummaging-03.ogg'
 	gripped_intents = list(/datum/intent/axe/chop/stone)
 	resistance_flags = FLAMMABLE
+	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg'
+	sheathe_sound = 'sound/items/wood_sharpen.ogg'	
 	blade_dulling = DULLING_SHAFT_WOOD
 
 
@@ -157,6 +158,11 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 	return ..()
 
+/obj/item/rogueweapon/stoneaxe/battle/equipped(mob/user, slot, initial = FALSE)
+	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg", "modular_helmsguard/sound/sheath_sounds/draw_spear.ogg")
+	sheathe_sound = 'sound/items/wood_sharpen.ogg'
+	. = ..()
+
 /obj/item/rogueweapon/stoneaxe/oath
 	force = 30
 	force_wielded = 40
@@ -190,6 +196,14 @@
 			if("onbelt")
 				return list("shrink" = 0.5,"sx" = 1,"sy" = -1,"nx" = 1,"ny" = -1,"wx" = 4,"wy" = -1,"ex" = -1,"ey" = -1,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0,)
 
+
+
+/obj/item/rogueweapon/stoneaxe/oath/equipped(mob/user, slot, initial = FALSE)
+	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg", "modular_helmsguard/sound/sheath_sounds/draw_spear.ogg")
+	sheathe_sound = 'sound/items/wood_sharpen.ogg'
+	. = ..()
+
+
 /obj/item/rogueweapon/stoneaxe/woodcut
 	name = "axe"
 	force = 20
@@ -201,6 +215,11 @@
 	smeltresult = /obj/item/ingot/iron
 	gripped_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop, /datum/intent/sword/peel)
 	wdefense = 2
+
+/obj/item/rogueweapon/stoneaxe/woodcut/equipped(mob/user, slot, initial = FALSE)
+	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg", "modular_helmsguard/sound/sheath_sounds/draw_spear.ogg")
+	sheathe_sound = 'sound/items/wood_sharpen.ogg'
+	. = ..()
 
 /obj/item/rogueweapon/stoneaxe/woodcut/aaxe
 	name = "decrepit axe"
@@ -257,6 +276,11 @@
 	smeltresult = /obj/item/ingot/iron
 	gripped_intents = null
 	wdefense = 2
+
+/obj/item/rogueweapon/stoneaxe/handaxe/equipped(mob/user, slot, initial = FALSE)
+	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg", "modular_helmsguard/sound/sheath_sounds/draw_spear.ogg")
+	sheathe_sound = 'sound/items/wood_sharpen.ogg'
+	. = ..()
 
 /obj/item/rogueweapon/stoneaxe/woodcut/steel
 	name = "steel axe"
@@ -375,6 +399,8 @@
 	associated_skill = /datum/skill/combat/axes
 	blade_dulling = DULLING_SHAFT_WOOD
 	wdefense = 6
+	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_greatsword.ogg'
+	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_to_leather.ogg'
 	demolition_mod = 1.5
 
 /obj/item/rogueweapon/greataxe/getonmobprop(tag)
@@ -387,6 +413,12 @@
 				return list("shrink" = 0.6,"sx" = 5,"sy" = -3,"nx" = -5,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+
+/obj/item/rogueweapon/greataxe/equipped(mob/user, slot, initial = FALSE)
+	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg", "modular_helmsguard/sound/sheath_sounds/draw_greatsword.ogg", "modular_helmsguard/sound/sheath_sounds/draw_spear.ogg")
+	. = ..()
+
 
 /obj/item/rogueweapon/greataxe/steel
 	force = 15
@@ -401,6 +433,7 @@
 	max_blade_int = 300
 	smeltresult = /obj/item/ingot/steel
 
+
 /obj/item/rogueweapon/greataxe/steel/doublehead
 	force = 15
 	force_wielded = 35
@@ -411,6 +444,29 @@
 	icon_state = "doublegreataxe"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	minstr = 12
+
+// ATGEVERI STUFF
+
+/obj/item/rogueweapon/stoneaxe/woodcut/steel/atgervi
+	name = "Bearded Axe"
+	desc = "A large axe easily wielded in one hand or two, With a large hooked axehead to tearing into flesh and armor and ripping it away brutally."
+	icon_state = "atgervi_axe"
+	item_state = "atgervi_axe"
+	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/rogue_righthand.dmi'
+	wlength = WLENGTH_LONG
+	experimental_onhip = TRUE
+
+/obj/item/rogueweapon/stoneaxe/woodcut/steel/atgervi/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.6,"sx" = -9,"sy" = -8,"nx" = 9,"ny" = -7,"wx" = -7,"wy" = -8,"ex" = 3,"ey" = -8,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 90,"sturn" = -90,"wturn" = -90,"eturn" = 90,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("wielded")
+				return list("shrink" = 0.8,"sx" = 2,"sy" = -8,"nx" = -6,"ny" = -3,"wx" = 3,"wy" = -4,"ex" = 4,"ey" = -3,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -44,"sturn" = 45,"wturn" = 47,"eturn" = 33,"nflip" = 8,"sflip" = 0,"wflip" = 0,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.6,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 180,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 1,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 
 /obj/item/rogueweapon/greataxe/steel/doublehead/graggar

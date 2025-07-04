@@ -61,96 +61,91 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 
 GLOBAL_LIST_INIT(noble_positions, list(
 	"Grand Duke",
-	"Consort",
-	"Suitor",
-	"Prince",
+	"Lord Consort",
+	"Lord Heir",
 	"Hand",
-	"Knight Captain",
-	"Marshal",
-	"Councillor",
 	"Steward",
-	"Knight",
 ))
 
 GLOBAL_LIST_INIT(courtier_positions, list(
-	"Court Magician",
 	"Court Physician",
 	"Jester",
-	"Seneschal",
+	"Keep Servant",
+	"Dungeoneer"
 ))
 
 GLOBAL_LIST_INIT(garrison_positions, list(
-	"Watchman",
-	"Warden",
-	"Sergeant",
-	"Man at Arms",
-	"Squire",
-	"Dungeoneer",
+	"Knight",
+	"Master-at-Arms",
+	"Man-at-Arms",
+	"Gatekeeper",
 ))
 
 GLOBAL_LIST_INIT(church_positions, list(
 	"Priest",
-	"Confessor",
-	"Acolyte",
-	"Mortician",
-	"Templar",
-	"Druid",
-	"Martyr",
-))
-
-GLOBAL_LIST_INIT(inquisition_positions, list(
 	"Inquisitor",
-	"Orthodoxist",
+	"Acolyte",
+	"Chapter Master",
+	"Knight Templar",
+	"Templar Sergeant",
+	"Knight Hospitaler",
+	"Hospitaler Sergeant",
 ))
 
-
-GLOBAL_LIST_INIT(yeoman_positions, list(
+/*GLOBAL_LIST_INIT(yeoman_positions, list(
 	"Merchant",
 	"Innkeeper",
-	"Archivist",
-	"Scribe",
-	"Town Elder",
-	"Bathmaster",
-	"Guildmaster",
-	"Guildsman",
-	"Tailor"
+))*/
+
+
+GLOBAL_LIST_INIT(watch_positions, list(
+	"Bailiff",
+	"Watchman",
 ))
+
+
+
+GLOBAL_LIST_INIT(towner_positions, list(
+	"Merchant",
+	"Innkeeper",
+	"Armorer",
+	"Weaponsmith",
+	"Apothecary",
+	"Leatherworker",
+	"Tailor",
+	"Blacksmith",
+	"Cook",
+	"Serving Lad",
+	"Apprentice",
+	"Builder"
+))
+
 
 GLOBAL_LIST_INIT(peasant_positions, list(
 	"Soilson",
-	"Cook",
-	"Lunatic",
-	"Miner",
-	"Hunter",
-	"Fisher",
-	"Lumberjack",
-	"Towner",
-	"Grabber",
-	"Nightmaster",
-	"Tapster",
-	"Bathhouse Attendant",
-	"Docker",
-	"Prisoner",
-	"Beggar",
+	"Serf"
+))
+
+
+GLOBAL_LIST_INIT(rabble_positions, list(
+	"Bawdyhouse Master",
+	"Rake",
+	"Gutterfolk",
 	"Adventurer",
 	"Pilgrim",
-	"Bandit",
-	"Court Agent",
-	"Wretch",
+	"Mercenary",
 ))
 
 GLOBAL_LIST_INIT(mercenary_positions, list(
-	"Mercenary",
 	"Grenzelhoft Mercenary",
 	"Desert Rider Mercenary",
-	"Veteran",
+	"Veteran Mercenary",
 ))
 
-GLOBAL_LIST_INIT(youngfolk_positions, list(
+GLOBAL_LIST_INIT(apprentices_positions, list(
 	"Clerk",
-	"Apothecary",
 	"Smithy Apprentice",
-	"Magicians Associate",
+	"Magicians Apprentice",
 	"Churchling",
 	"Servant",
 	"Shophand",
@@ -164,6 +159,10 @@ GLOBAL_LIST_INIT(allmig_positions, list(
 
 GLOBAL_LIST_INIT(roguewar_positions, list(
 	"Adventurer",
+))
+
+GLOBAL_LIST_INIT(orc_positions, list(
+	"Orc Grunt",
 ))
 
 GLOBAL_LIST_INIT(roguefight_positions, list(
@@ -189,14 +188,15 @@ GLOBAL_LIST_INIT(job_assignment_order, get_job_assignment_order())
 	sorting_order += GLOB.courtier_positions
 	sorting_order += GLOB.garrison_positions
 	sorting_order += GLOB.church_positions
-	sorting_order += GLOB.inquisition_positions
-	sorting_order += GLOB.yeoman_positions
-	sorting_order += GLOB.peasant_positions
-	sorting_order += GLOB.youngfolk_positions
+	sorting_order += GLOB.watch_positions
+//	sorting_order += GLOB.yeoman_positions
+	sorting_order += GLOB.towner_positions
+//	sorting_order += GLOB.goblin_positions
+	sorting_order += GLOB.orc_positions
 	return sorting_order
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
-	EXP_TYPE_CREW = list("titles" = peasant_positions | command_positions | engineering_positions | medical_positions | science_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg")), // crew positions
+	EXP_TYPE_CREW = list("titles" = rabble_positions | command_positions | engineering_positions | medical_positions | science_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg")), // crew positions
 	EXP_TYPE_COMMAND = list("titles" = command_positions),
 	EXP_TYPE_ENGINEERING = list("titles" = engineering_positions),
 	EXP_TYPE_MEDICAL = list("titles" = medical_positions),
@@ -263,5 +263,4 @@ GLOBAL_PROTECT(exp_specialmap)
 	job = chef_expand.Replace(job, "cook")
 	job = borg_expand.Replace(job, "cyborg")
 	return job
-
 

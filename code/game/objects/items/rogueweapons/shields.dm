@@ -34,7 +34,8 @@
 	blade_dulling = DULLING_BASHCHOP
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	COOLDOWN_DECLARE(shield_bang)
-
+	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_shield.ogg'
+	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_shield.ogg'
 
 /obj/item/rogueweapon/shield/attackby(obj/item/attackby_item, mob/user, params)
 
@@ -360,6 +361,33 @@
 				return list("shrink" = 0.6,"sx" = 1,"sy" = 4,"nx" = 1,"ny" = 2,"wx" = 3,"wy" = 3,"ex" = 0,"ey" = 2,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
 #undef SHIELD_BANG_COOLDOWN
+
+
+/// ATGEVRI SHIELD
+
+/obj/item/rogueweapon/shield/atgervi
+	name = "kite shield"
+	desc = "A large but light wooden shield with a steel boss in the center to deflect blows more easily."
+	icon_state = "atgervi_shield"
+	item_state = "atgervi_shield"
+	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/rogue_righthand.dmi'
+	force = 15
+	throwforce = 10
+	dropshrink = 0.8
+	coverage = 80
+	attacked_sound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')
+	parrysound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')
+	max_integrity = 250
+	experimental_inhand = FALSE
+
+/obj/item/rogueweapon/shield/atgervi/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("onback")
+				return list("shrink" = 0.7,"sx" = -17,"sy" = -15,"nx" = -15,"ny" = -15,"wx" = -12,"wy" = -15,"ex" = -18,"ey" = -15,"nturn" = 0,"sturn" = 0,"wturn" = 180,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 1,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
+
 
 /*/obj/item/rogueweapon/shield/buckler/freelancer
 	name = "fencer's wrap"

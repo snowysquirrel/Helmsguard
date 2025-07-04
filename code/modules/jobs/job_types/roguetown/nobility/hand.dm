@@ -19,7 +19,7 @@
 	max_pq = null
 	round_contrib_points = 3
 	cmode_music = 'sound/music/combat_noble.ogg'
-
+	advjob_examine = TRUE
 /*
 /datum/job/roguetown/hand/special_job_check(mob/dead/new_player/player)
 	if(!player)
@@ -69,7 +69,7 @@
 /datum/outfit/job/roguetown/hand/handclassic/pre_equip(mob/living/carbon/human/H)
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
 	backr = /obj/item/storage/backpack/rogue/satchel/black
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/dtace = 1, /obj/item/storage/keyring/hand = 1)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1, /obj/item/storage/keyring/sund/sund_steward = 1)
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/hand
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	id = /obj/item/scomstone/garrison
@@ -102,14 +102,14 @@
 //Spymaster start. More similar to the rogue adventurer - loses heavy armor and sword skills for more sneaky stuff. 
 /datum/outfit/job/roguetown/hand/spymaster/pre_equip(mob/living/carbon/human/H)
 	backr = /obj/item/storage/backpack/rogue/satchel/black
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/dtace = 1, /obj/item/storage/keyring/hand = 1, /obj/item/lockpickring/mundane)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/dtace = 1, /obj/item/storage/keyring/sund/sund_steward = 1, /obj/item/lockpickring/mundane)
 	if(H.dna.species.type in NON_DWARVEN_RACE_TYPES)
 		shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/shadowrobe
 		cloak = /obj/item/clothing/cloak/half/shadowcloak
 		gloves = /obj/item/clothing/gloves/roguetown/fingerless/shadowgloves
 		mask = /obj/item/clothing/mask/rogue/shepherd/shadowmask
 		pants = /obj/item/clothing/under/roguetown/trou/shadowpants
-		id = /obj/item/scomstone/garrison
+		id = /obj/item/scomstone
 	else
 		cloak = /obj/item/clothing/cloak/raincloak/mortus //cool spymaster cloak
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
@@ -144,7 +144,7 @@
 	ADD_TRAIT(H, TRAIT_PERFECT_TRACKER, TRAIT_GENERIC)
 
 /datum/advclass/hand/advisor
-	name = "Advisor"
+	name = "Court Advisor"
 	tutorial = " You have played researcher and confidant to the Noble-Family for so long that you are a vault of knowledge, something you exploit with potent conviction. Let no man ever forget the knowledge you wield. You've read more books than any blademaster or spymaster could ever claim to."
 	outfit = /datum/outfit/job/roguetown/hand/advisor
 
@@ -154,7 +154,7 @@
 /datum/outfit/job/roguetown/hand/advisor/pre_equip(mob/living/carbon/human/H)
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
 	backr = /obj/item/storage/backpack/rogue/satchel/black
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/dtace = 1, /obj/item/storage/keyring/hand = 1, /obj/item/reagent_containers/glass/bottle/rogue/poison = 1) //starts with a vial of poison, like all wizened evil advisors do!
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1, /obj/item/storage/keyring/sund/sund_steward = 1, /obj/item/reagent_containers/glass/bottle/rogue/poison = 1) //starts with a vial of poison, like all wizened evil advisors do!
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/hand
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	id = /obj/item/scomstone/garrison

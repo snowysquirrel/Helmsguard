@@ -8,9 +8,9 @@
 
 /datum/outfit/job/roguetown/vagabond/original/pre_equip(mob/living/carbon/human/H)
 	..()
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/rags
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights/vagrant
 		if(prob(50))
 			pants = /obj/item/clothing/under/roguetown/tights/vagrant/l

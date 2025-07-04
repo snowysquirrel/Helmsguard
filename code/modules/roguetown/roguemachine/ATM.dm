@@ -1,12 +1,12 @@
 /obj/structure/roguemachine/atm
 	name = "MEISTER"
-	desc = "Stores and withdraws currency for accounts managed by the Grand Duchy of Azuria."
+	desc = "Stores and withdraws currency for accounts managed by the stewardry of Helmsguard."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "atm"
 	density = FALSE
 	blade_dulling = DULLING_BASH
 	pixel_y = 32
-	var/mammonsiphoned = 0
+	var/groschensiphoned = 0
 	var/drilling = FALSE
 	var/drilled = FALSE
 	var/has_reported = FALSE
@@ -56,7 +56,7 @@
 			mod = 10
 		if(selection == "SILVER")
 			mod = 5
-		var/coin_amt = input(user, "There is [SStreasury.treasury_value] mammon in the treasury. You may withdraw [floor(amt/mod)] [selection] COINS from your account.", src) as null|num
+		var/coin_amt = input(user, "There is [SStreasury.treasury_value] groschen in the treasury. You may withdraw [floor(amt/mod)] [selection] COINS from your account.", src) as null|num
 		coin_amt = round(coin_amt)
 		if(coin_amt < 1)
 			return
@@ -103,7 +103,7 @@
 					var/T = round(P.get_real_price() * SStreasury.tax_value)
 					if(T != 0)
 						SStreasury.total_deposit_tax += T
-						say("Your deposit was taxed [T] mammon.")
+						say("Your deposit was taxed [T] groschen.")
 						record_featured_stat(FEATURED_STATS_TAX_PAYERS, H, T)
 						GLOB.azure_round_stats[STATS_TAXES_COLLECTED] += T
 				qdel(P)
@@ -124,7 +124,7 @@
 			if(SStreasury.treasury_value <50)
 				to_chat(user, "<font color='red'>These fools are completely broke. We'll get nothing out of this...</font>")
 				return
-			if(mammonsiphoned >499)
+			if(groschensiphoned >499)
 				to_chat(user, "<font color='red'>This one has already been siphoned dry...</font>")
 				return
 			else
@@ -159,7 +159,7 @@
 		drilling = FALSE
 		has_reported = FALSE
 		return
-	if(mammonsiphoned >199) // The cap variable for siphoning. 
+	if(groschensiphoned >199) // The cap variable for siphoning. 
 		new /obj/item/coveter(loc)
 		loc.visible_message(span_warning("Maximum withdrawal reached! The meister weeps."))
 		playsound(src, 'sound/misc/DrillDone.ogg', 70, TRUE)
@@ -177,10 +177,10 @@
 		spawn(100) // The time it takes to complete an interval. If you adjust this, please adjust the sound too. It's 'about' perfect at 100. Anything less It'll start overlapping.
 			loc.visible_message(span_warning("The meister spills its bounty!"))
 			SStreasury.treasury_value -= 20 // Takes from the treasury
-			mammonsiphoned += 20
+			groschensiphoned += 20
 			budget2change(20, null, "SILVER")
 			playsound(src, 'sound/misc/coindispense.ogg', 70, TRUE)
-			SStreasury.log_to_steward("-[20] exported mammon to the Freefolks!")
+			SStreasury.log_to_steward("-[20] exported groschen to the Freefolks!")
 			drill(src)
 
 /obj/structure/roguemachine/atm/attack_right(mob/living/carbon/human/user)
@@ -245,7 +245,7 @@
 				if("Fast")
 					is_active = TRUE
 					needed_cycles = round(SStreasury.bank_accounts[H] / fast_drain)
-					if(needed_cycles == 0)	//If you have less than 50 mammon, you'll still get drained at least once.
+					if(needed_cycles == 0)	//If you have less than 50 groschen, you'll still get drained at least once.
 						needed_cycles = 1
 					user.visible_message(span_warn("[user] hastily shoves \the [src] into [H]'s forehead!"))
 					playsound(H, 'sound/combat/hits/pick/genpick (1).ogg', 100)
@@ -256,7 +256,7 @@
 							SStreasury.bank_accounts[H] -= fast_drain
 							sum += fast_drain
 							new /obj/item/roguecoin/gold(T, fast_drain / 10)
-							SStreasury.log_to_steward("-[fast_drain] exported mammon to the Freefolks!")
+							SStreasury.log_to_steward("-[fast_drain] exported groschen to the Freefolks!")
 							if(prob(needed_cycles*2))
 								drain_effect_fast(H)
 							if(i == needed_cycles)	//Last cycle.
@@ -272,7 +272,7 @@
 				if("Slow")
 					is_active = TRUE
 					needed_cycles = round(SStreasury.bank_accounts[H] / slow_drain)
-					if(needed_cycles == 0)	//If you have less than 10 mammon, you'll still get drained at least once.
+					if(needed_cycles == 0)	//If you have less than 10 groschen, you'll still get drained at least once.
 						needed_cycles = 1
 					user.visible_message(span_warn("[user] carefully and methodically aligns \the [src] with [H]'s forehead..."))
 					to_chat(H,span_info("Tiny claws prick into your head. There's a trickling warmth running down your cheeks."))
@@ -286,7 +286,7 @@
 							SStreasury.bank_accounts[H] -= slow_drain
 							sum += slow_drain
 							new /obj/item/roguecoin/gold(T, slow_drain / 10)
-							SStreasury.log_to_steward("-[slow_drain] exported mammon to the Freefolks!")
+							SStreasury.log_to_steward("-[slow_drain] exported groschen to the Freefolks!")
 							if(prob(needed_cycles*2))
 								drain_effect_fast(H)
 							if(i == needed_cycles)	//Last cycle.

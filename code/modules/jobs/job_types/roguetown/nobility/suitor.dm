@@ -9,7 +9,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_NO_CONSTRUCT
 	advclass_cat_rolls = list(CTAG_CONSORT = 20)
-	tutorial = "You are a noble from a foreign court who has travelled to Azure Peak in order to win the hand of Azuria's most eligible bachelor and secure a political ally for your house. Competition is fierce, and it seems you're not the only one vying for the duke's favor..."
+	tutorial = "You are a noble from a foreign court who has travelled to Helmsguard in order to win the hand of Azuria's most eligible bachelor and secure a political ally for your house. Competition is fierce, and it seems you're not the only one vying for the duke's favor..."
 
 	outfit = /datum/outfit/job/roguetown/suitor
 
@@ -40,7 +40,7 @@
 
 /datum/outfit/job/roguetown/suitor/envoy/pre_equip(mob/living/carbon/human/H)
 	..()
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		neck = /obj/item/roguekey/manor
 		beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
@@ -53,7 +53,7 @@
 		backr = /obj/item/storage/backpack/rogue/satchel
 		id = /obj/item/clothing/ring/signet
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		head = /obj/item/clothing/head/roguetown/nyle/consortcrown
 		pants = /obj/item/clothing/under/roguetown/tights
 		armor = /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat
@@ -127,9 +127,9 @@
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/mid
 	backr = /obj/item/storage/backpack/rogue/satchel
 	id = /obj/item/clothing/ring/silver
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/armor/armordress/winterdress
-	if(should_wear_masc_clothes(H))
+	if(H.gender == MALE)
 		armor = /obj/item/clothing/suit/roguetown/armor/longcoat
 	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/poison = 1, /obj/item/lockpick = 1)
 	if(H.mind)

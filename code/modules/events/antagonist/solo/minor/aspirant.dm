@@ -10,12 +10,12 @@
 	minor_roleset = TRUE
 
 	needed_job = list(
-		"Consort",
+		"Lord Consort",
 		"Hand",
-		"Prince",
-		"Princess",
+		"Lord Heir",
+		"Lady Heir",
 		"Captain",
-		"Marshal",
+		"Master-at-arms",
 		"Sergeant",
 		"Steward",
 		"Court Magician"
@@ -37,7 +37,7 @@
 	for(var/datum/mind/antag_mind as anything in setup_minds)
 		add_datum_to_mind(antag_mind, antag_mind.current)
 
-	var/list/helping = list("Consort" ,"Hand" ,"Prince" ,"Captain" ,"Steward" ,"Court Magician ","Archivist", "Royal Knight", "Town Elder","Veteran")
+	var/list/helping = list("Lord Consort" ,"Hand" ,"Lord Heir", "Lady Heir", "Captain" ,"Steward" ,"Court Magician ","Archivist", "Royal Knight", "Town Elder","Veteran")
 	var/list/possible_helpers = list()
 	for(var/mob/living/living in GLOB.human_list)
 		if(!living.client)

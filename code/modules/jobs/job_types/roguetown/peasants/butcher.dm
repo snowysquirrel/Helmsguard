@@ -2,10 +2,12 @@
 // IF YOU'RE READING THIS, THIS VERSION OF BUTCHER IS UNUSED!! YOU'RE LOOKIKG FOR "tbutcher.dm"!!!!!
 	title = "Butcher"
 	flag = BUTCHER
-	department_flag = PEASANTS
+	department_flag = RABBLE
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
+
+	selection_color = JCOLOR_RABBLE
 
 	allowed_races = RACES_ALL_KINDS
 	allowed_ages = ALL_AGES_LIST
@@ -41,10 +43,10 @@
 		/obj/item/reagent_containers/powder/salt = 3,
 		/obj/item/reagent_containers/food/snacks/rogue/meat/coppiette = 2,
 		)
-	if(should_wear_femme_clothes(H))
+	if(H.gender == FEMALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
 		wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/trou
 		wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 

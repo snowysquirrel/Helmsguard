@@ -76,7 +76,7 @@
 
 	var/list/datum/bioware = list()
 
-	var/static/list/can_ride_typecache = typecacheof(list(/mob/living/carbon/human))
+	var/static/list/can_ride_typecache = typecacheof(list(/mob/living/carbon/human, /mob/living/simple_animal/hostile/rogue/ghost/wraith))
 	var/lastpuke = 0
 	var/last_fire_update
 	var/account_id
@@ -124,6 +124,9 @@
 	/datum/rmb_intent/weak)
 
 	rot_type = /datum/component/rot/corpse
+	rot_time = 12 MINUTES
+	dust_time = 40 MINUTES
+
 
 	var/voice_type = null // LETHALSTONE EDIT: defines what sound pack we use. keep this null so mobs resort to their typical gender typing - preferences set this
 	var/datum/statpack/statpack = null // Lethalstone Port - statpacks for greater customization

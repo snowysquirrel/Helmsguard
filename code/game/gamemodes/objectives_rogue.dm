@@ -8,7 +8,7 @@
 
 /datum/objective/bandit/update_explanation_text()
 	..()
-	explanation_text = "Feed [SSmapping.retainer.bandit_goal] mammon to an idol of greed."
+	explanation_text = "Feed [SSmapping.retainer.bandit_goal] groschen to an idol of greed."
 
 
 /datum/objective/delf
@@ -35,8 +35,8 @@
 
 /datum/objective/vampire
 	name = "conquer"
-	explanation_text = "Put an end to the werewolf menace in Azure Peak, or unite with them against the forces of the Nine."
-	team_explanation_text = "The feud between werewolves and vampires reaches back to the dawn of time. Will the two factions destroy each other, or find a way to coexist and face the mortals of Azure Peak together?"
+	explanation_text = "Put an end to the werewolf menace in Helmsguard, or unite with them against the forces of the Nine."
+	team_explanation_text = "The feud between werewolves and vampires reaches back to the dawn of time. Will the two factions destroy each other, or find a way to coexist and face the mortals of Helmsguard together?"
 	triumph_count = 5
 
 /datum/objective/vampire/check_completion()

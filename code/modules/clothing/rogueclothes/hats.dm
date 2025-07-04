@@ -1484,7 +1484,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan
 	name = "\improper Etruscan bascinet"
-	desc = "A steel bascinet helmet with a straight visor, or \"klappvisier\", which can greatly reduce visibility. Though it was first developed in Etrusca, it is also widely used in Grenzelhoft."
+	desc = "A steel bascinet helmet of Eisler design with a straight visor, or \"klappvisier\", which can greatly reduce visibility."
 	icon_state = "klappvisier"
 	item_state = "klappvisier"
 	adjustable = CAN_CADJUST
@@ -1496,7 +1496,7 @@
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/etruscan/attackby(obj/item/W, mob/living/user, params)
+/obj/item/clothing/head/roguetown/helmet/bascinet/klappvisier/attackby(obj/item/W, mob/living/user, params)
 	..()
 	if(istype(W, /obj/item/natural/cloth) && !detail_tag)
 		var/choice = input(user, "Choose a color.", "Orle") as anything in colorlist
@@ -1509,7 +1509,7 @@
 			var/mob/living/carbon/H = user
 			H.update_inv_head()
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/etruscan/update_icon()
+/obj/item/clothing/head/roguetown/helmet/bascinet/klappvisier/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
@@ -1523,7 +1523,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/frogmouth
 	name = "froggemund helmet"
-	desc = "A tall and imposing frogmouth-style helm popular in the highest plateaus of the Azure Peak. It covers not only the entire head and face, but the neck as well. Add a cloth to show the colors of your family or allegiance."
+	desc = "A tall and imposing frogmouth-style helm popular in the highest plateaus of Helmsguard. Covers not just the head, but the neck as well. Add a cloth to show the colors of your family or allegiance."
 	icon_state = "frogmouth"
 	item_state = "frogmouth"
 	emote_environment = 3
@@ -1770,7 +1770,7 @@
 			var/mob/living/carbon/H = user
 			H.update_inv_head()
 
-/obj/item/clothing/head/roguetown/grenzelhofthat/update_icon()
+/obj/item/clothing/head/roguetown/freihat/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
@@ -2055,3 +2055,28 @@
 	sewrepair = TRUE
 	flags_inv = HIDEEARS
 	body_parts_covered = HEAD|HAIR|EARS|NOSE|EYES
+
+/// NORDMAN STUFF
+
+/obj/item/clothing/head/roguetown/helmet/leather/saiga/atgervi
+	name = "moose hood"
+	desc = "A deceptively strong hood of hide with a pair of large heavy antlers. It is the fourth and final trial of the Shamans, To slay a Grinning moose with naught but metal claw and teeth."
+	icon_state = "nordman_shaman"
+	item_state = "nordman_shaman"
+	flags_inv = HIDEEARS|HIDEFACE
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/atgervi.dmi'
+	flags_inv = HIDEEARS
+	bloody_icon = 'icons/effects/blood64.dmi'
+	worn_x_dimension = 32
+	worn_y_dimension = 48
+	
+/obj/item/clothing/head/roguetown/helmet/bascinet/nordman
+	name = "owl helmet"
+	desc = "A carefully forged steel helmet in the shape of an owl's face, with added chain to cover the face and neck against many blows."
+	icon_state = "nordman_raider"
+	item_state = "nordman_raider"
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/atgervi.dmi'
+	block2add = null
+	worn_x_dimension = 32
+	worn_y_dimension = 48

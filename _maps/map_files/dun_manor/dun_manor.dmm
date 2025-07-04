@@ -6382,7 +6382,7 @@
 /area/rogue/indoors)
 "enF" = (
 /obj/structure/fluff/signage{
-	name = "AZURE PEAK - NORTH"
+	name = "HELMSGUARD PEAK - NORTH"
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield)
@@ -9494,7 +9494,7 @@
 /area/rogue/indoors/town/bath)
 "gFY" = (
 /obj/structure/pillory{
-	lockid = "inhumen"
+	lockid = "inhuman"
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/shelter/mountains)
@@ -10007,7 +10007,7 @@
 "gZS" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "inhumen";
+	lockid = "inhuman";
 	name = "Forgotten Chapel"
 	},
 /turf/open/floor/rogue/hexstone,
@@ -13640,7 +13640,7 @@
 /area/rogue/outdoors/town)
 "jKm" = (
 /obj/structure/roguemachine/atm{
-	mammonsiphoned = 250;
+	groschensiphoned = 250;
 	location_tag = "the Bathhouse"
 	},
 /turf/open/floor/rogue/tile,
@@ -32023,7 +32023,7 @@
 /area/rogue/indoors/town)
 "wBF" = (
 /obj/structure/mineral_door/bars{
-	lockid = "inhumen"
+	lockid = "inhuman"
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/shelter/mountains)

@@ -1,7 +1,7 @@
 /datum/job/roguetown/jester
 	title = "Jester"
 	flag = JESTER
-	department_flag = PEASANTS
+	department_flag = COURTIERS
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
@@ -16,6 +16,7 @@
 	allowed_ages = ALL_AGES_LIST
 	outfit = /datum/outfit/job/roguetown/jester
 	display_order = JDO_JESTER
+	selection_color = JCOLOR_COURTIER
 	give_bank_account = TRUE
 	min_pq = -4 //silly jesters are funny so low PQ requirement
 	max_pq = null
@@ -27,7 +28,7 @@
 	pants = /obj/item/clothing/under/roguetown/tights
 	armor = /obj/item/clothing/suit/roguetown/shirt/jester
 	belt = /obj/item/storage/belt/rogue/leather
-	beltr = /obj/item/storage/keyring/servant
+	beltr = /obj/item/storage/keyring/sund/sund_jester
 	beltl = /obj/item/storage/belt/rogue/pouch
 	head = /obj/item/clothing/head/roguetown/jester
 	neck = /obj/item/clothing/neck/roguetown/coif

@@ -1,14 +1,21 @@
 /datum/job/roguetown/barkeep
 	title = "Innkeeper"
 	flag = BARKEEP
-	department_flag = YEOMEN
+	department_flag = TOWNER
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
 
-	allowed_races = RACES_ALL_KINDS
+	allowed_races = list(\
+	/datum/species/human/northern,\
+	/datum/species/human/halfelf,\
+	/datum/species/elf/wood,\
+	/datum/species/dwarf/mountain,\
+	/datum/species/demihuman,\
+	/datum/species/tieberian,\
+	)
 
-	tutorial = "Adventurers and warriors alike have two exit plans; the early grave or even earlier retirement. As the proud owner of this fine establishment, you took the latter: The Azurian Pint, tavern, inn, and bathhouse! You even have an assortment of staff to help you, and plenty of business from the famished townsfolk looking to eat, weary travelers looking to rest, and characters of dubious repute seeking their own sort of success. Your bladework has gotten a little rusty, and the church across the street gives you the odd evil eye for the extra 'delights' of the bathhouse--but, well...you can't win 'em all!"
+	tutorial = "Adventurers and warriors alike have two exit plans; the early grave or even earlier retirement. As the proud owner of this fine establishment, you took the latter: The Golden Goblet, tavern and inn! You even have an assortment of staff to help you, and plenty of business from the famished townsfolk looking to eat, weary travelers looking to rest, and characters of dubious repute seeking their own sort of success. Your bladework has gotten a little rusty, and the church across the street gives you the odd evil eye for the extra 'delights' of the bathhouse--but, well...you can't win 'em all!"
 
 	outfit = /datum/outfit/job/roguetown/barkeep
 	display_order = JDO_BARKEEP
@@ -42,13 +49,15 @@
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	backr = /obj/item/storage/backpack/rogue/satchel
+	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
 	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
-	beltr = /obj/item/storage/keyring/innkeep
-	if(should_wear_femme_clothes(H))
+	beltl = /obj/item/storage/keyring/sund/sund_innrooms
+	beltr = /obj/item/storage/keyring/sund/sund_innkeep
+
+	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress
 		cloak = /obj/item/clothing/cloak/apron/waist
-	else if(should_wear_masc_clothes(H))
+	else if(H.gender == MALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor
 	backpack_contents = list(

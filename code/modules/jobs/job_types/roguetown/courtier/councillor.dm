@@ -3,8 +3,8 @@
 	flag = COUNCILLOR
 	department_flag = NOBLEMEN
 	faction = "Station"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 0
+	spawn_positions = 0
 	allowed_ages = ALL_AGES_LIST
 	allowed_races = RACES_NO_CONSTRUCT		//Nobility, so no constructs.
 	allowed_sexes = list(MALE, FEMALE)
@@ -32,7 +32,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	backl = /obj/item/storage/backpack/rogue/satchel
 	belt = /obj/item/storage/belt/rogue/leather/plaquesilver
-	beltl = /obj/item/storage/keyring/steward // If this turns out to be overbearing re:stewardry bump down to the clerk keyring instead.
+	beltl = /obj/item/storage/keyring/sund/sund_council // If this turns out to be overbearing re:stewardry bump down to the clerk keyring instead.
 	beltr = /obj/item/rogueweapon/huntingknife/idagger/steel
 	cloak = /obj/item/clothing/cloak/stabard/surcoat/councillor
 	ADD_TRAIT(H, TRAIT_SEEPRICES_SHITTY, "[type]")

@@ -1,4 +1,4 @@
-//These are all Vanderlin ports, simply redone values and additions to fit Azure. Credit for the code and idea goes to them!
+//These are all Vanderlin ports, simply redone values and additions to fit Helmsguard. Credit for the code and idea goes to them!
 
 //Divine Strike - Enhance your held weapon to have the next strike do extra damage and slow the target. Undead debuffed more.
 /obj/effect/proc_holder/spell/self/divine_strike
@@ -92,7 +92,7 @@
 /obj/effect/proc_holder/spell/self/call_to_arms/cast(list/targets,mob/living/user = usr)
 	for(var/mob/living/carbon/target in view(3, get_turf(user)))
 		if(istype(target.patron, /datum/patron/inhumen))
-			target.apply_status_effect(/datum/status_effect/debuff/call_to_arms)	//Debuffs inhumen worshipers.
+			target.apply_status_effect(/datum/status_effect/debuff/call_to_arms)	//Debuffs inhuman worshipers.
 			return
 		if(istype(target.patron, /datum/patron/old_god))
 			to_chat(target, span_danger("You feel a hot-wave wash over you, leaving as quickly as it came.."))	//No effect on Psydonians!

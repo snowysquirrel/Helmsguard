@@ -1,17 +1,30 @@
 /datum/job/roguetown/knavewench // The most aggressively rude name yet.
-	title = "Tapster"
-	f_title = "Tapster"
+	title = "Serving Lad"
+	f_title = "Serving Wench"
 	flag = KNAVEWENCH
-	department_flag = PEASANTS
+	department_flag = TOWNER
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	allowed_races = list(\
+	/datum/species/human/northern,\
+	/datum/species/human/halfelf,\
+	/datum/species/elf/wood,\
+	/datum/species/dwarf/mountain,\
+	/datum/species/demihuman,\
+	/datum/species/tieberian,\
+	/datum/species/halforc,\
+	)
+
 	faction = "Station"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 3
+	spawn_positions = 3
 
 	allowed_races = RACES_ALL_KINDS
-	tutorial = "You have a simple role at the Azurian Pint; please. You wait tables and help guests, clean the rooms, grow and brew more drink, and assist in the kitchens as need be. Bring a smile to the masses--and those cheapsake townsfolk and adventures might just give you an extra coin...assuming you've not already pilfered their pouch while they're in a drunken stupor off your latest brew."
+	tutorial = "You have a simple role at the inn. You wait tables and help guests, clean the rooms, grow and brew more drink, and assist in the kitchens as need be. Bring a smile to the masses--and those cheapsake townsfolk and adventures might just give you an extra coin...assuming you've not already pilfered their pouch while they're in a drunken stupor off your latest brew."
 
 	outfit = /datum/outfit/job/roguetown/knavewench
 	display_order = JDO_KNAVEWENCH
+	selection_color = JCOLOR_PEASANT
 	give_bank_account = 10
 	min_pq = -10
 	max_pq = null
@@ -39,15 +52,15 @@
 		H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
 	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/roguekey/tavern
+	beltl = /obj/item/storage/keyring/sund/sund_bawdy
 	backr = /obj/item/storage/backpack/rogue/satchel
 	cloak = /obj/item/clothing/cloak/apron/waist
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	if(should_wear_masc_clothes(H))
+	if(H.gender == MALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
 		pants = /obj/item/clothing/under/roguetown/tights/black
-	else if(should_wear_femme_clothes(H))
+	else if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/rags
 	backpack_contents = list(
 		/obj/item/bottle_kit

@@ -33,7 +33,7 @@
 	H.change_stat("speed", -1)
 	H.adjust_blindness(-3)
 
-	if(should_wear_masc_clothes(H))
+	if(H.gender == MALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/eastshirt1
 		cloak = /obj/item/clothing/cloak/eastcloak1
 		pants = /obj/item/clothing/under/roguetown/trou/eastpants1
@@ -43,7 +43,7 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1) //to compensate for the permanent lack of armor
 		H.dna.species.soundpack_m = new /datum/voicepack/male/evil()
-	else if(should_wear_femme_clothes(H))
+	else if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/armor/basiceast/captainrobe
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/easttats
 		shoes = /obj/item/clothing/shoes/roguetown/armor/rumaclan

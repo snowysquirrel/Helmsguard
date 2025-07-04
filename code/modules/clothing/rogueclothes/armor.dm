@@ -151,6 +151,11 @@
 	var/shiftable = TRUE
 	var/shifted = FALSE
 
+/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/bailiff
+	name = "bailiff's gambeson"
+	desc = "A linen jacket with quilted padding as well as tens of layers of linen cloth, dyed in the color of the City Watch."
+	color = CLOTHING_BLACK
+
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/attack_right(mob/user)
 	if(!shiftable)
 		return
@@ -390,7 +395,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/leather/hide/warden
 	name = "forestry armor"
-	desc = "A light armor worn by the Wardens of Azuria. Far more durable than leather."
+	desc = "A light armor worn by the Wardens of the Helmsguard. Far more durable than leather."
 	icon = 'icons/roguetown/clothing/special/warden.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/warden.dmi'
 	icon_state = "foresthide"
@@ -1330,6 +1335,23 @@
 /obj/item/clothing/suit/roguetown/armor/plate/elven_plate/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_WOOD_ARMOR)
+
+
+
+/// NORDMAN
+
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/atgervi
+	name = "vagarian hauberk"
+	desc = "The pride of the Hammerhold mercenaries a well crafted blend of chain and leather into a dense protective coat."
+	icon_state = "nordman_raider_mail"
+	item_state = "nordman_raider_mail"
+
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/atgervi
+	name = "shamanic coat"
+	desc = "A lightly protective coat, It embodies the second trial of the Northern shamans. To honor the leopard is too desire for more."
+	icon_state = "nordman_shaman_coat"
+	item_state = "nordman_shaman_coat"
 
 //the following changes are apart of a kazengite content update, and uses armor values from ratwood
 //i can move the armor protection values into roguetown.dm if it's requested but i really dont think that's necessary for a bunch of custom values

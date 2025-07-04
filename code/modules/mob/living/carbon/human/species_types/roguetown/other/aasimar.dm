@@ -5,13 +5,13 @@
 	name = "Aasimar"
 	id = "aasimar"
 	desc = "<b>Aasimar</b><br>\
-	Aasimar are born of a rare union between Humens and Angels. \
+	Aasimar are born of a rare union between Humans and Angels. \
 	They bear the mark of their celestial touch through their many varying physical features. \
 	Their looks resemble the traditional characteristics of whichever of the Gods their Angel parent was associated with. \
-	Most commonly, Aasimar are similar to Humens, albeit taller, and commonly possess an uncanny beauty. \
-	When compared to the average Humen, they have strangely colored skin and are more physically frail. \
+	Most commonly, Aasimar are similar to Humans, albeit taller, and commonly possess an uncanny beauty. \
+	When compared to the average Human, they have strangely colored skin and are more physically frail. \
 	Because of their upbringing, they make for natural conduits for godly powers. \
-	Azure Peak's populace holds them with a mixture of uneasy mixture of fear and respect. \
+	Helmsguard's populace holds them with a mixture of uneasy mixture of fear and respect. \
 	Due to their celestial nature, it is widely believed that an Aasimar's death is a bad omen...<br>\
 	(+1 Fortune)"
 
@@ -67,7 +67,7 @@
 		/datum/body_marking_set/tiger_dark,
 	)
 	body_markings = list(
-		/datum/body_marking/flushed_cheeks, //Azure > Hearth
+		/datum/body_marking/flushed_cheeks, //Helmsguard > Hearth
 		/datum/body_marking/eyeliner,
 		/datum/body_marking/tonage,
 	)
