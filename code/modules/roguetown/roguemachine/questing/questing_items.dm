@@ -12,6 +12,33 @@
 		assigned_quest.quest_scroll = src 
 	update_quest_text()
 
+/obj/item/paper/scroll/quest/Destroy()
+	if(assigned_quest)
+		// Return deposit if scroll is destroyed before completion
+		if(!assigned_quest.complete)
+			var/refund = assigned_quest.quest_difficulty == "Easy" ? 5 : \
+						assigned_quest.quest_difficulty == "Medium" ? 10 : 20
+
+			// First try to return to quest giver if available
+			var/mob/giver = assigned_quest.quest_giver_reference?.resolve()
+			if(giver && (giver in SStreasury.bank_accounts))
+				SStreasury.bank_accounts[giver] += refund
+				SStreasury.treasury_value -= refund
+				SStreasury.log_entries += "-[refund] from treasury (quest scroll destroyed refund to giver [giver.real_name])"
+			// Otherwise try quest receiver
+			else if(assigned_quest.quest_receiver_reference)
+				var/mob/receiver = assigned_quest.quest_receiver_reference.resolve()
+				if(receiver && (receiver in SStreasury.bank_accounts))
+					SStreasury.bank_accounts[receiver] += refund
+					SStreasury.treasury_value -= refund
+					SStreasury.log_entries += "-[refund] from treasury (quest scroll destroyed refund to receiver [receiver.real_name])"
+
+		// Clean up the quest
+		qdel(assigned_quest)
+		assigned_quest = null
+
+	return ..()
+
 /obj/item/paper/scroll/quest/update_icon_state()
 	if(open)
 		icon_state = info ? "[base_icon_state]_info" : "[base_icon_state]"
@@ -31,13 +58,17 @@
 		. += span_notice("\nThis quest is still in progress.")
 
 /obj/item/paper/scroll/quest/attack_self(mob/user)
-	. = ..()
+	. = ..() // Let the parent handle opening/closing first
 	if(.)
 		return
 
+	// Only do claim logic if unclaimed
 	if(!assigned_quest || assigned_quest.quest_receiver_reference)
+		refresh_compass(user) // Refresh compass when opened by claimed user
+		update_quest_text()
 		return
 
+	// Claim the quest
 	assigned_quest.quest_receiver_reference = WEAKREF(user)
 	assigned_quest.quest_receiver_name = user.real_name
 
@@ -60,8 +91,7 @@
 			return
 
 	to_chat(user, span_notice("You claim this quest for yourself!"))
-	update_quest_text()
-	return TRUE
+	refresh_compass(user) // Update compass after claiming
 
 /obj/item/paper/scroll/quest/proc/update_quest_text()
 	if(!assigned_quest)
@@ -73,6 +103,12 @@
 	scroll_text += "<b>Issued to:</b> [assigned_quest.quest_receiver_name ? assigned_quest.quest_receiver_name : "whoever it may concern"].<br>"
 	scroll_text += "<b>Type:</b> [assigned_quest.quest_type] quest.<br>"
 	scroll_text += "<b>Difficulty:</b> [assigned_quest.quest_difficulty].<br><br>"
+
+	if(last_compass_direction)
+		scroll_text += "<b>Direction:</b> [last_compass_direction]. "
+		if(last_z_level_hint)
+			scroll_text += " ([last_z_level_hint])"
+	scroll_text += "<br>"
 
 	switch(assigned_quest.quest_type)
 		if("Fetch")
@@ -95,17 +131,183 @@
 				scroll_text += "<b>Beacon Name:</b> [assigned_quest.target_beacon.name]<br>"
 				scroll_text += "<b>Location Description:</b> [beacon_area.desc]<br>"
 				scroll_text += "<b>Activation Method:</b> Simply interact with the beacon once found<br>"
-	
+
 	scroll_text += "<br><b>Reward:</b> [assigned_quest.reward_amount] marks upon completion<br>"
-	
+
 	if(assigned_quest.complete)
 		scroll_text += "<br><center><b>QUEST COMPLETE</b></center>"
 		scroll_text += "<br><b>Return this scroll to the Quest Book to claim your reward!</b>"
 		scroll_text += "<br><i>Place it on the marked area next to the book.</i>"
 	else
 		scroll_text += "<br><i>The magic in this scroll will update as you progress.</i>"
-	
+
 	info = scroll_text
+	update_icon()
+
+/obj/item/paper/scroll/quest/proc/refresh_compass(mob/user)
+	if(!assigned_quest || assigned_quest.complete)
+		return FALSE
+
+	// Update compass with precise directions
+	update_compass(user)
+
+	// Only update text if we have a valid direction
+	if(last_compass_direction)
+		update_quest_text()
+		return TRUE
+
+	return FALSE
+
+/obj/item/paper/scroll/quest/proc/update_compass(mob/user)
+	if(!assigned_quest || assigned_quest.complete)
+		return
+
+	var/turf/user_turf = user ? get_turf(user) : get_turf(src)
+	if(!user_turf)
+		last_compass_direction = "No signal detected"
+		last_z_level_hint = ""
+		return
+
+	// Reset compass values
+	last_compass_direction = "Searching for target..."
+	last_z_level_hint = ""
+
+	var/atom/target
+	var/turf/target_turf
+	var/min_distance = INFINITY
+
+	// Find the appropriate target based on quest type
+	switch(assigned_quest.quest_type)
+		if("Fetch")
+			// Find the closest fetch item
+			for(var/obj/item/I in world)
+				if(istype(I, assigned_quest.target_item_type))
+					var/datum/component/quest_object/Q = I.GetComponent(/datum/component/quest_object)
+					if(Q && Q.quest_ref?.resolve() == assigned_quest)
+						var/dist = get_dist(user_turf, I)
+						if(!target || dist < min_distance)
+							target = I
+							min_distance = dist
+		if("Courier")
+			// Find the delivery location area
+			var/area/target_area = assigned_quest.target_delivery_location
+			if(target_area)
+				var/list/area_turfs = get_area_turfs(target_area)
+				if(length(area_turfs))
+					var/turf/center_turf = locate(world.maxx/2, world.maxy/2, user_turf.z)
+					min_distance = get_dist(user_turf, center_turf)
+					target = center_turf
+		if("Kill", "Clear Out", "Miniboss")
+			// Find the closest target mob
+			for(var/mob/living/M in world)
+				if(istype(M, assigned_quest.target_mob_type))
+					var/datum/component/quest_object/Q = M.GetComponent(/datum/component/quest_object)
+					if(Q && Q.quest_ref?.resolve() == assigned_quest)
+						var/dist = get_dist(user_turf, M)
+						if(!target || dist < min_distance)
+							target = M
+							min_distance = dist
+		if("Beacon")
+			if(assigned_quest.target_beacon)
+				min_distance = get_dist(user_turf, assigned_quest.target_beacon)
+				target = assigned_quest.target_beacon
+
+	if(!target || !(target_turf = get_turf(target)))
+		last_compass_direction = "Target location unknown"
+		last_z_level_hint = ""
+		return
+
+	// Handle Z-level differences first
+	if(target_turf.z != user_turf.z)
+		var/z_diff = abs(target_turf.z - user_turf.z)
+		last_compass_direction = "Target is on another level"
+		last_z_level_hint = target_turf.z > user_turf.z ? \
+			"[z_diff] level\s above you" : \
+			"[z_diff] level\s below you"
+		return
+
+	// Calculate direction from user to target
+	var/dx = target_turf.x - user_turf.x  // EAST direction
+	var/dy = target_turf.y - user_turf.y  // NORTH direction
+
+	var/distance = sqrt(dx*dx + dy*dy)
+
+	// If very close, don't show direction
+	if(distance <= 7)
+		last_compass_direction = "Target is nearby"
+		last_z_level_hint = ""
+		return
+
+	// Calculate angle in degrees (0 = east, 90 = north)
+	var/angle = ATAN2(dx, dy)
+
+	if(angle < 0)
+		angle += 360
+
+	// Get precise direction text
+	var/direction_text = get_precise_direction_from_angle(angle)
+
+	// Determine distance description
+	var/distance_text
+	switch(distance)
+		if(0 to 14)
+			distance_text = "very close"
+		if(15 to 40)
+			distance_text = "close"
+		if(41 to 100)
+			distance_text = ""
+		if(101 to INFINITY)
+			distance_text = "far away"
+
+	last_compass_direction = "Target is [distance_text] to the [direction_text]"
+	last_z_level_hint = "on this level"
+
+/obj/item/paper/scroll/quest/proc/get_precise_direction_from_angle(angle)
+	// ATAN2 gives angle from positive x-axis (east) to the vector
+	// We need to:
+	// 1. Convert to compass degrees (0°=north, 90°=east)
+	// 2. Invert the direction (show direction TO target FROM player)
+
+	// Normalize angle first
+	angle = (angle + 360) % 360
+
+	// Convert to compass bearing (0°=north, 90°=east)
+	var/compass_angle = (450 - angle) % 360  // 450 = 360 + 90
+
+	// Return direction based on inverted compass angle
+	switch(compass_angle)
+		if(348.75 to 360, 0 to 11.25)
+			return "north"
+		if(11.25 to 33.75)
+			return "north-northeast"
+		if(33.75 to 56.25)
+			return "northeast"
+		if(56.25 to 78.75)
+			return "east-northeast"
+		if(78.75 to 101.25)
+			return "east"
+		if(101.25 to 123.75)
+			return "east-southeast"
+		if(123.75 to 146.25)
+			return "southeast"
+		if(146.25 to 168.75)
+			return "south-southeast"
+		if(168.75 to 191.25)
+			return "south"
+		if(191.25 to 213.75)
+			return "south-southwest"
+		if(213.75 to 236.25)
+			return "southwest"
+		if(236.25 to 258.75)
+			return "west-southwest"
+		if(258.75 to 281.25)
+			return "west"
+		if(281.25 to 303.75)
+			return "west-northwest"
+		if(303.75 to 326.25)
+			return "northwest"
+		if(326.25 to 348.75)
+			return "north-northwest"
 
 /obj/item/parcel
 	name = "parcel wrapping paper"
