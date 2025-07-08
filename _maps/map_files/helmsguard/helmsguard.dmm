@@ -192,7 +192,7 @@
 	dir = 8
 	},
 /obj/structure/fluff/walldeco/innsign{
-	name = ""
+	name = "The Twin-Antler"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/tavern)
@@ -205,6 +205,11 @@
 "agE" = (
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/rtfield)
+"agF" = (
+/turf/open/floor/rogue/rooftop/green{
+	dir = 1
+	},
+/area/rogue/outdoors/town/roofs)
 "agN" = (
 /turf/closed/wall/mineral/rogue/wooddark/vertical,
 /area/rogue/indoors/shelter/mountains)
@@ -815,6 +820,11 @@
 /obj/effect/spawner/lootdrop/ausflora,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town/riverstead)
+"aTc" = (
+/turf/open/floor/rogue/rooftop/green/corner1{
+	dir = 5
+	},
+/area/rogue/outdoors/town/roofs)
 "aTe" = (
 /obj/machinery/light/rogue/wallfire{
 	pixel_y = 32
@@ -1989,6 +1999,11 @@
 /obj/structure/fluff/walldeco/chains,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/town/basement/keep)
+"bYk" = (
+/turf/open/floor/rogue/rooftop/green{
+	dir = 8
+	},
+/area/rogue/outdoors/town/roofs)
 "bYR" = (
 /obj/structure/chair/wood/rogue{
 	dir = 4
@@ -2045,9 +2060,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/nosmooth/wooden_floor2,
 /area/rogue/indoors/town/church)
-"caL" = (
-/turf/open/floor/rogue/rooftop/green/corner1,
-/area/rogue/outdoors/town/roofs)
 "caP" = (
 /obj/machinery/light/rogue/wallfire/candle,
 /turf/open/floor/rogue/tile,
@@ -2190,11 +2202,13 @@
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/manor)
 "ckD" = (
-/obj/structure/roguemachine/goldface/public{
-	pixel_y = 32
+/obj/structure/flora/roguegrass,
+/obj/structure/fluff/railing/border{
+	dir = 10
 	},
-/turf/open/floor/rogue/blocks/stone/nosmooth,
-/area/rogue/outdoors/town/riverstead)
+/obj/effect/spawner/lootdrop/ausflora,
+/turf/open/transparent/openspace,
+/area/rogue/outdoors/town/riverstead/roof)
 "ckI" = (
 /obj/item/roguebin/crackers,
 /obj/effect/decal/border/stone/inverted{
@@ -2514,6 +2528,13 @@
 	},
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/tavern)
+"cEN" = (
+/obj/structure/fluff/signage/template{
+	name = "DREADWOOD FOREST - SOUTH";
+	written = "Travellers beware!"
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/woods)
 "cEV" = (
 /obj/structure/roguewindow/openclose{
 	dir = 1
@@ -2906,9 +2927,7 @@
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/dwarfin)
 "deP" = (
-/obj/structure/roguemachine/vendor{
-	keycontrol = "physician"
-	},
+/obj/structure/roguemachine/vendor,
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue/indoors/town)
 "dfh" = (
@@ -3840,6 +3859,10 @@
 	},
 /turf/open/floor/rogue/ruinedwood/nosmooth,
 /area/rogue/indoors/town/garrison)
+"ebn" = (
+/obj/structure/roguemachine/goldface/public,
+/turf/closed/wall/mineral/rogue/decowood/vert,
+/area/rogue/indoors/town/shop)
 "ebu" = (
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue/indoors/town/shop)
@@ -4238,8 +4261,8 @@
 "eAW" = (
 /obj/structure/mineral_door/wood/violet{
 	locked = 1;
-	lockid = "cook";
-	name = "COOK"
+	lockid = "tavern";
+	name = "STAFF DORM"
 	},
 /obj/effect/decal/wood/turnd{
 	dir = 8
@@ -4449,6 +4472,10 @@
 /obj/machinery/light/rogue/lanternpost,
 /turf/open/floor/rogue/blocks/stone/nosmooth,
 /area/rogue/outdoors/town/riverstead)
+"eJQ" = (
+/obj/structure/roguemachine/goldface,
+/turf/closed/wall/mineral/rogue/wooddark,
+/area/rogue/indoors/town/shop)
 "eJS" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5;
@@ -4635,7 +4662,7 @@
 	},
 /obj/structure/mineral_door/wood/donjon{
 	locked = 1;
-	lockid = "sund_inn";
+	lockid = "tavern";
 	name = "Kitchen";
 	desc = "For those who dare learn how the sausage was made.";
 	dir = 1
@@ -6149,6 +6176,13 @@
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors/town)
+"grS" = (
+/obj/structure/fluff/signage/template{
+	name = "RIVERSTEAD";
+	written = "Our berries are to die for!"
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/town/riverstead)
 "gsn" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /obj/structure/fluff/railing/wood,
@@ -7103,12 +7137,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/nosmooth/herringbone2,
 /area/rogue/indoors/town/church)
-"hpP" = (
-/obj/structure/flora/roguegrass,
-/obj/structure/fluff/railing/border,
-/obj/effect/spawner/lootdrop/ausflora,
-/turf/open/transparent/openspace,
-/area/rogue/outdoors/town/riverstead/roof)
 "hpW" = (
 /obj/structure/fluff/walldeco/artificerflag{
 	pixel_y = -30
@@ -7640,6 +7668,11 @@
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/exposed/town/keep)
+"hSy" = (
+/turf/open/floor/rogue/rooftop/green/corner1{
+	dir = 1
+	},
+/area/rogue/outdoors/town/roofs)
 "hSH" = (
 /obj/structure/chair/arrestchair,
 /obj/effect/decal/cobbleedge{
@@ -9059,6 +9092,7 @@
 	},
 /area/rogue/indoors/town)
 "jjw" = (
+/obj/structure/fluff/walldeco/artificerflag,
 /turf/closed/wall/mineral/rogue/craftstone,
 /area/rogue/indoors/town/dwarfin)
 "jjz" = (
@@ -10179,9 +10213,6 @@
 /obj/structure/rack/rogue/shelf,
 /turf/open/floor/rogue/ruinedwood/nosmooth/herringbone2,
 /area/rogue/indoors/town/church)
-"kpm" = (
-/turf/open/floor/rogue/rooftop/green,
-/area/rogue/outdoors/town/roofs)
 "kpp" = (
 /obj/machinery/light/rogue/wallfire/candle/blue,
 /turf/open/floor/rogue/churchmarble,
@@ -11281,6 +11312,10 @@
 /obj/effect/spawner/lootdrop/ausflora,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/rtfield)
+"lxr" = (
+/obj/structure/roguemachine/vendor,
+/turf/closed/wall/mineral/rogue/wooddark,
+/area/rogue/indoors/town/dwarfin)
 "lxD" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1";
@@ -11416,13 +11451,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
-"lCz" = (
-/obj/structure/fluff/signage/template{
-	name = "RIVERSTEAD";
-	written = "Our berries are to die for!"
-	},
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors/town/riverstead)
 "lCA" = (
 /obj/effect/decal/wood,
 /obj/effect/decal/wood{
@@ -11619,7 +11647,8 @@
 /area/rogue/indoors/town/church)
 "lLQ" = (
 /obj/structure/mineral_door/wood/window{
-	lockid = "tavern"
+	lockid = "tavern";
+	name = "The Twin Antler"
 	},
 /obj/effect/decal/wood/turnd{
 	dir = 8
@@ -12922,6 +12951,10 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/church_outside)
+"ncY" = (
+/obj/structure/roguemachine/vendor,
+/turf/closed/wall/mineral/rogue/wooddark,
+/area/rogue/indoors/town/shop)
 "ndc" = (
 /obj/structure/closet/crate/drawer{
 	pixel_y = 16
@@ -13085,10 +13118,11 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/magician)
 "nmE" = (
-/turf/open/floor/rogue/rooftop/green{
-	dir = 4
-	},
-/area/rogue/outdoors/town/roofs)
+/obj/structure/flora/roguegrass,
+/obj/structure/fluff/railing/border,
+/obj/effect/spawner/lootdrop/ausflora,
+/turf/open/transparent/openspace,
+/area/rogue/outdoors/town/riverstead/roof)
 "nmH" = (
 /turf/closed/wall/mineral/rogue/pipe{
 	icon_state = "iron_joint";
@@ -13856,8 +13890,6 @@
 /area/rogue/outdoors/church_outside)
 "odG" = (
 /obj/structure/mineral_door/wood/donjon{
-	locked = 1;
-	lockid = "sund_parlor";
 	name = "Parlor";
 	desc = "A well-maintained door to keep money in and trouble out."
 	},
@@ -14305,11 +14337,6 @@
 "oFV" = (
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/manor)
-"oGm" = (
-/turf/open/floor/rogue/rooftop/green/corner1{
-	dir = 9
-	},
-/area/rogue/outdoors/town/roofs)
 "oGI" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "stoneborder"
@@ -14567,8 +14594,8 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/church_outside)
 "oUR" = (
-/turf/open/floor/rogue/rooftop/green/corner1{
-	dir = 5
+/turf/open/floor/rogue/rooftop/green{
+	dir = 4
 	},
 /area/rogue/outdoors/town/roofs)
 "oVo" = (
@@ -14603,14 +14630,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/nosmooth/wooden_floor2,
 /area/rogue/indoors/town/tavern)
-"oWb" = (
-/obj/structure/flora/roguegrass,
-/obj/structure/fluff/railing/border{
-	dir = 10
-	},
-/obj/effect/spawner/lootdrop/ausflora,
-/turf/open/transparent/openspace,
-/area/rogue/outdoors/town/riverstead/roof)
 "oWg" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -17488,11 +17507,6 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/manor)
-"rUd" = (
-/turf/open/floor/rogue/rooftop/green{
-	dir = 8
-	},
-/area/rogue/outdoors/town/roofs)
 "rUi" = (
 /obj/structure/bed/rogue/inn,
 /turf/open/floor/rogue/churchbrick,
@@ -19231,8 +19245,8 @@
 "tGE" = (
 /obj/structure/mineral_door/wood/violet{
 	locked = 1;
-	lockid = "innkeep";
-	name = "INNKEEP"
+	lockid = "cook";
+	name = "COOK"
 	},
 /turf/open/floor/rogue/ruinedwood/nosmooth,
 /area/rogue/indoors/town/tavern)
@@ -19248,7 +19262,8 @@
 /area/rogue/indoors/town/church)
 "tKc" = (
 /obj/structure/mineral_door/wood/window{
-	lockid = "tavern"
+	lockid = "tavern";
+	name = "The Twin Antler"
 	},
 /obj/effect/decal/wood/turnd{
 	dir = 8
@@ -19817,13 +19832,6 @@
 	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/town/cell)
-"upj" = (
-/obj/structure/fluff/signage/template{
-	name = "DREADWOOD FOREST - SOUTH";
-	written = "Travellers beware!"
-	},
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors/woods)
 "upm" = (
 /obj/effect/decal/wood/turnd{
 	dir = 4
@@ -20821,14 +20829,8 @@
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/woods)
 "vhF" = (
-/obj/structure/roguemachine/goldface{
-	pixel_x = -32
-	},
-/obj/effect/decal/wood/ruinedwood/turned{
-	dir = 8
-	},
-/turf/open/floor/rogue/hexstone,
-/area/rogue/indoors/town/shop)
+/turf/open/floor/rogue/rooftop/green/corner1,
+/area/rogue/outdoors/town/roofs)
 "vhU" = (
 /obj/effect/landmark/start/smith,
 /obj/structure/chair/stool/rogue,
@@ -21021,11 +21023,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/nosmooth/wooden_floor2turned,
 /area/rogue/indoors/town/church)
-"vnX" = (
-/turf/open/floor/rogue/rooftop/green/corner1{
-	dir = 1
-	},
-/area/rogue/outdoors/town/roofs)
 "voW" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town/riverstead)
@@ -21162,11 +21159,8 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town/shop)
 "vuO" = (
-/obj/structure/roguemachine/vendor{
-	pixel_y = -32
-	},
-/turf/open/floor/rogue/blocks/stonered/tiny,
-/area/rogue/indoors/town/dwarfin)
+/turf/open/floor/rogue/rooftop/green,
+/area/rogue/outdoors/town/roofs)
 "vuP" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -21405,11 +21399,6 @@
 /obj/structure/table/wood,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town/roofs/keep)
-"vGF" = (
-/turf/open/floor/rogue/rooftop/green{
-	dir = 1
-	},
-/area/rogue/outdoors/town/roofs)
 "vGH" = (
 /obj/effect/decal/wood,
 /obj/effect/decal/wood/turnd{
@@ -22596,15 +22585,10 @@
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/magician_outside)
 "wVg" = (
-/obj/structure/roguemachine/vendor{
-	pixel_y = 32
+/turf/open/floor/rogue/rooftop/green/corner1{
+	dir = 9
 	},
-/obj/effect/decal/cobbleedge{
-	icon_state = "stoneborder";
-	dir = 8
-	},
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors/town/riverstead)
+/area/rogue/outdoors/town/roofs)
 "wVu" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -68763,7 +68747,7 @@ fXD
 fXD
 fXD
 fXD
-upj
+cEN
 kng
 ooX
 ooX
@@ -76975,8 +76959,8 @@ scl
 scl
 scl
 scl
-ebu
-wVg
+ncY
+vEQ
 vEQ
 vEQ
 aqH
@@ -77980,7 +77964,7 @@ gvW
 gMy
 gMy
 mrs
-ebu
+eJQ
 mrs
 gMy
 gMy
@@ -78182,13 +78166,13 @@ gMy
 eSs
 eVl
 woo
-vhF
+qFC
 qFC
 fOD
 qhN
 eKj
-gMy
-ckD
+ebn
+moj
 eJF
 uAw
 aqH
@@ -82667,7 +82651,7 @@ qTT
 sRf
 qTT
 qTT
-lCz
+grS
 nKn
 nKn
 nKn
@@ -83864,7 +83848,7 @@ dOf
 pGR
 pGR
 pGR
-dOf
+gfq
 awF
 rdu
 prn
@@ -85479,8 +85463,8 @@ bXk
 eJW
 fXC
 vpK
-vuO
-dOf
+fXC
+lxr
 moj
 rdu
 prn
@@ -157771,13 +157755,13 @@ bGP
 bGP
 bGP
 bGP
-oUR
-kpm
-kpm
-kpm
-kpm
-kpm
-vnX
+aTc
+vuO
+vuO
+vuO
+vuO
+vuO
+hSy
 bGP
 bGP
 bGP
@@ -157973,13 +157957,13 @@ bGP
 bGP
 bGP
 bGP
-rUd
+bYk
 wtP
 wtP
 wtP
 wtP
 wtP
-nmE
+oUR
 bGP
 bGP
 bGP
@@ -158175,13 +158159,13 @@ bGP
 bGP
 bGP
 bGP
-rUd
+bYk
 wtP
 wtP
 wtP
 wtP
 wtP
-nmE
+oUR
 bGP
 bGP
 bGP
@@ -158374,16 +158358,16 @@ bGP
 bGP
 bGP
 bGP
+aTc
+vuO
+vuO
+vhF
+wtP
+wtP
+wtP
+wtP
+wtP
 oUR
-kpm
-kpm
-caL
-wtP
-wtP
-wtP
-wtP
-wtP
-nmE
 bGP
 bGP
 bGP
@@ -158576,7 +158560,7 @@ bGP
 bGP
 bGP
 bGP
-rUd
+bYk
 wtP
 wtP
 wtP
@@ -158585,7 +158569,7 @@ wtP
 wtP
 wtP
 wtP
-nmE
+oUR
 bGP
 bGP
 bGP
@@ -158778,7 +158762,7 @@ bGP
 bGP
 bGP
 bGP
-rUd
+bYk
 wtP
 wtP
 wtP
@@ -158787,7 +158771,7 @@ wtP
 wtP
 wtP
 wtP
-nmE
+oUR
 bGP
 bGP
 bGP
@@ -158980,7 +158964,7 @@ bGP
 bGP
 bGP
 bGP
-rUd
+bYk
 wtP
 wtP
 wtP
@@ -158989,7 +158973,7 @@ wtP
 wtP
 wtP
 wtP
-nmE
+oUR
 bGP
 bGP
 bGP
@@ -159182,7 +159166,7 @@ bGP
 bGP
 bGP
 bGP
-rUd
+bYk
 wtP
 wtP
 wtP
@@ -159191,7 +159175,7 @@ wtP
 wtP
 wtP
 wtP
-nmE
+oUR
 bGP
 bGP
 bGP
@@ -159384,16 +159368,16 @@ bGP
 bGP
 bGP
 bGP
-oGm
-vGF
-vGF
-vGF
-vGF
-vnX
+wVg
+agF
+agF
+agF
+agF
+hSy
 wtP
 wtP
 wtP
-nmE
+oUR
 bGP
 bGP
 bGP
@@ -159591,11 +159575,11 @@ bGP
 bGP
 bGP
 bGP
-oGm
-vGF
-vGF
-vGF
-caL
+wVg
+agF
+agF
+agF
+vhF
 bGP
 bGP
 bGP
@@ -162232,7 +162216,7 @@ bGP
 bGP
 bGP
 wwb
-hpP
+nmE
 sDw
 aEm
 gqK
@@ -162434,7 +162418,7 @@ bGP
 bGP
 bGP
 wwb
-hpP
+nmE
 sjZ
 aEm
 gqK
@@ -162636,7 +162620,7 @@ bGP
 bGP
 bGP
 wwb
-hpP
+nmE
 aEm
 aEm
 cEz
@@ -162838,7 +162822,7 @@ bGP
 bGP
 bGP
 wwb
-oWb
+ckD
 abj
 abj
 gqK
