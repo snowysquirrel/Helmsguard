@@ -19,7 +19,6 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		/obj/effect/proc_holder/spell/self/convertrole/servant,
 		/obj/effect/proc_holder/spell/self/convertrole/guard,
 		/obj/effect/proc_holder/spell/self/grant_nobility,
-		/obj/effect/proc_holder/spell/self/convertrole/bog
 	)
 	outfit = /datum/outfit/job/roguetown/lord
 	visuals_only_outfit = /datum/outfit/job/roguetown/lord/visuals
@@ -62,7 +61,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 			GLOB.lordsurname = "of [L.real_name]"
 		SSticker.rulermob = L
 		if(L.gender == FEMALE)
-			SSticker.rulertype = "Markgräfin"
+			SSticker.rulertype = "Grand Duchess"
 		else
 			SSticker.rulertype = "Grand Duke"
 		to_chat(world, "<b><span class='notice'><span class='big'>[L.real_name] is [SSticker.rulertype] of Helmsguard.</span></span></b>")
@@ -73,7 +72,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 	cloak = /obj/item/clothing/cloak/lordcloak
 	belt = /obj/item/storage/belt/rogue/leather/plaquegold
-	beltl = /obj/item/storage/keyring/sund/sund_ruler
+	beltl = /obj/item/storage/keyring/lord
 	l_hand = /obj/item/rogueweapon/lordscepter
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1)
 	id = /obj/item/scomstone/garrison

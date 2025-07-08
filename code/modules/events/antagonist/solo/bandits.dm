@@ -53,7 +53,7 @@
 		"Squire",
 		"Veteran",
 		"Apothecary",
-		"Bailiff",
+		"Marshall",
 		"Watchman",
 		"Watchwoman",
 	)

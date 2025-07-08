@@ -8,13 +8,22 @@
 	spawn_positions = 1
 	selection_color = JCOLOR_CHURCH
 	f_title = "Priestess"
-	allowed_races = TOLERATED_CLEARANCE	//Too recent arrivals to ascend to priesthood. 
+	allowed_races = NOBLE_RACES_TYPES	//Too recent arrivals to ascend to priesthood. 
 	allowed_patrons = /datum/patron/old_god
 	allowed_sexes = list(MALE, FEMALE)
-	tutorial = "The Divine is all that matters in a world of the immoral. The Weeping God left his children to rule over us mortals--and you will preach their wisdom to any who still heed their will. The faithless are growing in number. It is up to you to shepard them toward a Gods-fearing future; for you are a priest of Astrata."
+	tutorial = "The Council of Ilum is the highest authority of the Church of Psydon, and as a member of the clergy, you have been assigned to the Monastery of Saint Katherine to \
+	serve as the head Psydonite priest of the province. Plenty still clings onto the false gods that is the Ten, and you are here to guide them towards the light of the only one true god, Psydon \
+	through the act of preaching, healing, and performing miracles and rites. \
+	However, no tolerance shall be given to those who follows the Inhumen Gods. \
+	Your duties include performing religious ceremonies, providing spiritual guidance to the townsfolk, and maintaining the monastery's sacred grounds."
+
 	whitelist_req = FALSE
 
-	spells = list(/obj/effect/proc_holder/spell/invoked/cure_rot, /obj/effect/proc_holder/spell/self/convertrole/monk)
+	spells = list(/obj/effect/proc_holder/spell/invoked/cure_rot,
+	/obj/effect/proc_holder/spell/invoked/heal, 
+	/obj/effect/proc_holder/spell/invoked/revive,
+	/obj/effect/proc_holder/spell/self/convertrole/templar,
+	/obj/effect/proc_holder/spell/self/convertrole/monk)
 	outfit = /datum/outfit/job/roguetown/priest
 
 	display_order = JDO_PRIEST
@@ -28,7 +37,7 @@
 
 /datum/outfit/job/roguetown/priest
 	job_bitflag = BITFLAG_CHURCH
-	allowed_patrons = list(/datum/patron/divine/astrata)	//We lock this cus head of church, acktully
+	allowed_patrons = /datum/patron/old_god	//We lock this cus head of church, acktully
 
 /datum/outfit/job/roguetown/priest/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -37,7 +46,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/priest
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	beltl = /obj/item/storage/keyring/sund/sund_priest
+	beltl = /obj/item/storage/keyring/priest
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	id = /obj/item/clothing/ring/active/nomag
@@ -139,7 +148,7 @@
 		for(var/mob/living/carbon/human/HL in GLOB.human_list)
 			if(HL.mind)
 				if(HL.mind.assigned_role == "Grand Duke" || HL.mind.assigned_role == "Lord Consort")
-					HL.mind.assigned_role = "Towner" //So they don't get the innate traits of the king
+					HL.mind.assigned_role = "Villager" //So they don't get the innate traits of the king
 			//would be better to change their title directly, but that's not possible since the title comes from the job datum
 			if(HL.job == "Grand Duke")
 				HL.job = "Grand Duke Emeritus"
@@ -172,7 +181,7 @@
 			return FALSE
 		if(inputty in GLOB.excommunicated_players)
 			GLOB.excommunicated_players -= inputty
-			priority_announce("[real_name] has forgiven [inputty]. Once more walk in the light!", title = "Hail the Ten!", sound = 'sound/misc/bell.ogg')
+			priority_announce("[real_name] has forgiven [inputty]. Once more walk in the light!", title = "A Soul Redeemed!", sound = 'sound/misc/bell.ogg')
 			for(var/mob/living/carbon/human/H in GLOB.player_list)
 				if(H.real_name == inputty)
 					H.remove_stress(/datum/stressevent/psycurse)
@@ -187,7 +196,7 @@
 		if(!found)
 			return FALSE
 		GLOB.excommunicated_players += inputty
-		priority_announce("[real_name] has put Xylix's curse of woe on [inputty] for offending the church!", title = "SHAME", sound = 'sound/misc/excomm.ogg')
+		priority_announce("[real_name] has declared [inputty] a heretic, they shall not see His light!", title = "EXCOMMUNICATED", sound = 'sound/misc/excomm.ogg')
 
 /mob/living/carbon/human/proc/churchannouncement()
 	set name = "Announcement"
@@ -197,34 +206,24 @@
 	var/inputty = input("Make an announcement", "ROGUETOWN") as text|null
 	if(inputty)
 		if(!istype(get_area(src), /area/rogue/indoors/town/church/chapel))
-			to_chat(src, span_warning("I need to do this from the chapel."))
+			to_chat(src, span_warning("I need to do this from the monastery."))
 			return FALSE
 		priority_announce("[inputty]", title = "The Priest Speaks", sound = 'sound/misc/bell.ogg', sender = src)
 
-/obj/effect/proc_holder/spell/self/convertrole/knight_hospitaler
-	name = "Recruit Knight Hospitaler"
-	new_role = "Knight Hospitaler"
+/obj/effect/proc_holder/spell/self/convertrole/templar
+	name = "Recruit Templar"
+	new_role = "Templar"
 	overlay_state = "recruit_templar"
 	recruitment_faction = "Templars"
-	recruitment_message = "Rise as a Knight of the Hospital, %RECRUIT!"
-	accept_message = "By the Shepherd's Will!"
+	recruitment_message = "Pledge Thy Sword to the Church, %RECRUIT!"
+	accept_message = "Psydon endures!"
 	refuse_message = "I refuse."
-
-/obj/effect/proc_holder/spell/self/convertrole/hospitaler_sergeant
-	name = "Recruit Hospitaler Sergeant"
-	new_role = "Hospitaler Sergeant"
-	overlay_state = "recruit_templar"
-	recruitment_faction = "Templars"
-	recruitment_message = "Pledge Thy Sword to the Hospital, %RECRUIT!"
-	accept_message = "By the Shepherd's Will!"
-	refuse_message = "I refuse."
-
 
 /obj/effect/proc_holder/spell/self/convertrole/monk
-	name = "Recruit Disciple"
-	new_role = "Monk"
+	name = "Recruit Acolyte"
+	new_role = "Acolyte"
 	overlay_state = "recruit_acolyte"
 	recruitment_faction = "Church"
-	recruitment_message = "Serve the ten, %RECRUIT!"
-	accept_message = "FOR THE TEN!"
+	recruitment_message = "Serve the ONE true god, %RECRUIT!"
+	accept_message = "Psydon endures!"
 	refuse_message = "I refuse."

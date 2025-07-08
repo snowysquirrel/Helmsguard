@@ -9,14 +9,7 @@
 	display_order = 6
 	min_pq = 0
 	selection_color = JCOLOR_YEOMAN
-	allowed_races = list(\
-	/datum/species/human/northern,\
-	/datum/species/human/halfelf,\
-	/datum/species/elf/wood,\
-	/datum/species/dwarf/mountain,\
-	/datum/species/demihuman,\
-	/datum/species/tieberian,\
-	)
+	allowed_races = RACES_ALL_KINDS
 	display_order = JDO_TAILOR
 	outfit = /datum/outfit/job/roguetown/tailor
 	give_bank_account = 16
@@ -27,7 +20,7 @@
 /datum/outfit/job/roguetown/tailor/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 5, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/sewing, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/tanning, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
@@ -37,11 +30,12 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	pants = /obj/item/clothing/under/roguetown/tights
 	belt = /obj/item/storage/belt/rogue/leather/cloth
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/mid
+	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
+	beltr = /obj/item/storage/keyring/tailor
 	beltl = /obj/item/rogueweapon/huntingknife/scissors/steel
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	backr = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/needle, /obj/item/storage/keyring/sund/sund_tailor)
+	backpack_contents = list(/obj/item/needle)
 	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/silkdress
 		head = /obj/item/clothing/head/roguetown/shawl

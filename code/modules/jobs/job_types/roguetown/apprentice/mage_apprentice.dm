@@ -1,17 +1,20 @@
 /datum/job/roguetown/wapprentice
-	title = "Magicians Associate"
+	title = "Mage Apprentice"
 	flag = MAGEAPPRENTICE
-	department_flag = TOWNER
+	department_flag = MAGEGUILD
+	selection_color = JCOLOR_MAGE
 	faction = "Station"
 	total_positions = 4
 	spawn_positions = 4
 
-	allowed_races = RACES_ALL_KINDS
+	allowed_races = ALL_RACES_TYPES
 	spells = list(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 	advclass_cat_rolls = list(CTAG_WAPPRENTICE = 20)
 
-	tutorial = "Your master once saw potential in you, although you are uncertain if they still do, given how rigorous and difficult your studies have been. The path to using magic is a treacherous and untamed one, and you are still decades away from calling yourself even a journeyman in the field. Listen and serve, and someday you will earn your hat."
-
+	tutorial = "You've come to the Mage Guild to learn the ways of the arcane. You are an apprentice, a student of the arcane arts, and you have much to learn. \
+				Your master is the Archmagos of the Mage Guild, and they will teach you the ways of magic. \
+				In the absence of the Archmagos, you are free to improve your arcane skills by offering your service to anyone in need within the province."
+	
 	outfit = /datum/outfit/job/roguetown/wapprentice
 
 	display_order = JDO_MAGEAPPRENTICE
@@ -24,10 +27,11 @@
 	advjob_examine = TRUE // So that Court Magicians can know if they're teachin' a Apprentice or if someone's a bit more advanced of a player. Just makes the title show up as the advjob's name.
 
 /datum/outfit/job/roguetown/wapprentice
+	job_bitflag = BITFLAG_MAGE
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	pants = /obj/item/clothing/under/roguetown/tights/random
 	belt = /obj/item/storage/belt/rogue/leather
-	beltr = /obj/item/storage/keyring/sund/sund_noble
+	beltr = /obj/item/storage/keyring/tower
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backr = /obj/item/rogueweapon/woodstaff
 	shoes = /obj/item/clothing/shoes/roguetown/gladiator // FANCY SANDALS

@@ -1,6 +1,6 @@
 /datum/job/roguetown/knavewench // The most aggressively rude name yet.
-	title = "Serving Lad"
-	f_title = "Serving Wench"
+	title = "Tapster"
+	f_title = "Tapstress"
 	flag = KNAVEWENCH
 	department_flag = TOWNER
 	allowed_sexes = list(MALE, FEMALE)
@@ -24,7 +24,6 @@
 
 	outfit = /datum/outfit/job/roguetown/knavewench
 	display_order = JDO_KNAVEWENCH
-	selection_color = JCOLOR_PEASANT
 	give_bank_account = 10
 	min_pq = -10
 	max_pq = null
@@ -52,7 +51,7 @@
 		H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
 	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/storage/keyring/sund/sund_bawdy
+	beltl = /obj/item/storage/keyring/tapser
 	backr = /obj/item/storage/backpack/rogue/satchel
 	cloak = /obj/item/clothing/cloak/apron/waist
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor

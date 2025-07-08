@@ -6,13 +6,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	selection_color = JCOLOR_YEOMAN
-	allowed_races = list(\
-	/datum/species/human/northern,\
-	/datum/species/human/halfelf,\
-	/datum/species/elf/wood,\
-	/datum/species/dwarf/mountain,\
-	/datum/species/demihuman,\
-	)
+	allowed_races = RACES_ALL_KINDS
 	tutorial = "You were born into wealth, learning from before you could talk about the basics of mathematics. Counting coins is a simple pleasure for any person, but you've made it an art form. These people are addicted to your wares, and you are the literal beating heart of this economy: Don't let these filth-covered troglodytes ever forget that."
 
 	display_order = JDO_MERCHANT
@@ -50,7 +44,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/sailor
 	pants = /obj/item/clothing/under/roguetown/tights/sailor
 	belt = /obj/item/storage/belt/rogue/leather/rope
-	beltl = /obj/item/storage/keyring/sund/sund_merchant
+	beltl = /obj/item/storage/keyring/merchant
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	id = /obj/item/clothing/ring/gold
 	backr = /obj/item/storage/backpack/rogue/satchel

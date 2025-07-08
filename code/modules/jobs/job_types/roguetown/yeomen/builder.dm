@@ -18,7 +18,7 @@
 	tutorial = "As a Builder, your role is to construct and repair structures, craft essential tools, and assist your team in maintaining the town's infrastructure. Utilize your skills in carpentry, masonry, and engineering to ensure the town thrives. Be prepared to adapt and contribute to various tasks, including crafting, smelting, and even setting traps when necessary."
 
 	outfit = /datum/outfit/job/roguetown/builder
-	display_order = JDO_BUILDER
+//	display_order = JDO_BUILDER
 	give_bank_account = 11
 	min_pq = 0
 	max_pq = null

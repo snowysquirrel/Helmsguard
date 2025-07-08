@@ -63,7 +63,7 @@
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 		belt = /obj/item/storage/belt/rogue/leather
 		beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
-		beltl = /obj/item/storage/keyring/sund/sund_shop
+		beltl = /obj/item/roguekey/shop
 		backr = /obj/item/storage/backpack/rogue/satchel
 	else if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights
@@ -125,7 +125,6 @@
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 		belt = /obj/item/storage/belt/rogue/leather/rope
-		beltr = /obj/item/storage/keyring/sund/sund_smith
 		cloak = /obj/item/clothing/cloak/apron/brown
 		backr = /obj/item/storage/backpack/rogue/satchel
 		backpack_contents = list(/obj/item/rogueweapon/hammer = 1, /obj/item/rogueweapon/tongs = 1)
@@ -134,7 +133,6 @@
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 		shirt = null
 		belt = /obj/item/storage/belt/rogue/leather/rope
-		beltr = /obj/item/storage/keyring/sund/sund_smith
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
 		backr = /obj/item/storage/backpack/rogue/satchel
 		backpack_contents = list(/obj/item/rogueweapon/hammer = 1, /obj/item/rogueweapon/tongs = 1)
@@ -165,7 +163,6 @@
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 		belt = /obj/item/storage/belt/rogue/leather/rope
-		beltr = /obj/item/roguekey/sund/sund_tailor
 		cloak = /obj/item/clothing/cloak/apron/tailor
 		backr = /obj/item/storage/backpack/rogue/satchel
 		backpack_contents = list(/obj/item/needle/thorn = 1, /obj/item/natural/cloth = 2,
@@ -222,3 +219,62 @@
 		backr = /obj/item/storage/backpack/rogue/satchel
 		backpack_contents = list(/obj/item/reagent_containers/glass/bottle = 1, /obj/item/reagent_containers/glass/bottle/alchemical = 1)
 		wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+
+
+
+// retinue recruit
+/datum/advclass/apprentice/recruit
+	name = "Retinue Recruit"
+	tutorial = "As a Retinue Recruit, you are a fledgling member of duchy's garrison. Your duties include training in combat, provide support in combat to the Men-At-Arms and to follow every order of your superior and liege."
+	outfit = /datum/outfit/job/roguetown/apprentice/retinue
+
+	category_tags = list(CTAG_APPRENTICE)
+
+/datum/outfit/job/roguetown/apprentice/retinue/pre_equip(mob/living/carbon/human/H)
+	..()
+	head = /obj/item/clothing/head/roguetown/paddedcap
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
+	pants = /obj/item/clothing/under/roguetown/tights/black
+	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/light
+	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
+	neck = /obj/item/clothing/neck/roguetown/coif
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	gloves = /obj/item/clothing/gloves/roguetown/leather
+	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
+	belt = /obj/item/storage/belt/rogue/leather/black
+	backr = /obj/item/storage/backpack/rogue/satchel/black
+	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
+	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	var/weapons = list("Messer and Shield", "Spear", "Axe and Shield", "Cudgel and Shield", "Bow and Quiver")
+	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	H.set_blindness(0)
+	switch(weapon_choice)
+		if("Messer and Shield")
+			H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+			r_hand = /obj/item/rogueweapon/sword/iron/messer
+			backl = /obj/item/rogueweapon/shield/wood
+		if("Spear")
+			H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
+			r_hand = /obj/item/rogueweapon/spear
+		if("Axe and Shield")
+			H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
+			r_hand = /obj/item/rogueweapon/stoneaxe/woodcut
+			backl = /obj/item/rogueweapon/shield/wood
+		if("Cudgel and Shield")
+			H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
+			r_hand = /obj/item/rogueweapon/mace/cudgel
+		if("Bow and Quiver")
+			H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
+			r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
+			backl = /obj/item/quiver/arrows
+
+
+

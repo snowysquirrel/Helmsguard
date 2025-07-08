@@ -151,8 +151,8 @@
 	var/shiftable = TRUE
 	var/shifted = FALSE
 
-/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/bailiff
-	name = "bailiff's gambeson"
+/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/marshall
+	name = "marshall's gambeson"
 	desc = "A linen jacket with quilted padding as well as tens of layers of linen cloth, dyed in the color of the City Watch."
 	color = CLOTHING_BLACK
 

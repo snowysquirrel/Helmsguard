@@ -9,6 +9,8 @@
 					/obj/effect/proc_holder/spell/self/check_boot				= CLERIC_T0,
 					/obj/effect/proc_holder/spell/invoked/psydonendure			= CLERIC_T1,
 					/obj/effect/proc_holder/spell/self/psydonrespite			= CLERIC_T2,
+					/obj/effect/proc_holder/spell/invoked/lesser_heal 			= CLERIC_T3,
+					
 	)
 	confess_lines = list(
 		"THERE IS ONLY ONE TRUE GOD!",

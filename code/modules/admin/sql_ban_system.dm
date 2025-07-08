@@ -235,13 +235,15 @@
 		var/break_counter = 0
 		//note to future developers: RT doesn't have command staff so toggle_head was removed, go back in the git history if you need to readd it
 		//departments/groups that don't have command staff would throw a javascript error since there's no corresponding reference for toggle_head()
-		var/list/headless_job_lists = list("Nobles" = GLOB.noble_positions,
+		var/list/headless_job_lists = list(
+							"Nobles" = GLOB.noble_positions,
 							"Courtiers" = GLOB.courtier_positions,
 							"Garrison" = GLOB.garrison_positions,
-							"City's Watch" = GLOB.watch_positions,
+//							"City's Watch" = GLOB.watch_positions,
 							"Church" = GLOB.church_positions,
 							"Mercenaries" = GLOB.mercenary_positions,
-							"Abstract" = list("Appearance", "Emote", "Deadchat", "OOC", "LOOC"))
+							"Abstract" = list("Appearance", "Emote", "Deadchat", "OOC", "LOOC")
+							)
 		for(var/department in headless_job_lists)
 			output += "<div class='column'><label class='rolegroup [ckey(department)]'><input type='checkbox' name='[department]' class='hidden' [usr.client.prefs.tgui_fancy ? " onClick='toggle_checkboxes(this, \"_com\")'" : ""]>[department]</label><div class='content'>"
 			break_counter = 0
@@ -254,9 +256,14 @@
 				"}
 				break_counter++
 			output += "</div></div>"
-		var/list/long_job_lists = list("Rabbles" = GLOB.rabble_positions,
-									"Peasants" = GLOB.peasant_positions,
-									"towners" = GLOB.towner_positions,
+		var/list/long_job_lists = list(
+									"Nobles" = GLOB.noble_positions,
+									"Courtiers" = GLOB.courtier_positions,
+									"Rabbles" = GLOB.rabble_positions,
+									"Garrison" = GLOB.garrison_positions,
+									"Towners" = GLOB.towner_positions,
+									"Mages" = GLOB.mages_positions,
+									"Church Positions" = GLOB.church_positions,
 									"Ghost and Other Roles" = list(ROLE_NECRO_SKELETON),
 									"Antagonist Positions" = list(ROLE_MANIAC, ROLE_WEREWOLF,
 									ROLE_VAMPIRE, ROLE_NBEAST, ROLE_BANDIT,

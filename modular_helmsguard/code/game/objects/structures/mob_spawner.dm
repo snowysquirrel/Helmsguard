@@ -15,8 +15,8 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 
 /obj/structure/mobspawner
 	name = "mob spawner"
-	desc = ""
-//	icon = 'icons/mob/animal.dmi'
+	desc = "gen"
+	icon = 'modular_helmsguard/icons/helpers/spawnhelpers.dmi'
 //	icon_state = "hole"
 	max_integrity = 500
 	anchored = TRUE
@@ -27,7 +27,7 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 	var/last_activated
 	var/detect_range = 6
 	var/spawn_range = 3
-	var/restart_time = 2 MINUTES
+	var/restart_time = 10 MINUTES
 	var/activated = FALSE
 	var/min_mobs = 1
 	var/max_mobs = 3

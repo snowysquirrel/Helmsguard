@@ -4,19 +4,12 @@
 	flag = MANATARMS
 	department_flag = GARRISON
 	faction = "Station"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 10  
+	spawn_positions = 10
 	selection_color = JCOLOR_SOLDIER
 
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = list(\
-	/datum/species/human/northern,\
-	/datum/species/human/halfelf,\
-	/datum/species/elf/wood,\
-	/datum/species/dwarf/mountain,\
-	/datum/species/demihuman,\
-	/datum/species/halforc,\
-	)
+	allowed_races = TOLERATED_CLEARANCE
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	tutorial = "You are a member of the march's garrison, you were either hired or levied to serve your liege and fight in their name. \
 	You answer to the Master-at-Arms, the Knights and the Marshall, therefore are expected to follow their orders."
@@ -67,6 +60,8 @@
 
 /datum/outfit/job/roguetown/manatarms/spearman/pre_equip(mob/living/carbon/human/H)
 	..()
+	H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
@@ -124,7 +119,7 @@
 
 
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/sund/sund_gate)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
 	H.verbs |= /mob/proc/haltyell
 
 
@@ -141,6 +136,8 @@
 
 /datum/outfit/job/roguetown/manatarms/swordsman/pre_equip(mob/living/carbon/human/H)
 	..()
+	H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
@@ -195,7 +192,7 @@
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/sund/sund_gate)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
 	
 // AXEMAN
 
@@ -210,6 +207,8 @@
 
 /datum/outfit/job/roguetown/manatarms/axeman/pre_equip(mob/living/carbon/human/H)
 	..()
+	H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
@@ -263,7 +262,7 @@
 	)
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/sund/sund_gate)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
 	H.verbs |= /mob/proc/haltyell
 
 
@@ -339,7 +338,7 @@
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/sund/sund_gate)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
 /// ARBALESTIER
 
 
@@ -408,7 +407,7 @@
 	)
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/sund/sund_gate)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
 
 /*
 /// ARQUEBUSIER

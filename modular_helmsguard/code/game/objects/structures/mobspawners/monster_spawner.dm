@@ -3,7 +3,7 @@
 
 /obj/effect/mobspawner/monster_spawner_all
 	name = "monster spawner"
-	desc = ""
+	icon_state = "vol"
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 2
@@ -27,6 +27,7 @@
 /obj/effect/mobspawner/monster_spawner_minotaurs
 	name = "minotaur spawner"
 	desc = ""
+	icon_state = "minotaur"
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 2
@@ -44,6 +45,7 @@
 	name = "critter spawner"
 	desc = ""
 	anchored = TRUE
+	icon_state = "vol"
 	density = FALSE
 	min_mobs = 2
 	max_mobs = 3
@@ -62,6 +64,7 @@
 	name = "volfs spawner"
 	desc = ""
 	anchored = TRUE
+	icon_state = "vol"
 	density = FALSE
 	min_mobs = 2
 	max_mobs = 3
@@ -73,7 +76,7 @@
 
 /obj/effect/mobspawner/monster_spawner_spider
 	name = "spider spawner"
-	desc = ""
+	icon_state = "spider"
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 2
@@ -104,7 +107,7 @@
 	mobs = 0
 	detect_range = 6
 	spawn_range = null
-	restart_time = 1 MINUTES
+	restart_time = 6 MINUTES
 	min_mobs = 1
 	max_mobs = 2
 	mobs_to_spawn = 3

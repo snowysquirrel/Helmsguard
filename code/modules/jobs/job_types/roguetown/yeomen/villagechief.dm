@@ -69,7 +69,7 @@
 		head = /obj/item/clothing/head/roguetown/chaperon/greyscale/elder
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/silkdress
 		backr = /obj/item/clothing/cloak/raincloak/furcloak
-	else if(H.gender == MALE)//Bailiff sort of look to it.
+	else if(H.gender == MALE)//Marshall sort of look to it.
 		head = /obj/item/clothing/head/roguetown/chaperon/greyscale/elder
 		shirt = /obj/item/clothing/suit/roguetown/shirt/tunic
 		gloves = /obj/item/clothing/gloves/roguetown/leather

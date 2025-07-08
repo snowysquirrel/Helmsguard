@@ -47,7 +47,7 @@
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
 //		SSticker.rulermob = H
 	if(H.gender == FEMALE)
-		beltl = /obj/item/storage/keyring/sund/sund_consort
+		beltl = /obj/item/storage/keyring/royal
 		neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
 		head = /obj/item/clothing/head/roguetown/nyle/consortcrown
@@ -62,7 +62,7 @@
 		armor = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
 		belt = /obj/item/storage/belt/rogue/leather
-		beltl = /obj/item/storage/keyring/sund/sund_consort
+		beltl = /obj/item/storage/keyring/royal
 		beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 		backr = /obj/item/storage/backpack/rogue/satchel
 		id = /obj/item/clothing/ring/silver

@@ -3,9 +3,9 @@
 /obj/item/ammopouch
 	name = "bullet pouch"
 	desc = ""
-	icon_state = "pouch0"
-	item_state = "pouch"
-	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "ammopouch0"
+	item_state = "ammopouch"
+	icon = 'modular_helmsguard/icons/obj/items/ammo_pouch.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
@@ -58,9 +58,9 @@
 
 /obj/item/ammopouch/update_icon()
 	if(bullets.len)
-		icon_state = "pouch1"
+		icon_state = "ammopouch1"
 	else
-		icon_state = "pouch0"
+		icon_state = "ammopouch0"
 
 /obj/item/ammopouch/bullets/Initialize()
 	..()

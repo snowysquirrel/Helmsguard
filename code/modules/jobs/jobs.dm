@@ -70,15 +70,14 @@ GLOBAL_LIST_INIT(noble_positions, list(
 GLOBAL_LIST_INIT(courtier_positions, list(
 	"Court Physician",
 	"Jester",
-	"Keep Servant",
+	"Butler",
 	"Dungeoneer"
 ))
 
 GLOBAL_LIST_INIT(garrison_positions, list(
 	"Knight",
-	"Master-at-Arms",
+	"Marshall",
 	"Man-at-Arms",
-	"Gatekeeper",
 ))
 
 GLOBAL_LIST_INIT(church_positions, list(
@@ -86,10 +85,7 @@ GLOBAL_LIST_INIT(church_positions, list(
 	"Inquisitor",
 	"Acolyte",
 	"Chapter Master",
-	"Knight Templar",
-	"Templar Sergeant",
-	"Knight Hospitaler",
-	"Hospitaler Sergeant",
+	"Templar",
 ))
 
 /*GLOBAL_LIST_INIT(yeoman_positions, list(
@@ -98,39 +94,35 @@ GLOBAL_LIST_INIT(church_positions, list(
 ))*/
 
 
-GLOBAL_LIST_INIT(watch_positions, list(
-	"Bailiff",
-	"Watchman",
+//GLOBAL_LIST_INIT(watch_positions, list(
+//	"Marshall",
+//	"Watchman",
+//))
+
+GLOBAL_LIST_INIT(mages_positions, list(
+	"Archmage",
+	"Mage Apprentice",
 ))
-
-
 
 GLOBAL_LIST_INIT(towner_positions, list(
 	"Merchant",
 	"Innkeeper",
-	"Armorer",
-	"Weaponsmith",
 	"Apothecary",
-	"Leatherworker",
 	"Tailor",
 	"Blacksmith",
 	"Cook",
-	"Serving Lad",
+	"Tapster",
 	"Apprentice",
-	"Builder"
-))
-
-
-GLOBAL_LIST_INIT(peasant_positions, list(
+	"Artificer",
 	"Soilson",
-	"Serf"
+	"Villager"
 ))
 
 
 GLOBAL_LIST_INIT(rabble_positions, list(
-	"Bawdyhouse Master",
-	"Rake",
-	"Gutterfolk",
+//	"Bawdyhouse Master",
+//	"Rake",
+//	"Gutterfolk",
 	"Adventurer",
 	"Pilgrim",
 	"Mercenary",
@@ -142,6 +134,7 @@ GLOBAL_LIST_INIT(mercenary_positions, list(
 	"Veteran Mercenary",
 ))
 
+/*
 GLOBAL_LIST_INIT(apprentices_positions, list(
 	"Clerk",
 	"Smithy Apprentice",
@@ -151,7 +144,7 @@ GLOBAL_LIST_INIT(apprentices_positions, list(
 	"Shophand",
 	"Vagabond",
 ))
-
+*/
 GLOBAL_LIST_INIT(allmig_positions, list(
 	"Adventurer",
 	"Pilgrim",
@@ -188,7 +181,8 @@ GLOBAL_LIST_INIT(job_assignment_order, get_job_assignment_order())
 	sorting_order += GLOB.courtier_positions
 	sorting_order += GLOB.garrison_positions
 	sorting_order += GLOB.church_positions
-	sorting_order += GLOB.watch_positions
+	sorting_order += GLOB.mages_positions
+//	sorting_order += GLOB.watch_positions
 //	sorting_order += GLOB.yeoman_positions
 	sorting_order += GLOB.towner_positions
 //	sorting_order += GLOB.goblin_positions
@@ -196,7 +190,7 @@ GLOBAL_LIST_INIT(job_assignment_order, get_job_assignment_order())
 	return sorting_order
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
-	EXP_TYPE_CREW = list("titles" = rabble_positions | command_positions | engineering_positions | medical_positions | science_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg")), // crew positions
+	EXP_TYPE_CREW = list("titles" = command_positions | engineering_positions | medical_positions | science_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg")), // crew positions
 	EXP_TYPE_COMMAND = list("titles" = command_positions),
 	EXP_TYPE_ENGINEERING = list("titles" = engineering_positions),
 	EXP_TYPE_MEDICAL = list("titles" = medical_positions),

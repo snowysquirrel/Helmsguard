@@ -59,7 +59,7 @@
 	color = "#851a16"
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
-	color = CLOTHING_AZURE
+	color = CLOTHING_RED
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/guard/Initialize()
 	. = ..()

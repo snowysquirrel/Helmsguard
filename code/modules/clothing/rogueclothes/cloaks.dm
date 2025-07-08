@@ -408,7 +408,7 @@
 
 /obj/item/clothing/cloak/tabard/knight/guard
 	desc = "A tabard with the lord's heraldic colors."
-	color = CLOTHING_AZURE
+	color = CLOTHING_RED
 	detail_tag = "_spl"
 	detail_color = CLOTHING_WHITE
 
@@ -701,7 +701,7 @@
 	name = "jupon"
 	icon_state = "surcoat"
 
-/obj/item/clothing/cloak/stabard/surcoat/bailiff
+/obj/item/clothing/cloak/stabard/surcoat/marshall
 	color = "#641E16"
 
 /obj/item/clothing/cloak/stabard/surcoat/councillor
@@ -763,7 +763,7 @@
 
 /obj/item/clothing/cloak/stabard/surcoat/guard
 	desc = "A surcoat with the lord's heraldic colors."
-	color = CLOTHING_AZURE
+	color = CLOTHING_RED
 	detail_tag = "_quad"
 	detail_color = CLOTHING_WHITE
 
@@ -872,7 +872,7 @@
 //	allowed_sex = list(MALE)
 	allowed_race = NON_DWARVEN_RACE_TYPES
 	detail_tag = "_det"
-	detail_color = CLOTHING_AZURE
+	detail_color = CLOTHING_RED
 
 /obj/item/clothing/cloak/lordcloak/update_icon()
 	cut_overlays()
@@ -1377,7 +1377,7 @@
 /obj/item/clothing/cloak/half/rider
 	name = "rider cloak"
 	icon_state = "guardcloak"
-	color = CLOTHING_AZURE
+	color = CLOTHING_RED
 	allowed_sex = list(MALE, FEMALE)
 	allowed_race = NON_DWARVEN_RACE_TYPES
 	inhand_mod = FALSE
@@ -1810,7 +1810,7 @@
 /obj/item/clothing/cloak/stabard/guardhood
 	name = "guard hood"
 	desc = "A hood with the lord's heraldic colors."
-	color = CLOTHING_AZURE
+	color = CLOTHING_RED
 	detail_tag = "_spl"
 	detail_color = CLOTHING_WHITE
 	icon_state = "guard_hood"

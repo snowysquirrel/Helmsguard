@@ -22,8 +22,6 @@
 	advjob_examine = TRUE
 
 /datum/outfit/job/roguetown/steward
-
-/datum/outfit/job/roguetown/steward
 	job_bitflag = BITFLAG_ROYALTY
 
 /datum/outfit/job/roguetown/steward/pre_equip(mob/living/carbon/human/H)
@@ -37,7 +35,7 @@
 		armor = /obj/item/clothing/suit/roguetown/shirt/tunic/silktunic
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	belt = /obj/item/storage/belt/rogue/leather/plaquegold/steward
-	beltr = /obj/item/storage/keyring/sund/sund_steward
+	beltr = /obj/item/storage/keyring/steward
 	backr = /obj/item/storage/backpack/rogue/satchel
 	id = /obj/item/scomstone
 
@@ -104,7 +102,7 @@
 		H.change_stat("speed", -1)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, TRAIT_GENERIC)
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/storage/keyring/sund/sund_steward)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1)
 
 
 
@@ -189,7 +187,7 @@
 	)
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1, /obj/item/storage/keyring/sund/sund_steward)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1)
 
 
 
@@ -253,7 +251,7 @@
 		H.change_stat("speed", -1)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, TRAIT_GENERIC)
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1, /obj/item/storage/keyring/sund/sund_steward)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1)
 	H.verbs |= /mob/living/carbon/human/proc/adjust_taxes
 
 GLOBAL_VAR_INIT(steward_tax_cooldown, -50000) // Antispam
