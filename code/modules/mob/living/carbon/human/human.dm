@@ -34,17 +34,6 @@
 	if(user == src)
 		if(get_num_arms(FALSE) < 1)
 			return
-		if(user.zone_selected == BODY_ZONE_PRECISE_GROIN)
-			if(get_location_accessible(src, BODY_ZONE_PRECISE_GROIN, skipundies = TRUE))
-				if(!underwear)
-					return
-				src.visible_message(span_notice("[src] begins to take off [underwear]..."))
-				if(do_after(user, 30, needhand = 1, target = src))
-					var/obj/item/bodypart/chest = get_bodypart(BODY_ZONE_CHEST)
-					chest.remove_bodypart_feature(underwear.undies_feature)
-					underwear.forceMove(get_turf(src))
-					src.put_in_hands(underwear)
-					underwear = null
 #endif
 
 /mob/living/carbon/human/Initialize()
@@ -267,11 +256,6 @@
 		dat += "<tr><td><A href='?src=[REF(src)];item=[SLOT_SHOES]'>[(shoes && !(shoes.item_flags & ABSTRACT)) ? shoes : "<font color=grey>Boots</font>"]</A></td></tr>"
 
 	dat += "<tr><td><hr></td></tr>"
-
-#ifdef MATURESERVER
-	if(get_location_accessible(src, BODY_ZONE_PRECISE_GROIN, skipundies = TRUE))
-		dat += "<tr><td><BR><B>Underwear:</B> <A href='?src=[REF(src)];undiesthing=1'>[!underwear ? "Nothing" : "Remove"]</A></td></tr>"
-#endif
 
 	dat += {"</table>"}
 

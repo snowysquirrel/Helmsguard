@@ -60,7 +60,6 @@
 		eyes = new /obj/item/organ/eyes/night_vision/zombie
 		eyes.Insert(H)
 		H.ambushable = FALSE
-		H.underwear = "Nude"
 		if(H.charflaw)
 			QDEL_NULL(H.charflaw)
 		H.update_body()
