@@ -4,6 +4,7 @@
 /obj/effect/mobspawner/goblin_spawner
 	name = "gob spawner"
 	desc = ""
+	icon_state = "goblin"
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 2
@@ -19,6 +20,7 @@
 /obj/effect/mobspawner/orc_spawner
 	name = "orc spawner"
 	desc = ""
+	icon_state = "orc"
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 2
@@ -34,6 +36,7 @@
 	desc = ""
 	anchored = TRUE
 	density = FALSE
+	icon_state = "orc"
 	min_mobs = 2
 	max_mobs = 5
 	mob_types = list(
@@ -52,6 +55,7 @@
 	density = FALSE
 	min_mobs = 5
 	spawn_range = 7
+	icon_state = "orc"
 	max_mobs = 10
 	mob_types = list(
 	/mob/living/carbon/human/species/goblin/npc = 5,

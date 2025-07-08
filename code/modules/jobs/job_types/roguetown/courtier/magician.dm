@@ -1,19 +1,22 @@
 /datum/job/roguetown/magician
-	title = "Court Magician"
+	title = "Archmage"
 	flag = WIZARD
-	department_flag = COURTIERS
-	selection_color = JCOLOR_COURTIER
+	department_flag = MAGEGUILD
+	selection_color = JCOLOR_MAGE
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
 
-	allowed_races = RACES_NO_CONSTRUCT		//Nobility, no construct
+	allowed_races = ALL_RACES_TYPES		//Nobility, no construct
 	allowed_sexes = list(MALE, FEMALE)
 	spells = list(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 	display_order = JDO_MAGICIAN
-	tutorial = "Your creed is one dedicated to the conquering of the arcane arts and the constant thrill of knowledge. \
-		You owe your life to the Lord, for it was his coin that allowed you to continue your studies in these dark times. \
-		In return, you have proven time and time again as justicar and trusted advisor to their reign."
+	tutorial = "As a considerably powerful spellcaster, the Order of the Mages has placed you in charge of the Mages Guild in Helmsguard,\
+	 Though the Order is generally shunned here, the Duke has granted you the rights to use the ancient cliffside Mage Tower as your headquarter \
+	in exchange for your service. \
+	You are expected to provide magical services to the people of Helmsguard, and to protect the town from any magical threats that may arise. \
+	You are also expected to train any aspiring mages who wish to learn the ways of the arcane."
+
 	outfit = /datum/outfit/job/roguetown/magician
 	whitelist_req = TRUE
 	give_bank_account = 47
@@ -26,7 +29,7 @@
 	vice_restrictions = list(/datum/charflaw/mute)
 
 /datum/outfit/job/roguetown/magician
-	job_bitflag = BITFLAG_ROYALTY
+	job_bitflag = BITFLAG_MAGE
 
 /datum/outfit/job/roguetown/magician/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -37,7 +40,7 @@
 	pants = /obj/item/clothing/under/roguetown/tights/random
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	belt = /obj/item/storage/belt/rogue/leather/plaquesilver
-	beltr = /obj/item/storage/keyring/sund/sund_noble
+	beltr = /obj/item/storage/keyring/archmage
 	beltl = /obj/item/book/spellbook
 	id = /obj/item/clothing/ring/gold
 	r_hand = /obj/item/rogueweapon/woodstaff/riddle_of_steel/magos
@@ -68,14 +71,14 @@
 		H.change_stat("strength", -1)
 		H.change_stat("constitution", -1)
 		H.change_stat("intelligence", 4)
-		H.adjust_spellpoints(11)
+		H.mind.adjust_spellpoints(11)
 		ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)
 		if(H.age == AGE_OLD)
 			H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 			H.change_stat("speed", -1)
 			H.change_stat("intelligence", 1)
 			H.change_stat("perception", 1)
-			H.adjust_spellpoints(2)
+			H.mind.adjust_spellpoints(2)
 			if(ishumannorthern(H))
 				belt = /obj/item/storage/belt/rogue/leather/plaquegold
 				cloak = null
@@ -85,3 +88,16 @@
 		switch(H.patron?.type)
 			if(/datum/patron/inhumen/zizo)
 				H.cmode_music = 'sound/music/combat_cult.ogg'
+	H.verbs |= /mob/living/carbon/human/proc/mageannouncement
+
+/mob/living/carbon/human/proc/mageannouncement()
+	set name = "Announcement"
+	set category = "Archmage"
+	if(stat)
+		return
+	var/inputty = input("Make an announcement", "ROGUETOWN") as text|null
+	if(inputty)
+		if(!istype(get_area(src), /area/rogue/indoors/town/magician))
+			to_chat(src, span_warning("I need to do this from the Mages Tower."))
+			return FALSE
+		priority_announce("[inputty]", title = "The Archmage Speaks", sound = 'sound/misc/notice.ogg', sender = src)

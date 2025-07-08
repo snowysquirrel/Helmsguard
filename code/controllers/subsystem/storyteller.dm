@@ -1205,7 +1205,7 @@ SUBSYSTEM_DEF(gamemode)
 				GLOB.azure_round_stats[STATS_ALIVE_GARRISON]++
 			if(human_mob.mind.assigned_role in GLOB.church_positions)
 				GLOB.azure_round_stats[STATS_ALIVE_CLERGY]++
-			if((human_mob.mind.assigned_role in GLOB.towner_positions) || (human_mob.mind.assigned_role in GLOB.peasant_positions) || (human_mob.mind.assigned_role in GLOB.mercenary_positions))
+			if((human_mob.mind.assigned_role in GLOB.towner_positions) || (human_mob.mind.assigned_role in GLOB.mercenary_positions))
 				GLOB.azure_round_stats[STATS_ALIVE_TRADESMEN]++
 			if(human_mob.has_flaw(/datum/charflaw/clingy))
 				GLOB.azure_round_stats[STATS_CLINGY_PEOPLE]++

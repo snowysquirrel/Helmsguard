@@ -99,7 +99,7 @@
 	wrists = /obj/item/clothing/neck/roguetown/psicross/silver
 	beltl = /obj/item/rogueweapon/sword/rapier
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat
-	backpack_contents = list(/obj/item/storage/keyring/sund/sund_inquisitor = 1, /obj/item/lockpickring/mundane = 1, /obj/item/rogueweapon/huntingknife/idagger/silver/psydagger, /obj/item/grapplinghook = 1, /obj/item/storage/belt/rogue/pouch/coins/rich = 1)
+	backpack_contents = list(/obj/item/storage/keyring/puritan = 1, /obj/item/lockpickring/mundane = 1, /obj/item/rogueweapon/huntingknife/idagger/silver/psydagger, /obj/item/grapplinghook = 1, /obj/item/storage/belt/rogue/pouch/coins/rich = 1)
 
 /// JUSTICIAR
 
@@ -160,7 +160,7 @@
 	wrists = /obj/item/clothing/neck/roguetown/psicross/silver
 	beltl = /obj/item/gun/ballistic/arquebus_pistol
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat
-	backpack_contents = list(/obj/item/storage/keyring/sund/sund_inquisitor = 1, /obj/item/powderflask = 1, /obj/item/storage/belt/rogue/pouch/coins/rich = 1)
+	backpack_contents = list(/obj/item/storage/keyring/puritan = 1, /obj/item/powderflask = 1, /obj/item/storage/belt/rogue/pouch/coins/rich = 1)
 
 
 

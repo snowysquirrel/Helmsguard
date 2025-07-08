@@ -1,7 +1,8 @@
 
 /obj/effect/spawner/lootdrop/roguetown/dungeon_chest
 	name = "dungeon_chest"
-	icon_state = "x4"
+	icon = 'modular_helmsguard/icons/helpers/spawnhelpers.dmi'
+	icon_state = "chest"
 	loot = list(
 	/obj/structure/closet/crate/chest/dungeon/generic_item = 6,
 	/obj/structure/closet/crate/chest/dungeon/materials = 5,
@@ -16,8 +17,8 @@
 
 /obj/effect/spawner/dungeons/maybechest
 	name = "Maybe a chest"
-	icon = 'icons/effects/landmarks_static.dmi'
-	icon_state = "generic_event"
+	icon = 'modular_helmsguard/icons/helpers/spawnhelpers.dmi'
+	icon_state = "maybechest"
 	var/tospawn = null
 
 /obj/effect/spawner/dungeons/maybechest/Initialize(mapload)

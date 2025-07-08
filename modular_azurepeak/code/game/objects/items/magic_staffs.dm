@@ -95,7 +95,7 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/rogueweapon/woodstaff/riddle_of_steel/magos
-	name = "\improper Staff of the Court Magos"
+	name = "\improper Staff of the Archmage"
 	icon_state = "courtstaff"
 
 /obj/item/rogueweapon/woodstaff/naledi

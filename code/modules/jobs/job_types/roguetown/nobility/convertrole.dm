@@ -47,7 +47,7 @@
 		return FALSE
 	//only migrants and peasants
 	if(!(recruit.job in GLOB.rabble_positions) && \
-		!(recruit.job in GLOB.peasant_positions) && \
+		!(recruit.job in GLOB.towner_positions) && \
 		!(recruit.job in GLOB.allmig_positions) && \
 		!(recruit.job in GLOB.mercenary_positions))
 		return FALSE
@@ -75,11 +75,11 @@
 
 /obj/effect/proc_holder/spell/self/convertrole/guard
 	name = "Recruit Guardsmen"
-	new_role = "Watchman"
+	new_role = "Man-at-Arms"
 	overlay_state = "recruit_guard"
-	recruitment_faction = "Watchman"
-	recruitment_message = "Serve the town guard, %RECRUIT!"
-	accept_message = "FOR THE CROWN!"
+	recruitment_faction = "garrison"
+	recruitment_message = "Serve the Duke, %RECRUIT!"
+	accept_message = "FOR THE PROVINCE!"
 	refuse_message = "I refuse."
 
 /obj/effect/proc_holder/spell/self/convertrole/guard/convert(mob/living/carbon/human/recruit, mob/living/carbon/human/recruiter)

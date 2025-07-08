@@ -125,7 +125,6 @@
 
 #define RACES_TOLERATED \
 	/datum/species/demihuman,\
-	/datum/species/kobold,\
 	/datum/species/elf/wood,\
 	/datum/species/tabaxi,\
 	/datum/species/lupian,\
@@ -175,6 +174,11 @@
 	/datum/species/elf/wood,\
 	/datum/species/dwarf/mountain,\
 	/datum/species/demihuman,\
+	/datum/species/halforc,\
+	/datum/species/tabaxi,\
+	/datum/species/lupian,\
+	/datum/species/vulpkanin,\
+	/datum/species/kobold,\
 )
 
 

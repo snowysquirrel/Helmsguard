@@ -489,7 +489,7 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/obj/item/clothing/head/roguetown/chaperon/noble/bailiff
+/obj/item/clothing/head/roguetown/chaperon/noble/marshall
 	name = "Marshal's chaperon"
 	desc = "A noble's chaperon made for the local Marshal. \"How terribly unfortunate you are!\""
 	color = "#641E16"

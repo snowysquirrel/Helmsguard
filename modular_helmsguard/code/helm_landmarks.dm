@@ -1,5 +1,32 @@
 /* HELMSGUARD LANDMARK */
 
+/obj/effect/landmark/start/marshall
+	name = "Marshall"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/chaptermaster
+	name = "Chapter Master"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/smith
+	name = "Blacksmith"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/artificer
+	name = "Artificer"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/apparentice
+	name = "Apparentice"
+	icon_state = "arrow"
+
+
+
+
+
+
+
+
 
 
 
@@ -8,6 +35,7 @@
 /* LATEJOIN HELMSGUARD */
 ///////////////////////
 
+/*
 /obj/effect/landmark/start/helms/late/noble
 	name = "Noble Late (Helm)"
 	icon_state = "arrow"
@@ -78,7 +106,7 @@
 /obj/effect/landmark/start/helms/late/citywatch
 	name = "Citywatch Late (Helm)"
 	icon_state = "arrow"
-	jobspawn_override = list("Bailiff",
+	jobspawn_override = list("Marshall",
 	"Watchman",
 	)
 	delete_after_roundstart = FALSE
@@ -205,8 +233,8 @@
 	icon_state = "arrow"
 
 
-/obj/effect/landmark/start/helms/watch/bailiff
-	name = "Bailiff"
+/obj/effect/landmark/start/helms/watch/marshall
+	name = "Marshall"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/helms/watch/watchman
@@ -280,3 +308,4 @@
 /obj/effect/landmark/start/helms/rabble/servingwench
 	name = "Serving Lad"
 	icon_state = "arrow"
+*/

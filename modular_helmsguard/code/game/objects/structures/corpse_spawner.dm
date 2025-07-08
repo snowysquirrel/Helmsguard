@@ -1,7 +1,8 @@
 
 /obj/effect/spawner/lootdrop/roguetown/corpse_spawner
 	name = "corpse spawner"
-	icon_state = "x2"
+	icon = 'modular_helmsguard/icons/helpers/spawnhelpers.dmi'
+	icon_state = "redskull"
 
 	loot = list(/mob/living/carbon/human/species/skeleton/dead/peasant = 10)
 	lootcount = 1
