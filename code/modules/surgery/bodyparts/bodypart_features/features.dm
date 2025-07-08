@@ -46,6 +46,7 @@
 	feature_slot = BODYPART_FEATURE_CREST
 	body_zone = BODY_ZONE_HEAD
 
+/*
 /datum/bodypart_feature/underwear
 	name = "Underwear"
 	feature_slot = BODYPART_FEATURE_UNDERWEAR
@@ -66,3 +67,4 @@
 	owner.underwear = underwear_item
 	underwear_item.undies_feature = src
 	underwear_item.color = accessory_colors
+*/

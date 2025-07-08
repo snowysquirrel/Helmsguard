@@ -66,7 +66,6 @@
 		/datum/customizer/bodypart_feature/hair/facial/humanoid,
 		/datum/customizer/bodypart_feature/accessory,
 		/datum/customizer/bodypart_feature/face_detail,
-		/datum/customizer/bodypart_feature/underwear,
 		/datum/customizer/organ/snout/tabaxi,
 		/datum/customizer/organ/tail/tabaxi,
 		/datum/customizer/organ/neck_feature/anthro,
