@@ -778,6 +778,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/exposed/bath
+
 /area/rogue/outdoors/exposed/bath
 	icon_state = "bath"
 	droning_sound = 'sound/music/area/bath.ogg'
@@ -886,8 +887,9 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound = 'sound/music/area/dwarf.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
-	first_time_text = "The Dwarven Quarter"
+	first_time_text = "The Crafting Guild"
 	converted_type = /area/rogue/outdoors/exposed/dwarf
+
 /area/rogue/outdoors/exposed/dwarf
 	icon_state = "dwarf"
 	droning_sound = 'sound/music/area/dwarf.ogg'

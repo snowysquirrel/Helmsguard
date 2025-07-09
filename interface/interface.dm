@@ -200,6 +200,7 @@ Hotkey-Mode: (hotkey-mode must be on)
 		for(var/atom/movable/screen/scannies/S in screen)
 			S.alpha = 70
 
+/*
 /client/verb/grainfilter()
 	set category = "Options"
 	set name = "ToggleGrain"
@@ -217,7 +218,7 @@ Hotkey-Mode: (hotkey-mode must be on)
 		to_chat(src, "Grain is <font color='#007fff'>ON.</font>")
 		for(var/atom/movable/screen/grain/S in screen)
 			S.alpha = 55
-
+*/
 /client/verb/triggercommend()
 	set category = "OOC"
 	set name = "Commend Someone"
