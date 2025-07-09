@@ -764,6 +764,10 @@
 		if(heart?.inscryption && (heart.inscryption_key in maniac.key_nums))
 			. += span_danger("[t_He] know[p_s()] [heart.inscryption_key], I AM SURE OF IT!")
 
+	if(!obscure_name || client?.prefs.masked_examine)
+		if(headshot_link)
+			. += "<span class='info'><img src=[headshot_link] width=100 height=100/></span>"
+
 	if(Adjacent(user))
 		if(observer_privilege)
 			var/static/list/check_zones = list(
