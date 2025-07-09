@@ -21,9 +21,11 @@
 	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 2,
 						/obj/item/natural/hide = 2, /obj/item/natural/bundle/bone/full = 2) // Made in-line w/ troll..
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 3,
-						/obj/item/natural/hide = 3, /obj/item/natural/bundle/bone/full = 2, /obj/item/natural/mino_head = 1)
+						/obj/item/natural/hide = 3, /obj/item/natural/bundle/bone/full = 2,
+						/obj/item/natural/head/minotaur = 1)
 	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 5,
-						/obj/item/natural/hide = 5, /obj/item/natural/bundle/bone/full = 2, /obj/item/natural/mino_head = 1) // No heads (yet). TBA.
+						/obj/item/natural/hide = 5, /obj/item/natural/bundle/bone/full = 2,
+						/obj/item/natural/head/minotaur = 1)
 	faction = list("caves")
 
 	health = MINOTAUR_HEALTH
@@ -59,7 +61,6 @@
 	ai_controller = /datum/ai_controller/minotaur
 
 //	stat_attack = UNCONSCIOUS
-	remains_type = /obj/item/rogueweapon/greataxe/steel/doublehead
 
 /mob/living/simple_animal/hostile/retaliate/rogue/minotaur/Initialize()
 	. = ..()
@@ -78,7 +79,7 @@
 
 
 /mob/living/simple_animal/hostile/retaliate/rogue/minotaur/axe
-	loot = list(/obj/item/rogueweapon/greataxe/steel/doublehead = 1) //Acquiring an axe from their cold, dead hands.
+	loot = list(/obj/item/rogueweapon/greataxe/steel/doublehead/minotaur = 1) //Acquiring an axe from their cold, dead hands.
 	icon_state = "MinotaurMale_Axe"
 	icon_living = "MinotaurMale_Axe"
 	icon_dead = "MinotaurMale_dead"
@@ -199,21 +200,25 @@
 	AIStatus = AI_ON
 	can_have_ai = TRUE
 
+// Dungeon-taur - Less health then normal.
+/mob/living/simple_animal/hostile/retaliate/rogue/minotaur/wounded
+	name = "Wounded Minotaur"
+	icon_state = "wminotaur"
+	icon_living = "wminotaur"
+	health = 400	//Regular is 600.
+	maxHealth = 400
 
-/obj/item/natural/mino_head
-	name = "minotaur's head"
-	icon = 'modular_hearthstone/icons/obj/items/mino_head.dmi'
-	icon_state = "mino_head"
-	desc = "Dismembered head of a mighty minotaur."
-	dropshrink = null
-	force = 0
-	throwforce = 0
-	w_class = WEIGHT_CLASS_BULKY
-	resistance_flags = FLAMMABLE
-	drop_sound = 'sound/foley/dropsound/gen_drop.ogg'
-	sellprice = 80
+/mob/living/simple_animal/hostile/retaliate/rogue/minotaur/axe/wounded
+	name = "Wounded Minotaur"
+	icon_state = "wminotaur_axe"
+	icon_living = "wminotaur_axe"
+	health = 400	//Regular is 600.
+	maxHealth = 400
 
-
-/obj/item/natural/mino_head/female
-	icon_state = "fmino_head"
-	desc = "Dismembered head of a mighty female minotaur."
+//Same as usual wounded, unique for orc dungeon. Prisoner-minotaur, doesn't attack orcs for dungeon related stuff.
+/mob/living/simple_animal/hostile/retaliate/rogue/minotaur/wounded/chained
+	name = "Chained Minotaur"
+	icon_state = "chainedminotaur"
+	icon_living = "chainedminotaur"
+	icon_dead = "chainedminotaur_dead"
+	faction = list("orcs", "caves")
