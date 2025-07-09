@@ -59,7 +59,7 @@
 		playsound(AM, pick('sound/foley/watermove (1).ogg','sound/foley/watermove (2).ogg'), 40, FALSE)
 
 
-/particles/hotspring_steam/attack_right(mob/user)
+/obj/structure/hotsprings/attack_right(mob/user)
 	if(isliving(user))
 		var/mob/living/L = user
 		if(L.stat != CONSCIOUS)
