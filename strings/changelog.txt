@@ -1,4 +1,12 @@
-Major revamp to races, lore and deities
-Jobs are renamed, removed and adapted appropriately to the settings
-Dreadwood map added to the south of the city
-Taxes would gradually get diminishing returns
+New Map
+Fixed Tavern and Blacksmith's locked doors
+Fixed Marshall's tower stairs
+Added the mountain hot springs
+Fixed some stairs that led into a death pit at the manor and the western monasteries
+Fixed the lock IDs on dungeon doors
+Added tamed horses to the monastery
+Added pans and pots inside of the cottages
+Fixed the Peddler's offsets to prevent path blocking
+
+Added mages guild
+Re-enabled some mercenary classes

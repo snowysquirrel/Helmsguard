@@ -68,6 +68,25 @@
 	spookysounds = SPOOKY_FROG
 	spookynight = SPOOKY_FOREST
 
+/area/rogue/outdoors/woods/pond
+	name = "pond"
+	icon = 'modular_helmsguard/icons/turf/helmsguard_areas.dmi'
+	icon_state = "pond"
+	ambientsounds = AMB_BEACH
+	ambientnight = AMB_BEACH
+	spookysounds = null
+	spookynight = null
+
+/area/rogue/outdoors/hotspring_outside
+	name = "springoutside"
+	first_time_text = "the mountain spring"
+	icon = 'modular_helmsguard/icons/turf/helmsguard_areas.dmi'
+	icon_state = "spring_outside"
+	ambientsounds = AMB_BEACH
+	ambientnight = AMB_BEACH
+	spookysounds = null
+	spookynight = null
+	discover_sound = 'sound/misc/area_4.ogg'
 
 
 // UNDER
@@ -77,3 +96,12 @@
 	discover_sound = 'sound/misc/area_2.ogg'
 	icon = 'modular_helmsguard/icons/turf/helmsguard_areas.dmi'
 	icon_state = "oldcrypt"
+
+/area/rogue/indoors/hotspring_inside
+	name = "springinside"
+	icon = 'modular_helmsguard/icons/turf/helmsguard_areas.dmi'
+	icon_state = "spring_inside"
+	ambientsounds = AMB_BEACH
+	ambientnight = AMB_BEACH
+	spookysounds = null
+	spookynight = null
