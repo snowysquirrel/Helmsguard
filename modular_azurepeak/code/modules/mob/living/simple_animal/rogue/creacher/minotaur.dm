@@ -75,7 +75,7 @@
 	icon_living = "MinotaurFem"
 	icon_dead = "MinotaurFem_dead"
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 10,
-						/obj/item/natural/hide = 10, /obj/item/natural/bundle/bone/full = 2, /obj/item/natural/mino_head/female = 1)
+						/obj/item/natural/hide = 10, /obj/item/natural/bundle/bone/full = 2, /obj/item/natural/head/minotaur = 1)
 
 
 /mob/living/simple_animal/hostile/retaliate/rogue/minotaur/axe
@@ -93,7 +93,7 @@
 	icon_living = "MinotaurFem_Axe"
 	icon_dead = "MinotaurFem_dead"
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 10,
-						/obj/item/natural/hide = 10, /obj/item/natural/bundle/bone/full = 2, /obj/item/natural/mino_head/female = 1, /obj/item/rogueweapon/greataxe/steel/doublehead = 1)
+						/obj/item/natural/hide = 10, /obj/item/natural/bundle/bone/full = 2, /obj/item/natural/head/minotaur = 1, /obj/item/rogueweapon/greataxe/steel/doublehead = 1)
 
 /mob/living/simple_animal/hostile/retaliate/rogue/minotaur/death(gibbed)
 	..()

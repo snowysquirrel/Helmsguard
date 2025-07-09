@@ -79,6 +79,10 @@
 					H.update_inv_armor()
 			return
 
+/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/marshall
+	name = "marshall padded gambeson"
+	color = CLOTHING_RED
+
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/otavan
 	name = "fencing gambeson"

@@ -369,7 +369,7 @@
 		add_overlay(pic2)
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan
-	name = "\improper Etruscan bascinet"
+	name = "\improper klappvisier bascinet"
 	desc = "A steel bascinet helmet with a straight visor, or \"klappvisier\", which can greatly reduce visibility. Though it was first developed in Etrusca, it is also widely used in Grenzelhoft."
 	icon_state = "klappvisier"
 	item_state = "klappvisier"
