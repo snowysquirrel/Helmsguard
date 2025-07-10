@@ -1814,7 +1814,7 @@
 	name = ""
 	screen_loc = "1,1"
 	mouse_opacity = 0
-	alpha = 55
+	alpha = 0
 	layer = 13
 	plane = 0
 	blend_mode = 4

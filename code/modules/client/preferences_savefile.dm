@@ -175,7 +175,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["masked_examine"]		>> masked_examine
 	S["mute_animal_emotes"]	>> mute_animal_emotes
 	S["crt"]				>> crt
-//	S["grain"]				>> grain
+	S["grain"]				>> grain
 	S["sexable"]			>> sexable
 	S["shake"]				>> shake
 	S["mastervol"]			>> mastervol

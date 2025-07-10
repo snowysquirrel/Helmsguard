@@ -106,7 +106,6 @@ GLOBAL_LIST_INIT(available_ui_styles, sortList(list(
 	if(owner.client?.prefs?.crt == TRUE)
 		scannies.alpha = 70
 
-/*
 /datum/hud/new_player/New(mob/owner)
 	..()
 	grain = new /atom/movable/screen/grain
@@ -114,7 +113,7 @@ GLOBAL_LIST_INIT(available_ui_styles, sortList(list(
 	static_inventory += grain
 	if(owner.client?.prefs?.grain == TRUE)
 		grain.alpha = 55
-*/
+
 /datum/hud/Destroy()
 	if(mymob.hud_used == src)
 		mymob.hud_used = null
