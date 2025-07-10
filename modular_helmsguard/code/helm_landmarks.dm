@@ -21,20 +21,22 @@
 	icon_state = "arrow"
 
 
-
-
-
-
-
-
-
-
-
-
 ///////////////////////
 /* LATEJOIN HELMSGUARD */
 ///////////////////////
 
+/obj/effect/landmark/start/manorlate
+	name = "Manorlate"
+	icon_state = "arrow"
+	delete_after_roundstart = FALSE
+	jobspawn_override = list("Grand Duke", "Lord Consort", "Lord Heir", "Hand", "Steward", "Knight", "Court Physician", "Butler", "Dungeoneer")
+
+
+
+
+///////////////////////
+/* DEPRECATED */
+///////////////////////
 /*
 /obj/effect/landmark/start/helms/late/noble
 	name = "Noble Late (Helm)"
