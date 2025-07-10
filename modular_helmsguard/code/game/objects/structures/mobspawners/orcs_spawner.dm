@@ -113,7 +113,7 @@
 	density = FALSE
 	mobs = 0
 	detect_range = 6
-	restart_time = 1 MINUTES
+	restart_time = 7 MINUTES
 	min_mobs = 1
 	max_mobs = 3
 	mobs_to_spawn = 3

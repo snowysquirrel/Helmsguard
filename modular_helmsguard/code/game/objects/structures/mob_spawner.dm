@@ -27,7 +27,7 @@ THESE SPAWNERS SPAWN MOBS BY CHOOSING RANDOM TILES AROUND IT AND SCATTERING THE 
 	var/last_activated
 	var/detect_range = 6
 	var/spawn_range = 3
-	var/restart_time = 10 MINUTES
+	var/restart_time = 15 MINUTES
 	var/activated = FALSE
 	var/min_mobs = 1
 	var/max_mobs = 3
