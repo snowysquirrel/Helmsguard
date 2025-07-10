@@ -301,7 +301,6 @@
 	/datum/job/roguetown/lord
 
 #define CHURCH_ROLES \
-	/datum/job/roguetown/churchling,\
 	/datum/job/roguetown/monk,\
 	/datum/job/roguetown/priest,\
 	/datum/job/roguetown/chaptermaster,\

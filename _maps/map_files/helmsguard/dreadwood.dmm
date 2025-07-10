@@ -577,11 +577,8 @@
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/outdoors/dread/dreadwoods)
 "eL" = (
-/obj/structure/fluff/customsign{
-	wrotesign = "SUNDBERG - NORTH";
-	name = "SUNDBERG - NORTH"
-	},
-/turf/open/floor/rogue/grass,
+/obj/effect/landmark/start/wretch,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/dread/merc_spawn)
 "eN" = (
 /obj/structure/bookcase/random/archive,
@@ -1543,6 +1540,10 @@
 /obj/structure/spider/stickyweb,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/dread/forgottenkeep)
+"mD" = (
+/obj/effect/landmark/start/wretchlate,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/dread/merc_spawn)
 "mG" = (
 /obj/structure/fluff/grindwheel,
 /obj/effect/decal/cleanable/dirt/cobweb,
@@ -4562,6 +4563,10 @@
 /obj/effect/decal/cleanable/blood/gibs/limb,
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/dread/forgottenkeep)
+"Lo" = (
+/obj/effect/landmark/start/wretchlate,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/dread/merc_spawn)
 "Ls" = (
 /obj/structure/table/wood{
 	icon_state = "largetable";
@@ -6021,6 +6026,10 @@
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/dread/nightkeep)
+"Xi" = (
+/obj/effect/landmark/start/wretch,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/dread/merc_spawn)
 "Xq" = (
 /obj/effect/spawner/dungeons/maybechest,
 /turf/open/floor/rogue/blocks/platform,
@@ -6125,6 +6134,13 @@
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/dread/church)
+"Yk" = (
+/obj/structure/fluff/signage/template{
+	name = "HELMSKEEP - NORTH";
+	written = "Hail the Grand Duke!"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/dread/merc_spawn)
 "Ym" = (
 /obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/blocks/nosmooth,
@@ -86104,9 +86120,9 @@ Bl
 Bl
 Bl
 kH
-fG
-Xy
-Xy
+Lo
+mD
+mD
 kH
 Bl
 Bl
@@ -86458,8 +86474,8 @@ vY
 vY
 Uy
 fG
-fG
-Xy
+Xi
+eL
 Xy
 fG
 fG
@@ -86814,7 +86830,7 @@ vY
 zL
 fG
 Xy
-fG
+Xi
 fG
 fG
 vY
@@ -88040,8 +88056,8 @@ yz
 yz
 fG
 fG
-eL
 fG
+Yk
 fG
 fG
 fG

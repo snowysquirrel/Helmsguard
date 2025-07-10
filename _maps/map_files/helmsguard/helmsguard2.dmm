@@ -8907,6 +8907,12 @@
 	icon_state = "weird1"
 	},
 /area/rogue/indoors/town)
+"idR" = (
+/obj/structure/fluff/railing/border{
+	dir = 8
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors/bridge)
 "ieb" = (
 /obj/effect/decal/border/stone/inverted{
 	dir = 8
@@ -10224,11 +10230,11 @@
 /turf/open/floor/rogue/ruinedwood/nosmooth/wooden_floor2,
 /area/rogue/indoors/town/church)
 "jlM" = (
-/obj/effect/landmark/start/apparentice{
-	dir = 8
+/obj/structure/fluff/railing/border{
+	dir = 4
 	},
-/turf/open/floor/rogue/blocks/stone/nosmooth,
-/area/rogue/outdoors/town/riverstead)
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors/bridge)
 "jmh" = (
 /obj/structure/hotspring/border/eleven,
 /obj/effect/wisp/prestidigitation{
@@ -11286,11 +11292,11 @@
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
-/obj/effect/landmark/start/apparentice{
-	dir = 4
-	},
 /obj/structure/fluff/littlebanners{
 	pixel_y = -11
+	},
+/obj/effect/landmark/start/apprentice{
+	dir = 4
 	},
 /turf/open/floor/rogue/blocks/stone/nosmooth,
 /area/rogue/outdoors/town/riverstead)
@@ -11366,6 +11372,9 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/manor)
+"klG" = (
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors/bridge)
 "klK" = (
 /turf/closed/wall/mineral/rogue/decowood/vert,
 /area/rogue/outdoors/mountains)
@@ -24136,7 +24145,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
-/obj/effect/landmark/start/apparentice{
+/obj/effect/landmark/start/apprentice{
 	dir = 4
 	},
 /turf/open/floor/rogue/blocks/stone/nosmooth,
@@ -104473,10 +104482,10 @@ jmo
 eEL
 jmo
 bxb
-jlM
-jlM
-jlM
-jlM
+jmo
+jmo
+jmo
+jmo
 jmo
 jmo
 bxb
@@ -161465,8 +161474,8 @@ pNU
 pNU
 pNU
 pNU
-pNU
-pNU
+klG
+klG
 pNU
 pNU
 pNU
@@ -161686,9 +161695,9 @@ mKA
 flR
 prg
 bvC
-mKA
-mKA
-mKA
+jlM
+jlM
+jlM
 bvC
 mKA
 mKA
@@ -162574,9 +162583,9 @@ wck
 kOR
 ajQ
 vsR
-wck
-wck
-wck
+idR
+idR
+idR
 vsR
 wck
 wck
@@ -162797,8 +162806,8 @@ pNU
 pNU
 pNU
 pNU
-pNU
-pNU
+klG
+klG
 pNU
 pNU
 pNU

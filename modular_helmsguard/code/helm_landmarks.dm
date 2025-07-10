@@ -16,8 +16,8 @@
 	name = "Artificer"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/apparentice
-	name = "Apparentice"
+/obj/effect/landmark/start/apprentice
+	name = "Apprentice"
 	icon_state = "arrow"
 
 
