@@ -4,7 +4,7 @@
 /obj/effect/mobspawner/goblin_spawner
 	name = "gob spawner"
 	desc = ""
-	icon_state = "goblin"
+	icon_state = "gob"
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 2
