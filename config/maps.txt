@@ -13,7 +13,7 @@ Format:
 	votable (is this map votable)
 endmap
 
-map helmsguard
+map helmsguard2
 	default
 	votable
 endmap
