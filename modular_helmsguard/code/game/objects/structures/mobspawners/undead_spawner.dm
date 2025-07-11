@@ -56,8 +56,8 @@
 	icon_state = "skel"
 	anchored = TRUE
 	density = FALSE
-	min_mobs = 5
-	max_mobs = 8
+	min_mobs = 2
+	max_mobs = 4
 	mob_types = list(
 	/mob/living/simple_animal/hostile/rogue/skeleton/axe = 6,
 	/mob/living/simple_animal/hostile/rogue/skeleton/spear = 6,
@@ -68,7 +68,6 @@
 	/mob/living/simple_animal/hostile/rogue/skeleton/bow = 4,
 	/mob/living/simple_animal/hostile/rogue/skeleton/guard/crypt_guard = 2,
 	/mob/living/simple_animal/hostile/rogue/skeleton/guard/crypt_guard_spear = 2,
-	/mob/living/simple_animal/hostile/rogue/gravelord = 1
 	)
 	text_faction = "Skeletons"
 	objfaction = list("undead")

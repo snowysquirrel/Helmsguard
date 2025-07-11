@@ -11,8 +11,8 @@
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/indoors/dread/forgottenkeep)
 "ag" = (
-/obj/effect/mobspawner/skeleton_spawner_hard,
-/turf/open/floor/rogue/cobble2,
+/obj/effect/mobspawner/skeleton_spawner_simple,
+/turf/closed/wall/mineral/rogue/decostone,
 /area/rogue/indoors/dread/nightkeep)
 "an" = (
 /obj/structure/mineral_door/wood{
@@ -112,6 +112,10 @@
 "bc" = (
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/dread/toll)
+"bd" = (
+/obj/effect/landmark/start/wretch,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/dread/merc_spawn)
 "be" = (
 /obj/machinery/light/rogue/firebowl,
 /turf/open/floor/rogue/dirt/road,
@@ -464,6 +468,7 @@
 /area/rogue/indoors/dread/forgottenkeep)
 "dY" = (
 /obj/structure/closet/crate/drawer,
+/obj/effect/spawner/lootdrop/general_loot_mid,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/dread/forgottenkeep)
 "dZ" = (
@@ -476,6 +481,7 @@
 	lockid = "sund_castle";
 	locked = 1
 	},
+/obj/effect/mobspawner/skeleton_spawner_simple,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/dread/nightkeep)
 "ec" = (
@@ -577,9 +583,11 @@
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/outdoors/dread/dreadwoods)
 "eL" = (
-/obj/effect/landmark/start/wretch,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/dread/merc_spawn)
+/obj/structure/closet/crate/chest,
+/obj/item/rope/chain,
+/obj/effect/spawner/lootdrop/general_loot_mid,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/dread/toll)
 "eN" = (
 /obj/structure/bookcase/random/archive,
 /turf/open/water/swamp/deep,
@@ -691,6 +699,10 @@
 /obj/machinery/light/rogue/wallfire/candle/blue/r,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/dread/nightkeep)
+"fD" = (
+/obj/effect/landmark/start/wretch,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/dread/merc_spawn)
 "fG" = (
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/dread/merc_spawn)
@@ -736,12 +748,14 @@
 /area/rogue/indoors/dread/forgottenkeep)
 "fW" = (
 /obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/general_loot_low,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/dread/toll)
 "fY" = (
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/roguetown/dungeon,
 /obj/effect/spawner/lootdrop/roguetown/dungeon,
+/obj/effect/spawner/lootdrop/general_loot_mid,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/dread/forgottenkeep)
 "gl" = (
@@ -810,6 +824,7 @@
 	icon_state = "largetable";
 	dir = 10
 	},
+/obj/effect/spawner/lootdrop/roguetown/dungeon/food,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/dread/nightkeep)
 "gQ" = (
@@ -823,6 +838,7 @@
 /area/rogue/indoors/dread/forgottenkeep)
 "gZ" = (
 /obj/structure/closet/crate/roguecloset,
+/obj/effect/spawner/lootdrop/general_loot_low,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/dread/nightkeep)
 "ha" = (
@@ -848,6 +864,7 @@
 	pixel_y = 32
 	},
 /obj/effect/mobspawner/undead_all,
+/obj/effect/spawner/lootdrop/general_loot_hi,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/dread/forgottenkeep)
 "hh" = (
@@ -990,10 +1007,11 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/dread/toll)
 "ih" = (
-/obj/structure/mineral_door/wood,
-/obj/effect/mobspawner/skeleton_spawner_simple,
-/turf/open/floor/rogue/blocks/nosmooth,
-/area/rogue/indoors/dread/forgottenkeep)
+/obj/structure/closet/crate/roguecloset,
+/obj/effect/spawner/lootdrop/general_loot_low,
+/obj/effect/spawner/lootdrop/general_loot_mid,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/dread/nightkeep)
 "ii" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/r,
 /turf/open/transparent/openspace,
@@ -1076,6 +1094,7 @@
 	icon_state = "stickyweb2"
 	},
 /obj/machinery/light/rogue/wallfire/candle/blue/r,
+/obj/effect/spawner/lootdrop/general_loot_low,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/dread/nightkeep)
 "iR" = (
@@ -1093,6 +1112,7 @@
 	icon_state = "largetable";
 	dir = 8
 	},
+/obj/effect/spawner/lootdrop/cheap_clutter_spawner,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/dread/nightkeep)
 "iZ" = (
@@ -1282,6 +1302,10 @@
 	},
 /turf/open/floor/rogue/blocks/paving,
 /area/rogue/indoors/dread/toll)
+"kj" = (
+/obj/item/reagent_containers/glass/bucket,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/indoors/dread/gobcamp)
 "kk" = (
 /turf/closed/mineral/random/rogue,
 /area/rogue/indoors/dread/church)
@@ -1342,6 +1366,7 @@
 /area/rogue/indoors/dread/forgottenkeep)
 "kx" = (
 /obj/structure/table/wood/crafted,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/medical,
 /turf/open/floor/rogue/cobble2,
 /area/rogue/indoors/dread/nightkeep)
 "ky" = (
@@ -1475,6 +1500,8 @@
 /area/rogue/indoors/dread/nightkeep)
 "me" = (
 /obj/structure/closet/crate/roguecloset/inn/south,
+/obj/effect/spawner/lootdrop/roguetown/dungeon,
+/obj/effect/spawner/lootdrop/roguetown/dungeon,
 /turf/open/floor/rogue/cobble2,
 /area/rogue/indoors/dread/nightkeep)
 "mh" = (
@@ -1540,10 +1567,6 @@
 /obj/structure/spider/stickyweb,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/dread/forgottenkeep)
-"mD" = (
-/obj/effect/landmark/start/wretchlate,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/dread/merc_spawn)
 "mG" = (
 /obj/structure/fluff/grindwheel,
 /obj/effect/decal/cleanable/dirt/cobweb,
@@ -1789,6 +1812,10 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/dread/forgottenkeep)
+"pn" = (
+/obj/effect/landmark/start/wretchlate,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/dread/merc_spawn)
 "pp" = (
 /obj/structure/bed/rogue/inn,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
@@ -1823,6 +1850,12 @@
 /area/rogue/indoors/dread/toll)
 "py" = (
 /turf/open/floor/carpet/royalblack,
+/area/rogue/indoors/dread/nightkeep)
+"pB" = (
+/obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/general_loot_mid,
+/obj/effect/spawner/lootdrop/general_loot_low,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/dread/nightkeep)
 "pD" = (
 /obj/structure/chair/bench/coucha,
@@ -1896,9 +1929,10 @@
 	},
 /area/rogue/indoors/dread/forgottenkeep)
 "qa" = (
-/obj/effect/mobspawner/skeleton_spawner_simple,
-/turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors/dread/nightkeep)
+/obj/structure/bed/rogue/inn/hay,
+/obj/effect/spawner/lootdrop/roguetown/dungeon,
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors/dread/church)
 "qb" = (
 /obj/structure/spider/stickyweb{
 	dir = 1
@@ -2016,6 +2050,7 @@
 /obj/structure/closet/crate/roguecloset/inn/south{
 	pixel_y = 8
 	},
+/obj/effect/spawner/lootdrop/general_loot_hi,
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/dread/forgottenkeep)
 "qV" = (
@@ -2594,6 +2629,11 @@
 /obj/effect/spawner/dungeons/maybechest,
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/dread/nightkeep)
+"vx" = (
+/obj/structure/mineral_door/wood/violet,
+/obj/effect/mobspawner/skeleton_spawner_hard,
+/turf/open/floor/rogue/cobble/mossy,
+/area/rogue/indoors/dread/nightkeep)
 "vD" = (
 /obj/effect/spawner/dungeons/maybechest,
 /turf/open/floor/rogue/cobble,
@@ -2702,6 +2742,13 @@
 "wE" = (
 /turf/open/water/swamp/deep,
 /area/rogue/outdoors/dread/dreadwoods)
+"wF" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood1"
+	},
+/obj/effect/spawner/lootdrop/general_loot_low,
+/turf/open/floor/rogue/cobble/mossy,
+/area/rogue/indoors/dread/nightkeep)
 "wH" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/church,
@@ -2718,6 +2765,8 @@
 /obj/structure/spider/stickyweb{
 	dir = 4
 	},
+/obj/effect/spawner/lootdrop/general_loot_mid,
+/obj/effect/spawner/lootdrop/general_loot_mid,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/dread/nightkeep)
 "wM" = (
@@ -2819,6 +2868,7 @@
 /obj/effect/decal/stone/mossy{
 	dir = 4
 	},
+/obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/dread/forgottenkeep)
 "xr" = (
@@ -2869,6 +2919,7 @@
 	icon_state = "churchtable_end"
 	},
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
+/obj/effect/spawner/lootdrop/roguetown/dungeon,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/dread/nightkeep)
 "xL" = (
@@ -2876,6 +2927,7 @@
 /obj/structure/spider/stickyweb{
 	icon_state = "stickyweb2"
 	},
+/obj/effect/spawner/lootdrop/general_loot_low,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/dread/toll)
 "xO" = (
@@ -3058,7 +3110,7 @@
 /area/rogue/indoors/dread/forgottenkeep)
 "zu" = (
 /obj/structure/closet/crate/drawer,
-/obj/effect/mobspawner/skeleton_spawner_simple,
+/obj/effect/spawner/lootdrop/roguetown/dungeon,
 /turf/open/floor/rogue/cobble2,
 /area/rogue/indoors/dread/nightkeep)
 "zw" = (
@@ -3509,6 +3561,8 @@
 /obj/structure/spider/stickyweb{
 	dir = 1
 	},
+/obj/effect/spawner/lootdrop/roguetown/dungeon,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/medical,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/dread/nightkeep)
 "Di" = (
@@ -3566,9 +3620,12 @@
 /turf/open/water/swamp,
 /area/rogue/outdoors/dread/dreadwoods)
 "Dy" = (
-/obj/effect/mobspawner/skeleton_spawner_simple,
-/turf/open/floor/rogue/cobble,
-/area/rogue/indoors/dread/nightkeep)
+/obj/structure/fluff/signage/template{
+	name = "HELMSKEEP - NORTH";
+	written = "Hail the Grand Duke!"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/dread/merc_spawn)
 "Dz" = (
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/roguetown/dungeon,
@@ -3586,6 +3643,7 @@
 	icon_state = "largetable";
 	dir = 9
 	},
+/obj/effect/spawner/lootdrop/roguetown/dungeon/food,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/dread/nightkeep)
 "DD" = (
@@ -3692,6 +3750,7 @@
 /area/rogue/indoors/dread/gobcamp)
 "Er" = (
 /obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/general_loot_mid,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/dread/nightkeep)
 "Es" = (
@@ -3722,6 +3781,9 @@
 	icon_state = "tablewood1"
 	},
 /obj/effect/decal/border,
+/obj/effect/spawner/lootdrop/general_loot_low,
+/obj/effect/spawner/lootdrop/general_loot_low,
+/obj/effect/spawner/lootdrop/cheap_clutter_spawner,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -3974,6 +4036,7 @@
 	icon_state = "tablewood1"
 	},
 /obj/item/reagent_containers/peppermill,
+/obj/effect/spawner/lootdrop/cheap_clutter_spawner,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/dread/nightkeep)
 "Gt" = (
@@ -4007,10 +4070,7 @@
 /turf/open/floor/rogue/rooftop/green,
 /area/rogue/outdoors/dread/dreadwoods)
 "GI" = (
-/obj/machinery/light/rogue/firebowl/church{
-	fueluse = 800;
-	no_refuel = 0
-	},
+/obj/structure/well,
 /turf/open/floor/rogue/cobble2,
 /area/rogue/indoors/dread/nightkeep)
 "GJ" = (
@@ -4066,6 +4126,7 @@
 	desc = "A gilded icon of Saint Käthe von Südgarde, who's silver hair-pin slew her Tyrian captor then herself in his siege-tent.";
 	pixel_y = 32
 	},
+/obj/effect/spawner/lootdrop/general_loot_hi,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/dread/nightkeep)
 "Hg" = (
@@ -4117,9 +4178,8 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/dread/forgottenkeep)
 "HD" = (
-/obj/effect/mobspawner/skeleton_spawner_simple,
-/obj/machinery/light/rogue/wallfire/candle/blue/l,
-/turf/open/floor/rogue/cobble/mossy,
+/obj/item/reagent_containers/glass/bucket,
+/turf/open/floor/rogue/cobble2,
 /area/rogue/indoors/dread/nightkeep)
 "HG" = (
 /obj/structure/bars/passage{
@@ -4314,6 +4374,7 @@
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/roguetown/dungeon,
 /obj/effect/spawner/lootdrop/roguetown/dungeon,
+/obj/effect/spawner/lootdrop/general_loot_mid,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/dread/forgottenkeep)
 "Jr" = (
@@ -4520,6 +4581,10 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/dread/gobcamp_outside)
+"KL" = (
+/obj/effect/mobspawner/skeleton_spawner_simple,
+/turf/closed/wall/mineral/rogue/decostone/cand,
+/area/rogue/indoors/dread/forgottenkeep)
 "KM" = (
 /obj/machinery/light/rogue/firebowl/standing/blue,
 /turf/open/floor/rogue/tile,
@@ -4563,15 +4628,12 @@
 /obj/effect/decal/cleanable/blood/gibs/limb,
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/dread/forgottenkeep)
-"Lo" = (
-/obj/effect/landmark/start/wretchlate,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/dread/merc_spawn)
 "Ls" = (
 /obj/structure/table/wood{
 	icon_state = "largetable";
 	dir = 4
 	},
+/obj/effect/spawner/lootdrop/roguetown/dungeon/food,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/dread/nightkeep)
 "Lu" = (
@@ -4729,6 +4791,8 @@
 "MF" = (
 /obj/structure/rack/rogue,
 /obj/effect/decal/cleanable/dirt/cobweb,
+/obj/effect/spawner/lootdrop/general_loot_low,
+/obj/effect/spawner/lootdrop/general_loot_mid,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/dread/toll)
 "MK" = (
@@ -4783,6 +4847,7 @@
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
 	},
+/obj/effect/spawner/lootdrop/cheap_clutter_spawner,
 /turf/open/floor/rogue/cobble/mossy3,
 /area/rogue/indoors/dread/nightkeep)
 "Nj" = (
@@ -4874,6 +4939,7 @@
 /obj/structure/table/wood{
 	icon_state = "longtable"
 	},
+/obj/effect/spawner/lootdrop/roguetown/dungeon,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/dread/church)
 "NR" = (
@@ -4932,8 +4998,10 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/dread/forgottenkeep)
 "On" = (
-/obj/effect/mobspawner/skeleton_spawner_simple,
-/turf/open/floor/rogue/cobble2,
+/obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/general_loot_mid,
+/obj/effect/spawner/lootdrop/general_loot_low/x3,
+/turf/open/floor/rogue/blocks/stone/stonepattern2,
 /area/rogue/indoors/dread/nightkeep)
 "Os" = (
 /obj/structure/flora/newtree,
@@ -5025,6 +5093,7 @@
 /obj/structure/spider/stickyweb{
 	dir = 4
 	},
+/obj/effect/spawner/lootdrop/general_loot_low,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/dread/nightkeep)
 "Pw" = (
@@ -5040,6 +5109,8 @@
 	dir = 10
 	},
 /obj/structure/closet/crate/roguecloset/inn/south,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/medical,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/medical,
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/dread/nightkeep)
 "PB" = (
@@ -5063,6 +5134,13 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/dread/forgottenkeep)
+"PO" = (
+/obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/general_loot_low,
+/obj/effect/spawner/lootdrop/general_loot_mid,
+/obj/effect/spawner/lootdrop/general_loot_mid,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/dread/toll)
 "PR" = (
 /obj/item/grown/log/tree/small,
 /turf/open/floor/rogue/cobble,
@@ -5358,8 +5436,11 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/dread/toll)
 "Si" = (
-/obj/structure/well,
-/turf/open/floor/rogue/blocks/nosmooth,
+/obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/general_loot_mid,
+/obj/effect/spawner/lootdrop/iron_copper_weapon_spawner,
+/obj/effect/spawner/lootdrop/iron_copper_weapon_spawner,
+/turf/open/floor/rogue/blocks/stone/stonepattern2,
 /area/rogue/indoors/dread/nightkeep)
 "Sj" = (
 /obj/structure/bars/grille,
@@ -5497,17 +5578,16 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/dread/toll)
 "SY" = (
-/obj/effect/decal/cobbleedge{
-	dir = 8
-	},
-/obj/effect/mobspawner/skeleton_spawner_hard,
-/turf/open/floor/rogue/dirt,
+/obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/helmet_spawner,
+/turf/open/floor/rogue/blocks/stone/stonepattern2,
 /area/rogue/indoors/dread/nightkeep)
 "SZ" = (
 /obj/structure/table/wood{
 	icon_state = "largetable";
 	dir = 5
 	},
+/obj/effect/spawner/lootdrop/cheap_clutter_spawner,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/dread/nightkeep)
 "Td" = (
@@ -5659,9 +5739,11 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/dread/forgottenkeep)
 "Uk" = (
-/obj/effect/mobspawner/skeleton_spawner_simple,
-/turf/closed/wall/mineral/rogue/stone,
-/area/rogue/indoors/dread/forgottenkeep)
+/obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/general_loot_low,
+/obj/effect/spawner/lootdrop/general_loot_mid,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/dread/toll)
 "Ul" = (
 /obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/cobble,
@@ -5734,6 +5816,7 @@
 	icon_state = "longtable";
 	dir = 1
 	},
+/obj/effect/spawner/lootdrop/roguetown/dungeon,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/dread/church)
 "UW" = (
@@ -5878,6 +5961,7 @@
 	icon_state = "largetable"
 	},
 /obj/effect/spawner/lootdrop/roguetown/dungeon,
+/obj/effect/spawner/lootdrop/general_loot_mid,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/dread/forgottenkeep)
 "Wf" = (
@@ -5902,6 +5986,7 @@
 	icon_state = "largetable";
 	dir = 6
 	},
+/obj/effect/spawner/lootdrop/roguetown/dungeon/food,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/dread/nightkeep)
 "Wp" = (
@@ -5948,6 +6033,7 @@
 	dir = 1;
 	icon_state = "stickyweb2"
 	},
+/obj/effect/spawner/lootdrop/general_loot_low,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/dread/nightkeep)
 "WF" = (
@@ -5975,6 +6061,7 @@
 /area/rogue/indoors/dread/forgottenkeep)
 "WS" = (
 /obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/general_loot_low/x3,
 /turf/open/floor/rogue/blocks/stone/stonepattern2,
 /area/rogue/indoors/dread/nightkeep)
 "WT" = (
@@ -6026,10 +6113,6 @@
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/dread/nightkeep)
-"Xi" = (
-/obj/effect/landmark/start/wretch,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/dread/merc_spawn)
 "Xq" = (
 /obj/effect/spawner/dungeons/maybechest,
 /turf/open/floor/rogue/blocks/platform,
@@ -6083,6 +6166,7 @@
 /obj/structure/table/wood/crafted,
 /obj/effect/decal/cleanable/dirt/cobweb,
 /obj/machinery/light/rogue/wallfire/candle/blue/l,
+/obj/effect/spawner/lootdrop/general_loot_low,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/dread/nightkeep)
 "XO" = (
@@ -6134,13 +6218,6 @@
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/dread/church)
-"Yk" = (
-/obj/structure/fluff/signage/template{
-	name = "HELMSKEEP - NORTH";
-	written = "Hail the Grand Duke!"
-	},
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/dread/merc_spawn)
 "Ym" = (
 /obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/blocks/nosmooth,
@@ -6200,6 +6277,12 @@
 /mob/living/simple_animal/hostile/rogue/ghost/wraith,
 /turf/open/floor/rogue/blocks/stone/stonepattern2,
 /area/rogue/indoors/dread/nightkeep)
+"YY" = (
+/obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/general_loot_low/x3,
+/obj/effect/spawner/lootdrop/helmet_spawner,
+/turf/open/floor/rogue/blocks/stone/stonepattern2,
+/area/rogue/indoors/dread/nightkeep)
 "Zc" = (
 /obj/structure/bars/passage{
 	redstone_id = "forgchapel"
@@ -6218,6 +6301,7 @@
 	icon_state = "tablewood1"
 	},
 /obj/item/cooking/pan,
+/obj/effect/spawner/lootdrop/general_loot_low,
 /turf/open/floor/rogue/cobble/mossy3,
 /area/rogue/indoors/dread/nightkeep)
 "Zf" = (
@@ -6299,9 +6383,9 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/dread/forgottenkeep)
 "ZI" = (
-/obj/effect/mobspawner/undead_all,
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/indoors/dread/forgottenkeep)
+/obj/effect/landmark/start/wretchlate,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/dread/merc_spawn)
 "ZJ" = (
 /obj/structure/well,
 /turf/open/floor/rogue/church,
@@ -15095,7 +15179,7 @@ Rt
 kp
 XE
 rE
-AJ
+eL
 uR
 Mm
 Oc
@@ -20171,7 +20255,7 @@ EF
 EF
 EF
 EF
-ZI
+EF
 NN
 NN
 NN
@@ -21408,10 +21492,10 @@ pi
 pi
 pi
 NN
-Uk
+NN
 hG
 dV
-ur
+KL
 FZ
 FZ
 FZ
@@ -22996,7 +23080,7 @@ VN
 VN
 VN
 LD
-ih
+Ym
 FZ
 FZ
 Ne
@@ -42351,7 +42435,7 @@ pi
 EO
 fW
 fW
-fW
+PO
 fW
 fW
 uR
@@ -42706,7 +42790,7 @@ EO
 Wj
 fW
 fW
-fW
+Uk
 eB
 DZ
 um
@@ -43857,7 +43941,7 @@ pi
 pi
 pi
 jM
-gZ
+ih
 IB
 nJ
 Gl
@@ -44552,7 +44636,7 @@ cA
 XZ
 AM
 kc
-HD
+vU
 If
 If
 If
@@ -44731,9 +44815,9 @@ AM
 cA
 If
 AM
-WS
+Si
 If
-WS
+SY
 AM
 Rh
 cA
@@ -44746,7 +44830,7 @@ If
 If
 If
 IV
-qa
+If
 jM
 pi
 pi
@@ -44907,10 +44991,10 @@ yp
 AM
 cA
 If
-WS
+On
 AM
 If
-WS
+YY
 AM
 cA
 XF
@@ -45085,7 +45169,7 @@ AM
 cA
 If
 AM
-WS
+Si
 If
 WS
 WS
@@ -45433,7 +45517,7 @@ pi
 pi
 pi
 Dq
-Rh
+ag
 Az
 Az
 Rh
@@ -45454,7 +45538,7 @@ If
 If
 If
 If
-Er
+pB
 cA
 pi
 pi
@@ -45973,8 +46057,8 @@ Rh
 Rh
 yU
 IB
-Dy
-Dy
+IB
+IB
 IB
 IB
 IB
@@ -47216,7 +47300,7 @@ Rh
 cA
 cA
 jM
-cA
+Jr
 QZ
 Rh
 cA
@@ -47386,7 +47470,7 @@ IB
 vq
 AM
 qo
-qa
+If
 qo
 AM
 cA
@@ -60956,7 +61040,7 @@ gQ
 cn
 aJ
 SJ
-NG
+qa
 ye
 Uy
 Uy
@@ -70386,7 +70470,7 @@ vw
 JC
 kF
 Gs
-XO
+wF
 If
 XO
 cA
@@ -70396,7 +70480,7 @@ Jv
 tX
 jM
 sg
-dv
+HD
 na
 na
 na
@@ -70575,7 +70659,7 @@ cA
 GI
 dv
 na
-Si
+ZB
 na
 dv
 dv
@@ -71104,7 +71188,7 @@ jM
 jM
 Rh
 BW
-On
+dv
 yh
 dv
 dv
@@ -72705,7 +72789,7 @@ jM
 dv
 zu
 cA
-On
+dv
 tH
 jM
 dv
@@ -73055,7 +73139,7 @@ cA
 Rh
 cA
 cA
-Rh
+ag
 cA
 cA
 Rh
@@ -73064,7 +73148,7 @@ dv
 cA
 dv
 iw
-SY
+Ow
 iw
 dv
 cA
@@ -73479,7 +73563,7 @@ eQ
 QS
 eQ
 eQ
-eQ
+kj
 eQ
 eQ
 DX
@@ -73592,7 +73676,7 @@ iK
 dv
 dv
 dv
-vq
+vx
 dv
 JW
 sW
@@ -73767,7 +73851,7 @@ jM
 cA
 cA
 cA
-ag
+dv
 dv
 Rh
 cA
@@ -86120,9 +86204,9 @@ Bl
 Bl
 Bl
 kH
-Lo
-mD
-mD
+ZI
+pn
+pn
 kH
 Bl
 Bl
@@ -86474,8 +86558,8 @@ vY
 vY
 Uy
 fG
-Xi
-eL
+fD
+bd
 Xy
 fG
 fG
@@ -86830,7 +86914,7 @@ vY
 zL
 fG
 Xy
-Xi
+fD
 fG
 fG
 vY
@@ -88057,7 +88141,7 @@ yz
 fG
 fG
 fG
-Yk
+Dy
 fG
 fG
 fG
