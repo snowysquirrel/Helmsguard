@@ -1,7 +1,6 @@
 /datum/advclass/ranger
-	name = "Poacher"
-	tutorial = "Hunters turned scouts often live among each other, as these bow-wielding \
-	hunters look out for bigger prey than just the occasional saiga."
+	name = "Ranger"
+	tutorial = "Rangers prefer to keep their enemies at a distance and rely on bows and ranged weaponry."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/ranger

@@ -1,4 +1,3 @@
-/* COPIED TO THE "THIEF" CLASS FOR THE GUTTERFOLK
 /datum/advclass/rogue
 	name = "Rogue"
 	tutorial = "Thieves, scoundrels, and silver-tongued charlatans from all walks of life."
@@ -210,4 +209,4 @@
 			H.change_stat("strength", 1)
 			H.change_stat("endurance", 1)
 			H.change_stat("speed", 2)
-*/
+
