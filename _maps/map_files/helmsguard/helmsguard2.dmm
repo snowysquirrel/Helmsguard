@@ -5992,7 +5992,7 @@
 	dir = 8
 	},
 /obj/structure/fluff/walldeco/innsign{
-	name = "The Twin-Antler"
+	name = "The Twin-Antlers"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/tavern)
@@ -6802,7 +6802,7 @@
 "ged" = (
 /obj/structure/mineral_door/wood/window{
 	lockid = "tavern";
-	name = "The Twin Antler"
+	name = "The Twin Antlers"
 	},
 /obj/effect/decal/wood/turnd{
 	dir = 8
@@ -9079,6 +9079,12 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town/roofs/keep)
+"ikp" = (
+/obj/structure/fluff/railing/border{
+	dir = 4
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors/bridge)
 "ikA" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town/cell)
@@ -10235,9 +10241,6 @@
 /turf/open/floor/rogue/ruinedwood/nosmooth/wooden_floor2,
 /area/rogue/indoors/town/church)
 "jlM" = (
-/obj/structure/fluff/railing/border{
-	dir = 4
-	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/bridge)
 "jmh" = (
@@ -14987,6 +14990,9 @@
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town)
 "nMK" = (
+/obj/structure/fluff/railing/border{
+	dir = 8
+	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/bridge)
 "nMY" = (
@@ -17761,14 +17767,6 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/basement/keep)
-"qtV" = (
-/obj/structure/table/wood{
-	dir = 1;
-	icon_state = "longtable_mid"
-	},
-/obj/item/candle/silver,
-/turf/open/floor/rogue/wood,
-/area/rogue/indoors/town/tavern)
 "qub" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/candle/yellow{
@@ -18420,12 +18418,6 @@
 	icon_state = "iron_corner"
 	},
 /area/rogue/under/town/basement)
-"qQu" = (
-/obj/structure/fluff/railing/border{
-	dir = 8
-	},
-/turf/open/floor/rogue/blocks,
-/area/rogue/outdoors/bridge)
 "qQE" = (
 /obj/structure/closet/crate/chest/neu,
 /obj/item/reagent_containers/food/snacks/grown/potato/rogue,
@@ -19467,7 +19459,7 @@
 "rSm" = (
 /obj/structure/mineral_door/wood/window{
 	lockid = "tavern";
-	name = "The Twin Antler"
+	name = "The Twin Antlers"
 	},
 /obj/effect/decal/wood/turnd{
 	dir = 8
@@ -21324,6 +21316,14 @@
 /area/rogue/indoors/town/manor)
 "tys" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town/tavern)
+"tyV" = (
+/obj/structure/table/wood{
+	dir = 1;
+	icon_state = "longtable_mid"
+	},
+/obj/item/candle/silver,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/tavern)
 "tzv" = (
@@ -101170,7 +101170,7 @@ mUx
 dbS
 lvM
 til
-qtV
+tyV
 gdx
 aun
 cFw
@@ -161489,8 +161489,8 @@ pNU
 pNU
 pNU
 pNU
-nMK
-nMK
+jlM
+jlM
 pNU
 pNU
 pNU
@@ -161710,9 +161710,9 @@ mKA
 flR
 prg
 bvC
-jlM
-jlM
-jlM
+ikp
+ikp
+ikp
 bvC
 mKA
 mKA
@@ -162598,9 +162598,9 @@ wck
 kOR
 ajQ
 vsR
-qQu
-qQu
-qQu
+nMK
+nMK
+nMK
 vsR
 wck
 wck
@@ -162821,8 +162821,8 @@ pNU
 pNU
 pNU
 pNU
-nMK
-nMK
+jlM
+jlM
 pNU
 pNU
 pNU
