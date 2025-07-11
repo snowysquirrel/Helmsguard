@@ -1,11 +1,11 @@
 GLOBAL_LIST_INIT(dwarfskeleton_aggro, world.file2list("strings/rt/dskeletonaggrolines.txt"))
 
-/mob/living/carbon/human/species/dwarfskeleton
+/mob/living/carbon/human/species/skeleton/dwarf
 
 	race = /datum/species/dwarf/mountain
 	gender = MALE
-	faction = list("dundead")
-	var/skel_outfit = /datum/outfit/job/roguetown/dwarfskeleton
+	faction = list("undead")
+	skel_outfit = /datum/outfit/job/roguetown/dwarfskeleton
 	ambushable = FALSE
 	mode = NPC_AI_IDLE
 	wander = FALSE
@@ -17,23 +17,23 @@ GLOBAL_LIST_INIT(dwarfskeleton_aggro, world.file2list("strings/rt/dskeletonaggro
 	possible_mmb_intents = list(INTENT_BITE, INTENT_JUMP, INTENT_KICK, INTENT_STEAL) //intents given in case of player controlled
 	possible_rmb_intents = list(/datum/rmb_intent/feint, /datum/rmb_intent/aimed, /datum/rmb_intent/strong, /datum/rmb_intent/weak)
 
-/mob/living/carbon/human/species/dwarfskeleton/ambush
+/mob/living/carbon/human/species/skeleton/dwarf/ambush
 	aggressive=1
 	wander = TRUE
 
-/mob/living/carbon/human/species/dwarfskeleton/retaliate(mob/living/L)
+/mob/living/carbon/human/species/skeleton/dwarf/retaliate(mob/living/L)
 	.=..()
 	if(prob(5))
 		say(pick(GLOB.dwarfskeleton_aggro))
 		linepoint(target)
 
-/mob/living/carbon/human/species/dwarfskeleton/Initialize()
+/mob/living/carbon/human/species/skeleton/dwarf/Initialize()
 	. = ..()
 	cut_overlays()
 	spawn(10)
 		after_creation()
 
-/mob/living/carbon/human/species/dwarfskeleton/after_creation()
+/mob/living/carbon/human/species/skeleton/dwarf/after_creation()
 	..()
 	if(src.dna && src.dna.species)
 		src.dna.species.species_traits |= NOBLOOD
@@ -117,7 +117,7 @@ GLOBAL_LIST_INIT(dwarfskeleton_aggro, world.file2list("strings/rt/dskeletonaggro
 	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 
-/mob/living/carbon/human/species/dwarfskeleton/ambush/knight
+/mob/living/carbon/human/species/skeleton/dwarf/ambush/knight
 	skel_outfit = /datum/outfit/job/roguetown/dwarfskeleton/ambush/knight
 
 /datum/outfit/job/roguetown/dwarfskeleton/ambush/knight/pre_equip(mob/living/carbon/human/H)

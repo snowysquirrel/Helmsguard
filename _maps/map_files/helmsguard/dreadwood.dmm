@@ -1161,7 +1161,7 @@
 	dir = 8;
 	icon_state = "stickyweb2"
 	},
-/turf/open/floor/rogue/blocks/stone,
+/turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/dread/nightkeep)
 "jr" = (
 /obj/structure/rack/rogue,
@@ -1558,7 +1558,7 @@
 	dir = 1;
 	icon_state = "stickyweb2"
 	},
-/turf/open/floor/rogue/blocks/stone,
+/turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/dread/nightkeep)
 "mA" = (
 /obj/structure/spider/stickyweb{
@@ -2758,7 +2758,7 @@
 /obj/structure/spider/stickyweb{
 	dir = 1
 	},
-/turf/open/floor/rogue/blocks/stone,
+/turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/dread/nightkeep)
 "wJ" = (
 /obj/structure/rack/rogue,
@@ -3835,7 +3835,7 @@
 /obj/structure/chair/bench/church{
 	dir = 1
 	},
-/turf/open/floor/rogue/blocks/stone,
+/turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/dread/nightkeep)
 "EW" = (
 /obj/machinery/light/rogue/firebowl,
@@ -4171,7 +4171,7 @@
 /area/rogue/indoors/dread/forgottenkeep)
 "HB" = (
 /obj/structure/chair/bench/church/mid,
-/turf/open/floor/rogue/blocks/stone,
+/turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/dread/nightkeep)
 "HC" = (
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
@@ -5415,7 +5415,7 @@
 /obj/structure/spider/stickyweb{
 	dir = 8
 	},
-/turf/open/floor/rogue/blocks/stone,
+/turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/dread/nightkeep)
 "RX" = (
 /obj/structure/bars/passage{
@@ -5862,7 +5862,7 @@
 /area/rogue/outdoors/dread/nightkeep)
 "Vt" = (
 /obj/structure/chair/bench/church/r,
-/turf/open/floor/rogue/blocks/stone,
+/turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/dread/nightkeep)
 "Vu" = (
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
@@ -71532,7 +71532,7 @@ Bl
 Bl
 jM
 sk
-sk
+Ws
 rW
 EU
 rW
