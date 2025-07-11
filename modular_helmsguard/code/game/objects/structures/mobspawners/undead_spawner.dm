@@ -5,7 +5,6 @@
 /obj/effect/mobspawner/undead_all
 	name = "skelly spawner"
 	desc = ""
-	icon_state = "skel"
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 2
@@ -35,7 +34,6 @@
 /obj/effect/mobspawner/skeleton_spawner_hard
 	name = "skelly spawner"
 	desc = ""
-	icon_state = "skel"
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 2
@@ -53,7 +51,6 @@
 /obj/effect/mobspawner/skeleton_spawner_simple
 	name = "skelly spawner"
 	desc = ""
-	icon_state = "skel"
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 2
@@ -77,7 +74,6 @@
 	name = "wraith spawner"
 	desc = ""
 	anchored = TRUE
-	icon_state = "wraith"
 	density = FALSE
 	min_mobs = 2
 	max_mobs = 3
@@ -92,7 +88,6 @@
 /obj/effect/mobspawner/ghosts_wraiths
 	name = "wraith spawner"
 	desc = ""
-	icon_state = "wraith"
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 1
@@ -106,7 +101,6 @@
 /obj/effect/mobspawner/ghosts_cursedsouls
 	name = "cursed soul spawner"
 	desc = ""
-	icon_state = "cursed"
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 2
