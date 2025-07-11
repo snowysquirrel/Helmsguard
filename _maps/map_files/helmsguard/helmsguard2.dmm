@@ -2951,6 +2951,10 @@
 	},
 /turf/open/floor/carpet/stellar,
 /area/rogue/indoors/town/magician)
+"cQX" = (
+/obj/machinery/light/rogue/wallfire/candle,
+/turf/open/water/bath,
+/area/rogue/indoors/town/manor)
 "cRp" = (
 /obj/structure/mineral_door/wood{
 	locked = 1;
@@ -7883,6 +7887,13 @@
 	},
 /turf/open/floor/rogue/blocks/stone/nosmooth,
 /area/rogue/outdoors/exposed/town/keep)
+"hit" = (
+/obj/structure/fluff/railing/border{
+	dir = 1
+	},
+/obj/structure/far_travel,
+/turf/open/floor/rogue/ruinedwood/nosmooth,
+/area/rogue/outdoors/beach)
 "hix" = (
 /obj/machinery/light/rogue/torchholder{
 	dir = 8
@@ -12317,6 +12328,12 @@
 /obj/effect/spawner/lootdrop/ausflora,
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors/town/manor)
+"lcA" = (
+/obj/machinery/light/rogue/wallfire/candle{
+	pixel_y = -32
+	},
+/turf/open/water/bath,
+/area/rogue/indoors/town/manor)
 "ldr" = (
 /obj/structure/mineral_door/wood/donjon{
 	locked = 1;
@@ -14825,6 +14842,12 @@
 "nCV" = (
 /turf/open/floor/carpet/stellar,
 /area/rogue/indoors/town/magician)
+"nCW" = (
+/obj/machinery/light/rogue/wallfire/candle{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/under/town/basement/keep)
 "nCX" = (
 /obj/machinery/light/rogue/torchholder/r{
 	pixel_x = 8
@@ -25454,6 +25477,7 @@
 /area/rogue/indoors/town/dwarfin)
 "xeF" = (
 /obj/structure/chair/bench/couchablack/r,
+/obj/machinery/light/rogue/wallfire/candle,
 /turf/open/floor/rogue/tile/masonic/single,
 /area/rogue/indoors/town/manor)
 "xfj" = (
@@ -25564,6 +25588,9 @@
 /area/rogue/outdoors/town/riverstead)
 "xjH" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
+/obj/structure/stairs/stone{
+	dir = 1
+	},
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/manor)
 "xla" = (
@@ -25851,6 +25878,7 @@
 /obj/item/roguekey/tavern,
 /obj/item/roguekey/tavern,
 /obj/item/roguekey/tavern,
+/obj/item/roguekey/tavernkeep,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/tavern)
 "xxl" = (
@@ -105923,7 +105951,7 @@ qUn
 qUn
 qUn
 qUn
-qaO
+hit
 qRH
 iHP
 uTj
@@ -106145,7 +106173,7 @@ qUn
 qUn
 qUn
 qUn
-qaO
+hit
 qRH
 tgv
 tgv
@@ -106367,7 +106395,7 @@ qUn
 qUn
 qUn
 qUn
-qaO
+hit
 qRH
 uio
 meJ
@@ -108380,7 +108408,7 @@ qUn
 kkq
 xyM
 xyM
-xyM
+lcA
 kkq
 sOG
 sOG
@@ -108600,7 +108628,7 @@ qUn
 qUn
 qUn
 kkq
-xyM
+cQX
 xyM
 xyM
 kkq
@@ -108837,7 +108865,7 @@ sRN
 sRN
 roH
 dGv
-dGv
+nCW
 sRN
 rpg
 rpg
