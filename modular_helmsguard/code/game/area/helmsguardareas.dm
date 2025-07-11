@@ -88,6 +88,17 @@
 	spookynight = null
 	discover_sound = 'sound/misc/area_4.ogg'
 
+/area/rogue/outdoors/cemetery
+	name = "cemetery"
+	icon = 'modular_helmsguard/icons/turf/helmsguard_areas.dmi'
+	icon_state = "cemetery"
+	ambientsounds = AMB_BOGDAY
+	ambientnight = AMB_BOGNIGHT
+	spookysounds = SPOOKY_FROG
+	spookynight = SPOOKY_GEN
+	droning_sound = 'sound/music/area/bog.ogg'
+	droning_sound_dusk = null
+	droning_sound_night = null
 
 // UNDER
 /area/rogue/under/cavewet/oldcrypt

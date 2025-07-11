@@ -109,10 +109,11 @@
 		opened = TRUE
 		if(!dense_when_open)
 			density = FALSE
-		springed = TRUE
 		dump_contents()
 		update_icon()
-		new /mob/living/carbon/human/species/skeleton/npc/ambush(get_turf(src))
+		if(!springed)
+			new /mob/living/carbon/human/species/skeleton/npc/ambush(get_turf(src))
+			springed = TRUE
 		return 1
 	..()
 

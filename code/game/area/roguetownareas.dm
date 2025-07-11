@@ -715,6 +715,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	name = "Keep"
 	icon_state = "manor"
 	droning_sound = 'sound/music/area/manorgarri.ogg'
+	first_time_text = "HELMSKEEP MANOR"
 	keep_area = TRUE
 	town_area = TRUE
 
@@ -725,7 +726,6 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/exposed/manorgarri
-	first_time_text = "HELMSKEEP MANOR"
 	keep_area = TRUE
 
 /area/rogue/outdoors/exposed/manorgarri
