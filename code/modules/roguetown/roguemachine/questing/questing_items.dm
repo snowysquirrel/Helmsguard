@@ -1,10 +1,15 @@
 /obj/item/paper/scroll/quest
 	name = "enchanted quest scroll"
-	desc = "A weathered scroll enchanted to list the active quests from the Adventurers' Guild."
+	desc = "A weathered scroll enchanted to list the active quests from the Adventurers' Guild. The magical protections make it resistant to damage and tampering."
 	icon = 'code/modules/roguetown/roguemachine/questing/questing.dmi'
 	icon_state = "scroll_quest"
 	var/base_icon_state = "scroll_quest"
 	var/datum/quest/assigned_quest
+	var/last_compass_direction = ""
+	var/last_z_level_hint = ""
+	resistance_flags = FIRE_PROOF | LAVA_PROOF | INDESTRUCTIBLE | UNACIDABLE
+	max_integrity = 1000
+	armor = list("blunt" = 100, "slash" = 100, "stab" = 100, "piercing" = 100, "fire" = 100, "acid" = 100)
 
 /obj/item/paper/scroll/quest/Initialize()
 	. = ..()
@@ -334,18 +339,16 @@
 
 /obj/item/parcel/proc/get_area_jobs(area_type)
 	var/static/list/area_jobs = list(
-		/area/provincial/indoors/town/tavern = list("Guild Handler", "Innkeeper", "Tapster"),
-		/area/provincial/indoors/town/church = list("Guild Handler", "Priest", "Acolyte", "Templar", "Churchling"),
-		/area/provincial/indoors/town/farm = list("Guild Handler", "Soilson"),
-		/area/provincial/indoors/town/blacksmith = list("Guild Handler", "Blacksmith"),
-		/area/provincial/indoors/town/shop = list("Guild Handler", "Merchant", "Shophand"),
-		/area/provincial/indoors/town/province_keep = list("Guild Handler", "Nobleman", "Hand", "Knight Captain", "Marshal", "Steward", "Clerk", "Head Mage", "Marquis"),
-		/area/provincial/indoors/town/mages_university = list("Guild Handler", "Head Mage", "Archivist", "Artificer", "Apothicant Apprentice", "Apprentice Magician"),
-		/area/provincial/indoors/town/mages_university/alchemy_lab = list("Guild Handler", "Head Mage", "Archivist", "Artificer", "Apothicant Apprentice", "Apprentice Magician"),
-		/area/provincial/indoors/town/steward = list("Guild Handler", "Steward"),
-		/area/provincial/indoors/town = list("Guild Handler")
+		/area/rogue/indoors/town/tavern = list("Grand Duke", "Innkeeper", "Tapster"),
+		/area/rogue/indoors/town/church = list("Grand Duke", "Priest", "Acolyte", "Chaptermaster", "Templar"),
+	//	/area/rogue/indoors/town/farm = list("Grand Duke", "Soilson"),
+		/area/rogue/indoors/town/dwarfin = list("Grand Duke", "Blacksmith", "Artificer"),
+		/area/rogue/indoors/town/shop = list("Grand Duke", "Merchant"),
+		/area/rogue/indoors/town/manor = list("Grand Duke", "Grand Duke", "Court Physician", "Hand", "Steward", "Clerk"),
+		/area/rogue/indoors/town/magician = list("Grand Duke", "Archmage", "Mage Apprentice"),
+		/area/rogue/indoors/town = list("Grand Duke"),
 	)
-	return area_jobs[area_type] || list("Guild Handler")
+	return area_jobs[area_type] || list("Grand Duke")
 
 /obj/item/parcel/proc/on_quest_component_deleted(datum/source)
 	SIGNAL_HANDLER

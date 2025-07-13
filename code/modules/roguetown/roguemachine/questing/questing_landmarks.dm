@@ -48,15 +48,13 @@
 		if("Courier")
 			new_quest.title = "Deliver [pick("an important", "a sealed", "a confidential", "a valuable")] [pick("package", "parcel", "letter", "delivery")]"
 			new_quest.target_delivery_location = pick(
-			/area/provincial/indoors/town/tavern,
-			/area/provincial/indoors/town/church,
-			/area/provincial/indoors/town/farm,
-			/area/provincial/indoors/town/blacksmith,
-			/area/provincial/indoors/town/shop,
-			/area/provincial/indoors/town/province_keep,
-			/area/provincial/indoors/town/mages_university,
-			/area/provincial/indoors/town/mages_university/alchemy_lab,
-			/area/provincial/indoors/town/steward,
+			/area/rogue/indoors/town/tavern,
+			/area/rogue/indoors/town/church,
+//			/area/rogue/indoors/town/farm,
+			/area/rogue/indoors/town/dwarfin,
+			/area/rogue/indoors/town/shop,
+			/area/rogue/indoors/town/manor,
+			/area/rogue/indoors/town/magician,
 			)
 			spawn_courier_item(new_quest, new_quest.target_delivery_location)
 		if("Beacon")
@@ -148,52 +146,50 @@
 
 	var/obj/item/parcel/delivery_parcel = new(scroll_turf)
 	var/static/list/area_delivery_items = list(
-		/area/provincial/indoors/town/tavern = list(
+		/area/rogue/indoors/town/tavern = list(
 			/obj/item/cooking/pan,
 			/obj/item/reagent_containers/glass/bottle/rogue/beer/aurorian,
 			/obj/item/reagent_containers/food/snacks/rogue/cheddar,
 		),
-		/area/provincial/indoors/town/church = list(
+		/area/rogue/indoors/town/church = list(
 			/obj/item/natural/cloth,
 			/obj/item/reagent_containers/powder/ozium,
 			/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
 		),
-		/area/provincial/indoors/town/farm = list(
+/*
+		/area/rogue/indoors/town/farm = list(
 			/obj/item/seeds/wheat,
 			/obj/item/reagent_containers/food/snacks/egg,
 			/obj/item/reagent_containers/food/snacks/egg/mothcat,
 		),
-		/area/provincial/indoors/town/blacksmith = list(
+*/
+		/area/rogue/indoors/town/dwarfin = list(
 			/obj/item/ingot/iron,
 			/obj/item/ingot/bronze,
 			/obj/item/rogueore/coal,
 		),
-		/area/provincial/indoors/town/shop = list(
+		/area/rogue/indoors/town/shop = list(
 			/obj/item/roguecoin/gold,
 			/obj/item/clothing/ring/silver,
 			/obj/item/scomstone/bad,
 		),
-		/area/provincial/indoors/town/province_keep = list(
+		/area/rogue/indoors/town/manor = list(
 			/obj/item/clothing/cloak/raincloak/furcloak,
 			/obj/item/reagent_containers/glass/bottle/rogue/whitewine,
 			/obj/item/reagent_containers/food/snacks/rogue/cheddar/aged,
-		),
-		/area/provincial/indoors/town/mages_university = list(
-			/obj/item/book/spellbook,
-			/obj/item/roguegem/yellow,
-			/obj/item/reagent_containers/glass/bottle/rogue/manapot,
-		),
-		/area/provincial/indoors/town/mages_university/alchemy_lab = list(
-			/obj/item/alch/waterdust,
-			/obj/item/alch/viscera,
-			/obj/item/alch/seeddust,
-		),
-		/area/provincial/indoors/town/steward = list(
 			/obj/item/clothing/ring/silver,
 			/obj/item/reagent_containers/glass/cup/silver,
 			/obj/item/reagent_containers/glass/cup/golden,
 		),
-		/area/provincial/indoors/town = list(
+		/area/rogue/indoors/town/magician = list(
+			/obj/item/book/spellbook,
+			/obj/item/roguegem/yellow,
+			/obj/item/reagent_containers/glass/bottle/rogue/manapot,
+			/obj/item/alch/waterdust,
+			/obj/item/alch/viscera,
+			/obj/item/alch/seeddust,
+		),
+		/area/rogue/indoors/town = list(
 			/obj/item/ration,
 		)
 	)

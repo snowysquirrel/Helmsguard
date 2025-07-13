@@ -5396,6 +5396,10 @@
 "eUp" = (
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/shop)
+"eUR" = (
+/obj/structure/roguemachine/questgiver/guild,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/rtfield)
 "eVe" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -11242,6 +11246,10 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/church_outside)
+"kaT" = (
+/obj/item/paper/scroll/quest,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/rtfield)
 "kbj" = (
 /obj/effect/decal/cobbleedge{
 	dir = 4
@@ -21691,6 +21699,10 @@
 	icon_state = "weird1"
 	},
 /area/rogue/indoors/town/manor)
+"tJa" = (
+/obj/structure/roguemachine/questgiver,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/rtfield)
 "tJm" = (
 /obj/effect/spawner/lootdrop/ausflora,
 /turf/open/floor/rogue/grassyel,
@@ -112093,7 +112105,7 @@ vrd
 vrd
 vrd
 vrd
-qKv
+kaT
 qKv
 qKv
 qKv
@@ -112316,7 +112328,7 @@ vrd
 vrd
 kGi
 qKv
-qKv
+eUR
 qKv
 uAj
 uAj
@@ -112760,7 +112772,7 @@ vrd
 vrd
 qKv
 qKv
-qKv
+tJa
 qKv
 uAj
 qKv

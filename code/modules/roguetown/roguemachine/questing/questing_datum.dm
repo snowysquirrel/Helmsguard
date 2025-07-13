@@ -19,7 +19,7 @@
 	/// Location for beacon quests
 	var/area/beacon_activation_location
 	/// Location for courier quests
-	var/area/provincial/indoors/town/target_delivery_location
+	var/area/rogue/indoors/town/target_delivery_location
 	/// Location name for kill/clear quests
 	var/target_spawn_area = ""
 	/// Fallback reference to the spawned scroll
