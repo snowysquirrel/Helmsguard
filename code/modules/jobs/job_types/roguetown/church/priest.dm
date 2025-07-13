@@ -8,15 +8,10 @@
 	spawn_positions = 1
 	selection_color = JCOLOR_CHURCH
 	f_title = "Priestess"
-	allowed_races = NOBLE_RACES_TYPES	//Too recent arrivals to ascend to priesthood. 
-	allowed_patrons = /datum/patron/old_god
+	allowed_races = RACES_NO_CONSTRUCT		//Too recent arrivals to ascend to priesthood.
+	allowed_patrons = ALL_DIVINE_PATRONS
 	allowed_sexes = list(MALE, FEMALE)
-	tutorial = "The Council of Ilum is the highest authority of the Church of Psydon, and as a member of the clergy, you have been assigned to the Monastery of Saint Katherine to \
-	serve as the head Psydonite priest of the province. Plenty still clings onto the false gods that is the Ten, and you are here to guide them towards the light of the only one true god, Psydon \
-	through the act of preaching, healing, and performing miracles and rites. \
-	However, no tolerance shall be given to those who follows the Inhumen Gods. \
-	Your duties include performing religious ceremonies, providing spiritual guidance to the townsfolk, and maintaining the monastery's sacred grounds."
-
+	tutorial = "The Divine is all that matters in a world of the immoral. The Weeping God left his children to rule over us mortals--and you will preach their wisdom to any who still heed their will. The faithless are growing in number. It is up to you to shepard them toward a Gods-fearing future; for you are a priest of Astrata."
 	whitelist_req = FALSE
 
 	spells = list(/obj/effect/proc_holder/spell/invoked/cure_rot,
@@ -37,7 +32,7 @@
 
 /datum/outfit/job/roguetown/priest
 	job_bitflag = BITFLAG_CHURCH
-	allowed_patrons = /datum/patron/old_god	//We lock this cus head of church, acktully
+	allowed_patrons = list(/datum/patron/divine/astrata)	//We lock this cus head of church, acktully
 
 /datum/outfit/job/roguetown/priest/pre_equip(mob/living/carbon/human/H)
 	..()

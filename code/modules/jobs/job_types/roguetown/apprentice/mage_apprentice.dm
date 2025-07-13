@@ -7,7 +7,7 @@
 	total_positions = 4
 	spawn_positions = 4
 
-	allowed_races = ALL_RACES_TYPES
+	allowed_races = RACES_NO_CONSTRUCT
 	spells = list(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 	advclass_cat_rolls = list(CTAG_WAPPRENTICE = 20)
 

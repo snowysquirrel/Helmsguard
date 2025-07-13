@@ -6,7 +6,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = TOLERATED_CLEARANCE	//Not been around long enough to be inquisitor, brand new race to the world.
+	allowed_races = RACES_NO_CONSTRUCT	//Not been around long enough to be inquisitor, brand new race to the world.
 	allowed_patrons = ALL_CLERIC_PATRONS  //You MUST have a Psydonite character to start. Just so people don't get japed into Oops Suddenly Psydon!
 	tutorial = "Emboldened by the clergy of the march, you are charged with rooting out the heretics and monsters that plague the land. \
 	You are a member of the Inquisition, a holy order of the Church of the Shepherd, and you will not rest until the world is cleansed of all evil.\
@@ -20,7 +20,7 @@
 	advclass_cat_rolls = list(CTAG_PURITAN = 20)
 	advjob_examine = TRUE
 	give_bank_account = 30
-	min_pq = 10
+	min_pq = 5
 	max_pq = null
 	round_contrib_points = 2
 
