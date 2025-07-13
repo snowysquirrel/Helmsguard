@@ -1,12 +1,4 @@
-New Map
-Fixed Tavern and Blacksmith's locked doors
-Fixed Marshall's tower stairs
-Added the mountain hot springs
-Fixed some stairs that led into a death pit at the manor and the western monasteries
-Fixed the lock IDs on dungeon doors
-Added tamed horses to the monastery
-Added pans and pots inside of the cottages
-Fixed the Peddler's offsets to prevent path blocking
-
-Added mages guild
-Re-enabled some mercenary classes
+- Construct race limited only to villager role and similar
+- Church roles are restored to Azure's default loadouts
+- Church roles now accepts All Divine Patrons again instead of Psydon, Psydonites will be relocated elsewhere in the future.
+- PQ req for all roles have been decreased drastically
