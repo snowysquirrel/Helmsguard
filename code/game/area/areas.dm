@@ -112,6 +112,8 @@
 
 	var/converted_type
 	var/location_name = ""
+	/// What does this area generally look like? Used in deathsight to describe it.
+	var/brief_descriptor = "a locale wreathed in enigmatic fog"
 
 /**
   * A list of teleport locations
