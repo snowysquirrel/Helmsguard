@@ -587,6 +587,13 @@
 /obj/item/flashlight/flare/torch/lantern,
 /obj/item/rope/chain,
 /obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/speakerinq,
+/obj/item/speakerinq,
+/obj/item/speakerinq,
+/obj/item/listeningdevice,
+/obj/item/listeningdevice,
+/obj/item/listeningdevice,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors/town/church/basement)
 "awR" = (
@@ -2340,6 +2347,8 @@
 /obj/effect/decal/border/stone{
 	dir = 6
 	},
+/obj/structure/reliquarybox,
+/obj/item/roguekey/psydonkey,
 /turf/open/floor/rogue/churchrough/nosmooth{
 	dir = 8
 	},
@@ -26404,6 +26413,10 @@
 	dir = 8
 	},
 /area/rogue/outdoors/church_outside)
+"xSy" = (
+/obj/machinery/light/rogue/wallfire/candle/l,
+/turf/open/floor/rogue/churchmarble/nosmooth,
+/area/rogue/indoors/town/church/basement)
 "xSK" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/ruinedwood{
@@ -126695,7 +126708,7 @@ rpg
 xHR
 mwj
 kSm
-jjd
+xSy
 wju
 kjZ
 cBD

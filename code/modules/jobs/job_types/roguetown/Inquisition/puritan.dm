@@ -211,7 +211,6 @@
 	ADD_TRAIT(H, TRAIT_INQUISITION, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_PERFECT_TRACKER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_PURITAN, JOB_TRAIT)
-	r_hand = /obj/item/rogueweapon/huntingknife/idagger/silver/psydagger
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/fluted/ornate
 	belt = /obj/item/storage/belt/rogue/leather/steel
