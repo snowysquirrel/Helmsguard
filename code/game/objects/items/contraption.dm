@@ -189,14 +189,14 @@
 
 /obj/item/contraption/linker/examine(mob/user)
 	. = ..()
-	if(user.mind?.get_skill_level(/datum/skill/craft/engineering) >= 1)
+	if(user.get_skill_level(/datum/skill/craft/engineering) >= 1)
 		. += span_notice("Its buffer [buffer ? "contains [buffer]." : "is empty."]")
 	else
 		. += span_notice("All you can make out is a bunch of gibberish.")
 
 /obj/item/contraption/linker/attack_self(mob/user)
 	. = ..()
-	if(user.mind?.get_skill_level(/datum/skill/craft/engineering) >= 1)
+	if(user.get_skill_level(/datum/skill/craft/engineering) >= 1)
 		to_chat(user, "You wipe [src] of its stored buffer.")
 		remove_buffer(src)
 	else
