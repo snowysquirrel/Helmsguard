@@ -199,6 +199,7 @@
 	/datum/species/elf/wood,\
 	/datum/species/tabaxi,\
 	/datum/species/lupian,\
+	/datum/species/lizardfolk,\
 	/datum/species/vulpkanin,\
 
 
@@ -250,6 +251,7 @@
 	/datum/species/lupian,\
 	/datum/species/vulpkanin,\
 	/datum/species/kobold,\
+	/datum/species/lizardfolk,\
 )
 
 
