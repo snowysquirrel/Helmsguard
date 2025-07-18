@@ -20,7 +20,7 @@
 	advclass_cat_rolls = list(CTAG_PURITAN = 20)
 	advjob_examine = TRUE
 	give_bank_account = 30
-	min_pq = 5
+	min_pq = 2
 	max_pq = null
 	round_contrib_points = 2
 

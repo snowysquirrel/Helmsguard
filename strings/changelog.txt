@@ -2,3 +2,7 @@
 - Church roles are restored to Azure's default loadouts
 - Church roles now accepts All Divine Patrons again instead of Psydon, Psydonites will be relocated elsewhere in the future.
 - PQ req for all roles have been decreased drastically
+- 1 PQ minimum requirement for all combat roles.
+- Blacksmith's peddler is now accessible by the members of the crafting guild
+- Apothecary's roof fixed
+- Tunnel to the hotsprings fixed

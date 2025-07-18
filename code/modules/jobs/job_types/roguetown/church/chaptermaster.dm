@@ -15,7 +15,7 @@
 	cmode_music = 'sound/music/combat_holy.ogg'
 	outfit = /datum/outfit/job/roguetown/chaptermaster
 	advclass_cat_rolls = list(CTAG_CHAPTERMASTER = 20)
-	min_pq = 5
+	min_pq = 3
 	max_pq = null
 	total_positions = 1
 	spawn_positions = 1
