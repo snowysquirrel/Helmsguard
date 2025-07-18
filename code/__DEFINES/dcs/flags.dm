@@ -15,8 +15,6 @@
 #define ELEMENT_DETACH		(1 << 0)
 */
 
-
-
 /* Dup commend out
 // How multiple components of the exact same type are handled in the same datum
 /// old component is deleted (default)

@@ -7,8 +7,6 @@
 /datum/element
 	/// Option flags for element behaviour
 	var/element_flags = NONE
-	
-	var/id_arg_index = 1
 	/**
 	  * The index of the first attach argument to consider for duplicate elements
 	  *
@@ -35,8 +33,6 @@
 	if(type == /datum/element)
 		return ELEMENT_INCOMPATIBLE
 	SEND_SIGNAL(target, COMSIG_ELEMENT_ATTACH, src)
-	if(element_flags & ELEMENT_DETACH)
-		RegisterSignal(target, COMSIG_PARENT_QDELETING, PROC_REF(Detach), override = TRUE)
 	if(element_flags & ELEMENT_DETACH_ON_HOST_DESTROY)
 		RegisterSignal(target, COMSIG_QDELETING, PROC_REF(OnTargetDelete), override = TRUE)
 

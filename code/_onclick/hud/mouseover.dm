@@ -76,7 +76,7 @@
 		else
 			p.client.mouseovertext.movethis(PM)
 		//if((((rotation_structure && rotation_network) || istype(src, /obj/structure/water_pipe)) || accepts_water_input) && HAS_TRAIT(p, TRAIT_ENGINEERING_GOGGLES))	
-		if(((rotation_structure && rotation_network)) && (p.mind?.get_skill_level(/datum/skill/craft/engineering) > 3)) //changing this to just look at rotations and removing the trait, users just need over 3 engineering.
+		if(((rotation_structure && rotation_network)) && (p.get_skill_level(/datum/skill/craft/engineering) > 3)) //changing this to just look at rotations and removing the trait, users just need over 3 engineering.
 			var/rotation_chat = return_rotation_chat(p.client.mouseovertext)
 			p.client.mouseovertext.maptext_width = 96
 			p.client.mouseovertext.maptext = {"[rotation_chat]

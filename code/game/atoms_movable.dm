@@ -244,9 +244,9 @@
     if(glide_size == target)
         return // Loop protection
 
-    SEND_SIGNAL(src, COMSIG_MOVABLE_UPDATE_GLIDE_SIZE, target)
-    glide_size = target
-
+	SEND_SIGNAL(src, COMSIG_MOVABLE_UPDATE_GLIDE_SIZE, target)
+	glide_size = target
+	
 	for(var/atom/movable/AM in buckled_mobs)
 		AM.set_glide_size(target)
 
