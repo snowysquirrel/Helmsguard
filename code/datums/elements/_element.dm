@@ -27,6 +27,8 @@
 	  */
 	var/argument_hash_end_idx = 0
 
+	var/id_arg_index = 1
+
 /// Activates the functionality defined by the element on the given target datum
 /datum/element/proc/Attach(datum/target)
 	SHOULD_CALL_PARENT(TRUE)
