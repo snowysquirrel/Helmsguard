@@ -352,7 +352,13 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 						coverage_exposed.Remove(READABLE_ZONE_MOUTH, READABLE_ZONE_EYES, READABLE_ZONE_NOSE)
 
 			if(!is_stupid)
+				dat += "<b><center>BODY:</center></b><br>"
 				if(length(coverage))
+					if(!is_smart && !is_normal)	//We get a significantly simplified printout if we don't have the stats / trait
+					coverage.Remove(READABLE_ZONE_NECK, READABLE_ZONE_MOUTH, READABLE_ZONE_EYES, READABLE_ZONE_NOSE, READABLE_ZONE_FACE, READABLE_ZONE_VITALS, READABLE_ZONE_GROIN, READABLE_ZONE_HANDS, READABLE_ZONE_FEET, READABLE_ZONE_L_FOOT, READABLE_ZONE_R_FOOT, READABLE_ZONE_L_HAND, READABLE_ZONE_R_HAND, READABLE_ZONE_L_ARM, READABLE_ZONE_R_ARM, READABLE_ZONE_L_LEG, READABLE_ZONE_R_LEG)
+				if(!is_smart && is_normal)
+					coverage.Remove(READABLE_ZONE_NECK, READABLE_ZONE_MOUTH, READABLE_ZONE_EYES, READABLE_ZONE_NOSE, READABLE_ZONE_FACE, READABLE_ZONE_VITALS, READABLE_ZONE_GROIN, READABLE_ZONE_HANDS, READABLE_ZONE_FEET, READABLE_ZONE_L_FOOT, READABLE_ZONE_R_FOOT, READABLE_ZONE_L_HAND, READABLE_ZONE_R_HAND)
+
 					var/str_exposed = ""
 					var/str_covered = ""
 
@@ -383,7 +389,7 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 
 					var/str = ""
 					if(length(str_exposed))
-						str = str_exposed + "<br>"  // отступ между exposed и armor
+						str = str_exposed + "<br>" // Empty space between exposed and armor
 					if(length(str_covered))
 						str += str_covered
 
