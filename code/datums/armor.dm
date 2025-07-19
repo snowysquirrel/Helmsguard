@@ -69,4 +69,18 @@
 	. = ..()
 	tag = ARMORID // update tag in case armor values were edited
 
+/proc/bclass_to_armor(bclass)
+	switch(bclass)
+		if(BCLASS_STAB)
+			return "stab"
+		if(BCLASS_PIERCE)
+			return "piercing"
+		if(BCLASS_PICK)
+			return "pick"
+		else
+			return bclass
+
+/proc/bclass_to_base_armor(bclass)
+	return BCLASS_TO_BASE_ARMOR[bclass]
+
 #undef ARMORID

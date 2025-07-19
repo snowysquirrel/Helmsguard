@@ -212,6 +212,22 @@
 #define BCLASS_PEEL			"peel"
 #define BCLASS_EFFECT		"effect"
 
+//Intent order for sorting
+#define BCLASS_ORDER		list(BCLASS_BLUNT, BCLASS_CUT, BCLASS_STAB, BCLASS_PIERCE, BCLASS_TWIST, BCLASS_LASHING, BCLASS_SMASH, BCLASS_CHOP, BCLASS_PICK)
+
+// BCLASS -> base_armor
+#define BCLASS_TO_BASE_ARMOR list(\
+	BCLASS_BLUNT = "blunt",\
+	BCLASS_SMASH = "blunt",\
+	BCLASS_TWIST = "blunt",\
+	BCLASS_LASHING = "blunt",\
+	BCLASS_CUT = "slash",\
+	BCLASS_CHOP = "slash",\
+	BCLASS_STAB = "stab",\
+	BCLASS_PICK = "stab",\
+	BCLASS_PIERCE = "piercing"\
+)
+
 //Material class (what material is striking)
 #define MCLASS_GENERIC		1
 #define MCLASS_WOOD			2
