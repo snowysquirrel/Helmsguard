@@ -215,6 +215,9 @@
 //Intent order for sorting
 #define BCLASS_ORDER		list(BCLASS_BLUNT, BCLASS_CUT, BCLASS_STAB, BCLASS_PIERCE, BCLASS_TWIST, BCLASS_LASHING, BCLASS_SMASH, BCLASS_CHOP, BCLASS_PICK)
 
+// Base armor order. Don't mistake it with bclass, that's a completely different thing
+#define DAM_TYPES_ORDER list("blunt", "slash", "stab", "piercing")
+
 // BCLASS -> base_armor
 #define BCLASS_TO_BASE_ARMOR list(\
 	BCLASS_BLUNT = "blunt",\

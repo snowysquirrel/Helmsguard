@@ -274,12 +274,17 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 									piercing_max[coverageflag] = max(C.armor.getRating(type), piercing_max[coverageflag])
 						coverage[coverageflag] += 1
 						if(length(critclasses) && (is_normal || is_smart))
-							var/str
-							for(var/critzone in critclasses)
-								if(critzone == BCLASS_PICK)
-									critzone = "Pick"
-								str += "| [capitalize(critzone)] | "
-							crit_weakness[coverageflag] = str
+							var/list/str = list()
+							for(var/critzone in BCLASS_ORDER)
+								if(critzone in critclasses)
+									var/name
+									if(critzone == BCLASS_PICK)
+										name = "Pick"
+									else
+										name = capitalize(critzone)
+									str += name
+							if(str.len)
+								crit_weakness[coverageflag] = "| [str.Join(" | ")] |"
 						switch(coverageflag)		//This removes covered zones from the _exposed list. The remainder, if any, will be highlighted in red as an "exposed" zone.
 							if(READABLE_ZONE_L_ARM)
 								coverage_exposed.Remove(READABLE_ZONE_ARMS, READABLE_ZONE_L_ARM)
@@ -347,25 +352,46 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 						coverage_exposed.Remove(READABLE_ZONE_MOUTH, READABLE_ZONE_EYES, READABLE_ZONE_NOSE)
 
 			if(!is_stupid)
-				dat += "<b><center>BODY:</center></b><br>"
-			if(length(coverage))
-				var/str
-				if(!is_smart && !is_normal)	//We get a significantly simplified printout if we don't have the stats / trait
-					coverage.Remove(READABLE_ZONE_NECK, READABLE_ZONE_MOUTH, READABLE_ZONE_EYES, READABLE_ZONE_NOSE, READABLE_ZONE_FACE, READABLE_ZONE_VITALS, READABLE_ZONE_GROIN, READABLE_ZONE_HANDS, READABLE_ZONE_FEET, READABLE_ZONE_L_FOOT, READABLE_ZONE_R_FOOT, READABLE_ZONE_L_HAND, READABLE_ZONE_R_HAND, READABLE_ZONE_L_ARM, READABLE_ZONE_R_ARM, READABLE_ZONE_L_LEG, READABLE_ZONE_R_LEG)
-				if(!is_smart && is_normal)
-					coverage.Remove(READABLE_ZONE_NECK, READABLE_ZONE_MOUTH, READABLE_ZONE_EYES, READABLE_ZONE_NOSE, READABLE_ZONE_FACE, READABLE_ZONE_VITALS, READABLE_ZONE_GROIN, READABLE_ZONE_HANDS, READABLE_ZONE_FEET, READABLE_ZONE_L_FOOT, READABLE_ZONE_R_FOOT, READABLE_ZONE_L_HAND, READABLE_ZONE_R_HAND)
-				if(!is_stupid)
+				if(length(coverage))
+					var/str_exposed = ""
+					var/str_covered = ""
+
 					if(is_normal || is_smart)
 						if(length(coverage_exposed))
 							for(var/exposed in coverage_exposed)
-								str += "<b>[exposed]</b>: <font color = '#770404'><b>EXPOSED!</B></font><br>"
+								str_exposed += "<b>[exposed]</b>: <font color = '#770404'><b>EXPOSED!</b></font><br>"
+
 					for(var/thing in coverage)
-						str += "<b>[thing]</b> LAYERS: <b>[coverage[thing]]</b> | [colorgrade_rating("", blunt_max[thing], TRUE)] | [colorgrade_rating("", slash_max[thing], TRUE)] | [colorgrade_rating("", stab_max[thing], TRUE)] | [colorgrade_rating("", piercing_max[thing], TRUE)] <br><font color = '#a35252'>[crit_weakness[thing]]</font><br>"
+						if(thing in coverage_exposed)
+							continue
+
+						var/list/parts = list()
+						for(var/type in DAM_TYPES_ORDER)
+							var/type_name = uppertext(type)
+							var/rating = 0
+							switch(type)
+								if("blunt")
+									rating = blunt_max[thing]
+								if("slash")
+									rating = slash_max[thing]
+								if("stab")
+									rating = stab_max[thing]
+								if("piercing")
+									rating = piercing_max[thing]
+							parts += colorgrade_rating("[type_name]", rating, TRUE)
+						str_covered += "<b>[thing]</b> LAYERS: <b>[coverage[thing]]</b> | [parts.Join(" | ")]<br><font color = '#a35252'>[crit_weakness[thing]]</font><br>"
+
+					var/str = ""
+					if(length(str_exposed))
+						str = str_exposed + "<br>"  // отступ между exposed и armor
+					if(length(str_covered))
+						str += str_covered
+
 					dat += str
 				else
-					dat += "<b><center>I don't know! Just hit them!</center></b>"
+					dat += "<b><center>They're wearing nothing.</center></b>"
 			else
-				dat += "<b><center>They're wearing nothing.</center></b>"
+				dat += "<b><center>I don't know! Just hit them!</center></b>"
 			dat += "</td>"
 
 			dat += "<td style='width:40%;text-align:center;vertical-align: text-top'>"
