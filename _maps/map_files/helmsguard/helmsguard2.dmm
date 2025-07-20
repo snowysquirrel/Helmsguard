@@ -1144,7 +1144,7 @@
 "aZY" = (
 /obj/structure/mineral_door/wood{
 	name = "Cloister";
-	lockid = "sund_church";
+	lockid = "church";
 	dir = 4;
 	locked = 1
 	},
@@ -13825,7 +13825,7 @@
 "mzH" = (
 /obj/structure/mineral_door/wood{
 	name = "Priest's Chambers";
-	lockid = "sund_priest";
+	lockid = "church";
 	locked = 1
 	},
 /turf/open/floor/rogue/blocks/stone/nosmooth,
@@ -14443,7 +14443,6 @@
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/rogueweapon/flail/militia,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town/church/basement)
 "ngf" = (
@@ -19689,11 +19688,10 @@
 	},
 /area/rogue/outdoors/town/riverstead/roof)
 "rVU" = (
-/obj/structure/stairs/stone{
-	dir = 4
-	},
-/turf/closed/mineral/rogue,
-/area/rogue/under/cave)
+/obj/structure/roguewindow/openclose,
+/obj/structure/curtain/red,
+/turf/open/floor/rogue/ruinedwood,
+/area/rogue/indoors/town/tavern)
 "rWA" = (
 /obj/effect/decal/border/stone{
 	dir = 4
@@ -22288,7 +22286,9 @@
 /turf/open/floor/rogue/ruinedwood/nosmooth/herringbone2,
 /area/rogue/indoors/town/tavern)
 "uou" = (
-/obj/structure/roguemachine/vendor,
+/obj/structure/roguemachine/vendor{
+	keycontrol = "guild"
+	},
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue/indoors/town/dwarfin)
 "uoH" = (
@@ -152689,8 +152689,8 @@ rpg
 tmk
 tmk
 gGH
-rVU
-rVU
+bpv
+bpv
 gGH
 gGH
 gGH
@@ -179320,7 +179320,7 @@ qgu
 epz
 jBy
 jBy
-qVR
+mzH
 udL
 jBy
 jBy
@@ -213357,7 +213357,7 @@ jJy
 hCK
 qOq
 hXb
-aMP
+rVU
 bcL
 loj
 omk
@@ -220037,12 +220037,12 @@ sxB
 sxB
 sxB
 sxB
-sxB
-sxB
-sxB
-sxB
-sxB
-sxB
+vkd
+vkd
+vkd
+vkd
+vkd
+vkd
 sxB
 sxB
 sxB
@@ -220259,12 +220259,12 @@ sxB
 sxB
 sxB
 sxB
-sxB
-sxB
-sxB
-sxB
-sxB
-sxB
+vkd
+vkd
+vkd
+vkd
+vkd
+vkd
 sxB
 sxB
 sxB
@@ -220481,12 +220481,12 @@ sxB
 sxB
 sxB
 sxB
-sxB
-sxB
-sxB
-sxB
-sxB
-sxB
+vkd
+vkd
+vkd
+vkd
+vkd
+vkd
 sxB
 sxB
 sxB
@@ -220703,12 +220703,12 @@ sxB
 sxB
 sxB
 sxB
-sxB
-sxB
-sxB
-sxB
-sxB
-sxB
+bhN
+bhN
+bhN
+bhN
+bhN
+bhN
 sxB
 sxB
 sxB
@@ -220925,17 +220925,17 @@ sxB
 sxB
 sxB
 sxB
+bhN
+bhN
+bhN
+bhN
+bhN
+bhN
 sxB
 sxB
 sxB
-vkd
-vkd
-vkd
-vkd
-vkd
-vkd
-vkd
-vkd
+sxB
+sxB
 sxB
 sxB
 sxB
@@ -221147,17 +221147,17 @@ sxB
 sxB
 sxB
 sxB
+eKA
+eKA
+eKA
+eKA
+eKA
+eKA
 sxB
 sxB
 sxB
-vkd
-vkd
-vkd
-vkd
-vkd
-vkd
-vkd
-vkd
+sxB
+sxB
 sxB
 sxB
 sxB
@@ -221369,17 +221369,17 @@ sxB
 sxB
 sxB
 sxB
+eKA
+eKA
+eKA
+eKA
+eKA
+eKA
 sxB
 sxB
 sxB
-vkd
-vkd
-vkd
-vkd
-vkd
-vkd
-vkd
-vkd
+sxB
+sxB
 sxB
 sxB
 sxB
@@ -221591,17 +221591,17 @@ sxB
 sxB
 sxB
 sxB
+eKA
+eKA
+eKA
+eKA
+eKA
+eKA
 sxB
 sxB
 sxB
-lkN
-bhN
-bhN
-bhN
-bhN
-bhN
-bhN
-bhN
+sxB
+sxB
 sxB
 sxB
 sxB
@@ -221816,14 +221816,14 @@ sxB
 sxB
 sxB
 sxB
-lkN
-eKA
-eKA
-eKA
-eKA
-eKA
-eKA
-eKA
+sxB
+sxB
+sxB
+sxB
+sxB
+sxB
+sxB
+sxB
 sxB
 sxB
 sxB
@@ -222038,14 +222038,14 @@ sxB
 sxB
 sxB
 sxB
-lkN
-eKA
-eKA
-eKA
-eKA
-eKA
-eKA
-eKA
+sxB
+sxB
+sxB
+sxB
+sxB
+sxB
+sxB
+sxB
 sxB
 sxB
 sxB
@@ -222260,14 +222260,14 @@ sxB
 sxB
 sxB
 sxB
-eKA
-eKA
-eKA
-eKA
-eKA
-eKA
-eKA
-eKA
+sxB
+sxB
+sxB
+sxB
+sxB
+sxB
+sxB
+sxB
 sxB
 sxB
 sxB

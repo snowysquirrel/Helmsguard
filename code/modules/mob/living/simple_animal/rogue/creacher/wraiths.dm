@@ -168,7 +168,7 @@
 					if(target.STACON < 15 && prob(50)) // If the target's STACON is less than 15, there's a chance to knockdown
 						target.Knockdown(3 SECONDS) // Knockdown the target for 3 seconds
 						target.Stun(5 SECONDS) // Stun the target for 5 seconds
-	if(!buckled && prob(30) && iscarbon(C) && C.stat == CONSCIOUS && !C.has_buckled_mobs())
+	if(!buckled && in_range(src, C) && prob(30) && iscarbon(C) && C.stat == CONSCIOUS && !C.has_buckled_mobs())
 		grapples(C) // Attempt to grapple the target
 
 
