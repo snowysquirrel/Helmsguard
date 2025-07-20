@@ -39,7 +39,7 @@
 /// CHURCH
 
 
-/area/rogue/outdoors/woods/dread/church
+/area/rogue/outdoors/church
 	name = "Old Church Outdoor"
 	icon = 'modular_helmsguard/icons/turf/dreadareas.dmi'
 	discover_sound = 'sound/misc/area_4.ogg'

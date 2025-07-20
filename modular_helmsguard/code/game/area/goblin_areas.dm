@@ -12,15 +12,20 @@
 	icon_state = "gobcamp"
 	location_name = "deep inside of the Goblin Outpost"
 
-/area/rogue/outdoors/woods/dread/gobcamp_outside
+/area/rogue/outdoors/gobcamp_outside
 	name = "goblin outpost exterior"
 	first_time_text = "Goblin Outpost"
 	discover_sound = 'sound/misc/area_3.ogg'
+	icon = 'modular_helmsguard/icons/turf/dreadareas.dmi'
 	icon_state = "gobcamp_outside"
 	droning_sound = 'sound/music/area/dreadwood.ogg'
 	droning_sound_dusk = 'sound/music/area/dreadwood.ogg'
 	droning_sound_night = 'sound/music/area/dreadwood_night.ogg'
 	location_name = "Goblin Outpost"
+	ambientsounds = AMB_BOGDAY
+	ambientnight = AMB_BOGNIGHT
+	spookysounds = SPOOKY_FROG
+	spookynight = SPOOKY_GEN
 
 /area/rogue/under/cave/goblin_outpost
 	name = "goblin_outpost's cave"
@@ -43,12 +48,17 @@
 	icon_state = "greenskin"
 	location_name = "deep inside of the Greenskin Encampment"
 
-/area/rogue/outdoors/woods/dread/encampment_outside
+/area/rogue/outdoors/encampment_outside
 	name = "greenskin encampment exterior"
 	first_time_text = "Greenskin Encampment"
 	discover_sound = 'sound/misc/area_3.ogg'
+	icon = 'modular_helmsguard/icons/turf/dreadareas.dmi'
 	icon_state = "greenskin_outdoor"
 	droning_sound = 'sound/music/area/dreadwood.ogg'
 	droning_sound_dusk = 'sound/music/area/dreadwood.ogg'
 	droning_sound_night = 'sound/music/area/dreadwood_night.ogg'
+	ambientsounds = AMB_BOGDAY
+	ambientnight = AMB_BOGNIGHT
+	spookysounds = SPOOKY_FROG
+	spookynight = SPOOKY_GEN
 	location_name = "Greenskin Encampment"

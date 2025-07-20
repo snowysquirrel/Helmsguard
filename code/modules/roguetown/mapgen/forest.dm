@@ -37,7 +37,7 @@
 	spawnableTurfs = list(/turf/open/floor/rogue/dirt/road=2,
 						/turf/open/water/swamp=1)
 	allowed_areas = list(/area/rogue/outdoors/woods, /area/rogue/outdoors/woods/river, /area/rogue/outdoors/woods/dread)
-
+	
 /datum/mapGeneratorModule/forestroad
 	clusterCheckFlags = CLUSTER_CHECK_DIFFERENT_ATOMS
 	allowed_turfs = list(/turf/open/floor/rogue/dirt/road)
