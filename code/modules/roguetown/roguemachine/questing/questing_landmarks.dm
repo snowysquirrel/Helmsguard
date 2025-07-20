@@ -257,4 +257,4 @@
 	name = "hard quest landmark"
 	icon_state = "quest_marker_high"
 	quest_difficulty = "Hard"
-	quest_type = list("Clear Out", "Beacon")/// Temporarily removed Miniboss
+	quest_type = list("Clear Out", "Beacon", "Miniboss")

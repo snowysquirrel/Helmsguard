@@ -37,7 +37,6 @@
 		/obj/item/clothing/shoes/roguetown/boots = 4,
 		/obj/item/clothing/shoes/roguetown/boots/leather = 4,
 		/obj/item/storage/belt/rogue/leather/knifebelt/iron = 2,
-		/obj/item/storage/belt/rogue/leather/knifebelt/black/steel = 1,
 
 		// Money
 		/obj/item/roguecoin/copper = 5,
@@ -179,15 +178,31 @@
 		/obj/item/storage/backpack/rogue/satchel = 3,
 		/obj/item/clothing/shoes/roguetown/simpleshoes = 4,
 		/obj/item/clothing/suit/roguetown/shirt/undershirt/random = 5,
+		/obj/item/clothing/suit/roguetown/shirt/undershirt/sailor = 3,
+		/obj/item/clothing/suit/roguetown/shirt/undershirt/lowcut = 3,
+		/obj/item/clothing/suit/roguetown/shirt/tunic/random = 2,
 		/obj/item/storage/belt/rogue/leather/cloth = 4,
 		/obj/item/clothing/cloak/raincloak/mortus = 3,
+		/obj/item/clothing/head/roguetown/knitcap = 3,
+		/obj/item/clothing/head/roguetown/papakha = 3,
+		/obj/item/clothing/head/roguetown/strawhat = 3,
+		/obj/item/clothing/head/roguetown/headband = 3,
+		/obj/item/clothing/head/roguetown/paddedcap = 3,
+		/obj/item/clothing/head/roguetown/hatfur = 3,
 		/obj/item/clothing/head/roguetown/armingcap = 4,
-		/obj/item/clothing/cloak/apron/waist = 3,
+		/obj/item/clothing/cloak/apron/brown = 4,
+		/obj/item/clothing/cloak/apron/blacksmith = 4,
+		/obj/item/clothing/cloak/apron/waist = 4,
+		/obj/item/storage/belt/rogue/leather = 4,
 		/obj/item/storage/belt/rogue/leather/rope = 3,
 		/obj/item/clothing/under/roguetown/tights/vagrant = 4,
 		/obj/item/clothing/gloves/roguetown/leather = 4,
+		/obj/item/clothing/shoes/roguetown/simpleshoes = 4,
 		/obj/item/clothing/shoes/roguetown/boots = 4,
-		/obj/item/clothing/shoes/roguetown/boots/leather = 4
+		/obj/item/clothing/shoes/roguetown/shortboots = 4,
+		/obj/item/clothing/shoes/roguetown/boots/leather = 4,
+		/obj/item/clothing/gloves/roguetown/leather = 4,
+		/obj/item/clothing/head/roguetown/roguehood/random = 3,
 	)
 	lootcount = 1
 

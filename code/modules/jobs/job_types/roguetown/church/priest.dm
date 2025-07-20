@@ -126,7 +126,7 @@
 	if(world.time < 30 MINUTES)
 		to_chat(src, span_warning("It is a bad omen to coronate so early in the week."))
 		return FALSE
-	if(!istype(get_area(src), /area/rogue/indoors/town/church/chapel))
+	if(!istype(get_area(src), /area/rogue/indoors/town/church))
 		to_chat(src, span_warning("I need to do this in the chapel."))
 		return FALSE
 	for(var/mob/living/carbon/human/HU in get_step(src, src.dir))
@@ -171,7 +171,7 @@
 		return
 	var/inputty = input("Curse someone... (curse them again to remove it)", "Sinner Name") as text|null
 	if(inputty)
-		if(!istype(get_area(src), /area/rogue/indoors/town/church/chapel))
+		if(!istype(get_area(src), /area/rogue/indoors/town/church))
 			to_chat(src, span_warning("I need to do this from the chapel."))
 			return FALSE
 		if(inputty in GLOB.excommunicated_players)
@@ -200,7 +200,7 @@
 		return
 	var/inputty = input("Make an announcement", "ROGUETOWN") as text|null
 	if(inputty)
-		if(!istype(get_area(src), /area/rogue/indoors/town/church/chapel))
+		if(!istype(get_area(src), /area/rogue/indoors/town/church))
 			to_chat(src, span_warning("I need to do this from the monastery."))
 			return FALSE
 		priority_announce("[inputty]", title = "The Priest Speaks", sound = 'sound/misc/bell.ogg', sender = src)

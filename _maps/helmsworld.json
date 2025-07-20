@@ -1,0 +1,15 @@
+{
+    "map_name": "Helmsworld",
+    "map_path": "map_files/helmsguard",
+    "map_file": "helmsworld.dmm",
+	"traits": [{"Name": "Helmsguard", "Up": true}, {"Up": true, "Down": true}, {"Up": true, "Down": true}, {"Up": true, "Down": true}, {"Down": true}],
+	"minetype": null,
+	"space_empty_levels": 0,
+	"space_ruin_levels": 0,
+	"shuttles": {
+		"cargo": "cargo_rogue",
+		"ferry": "ferry_fancy",
+		"whiteship": "whiteship_box",
+		"emergency":  "emergency_rogue"
+	}
+}

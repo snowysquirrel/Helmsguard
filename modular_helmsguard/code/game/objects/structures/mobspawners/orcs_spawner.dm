@@ -35,11 +35,42 @@
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 2
-	max_mobs = 5
+	max_mobs = 4
 	mob_types = list(
 	/mob/living/carbon/human/species/goblin/npc = 5,
-	/mob/living/simple_animal/hostile/retaliate/rogue/goblin/cave = 4,		//archer	//archer
+	/mob/living/carbon/human/species/orc/npc/savage = 4,
+	/mob/living/simple_animal/hostile/retaliate/rogue/goblin/cave = 4,
 	/mob/living/simple_animal/hostile/retaliate/rogue/orc/ranged = 3		//archer
+	)
+	text_faction = "Greenskins"
+	objfaction = list("orcs")
+
+
+/obj/effect/mobspawner/orc_spawner
+	name = "greenskin spawner"
+	desc = ""
+	anchored = TRUE
+	density = FALSE
+	min_mobs = 2
+	max_mobs = 4
+	mob_types = list(
+	/mob/living/carbon/human/species/orc/npc/savage = 4,	
+	/mob/living/simple_animal/hostile/retaliate/rogue/orc/ranged = 3		//archer
+	)
+	text_faction = "Greenskins"
+	objfaction = list("orcs")
+
+/obj/effect/mobspawner/orc_spawner_hard
+	name = "greenskin spawner"
+	desc = ""
+	anchored = TRUE
+	density = FALSE
+	min_mobs = 3
+	max_mobs = 4
+	mob_types = list(
+	/mob/living/carbon/human/species/orc/npc/savage = 4,	
+	/mob/living/carbon/human/species/orc/npc/brute = 3,
+	/mob/living/simple_animal/hostile/retaliate/rogue/orc/ranged = 3,	//archer
 	)
 	text_faction = "Greenskins"
 	objfaction = list("orcs")
@@ -55,6 +86,7 @@
 	max_mobs = 10
 	mob_types = list(
 	/mob/living/carbon/human/species/goblin/npc = 5,
+	/mob/living/carbon/human/species/orc/npc/savage = 4,
 	/mob/living/simple_animal/hostile/retaliate/rogue/goblin/cave = 4,		//archer	//archer
 	/mob/living/simple_animal/hostile/retaliate/rogue/orc/ranged = 3		//archer
 	)
@@ -74,13 +106,14 @@
 	density = TRUE
 	detect_range = 6
 	spawn_range = 3
-	restart_time = 2 MINUTES
+	restart_time = 8 MINUTES
 	min_mobs = 3
 	max_mobs = 6
 	mobs = 0
 	mobs_to_spawn = 3
 	mob_types = list(
 	/mob/living/carbon/human/species/goblin/npc = 5,
+	/mob/living/carbon/human/species/orc/npc/savage = 4,
 	/mob/living/simple_animal/hostile/retaliate/rogue/goblin/cave = 4,		//archer
 	/mob/living/simple_animal/hostile/retaliate/rogue/orc/ranged = 3		//archer
 	)
@@ -117,10 +150,7 @@
 	/mob/living/carbon/human/species/goblin/npc = 6,
 	/mob/living/simple_animal/hostile/retaliate/rogue/goblin/cave = 3,		//archer
 	/mob/living/simple_animal/hostile/retaliate/rogue/goblin = 3,		//archer
-	/mob/living/carbon/human/species/goblin/npc/hell = 1,
-	/mob/living/carbon/human/species/goblin/npc/cave = 4,
-	/mob/living/carbon/human/species/goblin/npc/sea= 1,
-	/mob/living/carbon/human/species/goblin/npc/moon = 1)
+	/mob/living/carbon/human/species/goblin/npc/cave = 4,)
 	picked_string = null
 	spawn_sound = list('sound/foley/climb.ogg')
 	objfaction = list("orcs")

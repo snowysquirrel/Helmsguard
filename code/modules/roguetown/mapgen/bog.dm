@@ -35,7 +35,7 @@
 							/obj/structure/flora/roguegrass/maneater/real = 3)
 	spawnableTurfs = list(/turf/open/floor/rogue/dirt/road=2,
 						/turf/open/water/swamp=1)
-	allowed_areas = list(/area/rogue/outdoors/bog, /area/rogue/outdoors/dread/dreadwoods)
+	allowed_areas = list(/area/rogue/outdoors/bog)
 
 /datum/mapGeneratorModule/bogroad
 	clusterCheckFlags = CLUSTER_CHECK_NONE
@@ -47,13 +47,13 @@
 	allowed_turfs = list(/turf/open/floor/rogue/dirt)
 	excluded_turfs = list(/turf/open/floor/rogue/dirt/road)
 	spawnableTurfs = list(/turf/open/floor/rogue/grass = 23)
-	allowed_areas = list(/area/rogue/outdoors/bog, /area/rogue/outdoors/dread/dreadwoods)
+	allowed_areas = list(/area/rogue/outdoors/bog)
 
 /datum/mapGeneratorModule/boggrass
 	clusterCheckFlags = CLUSTER_CHECK_NONE
 	allowed_turfs = list( /turf/open/floor/rogue/grass, /turf/open/floor/rogue/grassyel)
 	excluded_turfs = list()
-	allowed_areas = list(/area/rogue/outdoors/bog, /area/rogue/outdoors/dread/dreadwoods)
+	allowed_areas = list(/area/rogue/outdoors/bog)
 	spawnableAtoms = list(/obj/structure/glowshroom = 20,
 							/obj/structure/flora/roguegrass/bush/random = 13,
 							/obj/structure/flora/roguegrass/pyroclasticflowers = 13,
@@ -71,7 +71,7 @@
 	clusterCheckFlags = CLUSTER_CHECK_NONE
 	allowed_turfs = list(/turf/open/water/swamp/deep)
 	excluded_turfs = list()
-	allowed_areas = list(/area/rogue/outdoors/bog, /area/rogue/outdoors/dread/dreadwoods)
+	allowed_areas = list(/area/rogue/outdoors/bog)
 	spawnableAtoms = list(/obj/structure/glowshroom = 44,
 							/obj/item/restraints/legcuffs/beartrap/armed = 10,
 							/obj/structure/flora/roguetree/stump/log = 3)

@@ -148,8 +148,8 @@
 /obj/item/clothing/head/roguetown/helmet/bascinet/atgervi
 	name = "owl helmet"
 	desc = "A carefully forged steel helmet in the shape of an owl's face, with added chain to cover the face and neck against many blows."
-	icon_state = "atgervi_raider"
-	item_state = "atgervi_raider"
+	icon_state = "nordman_raider"
+	item_state = "nordman_raider"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/atgervi.dmi'
 	block2add = null
@@ -159,8 +159,8 @@
 /obj/item/clothing/head/roguetown/helmet/leather/saiga/atgervi
 	name = "moose hood"
 	desc = "A deceptively strong hood of hide with a pair of large heavy antlers. It is the reward of the fourth trial of the Iskarn Shamans, To slay a Grinning moose in the final hunt alone and fashion a hood from it's head."
-	icon_state = "atgervi_shaman"
-	item_state = "atgervi_shaman"
+	icon_state = "nordman_shaman"
+	item_state = "nordman_shaman"
 	flags_inv = HIDEEARS|HIDEFACE
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/atgervi.dmi'
 	flags_inv = HIDEEARS
