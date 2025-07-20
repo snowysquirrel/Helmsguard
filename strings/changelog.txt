@@ -1,9 +1,8 @@
-- Construct race limited only to villager role and similar
-- Church roles are restored to Azure's default loadouts
-- Church roles now accepts All Divine Patrons again instead of Psydon, Psydonites will be relocated elsewhere in the future.
-- PQ req for all roles have been decreased drastically
-- 1 PQ minimum requirement for all combat roles.
-- Blacksmith's peddler is now accessible by the members of the crafting guild
-- Apothecary's roof fixed
-- Tunnel to the hotsprings fixed
+- Map expanded from Helmsguard to Helmsworld
 - Tiefling can now access all roles except nobility.
+- Added orc raider carbon mobs
+- Adventurers now spawn deep in Dreadwood Forest
+- Priest can now make announcement and all priestly ability from the Church
+- Varangian helmets and hood fixed
+- Laborer's skills and stats fixed
+- Warscholar mercenary class renenabled
