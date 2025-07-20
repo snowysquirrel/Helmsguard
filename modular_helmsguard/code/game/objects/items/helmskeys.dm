@@ -17,7 +17,7 @@
 	name = "chaptermaster's key"
 	desc = "A key for the chaptermaster's quarters, bearing the psycross"
 	icon_state = "greenkey"
-	lockid = "chapter"
+	lockid = "chaptermaster"
 
 
 /obj/item/roguekey/smith
