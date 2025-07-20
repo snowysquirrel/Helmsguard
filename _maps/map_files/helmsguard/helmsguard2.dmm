@@ -1573,10 +1573,6 @@
 /mob/living/simple_animal/hostile/rogue/skeleton/guard,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors)
-"bum" = (
-/obj/machinery/light/rogue/wallfire/candle/r,
-/turf/open/floor/rogue/herringbone,
-/area/rogue/indoors/town/magician)
 "buB" = (
 /obj/effect/decal/wood/ruinedwood/turned,
 /turf/open/floor/rogue/grass,
@@ -1610,6 +1606,19 @@
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors/town)
+"bwq" = (
+/obj/item/roguekey/tower,
+/obj/item/roguekey/tower,
+/obj/item/roguekey/tower,
+/obj/item/clothing/mask/cigarette/pipe/westman,
+/obj/item/reagent_containers/glass/bottle/rogue/wine{
+	pixel_x = -8;
+	pixel_y = 9
+	},
+/obj/item/scrying,
+/obj/structure/closet/crate/roguecloset/dark,
+/turf/open/floor/carpet/stellar,
+/area/rogue/indoors/town/magician)
 "bwt" = (
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/indoors/town/dwarfin)
@@ -2087,13 +2096,6 @@
 	},
 /turf/open/floor/rogue/churchmarble/nosmooth,
 /area/rogue/indoors/town/church)
-"bUQ" = (
-/obj/structure/table/wood{
-	dir = 1;
-	icon_state = "longtable"
-	},
-/turf/open/floor/carpet/stellar,
-/area/rogue/indoors/town/magician)
 "bVU" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -3067,12 +3069,12 @@
 /turf/open/floor/rogue/ruinedwood/nosmooth/turned,
 /area/rogue/outdoors/mountains)
 "cTI" = (
-/obj/structure/roguewindow/openclose{
-	dir = 4
+/obj/structure/table/wood{
+	dir = 1;
+	icon_state = "longtable"
 	},
-/obj/structure/curtain/magenta,
-/turf/open/floor/rogue/concrete,
-/area/rogue/outdoors/mountains)
+/turf/open/floor/carpet/stellar,
+/area/rogue/indoors/town/magician)
 "cTR" = (
 /obj/effect/landmark/start/smith,
 /obj/structure/chair/stool/rogue,
@@ -4211,10 +4213,6 @@
 "dVe" = (
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town/manor)
-"dVk" = (
-/obj/machinery/light/rogue/wallfire/candle/l,
-/turf/open/floor/rogue/herringbone,
-/area/rogue/indoors/town/magician)
 "dVu" = (
 /obj/structure/stairs{
 	dir = 8
@@ -10069,6 +10067,10 @@
 	},
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town/tavern)
+"iZz" = (
+/obj/machinery/light/rogue/wallfire/candle/r,
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors/town/magician)
 "iZP" = (
 /obj/effect/decal/wood{
 	dir = 1
@@ -17978,9 +17980,6 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/basement/keep)
-"qtv" = (
-/turf/closed/wall/mineral/rogue/stone/moss,
-/area/rogue/outdoors/mountains)
 "qub" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/candle/yellow{
@@ -22213,17 +22212,8 @@
 	},
 /area/rogue/indoors/town/manor)
 "uhb" = (
-/obj/item/roguekey/tower,
-/obj/item/roguekey/tower,
-/obj/item/roguekey/tower,
-/obj/item/clothing/mask/cigarette/pipe/westman,
-/obj/item/reagent_containers/glass/bottle/rogue/wine{
-	pixel_x = -8;
-	pixel_y = 9
-	},
-/obj/item/scrying,
-/obj/structure/closet/crate/roguecloset/dark,
-/turf/open/floor/carpet/stellar,
+/obj/machinery/light/rogue/wallfire/candle/l,
+/turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/magician)
 "uhp" = (
 /obj/structure/roguemachine/scomm/r,
@@ -257563,18 +257553,18 @@ sxB
 sxB
 sxB
 sxB
-aje
-aje
-qtv
-qtv
-aje
-qtv
-aje
-cTI
-cTI
-cTI
-aje
-aje
+pvh
+pvh
+vAh
+vAh
+pvh
+vAh
+pvh
+dAX
+dAX
+dAX
+pvh
+pvh
 sqH
 sxB
 sxB
@@ -257787,9 +257777,9 @@ sxB
 sxB
 pvh
 ddY
-dVk
-ddY
 uhb
+ddY
+bwq
 vAh
 vAh
 aRb
@@ -258675,9 +258665,9 @@ sxB
 sxB
 pvh
 xqO
-bum
+iZz
 ddY
-bUQ
+cTI
 vAh
 wlR
 xzU
@@ -259121,7 +259111,7 @@ ogP
 pvh
 qvn
 ddY
-dVk
+uhb
 pvh
 gXV
 xzU
