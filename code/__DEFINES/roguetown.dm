@@ -201,6 +201,7 @@
 	/datum/species/lupian,\
 	/datum/species/lizardfolk,\
 	/datum/species/vulpkanin,\
+	/datum/species/tieberian,\
 
 
 #define RACES_SHUNNED \
@@ -268,6 +269,7 @@
 	/datum/species/vulpkanin,\
 	/datum/species/demihuman,\
 	/datum/species/halforc,\
+	/datum/species/orc,\
 	/datum/species/kobold,\
 	/datum/species/goblinp,\
 	/datum/species/construct/metal,\

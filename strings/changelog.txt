@@ -6,3 +6,4 @@
 - Blacksmith's peddler is now accessible by the members of the crafting guild
 - Apothecary's roof fixed
 - Tunnel to the hotsprings fixed
+- Tiefling can now access all roles except nobility.
