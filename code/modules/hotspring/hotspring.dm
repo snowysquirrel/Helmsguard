@@ -58,6 +58,44 @@
 	if(!edge)
 		playsound(AM, pick('sound/foley/watermove (1).ogg','sound/foley/watermove (2).ogg'), 40, FALSE)
 
+
+/obj/structure/hotsprings/attack_right(mob/user)
+	if(isliving(user))
+		var/mob/living/L = user
+		if(L.stat != CONSCIOUS)
+			return
+		var/list/wash = list('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg')
+		playsound(user, pick_n_take(wash), 100, FALSE)
+		var/item2wash = user.get_active_held_item()
+		if(!item2wash)
+			user.visible_message(span_info("[user] starts to wash in [src]."))
+			if(do_after(L, 3 SECONDS, target = src))
+				wash_atom(user, CLEAN_STRONG)
+				playsound(user, pick(wash), 100, FALSE)
+	/*				if(water_reagent == /datum/reagent/water) //become shittified, checks so bath water can be naturally gross but not discolored
+					water_reagent = /datum/reagent/water/gross
+					water_color = "#a4955b"
+					update_icon()*/
+		else
+			user.visible_message(span_info("[user] starts to wash [item2wash] in [src]."))
+			if(do_after(L, 30, target = src))
+				wash_atom(item2wash, CLEAN_STRONG)
+				playsound(user, pick(wash), 100, FALSE)
+		return
+	..()
+
+
+
+
+
+
+
+
+
+
+
+
+
 /obj/structure/hotspring/border
 	icon_state = "hotspring_border_1"
 	object_slowdown = 0

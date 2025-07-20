@@ -1,7 +1,7 @@
 /obj/effect/landmark/mapGenerator/rogue/roguetownfield
 	mapGeneratorType = /datum/mapGenerator/roguetownfield
-	endTurfX = 155
-	endTurfY = 155
+	endTurfX = 255
+	endTurfY = 255
 	startTurfX = 1
 	startTurfY = 1
 
@@ -19,6 +19,9 @@
 							/obj/structure/flora/roguegrass/herb/random = 7,
 							/obj/structure/flora/roguetree/stump = 4,
 							/obj/structure/flora/roguetree/elder = 14,
+							/obj/structure/flora/roguetree = 19,
+							/obj/structure/flora/roguetree/pine = 18,
+							/obj/structure/flora/roguetree/pine/dead = 15,
 							/obj/structure/flora/roguegrass/bush/random = 13,
 							/obj/structure/flora/roguegrass = 40,
 							/obj/structure/flora/roguegrass/maneater = 16,
@@ -28,7 +31,8 @@
 							/obj/structure/closet/dirthole/closed/loot=3,
 							/obj/structure/flora/roguegrass/pyroclasticflowers = 3)
 	spawnableTurfs = list(/turf/open/floor/rogue/dirt/road=5, /turf/open/floor/rogue/grassyel=5)
-	allowed_areas = list(/area/rogue/outdoors/rtfield, /area/rogue/outdoors/sund/wilderness/woods, /area/rogue/outdoors/sund/wilderness/field)
+	allowed_areas = list(/area/rogue/outdoors/rtfield, /area/rogue/outdoors/church_outside, /area/rogue/outdoors/woods, 
+	/area/rogue/outdoors/woods/river, /area/rogue/outdoors/woods/pond, /area/rogue/outdoors/mountains)
 
 /datum/mapGeneratorModule/roguetownfield/road
 	clusterCheckFlags = CLUSTER_CHECK_DIFFERENT_ATOMS
@@ -44,24 +48,29 @@
 	excluded_turfs = list(/turf/open/floor/rogue/dirt/road)
 	spawnableTurfs = list(/turf/open/floor/rogue/grass = 15)
 	spawnableAtoms = list()
-	allowed_areas = list(/area/rogue/outdoors/rtfield, /area/rogue/outdoors/sund/wilderness/woods, /area/rogue/outdoors/sund/wilderness/field)
-
+	allowed_areas = list(/area/rogue/outdoors/rtfield, /area/rogue/outdoors/church_outside, /area/rogue/outdoors/woods, /area/rogue/outdoors/woods/river, /area/rogue/outdoors/woods/pond, /area/rogue/outdoors/mountains)
+	
 /datum/mapGeneratorModule/roguetownfloras
 	clusterCheckFlags = CLUSTER_CHECK_DIFFERENT_ATOMS
 	allowed_turfs = list(/turf/open/floor/rogue/dirt,/turf/open/floor/rogue/grass,/turf/open/floor/rogue/grassred,/turf/open/floor/rogue/grassyel,/turf/open/floor/rogue/grasscold)
 	excluded_turfs = list(/turf/open/floor/rogue/dirt/road)
-	spawnableAtoms = list(/obj/structure/flora/roguetree/elder = 30,
+	spawnableAtoms = list(/obj/structure/flora/roguetree/elder = 20,
+						/obj/structure/flora/roguetree/pine = 25,
+						/obj/structure/flora/roguetree/pine/dead = 15,
 						/obj/structure/flora/roguetree = 20,
 						/obj/structure/flora/roguegrass/bush/random = 41,
 						/obj/effect/spawner/lootdrop/ausflora = 50,)
-	allowed_areas = list(/area/rogue/outdoors/rtfield, /area/rogue/outdoors/sund/wilderness/woods, /area/rogue/outdoors/sund/wilderness/field)
+	allowed_areas = list(/area/rogue/outdoors/rtfield, /area/rogue/outdoors/church_outside, /area/rogue/outdoors/woods/pond, /area/rogue/outdoors/mountains)
 
 /datum/mapGeneratorModule/roguetowngrass
 	clusterCheckFlags = CLUSTER_CHECK_DIFFERENT_ATOMS
 	allowed_turfs = list(/turf/open/floor/rogue/dirt,/turf/open/floor/rogue/grass,/turf/open/floor/rogue/grassred,/turf/open/floor/rogue/grassyel,/turf/open/floor/rogue/grasscold)
 	excluded_turfs = list(/turf/open/floor/rogue/dirt/road)
 	spawnableAtoms = list(/obj/structure/flora/roguegrass = 40,
-						/obj/structure/flora/roguetree/elder = 30,
+						/obj/structure/flora/roguetree/elder = 17,
+						/obj/structure/flora/roguetree = 19,
+						/obj/structure/flora/roguetree/pine = 25,
+						/obj/structure/flora/roguetree/pine/dead = 15,
 						/obj/structure/flora/roguegrass/bush/random = 31,
 						/obj/structure/flora/roguegrass/herb/random = 25,
 						/obj/effect/spawner/lootdrop/ausflora = 30,
@@ -69,4 +78,5 @@
 						/obj/item/natural/stone = 26,
 						/obj/item/natural/rock = 26,  
 						/obj/item/grown/log/tree/stick = 27)
-	allowed_areas = list(/area/rogue/outdoors/rtfield, /area/rogue/outdoors/sund/wilderness/woods, /area/rogue/outdoors/sund/wilderness/field)
+	allowed_areas = list(/area/rogue/outdoors/rtfield, /area/rogue/outdoors/church_outside, /area/rogue/outdoors/woods/pond, /area/rogue/outdoors/mountains)
+	

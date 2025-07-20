@@ -6,14 +6,7 @@
 	total_positions = 2
 	spawn_positions = 2
 
-	allowed_races = list(\
-	/datum/species/human/northern,\
-	/datum/species/human/halfelf,\
-	/datum/species/elf/wood,\
-	/datum/species/dwarf/mountain,\
-	/datum/species/demihuman,\
-	/datum/species/tieberian,\
-	)
+	allowed_races = RACES_ALL_KINDS
 //	allowed_ages = list(AGE_ADULT)
 
 	tutorial = "Working under the tutelage of the court physician, you still remain a mere apprentice in the medical arts. Woe is the one who has to suffer your hand holding the scalpel when your master is out."
@@ -38,9 +31,8 @@
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	beltl = /obj/item/storage/belt/rogue/surgery_bag/full/physician
-	beltr = /obj/item/roguekey/sund/sund_apoth
 	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-	beltr = /obj/item/storage/keyring/sund/sund_servant
+	beltr = /obj/item/storage/keyring/apothecary
 	id = /obj/item/scomstone/bad
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 	backr = /obj/item/storage/backpack/rogue/satchel

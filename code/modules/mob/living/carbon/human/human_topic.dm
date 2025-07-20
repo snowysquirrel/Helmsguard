@@ -34,7 +34,7 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 		if(is_legacy)
 			dat += "<center><i><font color = '#b9b9b9'; font size = 1>This is a LEGACY Profile from naive days of Psydon.</font></i></center>"
 		if(valid_headshot_link(null, headshot_link, TRUE))
-			dat += ("<div align='center'><img src='[headshot_link]' width='325px' height='325px'></div>")
+			dat += ("<div align='center'><img src='[headshot_link]' width='350px' height='350px'></div>")
 		if(flavortext)
 			dat += "<div align='left'>[flavortext_display]</div>"
 		if(ooc_notes)
@@ -43,7 +43,13 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 			dat += "<div align='left'>[ooc_notes_display]</div>"
 		if(ooc_extra)
 			dat += "[ooc_extra]"
-		var/datum/browser/popup = new(user, "[src]", nwidth = 600, nheight = 800)
+		if(nsfw_headshot_link)
+			dat += "<br><div align='center'><b>NSFW</b></div>"
+		if(nsfw_headshot_link && !wear_armor && !wear_shirt)
+			dat += ("<br><div align='center'><img src='[nsfw_headshot_link]' width='600px' height='725px'></div>")
+		else if(nsfw_headshot_link && (wear_armor || wear_shirt))
+			dat += "<br><center><i><font color = '#9d0080'; font size = 5>There is more to see but they are not naked...</font></i></center>"
+		var/datum/browser/popup = new(user, "[src]", nwidth = 700, nheight = 800)
 		popup.set_content(dat.Join())
 		popup.open(FALSE)
 		return
@@ -116,22 +122,6 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 		if(slot in check_obscured_slots(TRUE))
 			to_chat(usr, span_warning("I can't reach that! Something is covering it."))
 			return
-
-	if(href_list["undiesthing"]) //canUseTopic check for this is handled by mob/Topic()
-		if(!get_location_accessible(src, BODY_ZONE_PRECISE_GROIN, skipundies = TRUE))
-			to_chat(usr, span_warning("I can't reach that! Something is covering it."))
-			return
-		if(!underwear)
-			return
-		usr.visible_message(span_warning("[usr] starts taking off [src]'s [underwear.name]."),span_warning("I start taking off [src]'s [underwear.name]..."))
-		if(do_after(usr, 50, needhand = 1, target = src))
-			var/obj/item/bodypart/chest = get_bodypart(BODY_ZONE_CHEST)
-			chest.remove_bodypart_feature(underwear.undies_feature)
-			underwear.forceMove(get_turf(src))
-			if(iscarbon(usr))
-				var/mob/living/carbon/C = usr
-				C.put_in_hands(underwear)
-			underwear = null
 
 	if(href_list["pockets"] && usr.canUseTopic(src, BE_CLOSE, NO_DEXTERITY)) //TODO: Make it match (or intergrate it into) strippanel so you get 'item cannot fit here' warnings if mob_can_equip fails
 		var/pocket_side = href_list["pockets"]

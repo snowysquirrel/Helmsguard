@@ -4,7 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/mercenary/warscholar
-//	category_tags = list(CTAG_MERCENARY)
+	category_tags = list(CTAG_MERCENARY)
 	cmode_music = 'sound/music/warscholar.ogg'
 	traits_applied = list(TRAIT_OUTLANDER)
 	classes = list("Hierophant" = "You are a Naledi Hierophant, a magician who studied under cloistered sages, well-versed in all manners of arcyne. You prioritize enhancing your teammates and distracting foes while staying in the backline.",
@@ -94,7 +94,11 @@
 			armor = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/hierophant
 			shirt = /obj/item/clothing/suit/roguetown/shirt/robe/hierophant
 			pants = /obj/item/clothing/under/roguetown/trou/leather
-			backpack_contents = list(/obj/item/rogueweapon/huntingknife,/obj/item/spellbook_unfinished/pre_arcyne)
+			backpack_contents = list(
+				/obj/item/roguekey/mercenary,
+				/obj/item/rogueweapon/huntingknife/idagger,
+				/obj/item/spellbook_unfinished/pre_arcyne,
+				)
 
 		if("Pontifex")
 			H.set_blindness(0)

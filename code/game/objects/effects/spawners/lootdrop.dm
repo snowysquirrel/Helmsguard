@@ -1,6 +1,6 @@
 /obj/effect/spawner/lootdrop
 	icon = 'icons/roguetown/helpers/spawnerhelpers.dmi'
-	icon_state = "cot"
+	icon_state = "gen"
 	layer = OBJ_LAYER
 	//how many items will be spawned
 	var/lootcount = 1

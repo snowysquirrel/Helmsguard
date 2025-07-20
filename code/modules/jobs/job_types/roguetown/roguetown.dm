@@ -7,12 +7,12 @@
 		for(var/X in GLOB.rabble_positions)
 			peopleiknow += X
 			peopleknowme += X
-		for(var/X in GLOB.peasant_positions)
+		for(var/X in GLOB.mages_positions)
 			peopleiknow += X
 			peopleknowme += X
-		for(var/X in GLOB.watch_positions)
-			peopleiknow += X
-			peopleknowme += X
+//		for(var/X in GLOB.watch_positions)
+//			peopleiknow += X
+//			peopleknowme += X
 		for(var/X in GLOB.church_positions)
 			peopleiknow += X
 			peopleknowme += X

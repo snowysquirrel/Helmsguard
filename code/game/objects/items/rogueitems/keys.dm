@@ -209,9 +209,9 @@
 	icon_state = "cheesekey"
 	lockid = "sheriff"
 
-/obj/item/roguekey/bailiff
-	name = "bailiff's key"
-	desc = "This key belongs to the bailiff."
+/obj/item/roguekey/marshall
+	name = "marshall's key"
+	desc = "This key belongs to the marshall."
 	icon_state = "cheesekey"
 	lockid = "sheriff"
 
@@ -381,7 +381,7 @@
 	name = "guild's key"
 	desc = "The key to the Crafter's Guild."
 	icon_state = "brownkey"
-	lockid = "crafterguild"
+	lockid = "guild"
 
 /obj/item/roguekey/craftermaster
 	name = "guildmaster's key"
@@ -481,8 +481,8 @@
 	lockid = "inquisition"
 
 /obj/item/roguekey/inhumen
-	name = "ancient key"
-	desc = "A ancient, rusty key. There's no telling where this leads."
+	name = "old cell key"
+	desc = "A ancient, rusty key. Seems like it goes to some kind of cell."
 	icon_state = "rustkey"
 	lockid = "inhuman"
 

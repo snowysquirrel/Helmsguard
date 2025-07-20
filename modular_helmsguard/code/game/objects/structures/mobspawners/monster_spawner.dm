@@ -3,7 +3,6 @@
 
 /obj/effect/mobspawner/monster_spawner_all
 	name = "monster spawner"
-	desc = ""
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 2
@@ -73,7 +72,6 @@
 
 /obj/effect/mobspawner/monster_spawner_spider
 	name = "spider spawner"
-	desc = ""
 	anchored = TRUE
 	density = FALSE
 	min_mobs = 2
@@ -104,7 +102,7 @@
 	mobs = 0
 	detect_range = 6
 	spawn_range = null
-	restart_time = 1 MINUTES
+	restart_time = 6 MINUTES
 	min_mobs = 1
 	max_mobs = 2
 	mobs_to_spawn = 3
@@ -156,7 +154,7 @@
 	mobs = 0
 	detect_range = 6
 	spawn_range = null
-	restart_time = 1 MINUTES
+	restart_time = 6 MINUTES
 	min_mobs = 1
 	max_mobs = 2
 	mobs_to_spawn = 3

@@ -75,6 +75,3 @@
 	/datum/rmb_intent/weak)
 	H.swap_rmb_intent(num=1)
 
-
-GLOBAL_LIST_INIT(orcraider_quotes, world.file2list("strings/rt/orcraiderlines.txt"))
-GLOBAL_LIST_INIT(orcraider_aggro, world.file2list("strings/rt/orcraideraggrolines.txt"))

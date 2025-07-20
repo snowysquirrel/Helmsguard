@@ -1,21 +1,12 @@
 /datum/job/roguetown/cook
 	title = "Cook"
 	flag = COOK
-	department_flag = RABBLE
+	department_flag = TOWNER
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
 
-	selection_color = JCOLOR_RABBLE
-
-	allowed_races = list(\
-	/datum/species/human/northern,\
-	/datum/species/human/halfelf,\
-	/datum/species/elf/wood,\
-	/datum/species/dwarf/mountain,\
-	/datum/species/demihuman,\
-	/datum/species/tieberian,\
-	)
+	allowed_races = RACES_ALL_KINDS
 	tutorial = "There are many mouths to feed in town, and most look to you for it. You work under the care of the innkeeper and craft such culinary delights that even the crown stops by from time to time. All the while, you try to get the rest of the staff up to speed as well--before you get too many burn marks on your body from slaving over your hot hearths."
 
 	outfit = /datum/outfit/job/roguetown/cook
@@ -45,7 +36,7 @@
 		H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/labor/farming, 1, TRUE)
 	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/storage/keyring/sund/sund_inn
+	beltl = /obj/item/storage/keyring/cook
 	backr = /obj/item/storage/backpack/rogue/satchel
 	cloak = /obj/item/clothing/cloak/apron/cook
 	head = /obj/item/clothing/head/roguetown/cookhat

@@ -36,7 +36,11 @@
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	backl = /obj/item/storage/backpack/rogue/satchel
 	id = /obj/item/scomstone/bad//He is meant to be helping people around - hard to do when he can't hear their calls
-	backpack_contents = list(/obj/item/storage/keyring/velder  = 1, /obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/storage/belt/rogue/pouch/coins/rich = 1)
+	backpack_contents = list(
+		/obj/item/storage/keyring/velder  = 1,
+		/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1,
+		/obj/item/storage/belt/rogue/pouch/coins/rich = 1,
+		)
 	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
@@ -69,7 +73,7 @@
 		head = /obj/item/clothing/head/roguetown/chaperon/greyscale/elder
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/silkdress
 		backr = /obj/item/clothing/cloak/raincloak/furcloak
-	else if(H.gender == MALE)//Bailiff sort of look to it.
+	else if(H.gender == MALE)//Marshall sort of look to it.
 		head = /obj/item/clothing/head/roguetown/chaperon/greyscale/elder
 		shirt = /obj/item/clothing/suit/roguetown/shirt/tunic
 		gloves = /obj/item/clothing/gloves/roguetown/leather

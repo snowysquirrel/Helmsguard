@@ -92,7 +92,7 @@
 			/obj/item/clothing/head/roguetown/fisherhat,
 			/obj/item/clothing/head/roguetown/paddedcap,
 			/obj/item/clothing/head/roguetown/armingcap,
-			/obj/item/clothing/head/roguetown/helmet/bascinet/nordman,
+			/obj/item/clothing/head/roguetown/helmet/bascinet/atgervi,
 			/obj/item/clothing/head/roguetown/hatfur,
 			/obj/item/clothing/head/roguetown/papakha,
 			/obj/item/clothing/head/roguetown/helmet/bascinet,
@@ -357,7 +357,7 @@
 					/obj/item/clothing/head/roguetown/helmet/heavy/bucket,
 					/obj/item/clothing/head/roguetown/helmet/sallet/visored,
 					/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull,
-					/obj/item/clothing/head/roguetown/helmet/bascinet/klappvisier,
+					/obj/item/clothing/head/roguetown/helmet/bascinet,
 					)
 	armor = pick(
 				/obj/item/clothing/suit/roguetown/armor/brigandine,
@@ -582,7 +582,7 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/grenzelhoft
-	head = /obj/item/clothing/head/roguetown/freihat
+	head = /obj/item/clothing/head/roguetown/grenzelhofthat
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/blacksteel_half_plate
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/grenzelpants
 	shoes = /obj/item/clothing/shoes/roguetown/grenzelhoft

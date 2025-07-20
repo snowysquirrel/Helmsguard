@@ -8,14 +8,14 @@
 	 As the templars, you serve the will of the church through the guidance of the Priest. Your duty is to protect the church and to answer\
 	 the call of the church. You are the sword of the church, and you are to be feared by all who oppose its will."
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = TOLERATED_CLEARANCE
-	allowed_patrons = /datum/patron/old_god
+	allowed_races = NOBLE_RACES_TYPES
+	allowed_patrons = ALL_DIVINE_PATRONS
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
-	spells = list(/obj/effect/proc_holder/spell/self/convertrole/knight_templar, /obj/effect/proc_holder/spell/self/convertrole/templar)
+	spells = list(/obj/effect/proc_holder/spell/self/convertrole/templar)
 	cmode_music = 'sound/music/combat_holy.ogg'
 	outfit = /datum/outfit/job/roguetown/chaptermaster
 	advclass_cat_rolls = list(CTAG_CHAPTERMASTER = 20)
-	min_pq = 5
+	min_pq = 3
 	max_pq = null
 	total_positions = 1
 	spawn_positions = 1
@@ -25,6 +25,8 @@
 
 
 /datum/outfit/job/roguetown/chaptermaster
+	allowed_patrons = /datum/patron/old_god
+	job_bitflag = BITFLAG_CHURCH
 	cloak = /obj/item/clothing/cloak/templar/psydon
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 	pants = /obj/item/clothing/under/roguetown/chainlegs
@@ -35,6 +37,9 @@
 	id = /obj/item/clothing/ring/silver
 	gloves = /obj/item/clothing/gloves/roguetown/chain
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
+
+/datum/outfit/job/roguetown/priest
+
 
 /datum/job/roguetown/chaptermaster/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
@@ -59,28 +64,6 @@
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_GOODTRAINER, TRAIT_GENERIC)
-
-/*  RECRUITMENT  */
-
-
-/obj/effect/proc_holder/spell/self/convertrole/knight_templar
-	name = "Recruit Knight Templar"
-	new_role = "Templar Knight"
-	overlay_state = "recruit_templar"
-	recruitment_faction = "Templars"
-	recruitment_message = "Rise as His Knight, %RECRUIT!"
-	accept_message = "By the Shepherd's Will!"
-	refuse_message = "I refuse."
-
-/obj/effect/proc_holder/spell/self/convertrole/templar
-	name = "Recruit Templar Sergeant"
-	new_role = "Templar Sergeant"
-	overlay_state = "recruit_templar"
-	recruitment_faction = "Templars"
-	recruitment_message = "Pledge Thy Sword in His Name, %RECRUIT!"
-	accept_message = "By the Shepherd's Will!"
-	refuse_message = "I refuse."
-
 
 
 /datum/advclass/chaptermaster/lance
@@ -130,7 +113,7 @@
 		"Visored Sallet"	= /obj/item/clothing/head/roguetown/helmet/sallet/visored,
 		"Armet"				= /obj/item/clothing/head/roguetown/helmet/heavy/knight/armet,
 		"Hounskull Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull,
-		"Klappvisier Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/klappvisier,
+		"Klappvisier Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan,
 		"None"
 	)
 	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
@@ -145,7 +128,7 @@
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/sund/sund_knight = 1)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/chaptermaster = 1)
 
 
 /// SCHOOL OF THE SWORD
@@ -199,7 +182,7 @@
 		"Visored Sallet"	= /obj/item/clothing/head/roguetown/helmet/sallet/visored,
 		"Armet"				= /obj/item/clothing/head/roguetown/helmet/heavy/knight/armet,
 		"Hounskull Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull,
-		"Klappvisier Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/klappvisier,
+		"Klappvisier Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan,
 		"None"
 	)
 	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
@@ -214,7 +197,7 @@
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/sund/sund_knight = 1)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/chaptermaster = 1)
 
 
 
@@ -269,7 +252,7 @@
 		"Visored Sallet"	= /obj/item/clothing/head/roguetown/helmet/sallet/visored,
 		"Armet"				= /obj/item/clothing/head/roguetown/helmet/heavy/knight/armet,
 		"Hounskull Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull,
-		"Klappvisier Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/klappvisier,
+		"Klappvisier Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan,
 		"None"
 	)
 	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
@@ -284,7 +267,7 @@
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/sund/sund_knight = 1)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/chaptermaster = 1)
 
 
 /// SCHOOL OF THE MACE
@@ -338,7 +321,7 @@
 		"Visored Sallet"	= /obj/item/clothing/head/roguetown/helmet/sallet/visored,
 		"Armet"				= /obj/item/clothing/head/roguetown/helmet/heavy/knight/armet,
 		"Hounskull Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull,
-		"Klappvisier Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/klappvisier,
+		"Klappvisier Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan,
 		"None"
 	)
 	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
@@ -353,5 +336,5 @@
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/sund/sund_knight = 1)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/chaptermaster = 1)
 

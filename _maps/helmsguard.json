@@ -1,0 +1,18 @@
+{
+    "map_name": "Helmsguard",
+    "map_path": "map_files/helmsguard",
+    "map_file": ["helmsguard2.dmm",
+	"dreadwood.dmm"],
+	"traits": [{"Name": "Helmsguard", "Up": 1}, {"Up": 1, "Down": -1}, {"Up": 1, "Down": -1}, {"Up": 1, "Down": -1}, {"Down": -1},
+	{"Name": "Dread Wood", "Up": true}, {"Up": true, "Down": true}, {"Up": true, "Down": true}, {"Down": true}
+	],
+	"minetype": null,
+	"space_empty_levels": 0,
+	"space_ruin_levels": 0,
+	"shuttles": {
+		"cargo": "cargo_rogue",
+		"ferry": "ferry_fancy",
+		"whiteship": "whiteship_box",
+		"emergency":  "emergency_rogue"
+	}
+}

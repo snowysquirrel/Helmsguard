@@ -12,6 +12,7 @@
 		/obj/item/bouquet/salvia = 1,
 		/obj/item/bouquet/calendula = 1,
 		/obj/item/flowercrown/rosa = 1,
+		/obj/item/reagent_containers/glass/bottle = 1,
 		/obj/item/reagent_containers/glass/bottle/claybottle = 1,
 		/obj/item/reagent_containers/glass/bottle/clayvase = 1,
 		/obj/item/roguestatue/clay = 1,
@@ -22,9 +23,24 @@
 		/obj/item/lockpick = 1,
 		/obj/item/needle = 1,
 		/obj/item/needle/thorn = 1,
+		/obj/item/natural/cloth = 1,
+		/obj/item/dice/d6 = 1,
+		/obj/item/toy/cards/deck = 1,
+		/obj/item/natural/feather = 1,
+		/obj/item/paper = 1,
 		/obj/item/roguestatue/steel = 1,
 		/obj/item/roguestatue/aalloy = 1,
 		/obj/item/roguestatue/iron = 1,
+		/obj/item/clothing/neck/roguetown/psicross/wood = 1,
+		/obj/item/clothing/neck/roguetown/luckcharm = 1,
+		/obj/item/soap = 1,
+		/obj/item/pestle = 1,
+		/obj/item/reagent_containers/glass/mortar = 1,
+		/obj/item/flashlight/flare/torch = 1,
+		/obj/item/clothing/mask/cigarette/pipe = 1,
+		/obj/item/clothing/mask/cigarette/pipe/westman = 1,
+		/obj/item/rope = 1,
+		/obj/item/grown/log/tree/stake = 1,
 	)
 
 /obj/effect/spawner/lootdrop/valuable_clutter_spawner
@@ -76,6 +92,12 @@
 		/obj/item/kitchen/spoon/tin = 1,
 		/obj/item/reagent_containers/glass/bowl = 1,
 		/obj/item/reagent_containers/glass/bowl/iron = 1,
+		/obj/item/reagent_containers/glass/cup/wooden = 1,
+		/obj/item/reagent_containers/glass/cup = 1,
+		/obj/item/cooking/platter = 1,
+		/obj/item/cooking/platter/pewter = 1,
+
+
 	)
 
 /obj/effect/spawner/lootdrop/valuable_tableware_spawner

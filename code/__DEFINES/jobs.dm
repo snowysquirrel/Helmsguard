@@ -102,17 +102,14 @@
 #define HAND		(1<<2)
 #define STEWARD		(1<<3)
 #define KNIGHT		(1<<4)
-#define GUARD_CAPTAIN		(1<<5)
 #define HOSTAGE				(1<<6)
 
 #define GARRISON	(1<<1)
 
-#define GUARDSMAN	(1<<0)
+#define MARSHALL	(1<<0)
 #define MANATARMS	(1<<1)
-#define GATEMASTER	(1<<2)
-#define MASTERATARMS	(1<<3)
 
-#define CHURCHMEN		(1<<2)
+#define CHURCHMEN	(1<<2)
 
 #define PRIEST		(1<<0)
 #define MONK		(1<<1)
@@ -128,10 +125,10 @@
 #define COURTIERS	(1<<3)
 
 #define JESTER		(1<<0)
-#define WIZARD		(1<<1)
 #define PHYSICIAN 	(1<<2)
 #define BUTLER		(1<<3)
 #define COUNCILLOR	(1<<4)
+#define DUNGEONEER	(1<<5)
 
 #define TOWNER		(1<<4)
 
@@ -144,27 +141,29 @@
 #define MERCHANT	(1<<6)
 #define COOK		(1<<7)
 #define APOTHECARY	(1<<8)
-#define BUILDER		(1<<9)
+#define ARTIFICER		(1<<9)
 #define KNAVEWENCH	(1<<10)
 #define APPRENTICE 	(1<<11)
+#define FARMER		(1<<12)
+#define VILLAGER		(1<<13)
 
-#define CITYWATCH	(1<<5)
-#define BAILIFF		(1<<0)
-#define WATCHMAN	(1<<1)
-#define DUNGEONEER	(1<<2)
+//#define CITYWATCH	(1<<5)
+//#define BAILIFF		(1<<0)
+//#define WATCHMAN	(1<<1)
+//#define DUNGEONEER	(1<<2)
 
-#define PEASANTRY	(1<<6)
-#define FARMER		(1<<0)
-#define SERF		(1<<1)
+#define MAGEGUILD (1<<5)
+#define WIZARD		(1<<1)
+#define MAGEAPPRENTICE (1<<2)
 
-#define WRETCH		(1<<7)
+#define WRETCH		(1<<6)
 #define CHURCHLING	(1<<1)
 #define SERVANT		(1<<3)
 #define ORPHAN		(1<<4)
 #define PRINCE		(1<<5)
 #define SHOPHAND	(1<<6)
 
-#define MERCENARIES		(1<<8)
+#define MERCENARIES		(1<<7)
 
 #define VETERAN			(1<<1)
 #define MERCENARY		(1<<2)
@@ -172,7 +171,7 @@
 #define GRENZELHOFT		(1<<4)	//Unused
 
 
-#define RABBLE		(1<<9)
+#define RABBLE		(1<<8)
 
 #define NITEMASTER	(1<<0)
 #define WENCH		(1<<1)
@@ -184,7 +183,7 @@
 #define MIGRANT		(1<<7)
 #define LUNATIC		(1<<8)
 
-#define SLOP (1<<10)
+#define SLOP (1<<9)
 
 #define TESTER		(1<<0)
 #define DEATHKNIGHT (1<<1)
@@ -197,6 +196,7 @@
 
 #define JCOLOR_NOBLE "#aa83b9"
 #define JCOLOR_COURTIER "#81adc8"
+#define JCOLOR_MAGE "#a13dff"
 #define JCOLOR_CHURCH "#c0ba8d"
 #define JCOLOR_SOLDIER "#b18484"
 #define JCOLOR_YEOMAN "#819e82"
@@ -220,56 +220,49 @@
 #define JDO_JESTER 2.2
 #define JDO_SERVANT 2.3
 #define JDO_COUNCILLOR 2.4
+#define JDO_DUNGEONEER 2.5
 
 // RETINUE	
 #define JDO_KNIGHT 3
-#define JDO_MASTERATARMS 3.1
-#define JDO_GATEMASTER 3.2
-#define JDO_MANATARMS 3.3
-#define JDO_TOWNGUARD 3.4
+#define JDO_MARSHAL 3.1
+#define JDO_MANATARMS 3.2
 
 // CHURCH
 #define JDO_PRIEST 4
 #define JDO_CHAPTERMASTER 4.1
-#define JDO_TEMPLAR_KNIGHT 4.2
 #define JDO_TEMPLAR 4.3
-#define JDO_HOSP_KNIGHT 4.4
-#define JDO_HOSPITALER 4.5
 #define JDO_MONK 4.6
 #define JDO_PURITAN 4.7
 #define JDO_CHURCHLING 4.8
 
 // CITYWATCH
-#define JDO_BAILIFF 5
-#define JDO_WATCHMAN 5.1
-#define JDO_DUNGEONEER 5.2
+//#define JDO_BAILIFF 5
+//#define JDO_WATCHMAN 5.1
+//#define JDO_DUNGEONEER 5.2
+
+//MAGE GUILD
+#define JDO_MAGICIAN 5
+#define JDO_MAGEAPPRENTICE 5.1
 
 #define JDO_MERCHANT 6
-#define JDO_SHOPHAND 6.1
-#define JDO_APOTHECARY 6.2
-#define JDO_ARMORER 6.3
-#define JDO_WEAPONSMITH 6.4
-#define JDO_BLACKSMITH 6.5
-#define JDO_APPRENTICE 6.6
-#define JDO_ARTISAN 6.7
-#define JDO_TAILOR 6.8
-#define JDO_LEATHERWORKER 6.9
-#define JDO_BARKEEP 7
-#define JDO_COOK 7.1
-#define JDO_NITEMASTER 7.2
-#define JDO_BUILDER 7.3
+#define JDO_APOTHECARY 6.1
+#define JDO_BLACKSMITH 6.2
+#define JDO_APPRENTICE 6.3
+#define JDO_TAILOR 6.4
+#define JDO_BARKEEP 6.5
+#define JDO_COOK 6.6
+#define JDO_ARTIFICER 6.7
+#define JDO_WENCH 6.8
 
-#define JDO_WENCH 7.4
-
-#define JDO_SOILSON 8
-#define JDO_VILLAGER 8.1
-#define JDO_KNAVEWENCH 8.2
-#define JDO_ADVENTURER 8.3
-#define JDO_PILGRIM 8.4
-#define JDO_MIGRANT 8.5
-#define JDO_BANDIT 8.6
-#define JDO_WRETCH 8.7
-#define JDO_GUTTERFOLK 8.8
+#define JDO_SOILSON 7
+#define JDO_VILLAGER 7.1
+#define JDO_KNAVEWENCH 7.2
+#define JDO_ADVENTURER 7.3
+#define JDO_PILGRIM 7.4
+#define JDO_MIGRANT 7.5
+#define JDO_BANDIT 7.6
+#define JDO_WRETCH 7.7
+#define JDO_GUTTERFOLK 7.8
 
 #define JDO_MERCENARY 9
 #define JDO_GRENZELHOFT 9.1
@@ -288,12 +281,13 @@
 #define BITFLAG_ROYALTY (1<<1)
 #define BITFLAG_CONSTRUCTOR (1<<2)
 #define BITFLAG_GARRISON (1<<3)
+#define BITFLAG_MAGE (1<<4)
 
 #define MANOR_ROLES \
 	/datum/job/roguetown/jester,\
 	/datum/job/roguetown/servant,\
-	/datum/job/roguetown/squire,\
-	/datum/job/roguetown/physician,
+	/datum/job/roguetown/physician,\
+	/datum/job/roguetown/dungeoneer
 
 #define NOBLE_ROLES \
 	/datum/job/roguetown/prince,\
@@ -307,15 +301,11 @@
 	/datum/job/roguetown/lord
 
 #define CHURCH_ROLES \
-	/datum/job/roguetown/churchling,\
 	/datum/job/roguetown/monk,\
 	/datum/job/roguetown/priest,\
 	/datum/job/roguetown/chaptermaster,\
 	/datum/job/roguetown/puritan,\
-	/datum/job/roguetown/templar_knight,\
 	/datum/job/roguetown/templar,\
-	/datum/job/roguetown/hosp_knight,\
-	/datum/job/roguetown/hospitaler,	
 
 #define PEASANT_ROLES \
 	/datum/job/roguetown/villager,\
@@ -336,15 +326,11 @@
 
 
 
-
 #define TOWNER_ROLES \
 	/datum/job/roguetown/niteman,\
 	/datum/job/roguetown/barkeep,\
-	/datum/job/roguetown/armorsmith,\
-	/datum/job/roguetown/weaponsmith,\
 	/datum/job/roguetown/blacksmith,\
 	/datum/job/roguetown/merchant,\
-	/datum/job/roguetown/artisan,\
 	/datum/job/roguetown/tailor,\
 	/datum/job/roguetown/scribe,\
 	/datum/job/roguetown/apothecary,
@@ -357,16 +343,7 @@
 	/datum/job/roguetown/bandit,\
 	/datum/job/roguetown/wretch
 
-#define CITYWATCH_ROLES \
-	/datum/job/roguetown/bailiff,\
-	/datum/job/roguetown/guardsman,\
-	/datum/job/roguetown/dungeoneer
-
 #define GARRISON_ROLES \
 	/datum/job/roguetown/knight,\
+	/datum/job/roguetown/marshall,\
 	/datum/job/roguetown/manatarms,\
-	/datum/job/roguetown/masteratarms,\
-	/datum/job/roguetown/gatemaster
-
-#define INQUISITION_ROLES \
-	/datum/job/roguetown/orthodoxist

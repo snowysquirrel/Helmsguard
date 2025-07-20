@@ -1,21 +1,12 @@
 /datum/job/roguetown/villager
-	title = "Serf"
-	flag = SERF
-	department_flag = PEASANTRY
+	title = "Villager"
+	flag = VILLAGER
+	department_flag = TOWNER
 	faction = "Station"
 	total_positions = 75
 	spawn_positions = 75
-	allowed_races = list(\
-	/datum/species/human/northern,\
-	/datum/species/human/halfelf,\
-	/datum/species/elf/wood,\
-	/datum/species/dwarf/mountain,\
-	/datum/species/demihuman,\
-	/datum/species/tieberian,\
-	/datum/species/halforc,\
-	)
+	allowed_races = RACES_ALL_KINDS
 
-	selection_color = JCOLOR_PEASANT
 	tutorial = "You've lived in this shithole for effectively all your life. You are not an explorer, nor exactly a warrior in many cases. You're just some average poor bastard who thinks they'll be something someday."
 	advclass_cat_rolls = list(CTAG_TOWNER = 20)
 	outfit = null

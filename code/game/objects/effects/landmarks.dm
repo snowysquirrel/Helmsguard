@@ -128,7 +128,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 /obj/effect/landmark/start/villagerlate
 	name = "Townerlate"
 	icon_state = "arrow"
-	jobspawn_override = list("Towner")
+	jobspawn_override = list("Villager")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/lord
@@ -185,7 +185,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 
 /obj/effect/landmark/start/marshal
-	name = "Marshal"
+	name = "Marshall"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/councillor
@@ -205,7 +205,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/villager
-	name = "Towner"
+	name = "Villager"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/woodsman
@@ -271,7 +271,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 
 /obj/effect/landmark/start/innkeep
-	name = "Innkeep"
+	name = "Innkeeper"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/archivist
@@ -397,7 +397,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/wapprentice
-	name = "Magicians Associate"
+	name = "Mage Apprentice"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/apothecary
@@ -405,7 +405,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/servant
-	name = "Servant"
+	name = "Butler"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/churchling

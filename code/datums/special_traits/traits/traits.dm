@@ -534,7 +534,7 @@
 	name = "Vengant Bum"
 	greet_text = span_notice("I was once a nobleman, high on life until my father was murdered right in front of me. Thankfully, my mentor took me to safety and taught me all I needed to survive in these disgusting lands. They think I am a lowlife, but that's just an advantage.")
 	req_text = "Be a beggar"
-	allowed_jobs = list(/datum/job/roguetown/beggar)
+//	allowed_jobs = list()
 	weight = 7
 
 /datum/special_trait/vengantbum/on_apply(mob/living/carbon/human/character, silent)
@@ -550,7 +550,7 @@
 	name = "My Precious"
 	greet_text = span_notice("The ring, it's so shiny.. so valuable, I can feel it's power. It's all mine!")
 	req_text = "Be a beggar"
-	allowed_jobs = list(/datum/job/roguetown/beggar)
+	allowed_jobs = list()
 	weight = 50
 
 /datum/special_trait/my_precious/on_apply(mob/living/carbon/human/character, silent)
@@ -562,6 +562,7 @@
 	var/obj/item/ring = new /obj/item/clothing/ring/dragon_ring(get_turf(character))
 	character.put_in_hands(ring, forced = TRUE)
 
+/*
 /datum/special_trait/illicit_merchant
 	name = "Illicit Merchant"
 	greet_text = span_notice("I'm sick of working as an underling, I will start my own trade emporium. I've got my hands on a hidden merchant key and a curious magical device")
@@ -572,3 +573,4 @@
 /datum/special_trait/illicit_merchant/on_apply(mob/living/carbon/human/character, silent)
 	character.mind.special_items["Merchant Key"] = /obj/item/roguekey/merchant
 	character.mind.special_items["GOLDFACE Gem"] = /obj/item/gem_device/goldface
+*/

@@ -976,12 +976,12 @@
 	keylock = TRUE
 	grant_resident_key = TRUE
 	resident_key_type = /obj/item/roguekey/bath
-	resident_role = /datum/job/roguetown/nightmaiden
+//	resident_role = /datum/job/roguetown/nightmaiden
 	lockid = null //Will be randomized
 
 /obj/structure/mineral_door/wood/bath/bathmaid
 	icon_state = "woodwindow"
-	resident_advclass = list(/datum/advclass/nightmaiden)
+//	resident_advclass = list(/datum/advclass/nightmaiden)
 
 /obj/structure/mineral_door/wood/bath/courtesan
-	resident_advclass = list(/datum/advclass/nightmaiden/concubine, /datum/advclass/nightmaiden/courtesan)
+//	resident_advclass = list(/datum/advclass/nightmaiden/concubine, /datum/advclass/nightmaiden/courtesan)
