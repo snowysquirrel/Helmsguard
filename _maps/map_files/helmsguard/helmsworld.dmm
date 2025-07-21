@@ -1893,6 +1893,7 @@
 /obj/effect/landmark/start/villagerlate,
 /obj/effect/landmark/start/mercenarylate,
 /obj/effect/landmark/start/manatarmslate,
+/obj/effect/landmark/start/mercenarylate,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/rtfield)
 "biK" = (
@@ -2874,12 +2875,6 @@
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/carpet/stellar,
 /area/rogue/indoors/town)
-"bPM" = (
-/mob/living/carbon/human/species/skeleton/dead/manatarms,
-/turf/open/floor/rogue/blocks/stone/stonepattern2{
-	dir = 8
-	},
-/area/rogue/outdoors/fallen_gate)
 "bQf" = (
 /obj/effect/decal/cleanable/dirt/cobweb,
 /obj/effect/spawner/dungeons/maybechest,
@@ -9732,6 +9727,10 @@
 /obj/effect/decal/wood,
 /turf/open/floor/rogue/blocks/stonered/tiny/nosmooth,
 /area/rogue/indoors/town/tavern)
+"fOE" = (
+/mob/living/carbon/human/species/skeleton/dead/peasant,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "fPs" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -11318,12 +11317,8 @@
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/shelter/mountains)
 "gST" = (
-/obj/effect/decal/wood/ruinedwood/turned{
-	dir = 4
-	},
-/mob/living/carbon/human/species/skeleton/dead/peasant,
-/turf/open/floor/rogue/ruinedwood/platform,
-/area/rogue/indoors/town)
+/turf/open/floor/rogue/concrete,
+/area/rogue/indoors/fallen_gate)
 "gSU" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4
@@ -16239,9 +16234,6 @@
 "jNN" = (
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town/garrison)
-"jOk" = (
-/turf/open/floor/rogue/concrete,
-/area/rogue/indoors/fallen_gate)
 "jOv" = (
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /obj/item/natural/bundle/bone,
@@ -17534,10 +17526,6 @@
 /obj/structure/roguetent,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/goblin_outpost)
-"kAm" = (
-/mob/living/carbon/human/species/skeleton/dead/manatarms,
-/turf/open/floor/rogue/blocks/nosmooth,
-/area/rogue/indoors/fallen_gate)
 "kAr" = (
 /obj/structure/table/vtable/v2,
 /obj/item/paper{
@@ -22021,11 +22009,11 @@
 /turf/open/floor/rogue/ruinedwood/nosmooth/wooden_floor2,
 /area/rogue/indoors/town/tavern)
 "neP" = (
-/obj/effect/decal/border/stone{
+/mob/living/carbon/human/species/skeleton/dead/manatarms,
+/turf/open/floor/rogue/blocks/stone/stonepattern2{
 	dir = 8
 	},
-/turf/open/floor/rogue/concrete,
-/area/rogue/indoors/fallen_gate)
+/area/rogue/outdoors/fallen_gate)
 "nfc" = (
 /obj/effect/decal/border/stone{
 	dir = 8
@@ -22803,9 +22791,12 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/mountains)
 "nCu" = (
-/mob/living/carbon/human/species/skeleton/dead/manatarms,
-/turf/open/floor/rogue/blocks,
-/area/rogue/indoors/toll_dread)
+/obj/effect/decal/wood/ruinedwood/turned{
+	dir = 4
+	},
+/mob/living/carbon/human/species/skeleton/dead/peasant,
+/turf/open/floor/rogue/ruinedwood/platform,
+/area/rogue/indoors/town)
 "nCz" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/twig/nospin,
@@ -24889,9 +24880,9 @@
 /turf/open/floor/rogue/ruinedwood/platform,
 /area/rogue/indoors)
 "oQF" = (
-/obj/effect/landmark/start/mercenarylate,
-/turf/open/transparent/openspace,
-/area/rogue/outdoors/mountains)
+/mob/living/carbon/human/species/skeleton/dead/manatarms,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/toll_dread)
 "oQW" = (
 /turf/closed/mineral/random/rogue/high,
 /area/rogue/under/underdark)
@@ -25030,9 +25021,11 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/forgotten_refuge)
 "oYh" = (
-/mob/living/carbon/human/species/skeleton/dead/peasant,
-/turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/obj/effect/decal/border/stone{
+	dir = 8
+	},
+/turf/open/floor/rogue/concrete,
+/area/rogue/indoors/fallen_gate)
 "oYC" = (
 /obj/effect/decal/cobbleedge{
 	dir = 9
@@ -26066,6 +26059,10 @@
 /obj/structure/chair/bench,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/forgotten_refuge)
+"pGj" = (
+/mob/living/carbon/human/species/skeleton/dead/manatarms,
+/turf/open/floor/rogue/blocks/nosmooth,
+/area/rogue/indoors/fallen_gate)
 "pGS" = (
 /obj/effect/decal/border/stone{
 	dir = 4
@@ -30700,8 +30697,8 @@
 /area/rogue/indoors/forgotten_refuge)
 "szU" = (
 /mob/living/carbon/human/species/skeleton/dead/peasant,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/woods)
+/turf/open/floor/rogue/ruinedwood,
+/area/rogue/indoors)
 "sAo" = (
 /obj/structure/curtain/brown,
 /obj/structure/roguewindow/openclose{
@@ -163431,7 +163428,7 @@ xpG
 bxf
 ojq
 sur
-szU
+fOE
 hmS
 hmS
 hmS
@@ -183180,7 +183177,7 @@ iKz
 oiY
 aPj
 iBx
-kAm
+pGj
 fDw
 fDw
 fDw
@@ -187292,7 +187289,7 @@ enm
 enm
 enm
 uRP
-nCu
+oQF
 eUg
 hoH
 gqv
@@ -257904,7 +257901,7 @@ jER
 jER
 jER
 twS
-oYh
+szU
 ukI
 mky
 rLw
@@ -280466,8 +280463,8 @@ orc
 oiJ
 iRW
 dhl
-neP
-jOk
+oYh
+gST
 gFq
 shs
 iRW
@@ -280871,7 +280868,7 @@ dhl
 sop
 pjp
 qSQ
-kAm
+pGj
 nqt
 jER
 jER
@@ -281681,7 +281678,7 @@ dtl
 yeA
 uOQ
 gcF
-bPM
+neP
 lEs
 ghr
 mcC
@@ -283280,7 +283277,7 @@ oiY
 oiY
 qap
 dhl
-neP
+oYh
 ski
 per
 lcT
@@ -283683,7 +283680,7 @@ oiJ
 qap
 dhl
 nhy
-jOk
+gST
 aLN
 shs
 iRW
@@ -292838,7 +292835,7 @@ jER
 jER
 gQf
 feZ
-gST
+nCu
 gwQ
 qDE
 rcr
@@ -294423,7 +294420,7 @@ jER
 jER
 jER
 jER
-oQF
+jER
 jER
 jER
 jER
