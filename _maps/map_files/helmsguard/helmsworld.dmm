@@ -7657,6 +7657,15 @@
 /obj/effect/decal/wood/ruinedwood/turned{
 	dir = 4
 	},
+/obj/structure/table/wood{
+	icon_state = "tablewood1";
+	pixel_x = 1
+	},
+/obj/item/reagent_containers/glass/bowl,
+/obj/item/natural/cloth{
+	pixel_x = 8;
+	pixel_y = 10
+	},
 /turf/open/floor/rogue/blocks/newstone/nosmooth,
 /area/rogue/indoors/town/church/basement)
 "eEv" = (
@@ -9270,6 +9279,17 @@
 /obj/structure/chair/wood/rogue,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town)
+"fyD" = (
+/obj/structure/fluff/railing/wood{
+	dir = 8;
+	pixel_x = -8
+	},
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	pixel_y = 7
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/church_outside)
 "fyH" = (
 /turf/open/floor/rogue/blocks/stone/nosmooth,
 /area/rogue/indoors/town/dwarfin)
@@ -9586,6 +9606,15 @@
 	},
 /obj/machinery/light/rogue/torchholder/r{
 	pixel_x = 8
+	},
+/obj/structure/table/wood{
+	icon_state = "tablewood1";
+	pixel_x = 1
+	},
+/obj/item/reagent_containers/glass/bowl,
+/obj/item/natural/cloth{
+	pixel_x = 8;
+	pixel_y = 10
 	},
 /turf/open/floor/rogue/blocks/newstone/nosmooth,
 /area/rogue/indoors/town/church/basement)
@@ -12274,6 +12303,17 @@
 /mob/living/simple_animal/hostile/rogue/skeleton/spear,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors)
+"hxi" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	pixel_y = 7
+	},
+/obj/structure/fluff/railing/wood{
+	dir = 8;
+	pixel_x = -8
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/mountains)
 "hxj" = (
 /obj/structure/chair/wood/rogue/chair3{
 	dir = 8
@@ -19812,6 +19852,13 @@
 "lTh" = (
 /turf/closed/wall/mineral/rogue/decostone,
 /area/rogue/indoors/town/church/basement)
+"lTk" = (
+/obj/structure/fluff/railing/wood{
+	dir = 8;
+	pixel_x = -8
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/mountains)
 "lTn" = (
 /obj/effect/landmark/start/hand{
 	dir = 1
@@ -20456,6 +20503,7 @@
 /obj/effect/decal/border/stone{
 	dir = 4
 	},
+/obj/machinery/light/rogue/torchholder/c,
 /turf/open/floor/rogue/blocks/stone/stonepattern2,
 /area/rogue/indoors/town/church/basement)
 "mog" = (
@@ -23248,6 +23296,13 @@
 "nRH" = (
 /turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/indoors/greykeep)
+"nRJ" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	pixel_y = 7
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/church_outside)
 "nRR" = (
 /obj/structure/fluff/railing/border,
 /obj/effect/decal/wood/turnd{
@@ -25417,14 +25472,12 @@
 /turf/open/floor/rogue/ruinedwood/nosmooth/turned,
 /area/rogue/outdoors/mountains)
 "pmF" = (
-/obj/structure/closet/crate/roguecloset/lord{
-	name = "Surgical Tools";
-	lockid = "church";
-	pixel_y = 16
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	pixel_y = 7
 	},
-/obj/item/natural/bundle/fibers/full,
-/turf/open/floor/rogue/blocks/newstone/nosmooth,
-/area/rogue/indoors/town/church/basement)
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/mountains)
 "pmL" = (
 /obj/structure/chair/wood/rogue/fancy,
 /obj/effect/decal/wood/ruinedwood{
@@ -31579,8 +31632,15 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/mountains)
 "tcC" = (
-/obj/effect/decal/border/stone{
-	dir = 9
+/obj/item/natural/bundle/cloth,
+/obj/item/natural/bundle/fibers/full,
+/obj/item/needle,
+/obj/item/needle,
+/obj/item/needle,
+/obj/item/storage/belt/rogue/surgery_bag/full,
+/obj/structure/closet/crate/roguecloset/inn{
+	pixel_y = 19;
+	name = "medical closet"
 	},
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/indoors/town/church/basement)
@@ -35833,6 +35893,16 @@
 /obj/effect/decal/wood,
 /turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/indoors/town/church)
+"vOp" = (
+/obj/effect/decal/border/stone{
+	dir = 4
+	},
+/obj/effect/decal/border/stone{
+	dir = 8
+	},
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/blocks/stone/stonepattern2,
+/area/rogue/indoors/town/church/basement)
 "vOs" = (
 /obj/structure/fluff/walldeco/rpainting/forest{
 	pixel_y = 32
@@ -314075,7 +314145,7 @@ jER
 jER
 jER
 jER
-sHK
+pmF
 qtS
 qtS
 qtS
@@ -314476,7 +314546,7 @@ jER
 jER
 jER
 jER
-sHK
+hxi
 sHK
 sHK
 qtS
@@ -314876,8 +314946,8 @@ jER
 jER
 jER
 jER
-sHK
-sHK
+hxi
+lTk
 sHK
 sHK
 sHK
@@ -316075,7 +316145,7 @@ jER
 jER
 jER
 jER
-uJC
+fyD
 mPx
 xvQ
 kYJ
@@ -316476,7 +316546,7 @@ jER
 jER
 jER
 jER
-uJC
+fyD
 uJC
 mPx
 iAj
@@ -316877,7 +316947,7 @@ jER
 jER
 jER
 jER
-uJC
+fyD
 uJC
 ejq
 mPx
@@ -317279,7 +317349,7 @@ jER
 jER
 jER
 jER
-uJC
+nRJ
 ejq
 nVB
 mPx
@@ -317678,9 +317748,9 @@ jER
 jER
 jER
 jER
-uJC
-uJC
-uJC
+fyD
+qDH
+qDH
 ejq
 nVB
 nVB
@@ -318078,8 +318148,8 @@ jER
 jER
 jER
 jER
-uJC
-uJC
+fyD
+qDH
 uJC
 ejq
 nVB
@@ -318479,7 +318549,7 @@ jER
 jER
 jER
 jER
-uJC
+fyD
 uJC
 uJC
 uJC
@@ -318880,7 +318950,7 @@ jER
 jER
 jER
 jER
-uJC
+fyD
 uJC
 aDG
 ejq
@@ -319282,7 +319352,7 @@ jER
 jER
 jER
 jER
-uJC
+nRJ
 uJC
 aDG
 oMj
@@ -319684,7 +319754,7 @@ jER
 jER
 jER
 jER
-uJC
+nRJ
 uJC
 aDG
 ejq
@@ -320086,7 +320156,7 @@ jER
 jER
 jER
 jER
-uJC
+nRJ
 uJC
 afK
 fnO
@@ -320488,7 +320558,7 @@ jER
 jER
 jER
 jER
-uJC
+nRJ
 uJC
 afK
 rIJ
@@ -320890,7 +320960,7 @@ jER
 jER
 jER
 jER
-uJC
+nRJ
 uJC
 lWI
 rIJ
@@ -321292,7 +321362,7 @@ jER
 jER
 jER
 jER
-uJC
+nRJ
 uJC
 lWI
 eyY
@@ -328950,7 +329020,7 @@ vtp
 wHI
 sbf
 bKq
-sKI
+vOp
 sKI
 bKq
 mof
@@ -329751,7 +329821,7 @@ gzM
 fUM
 uXS
 ift
-pmF
+pFb
 pFb
 pFb
 pFb
