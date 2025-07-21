@@ -10,3 +10,4 @@
 - Tainted items only have half of the maximum integrity of its non-tainted counterpart.
 - Simple skeletons now drop decrepit loots only.
 - Manatarms latespawns on the carriage only.
+- Apothecary and Blacksmith can now access their peddler.
