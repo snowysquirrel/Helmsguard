@@ -12,6 +12,7 @@
 	var/icon_y_offset = 0
 	var/always_destroy = FALSE
 	var/is_important = FALSE // If TRUE, this item is not allowed to be minted. May be useful for other things later.
+	var/tainted = FALSE
 //#else
 //	var/force_reupdate_inhand = FALSE
 //#endif

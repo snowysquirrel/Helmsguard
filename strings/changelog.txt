@@ -6,3 +6,7 @@
 - Varangian helmets and hood fixed
 - Laborer's skills and stats fixed
 - Warscholar mercenary class renenabled
+- Loots from hostile carbon skeletons and ambient corpses have a high probabiltiy of being "tainted"
+- Tainted items only have half of the maximum integrity of its non-tainted counterpart.
+- Simple skeletons now drop decrepit loots only.
+- Manatarms latespawns on the carriage only.

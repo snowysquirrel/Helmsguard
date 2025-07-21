@@ -65,7 +65,6 @@
 /area/rogue/indoors/town/tavern)
 "ack" = (
 /obj/structure/bed/rogue/inn/hay,
-/obj/effect/spawner/lootdrop/roguetown/corpse_spawner/dungeon,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors)
 "acr" = (
@@ -192,13 +191,9 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/underdark)
 "ajp" = (
-/obj/structure/rack/rogue,
-/obj/effect/spawner/lootdrop/general_loot_mid,
-/obj/effect/spawner/lootdrop/general_loot_low,
-/obj/effect/spawner/lootdrop/general_loot_low,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/turf/open/floor/rogue/blocks/nosmooth,
-/area/rogue/indoors/fallen_gate)
+/mob/living/carbon/human/species/skeleton/dead/manatarms,
+/turf/open/floor/rogue/blocks/stone/nosmooth,
+/area/rogue/outdoors/fallen_gate)
 "akj" = (
 /obj/structure/chair/bench/coucha/r,
 /obj/machinery/light/rogue/wallfire/candle/r,
@@ -1748,6 +1743,7 @@
 /area/rogue/indoors/greykeep)
 "beT" = (
 /obj/effect/decal/cleanable/dirt/cobweb,
+/mob/living/carbon/human/species/skeleton/dead/manatarms,
 /turf/open/floor/rogue/blocks/nosmooth,
 /area/rogue/indoors/fallen_gate)
 "beU" = (
@@ -1896,6 +1892,7 @@
 /obj/effect/landmark/latejoin,
 /obj/effect/landmark/start/villagerlate,
 /obj/effect/landmark/start/mercenarylate,
+/obj/effect/landmark/start/manatarmslate,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/rtfield)
 "biK" = (
@@ -2878,13 +2875,11 @@
 /turf/open/floor/carpet/stellar,
 /area/rogue/indoors/town)
 "bPM" = (
-/obj/structure/stairs/stone{
-	dir = 1
+/mob/living/carbon/human/species/skeleton/dead/manatarms,
+/turf/open/floor/rogue/blocks/stone/stonepattern2{
+	dir = 8
 	},
-/obj/structure/vine,
-/obj/effect/decal/cleanable/dirt/cobweb,
-/turf/open/floor/rogue/blocks/nosmooth,
-/area/rogue/indoors/fallen_gate)
+/area/rogue/outdoors/fallen_gate)
 "bQf" = (
 /obj/effect/decal/cleanable/dirt/cobweb,
 /obj/effect/spawner/dungeons/maybechest,
@@ -8800,10 +8795,6 @@
 "fkU" = (
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/fallen_gate)
-"fkW" = (
-/obj/effect/landmark/start/manatarmslate,
-/turf/open/floor/carpet/royalblack,
-/area/rogue/indoors/town/garrison)
 "flr" = (
 /obj/effect/decal/wood/turnd{
 	dir = 8
@@ -9741,10 +9732,6 @@
 /obj/effect/decal/wood,
 /turf/open/floor/rogue/blocks/stonered/tiny/nosmooth,
 /area/rogue/indoors/town/tavern)
-"fOE" = (
-/obj/effect/landmark/start/manatarmslate,
-/turf/open/transparent/openspace,
-/area/rogue/outdoors/town/riverstead/roof)
 "fPs" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -11331,16 +11318,12 @@
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/shelter/mountains)
 "gST" = (
-/obj/effect/decal/border/stone{
-	dir = 1
+/obj/effect/decal/wood/ruinedwood/turned{
+	dir = 4
 	},
-/obj/structure/rack/rogue,
-/obj/effect/spawner/lootdrop/general_loot_mid,
-/obj/effect/spawner/lootdrop/general_loot_low,
-/obj/effect/spawner/lootdrop/general_loot_low,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors/fallen_gate)
+/mob/living/carbon/human/species/skeleton/dead/peasant,
+/turf/open/floor/rogue/ruinedwood/platform,
+/area/rogue/indoors/town)
 "gSU" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4
@@ -16257,12 +16240,7 @@
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town/garrison)
 "jOk" = (
-/obj/structure/rack/rogue,
-/obj/structure/vine,
-/obj/effect/spawner/lootdrop/general_loot_mid,
-/obj/effect/spawner/lootdrop/general_loot_low,
-/obj/effect/spawner/lootdrop/general_loot_low,
-/turf/open/floor/rogue/blocks/nosmooth,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/fallen_gate)
 "jOv" = (
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
@@ -17209,6 +17187,7 @@
 	dir = 8
 	},
 /obj/machinery/light/rogue/wallfire/candle/off/l,
+/mob/living/carbon/human/species/skeleton/dead/peasant,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors)
 "kpn" = (
@@ -17556,10 +17535,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/goblin_outpost)
 "kAm" = (
-/obj/structure/stairs/stone{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt/cobweb,
+/mob/living/carbon/human/species/skeleton/dead/manatarms,
 /turf/open/floor/rogue/blocks/nosmooth,
 /area/rogue/indoors/fallen_gate)
 "kAr" = (
@@ -17931,6 +17907,7 @@
 /area/rogue/outdoors/woods/river)
 "kKv" = (
 /obj/item/natural/bundle/bone,
+/mob/living/carbon/human/species/skeleton/dead/manatarms,
 /turf/open/floor/rogue/blocks/stone/nosmooth,
 /area/rogue/outdoors/fallen_gate)
 "kKw" = (
@@ -22047,7 +22024,7 @@
 /obj/effect/decal/border/stone{
 	dir = 8
 	},
-/turf/open/floor/rogue/naturalstone,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/fallen_gate)
 "nfc" = (
 /obj/effect/decal/border/stone{
@@ -22175,7 +22152,7 @@
 	pixel_y = -6;
 	pixel_x = 7
 	},
-/turf/open/floor/rogue/naturalstone,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/fallen_gate)
 "nhz" = (
 /obj/structure/stairs,
@@ -22826,12 +22803,9 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/mountains)
 "nCu" = (
-/obj/structure/stairs/stone{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
-/turf/open/floor/rogue/blocks/nosmooth,
-/area/rogue/indoors/fallen_gate)
+/mob/living/carbon/human/species/skeleton/dead/manatarms,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/toll_dread)
 "nCz" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/twig/nospin,
@@ -25056,11 +25030,9 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/forgotten_refuge)
 "oYh" = (
-/obj/effect/decal/border/stone{
-	dir = 8
-	},
-/turf/open/floor/rogue/cobble3,
-/area/rogue/indoors/fallen_gate)
+/mob/living/carbon/human/species/skeleton/dead/peasant,
+/turf/open/floor/rogue/ruinedwood,
+/area/rogue/indoors)
 "oYC" = (
 /obj/effect/decal/cobbleedge{
 	dir = 9
@@ -25375,7 +25347,7 @@
 	dir = 4
 	},
 /obj/item/ammo_casing/caseless/rogue/arrow/iron/aalloy,
-/turf/open/floor/rogue/cobble3,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/fallen_gate)
 "pjK" = (
 /turf/closed/wall/mineral/rogue/tent,
@@ -26094,15 +26066,6 @@
 /obj/structure/chair/bench,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/forgotten_refuge)
-"pGj" = (
-/obj/structure/mineral_door/wood{
-	brokenstate = 1;
-	icon_state = "woodhandlebr";
-	density = 0;
-	opacity = 0
-	},
-/turf/open/floor/rogue/grassred,
-/area/rogue/outdoors/rtfield)
 "pGS" = (
 /obj/effect/decal/border/stone{
 	dir = 4
@@ -30228,7 +30191,7 @@
 /obj/effect/decal/border/stone{
 	dir = 8
 	},
-/turf/open/floor/rogue/cobble3,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/fallen_gate)
 "skl" = (
 /obj/structure/rack/rogue,
@@ -30332,7 +30295,7 @@
 /obj/effect/decal/border/stone{
 	dir = 4
 	},
-/turf/open/floor/rogue/cobble3,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/fallen_gate)
 "sor" = (
 /turf/open/floor/rogue/naturalstone,
@@ -30495,7 +30458,7 @@
 /area/rogue/indoors/toll_dread)
 "sso" = (
 /obj/structure/bed/rogue/inn/wooldouble,
-/obj/effect/spawner/lootdrop/roguetown/corpse_spawner/dungeon,
+/mob/living/carbon/human/species/skeleton/dead/peasant,
 /turf/open/floor/rogue/ruinedwood/platform,
 /area/rogue/indoors)
 "ssr" = (
@@ -30736,15 +30699,9 @@
 /turf/open/water/swamp,
 /area/rogue/indoors/forgotten_refuge)
 "szU" = (
-/obj/effect/decal/border/stone{
-	dir = 1
-	},
-/obj/structure/rack/rogue,
-/obj/effect/spawner/lootdrop/general_loot_mid,
-/obj/effect/spawner/lootdrop/general_loot_low,
-/obj/effect/spawner/lootdrop/general_loot_low,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors/fallen_gate)
+/mob/living/carbon/human/species/skeleton/dead/peasant,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "sAo" = (
 /obj/structure/curtain/brown,
 /obj/structure/roguewindow/openclose{
@@ -31165,7 +31122,6 @@
 /obj/effect/decal/wood/ruinedwood/turned{
 	dir = 4
 	},
-/obj/effect/landmark/start/manatarmslate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/garrison)
 "sMC" = (
@@ -32821,7 +32777,6 @@
 "tTh" = (
 /obj/structure/bed/rogue/inn/hay,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
-/obj/effect/spawner/lootdrop/roguetown/corpse_spawner/dungeon,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors)
 "tTi" = (
@@ -163476,7 +163431,7 @@ xpG
 bxf
 ojq
 sur
-hmS
+szU
 hmS
 hmS
 hmS
@@ -183225,7 +183180,7 @@ iKz
 oiY
 aPj
 iBx
-shs
+kAm
 fDw
 fDw
 fDw
@@ -187337,7 +187292,7 @@ enm
 enm
 enm
 uRP
-qaJ
+nCu
 eUg
 hoH
 gqv
@@ -194796,7 +194751,7 @@ cSb
 cSb
 vai
 vai
-pGj
+vai
 vai
 fkH
 tfF
@@ -257949,7 +257904,7 @@ jER
 jER
 jER
 twS
-ukI
+oYh
 ukI
 mky
 rLw
@@ -279194,7 +279149,7 @@ jrt
 bcu
 lBZ
 hOl
-fkW
+tMB
 idB
 lBZ
 wOZ
@@ -280108,9 +280063,9 @@ kJQ
 iRW
 kJQ
 kJQ
-kJQ
-jOk
-szU
+iRW
+nqt
+fCH
 kCU
 shs
 nqt
@@ -280510,9 +280465,9 @@ kJQ
 orc
 oiJ
 iRW
-bPM
-oYh
-fkU
+dhl
+neP
+jOk
 gFq
 shs
 iRW
@@ -280912,11 +280867,11 @@ kJQ
 fJF
 fJF
 qap
-nCu
+dhl
 sop
 pjp
 qSQ
-shs
+kAm
 nqt
 jER
 jER
@@ -281726,7 +281681,7 @@ dtl
 yeA
 uOQ
 gcF
-alt
+bPM
 lEs
 ghr
 mcC
@@ -282415,7 +282370,7 @@ wOZ
 wOZ
 wOZ
 wOZ
-fOE
+wOZ
 wOZ
 wOZ
 wOZ
@@ -282535,7 +282490,7 @@ tCd
 ghr
 ezM
 alt
-yhh
+ajp
 alt
 osQ
 ghr
@@ -283324,7 +283279,7 @@ qap
 oiY
 oiY
 qap
-kAm
+dhl
 neP
 ski
 per
@@ -283726,9 +283681,9 @@ qap
 wkN
 oiJ
 qap
-nCu
+dhl
 nhy
-fkU
+jOk
 aLN
 shs
 iRW
@@ -284128,9 +284083,9 @@ kJQ
 lDn
 cLS
 kJQ
-kJQ
-ajp
-gST
+iRW
+nqt
+fCH
 tJD
 shs
 nqt
@@ -292883,7 +292838,7 @@ jER
 jER
 gQf
 feZ
-qDE
+gST
 gwQ
 qDE
 rcr

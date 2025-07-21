@@ -8,7 +8,7 @@
 	. = ..()
 
 	. += integrity_check()
-
+	. += taint_check()
 	var/real_value = get_real_price()
 	if(real_value > 0)
 		if(HAS_TRAIT(user, TRAIT_SEEPRICES) || simpleton_price)
@@ -43,3 +43,7 @@
 		if(80 to 99)
 			result = span_warning("It's a little damaged.")
 	return result
+
+/obj/item/proc/taint_check()
+	if(tainted)
+		return span_warning("It is tainted with the stench of a corpse and has decayed beyond full repairs.")

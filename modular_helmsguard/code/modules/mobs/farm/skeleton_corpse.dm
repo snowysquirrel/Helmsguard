@@ -3,11 +3,13 @@
 //Mob
 
 /mob/living/carbon/human/species/skeleton/dead
+	tainted_chance = 70
 
 /mob/living/carbon/human/species/skeleton/dead/after_creation()
 	..()
 	death()
-
+	setDir(pick(GLOB.alldirs))
+	
 /mob/living/carbon/human/species/skeleton/dead/adventurer
 	skel_outfit = /datum/outfit/job/roguetown/npc/skeleton/dead/adventurer
 
@@ -26,11 +28,11 @@
 /mob/living/carbon/human/species/skeleton/dead/freitrupp
 	skel_outfit = /datum/outfit/job/roguetown/npc/skeleton/dead/freitrupp
 
+/datum/outfit/job/roguetown/npc/skeleton/dead/pre_equip(mob/living/carbon/human/H)
+	. = ..()
 
 // OUTFIT DEAD ADVENTURER
-/datum/outfit/job/roguetown/npc/skeleton/dead/adventurer/pre_equip(mob/living/carbon/human/H)
-
-
+/datum/outfit/job/roguetown/npc/skeleton/dead/adventurer/pre_equip(mob/living/carbon/human/H)	
 	shirt = pick(
 		/obj/item/clothing/suit/roguetown/shirt/tunic/random,
 		/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/grenzelhoft,
@@ -258,7 +260,6 @@
 			/obj/item/clothing/head/roguetown/helmet/leather/advanced,
 			/obj/item/clothing/head/roguetown/helmet/kettle,
 			/obj/item/clothing/head/roguetown/helmet/leather,
-			/obj/item/clothing/head/roguetown/helmet/horned,
 			/obj/item/clothing/head/roguetown/helmet/skullcap,
 			/obj/item/clothing/head/roguetown/helmet/kettle/wide,
 			/obj/item/clothing/head/roguetown/helmet/sallet,
@@ -340,7 +341,6 @@
 			/obj/item/reagent_containers/glass/bottle/rogue/healthpot,
 			/obj/item/flashlight/flare/torch,
 			)
-
 
 
 
