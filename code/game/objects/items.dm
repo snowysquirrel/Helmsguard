@@ -521,10 +521,12 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 			if(C.prevent_crits)
 				if(length(C.prevent_crits))
 					inspec += "\n<b>PREVENTS CRITS:</b>"
-					for(var/X in C.prevent_crits)
-						if(X == BCLASS_PICK)	//BCLASS_PICK is named "stab", and "stabbing" is its own damage class. Prevents confusion.
-							X = "pick"
-						inspec += ("\n<b>[capitalize(X)]</b>")
+					for(var/X in BCLASS_ORDER)
+						if(C.prevent_crits.Find(X))
+							var/show = X
+							if(show == BCLASS_PICK)	//BCLASS_PICK is named "stab", and "stabbing" is its own damage class. Prevents confusion.
+								show = "pick"
+							inspec += ("\n<b>[capitalize(show)]</b>")
 				inspec += "<br>"
 
 //**** General durability
@@ -1295,10 +1297,21 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		if(C.armor)
 			var/defense = "<u><b>ABSORPTION: </b></u><br>"
 			var/datum/armor/def_armor = C.armor
-			defense += "[colorgrade_rating("BLUNT", def_armor.blunt, elaborate = TRUE)] | "
-			defense += "[colorgrade_rating("SLASH", def_armor.slash, elaborate = TRUE)] | "
-			defense += "[colorgrade_rating("STAB", def_armor.stab, elaborate = TRUE)] | "
-			defense += "[colorgrade_rating("PIERCING", def_armor.piercing, elaborate = TRUE)] "
+			var/list/output = list()
+
+			for(var/type in BCLASS_ORDER)
+				var/armor_key = bclass_to_armor(type)
+				if(!(armor_key in def_armor.getList()))
+					continue
+				var/rating = def_armor.getRating(armor_key)
+				var/display_name = ""
+				if(type == BCLASS_PICK)
+					display_name = "pick"
+				else
+					display_name = armor_key
+				output += colorgrade_rating(uppertext(display_name), rating, elaborate = TRUE)
+
+			defense += jointext(output, " | ")
 			str += "[defense]<br>"
 		else
 			str += "NO DEFENSE"
