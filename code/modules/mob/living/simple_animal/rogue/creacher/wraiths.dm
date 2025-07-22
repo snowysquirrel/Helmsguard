@@ -10,6 +10,7 @@
 	incorporeal_move = INCORPOREAL_MOVE_JAUNT
 	layer = GHOST_LAYER
 	environment_smash = ENVIRONMENT_SMASH_NONE
+	density = FALSE
 	pass_flags = PASSTABLE|PASSGRILLE
 	base_intents = list(/datum/intent/simple/claw/wraith)
 /*	emote_see = list("floats hauntingly","weeps mourningly", "laments vengefully")*/
@@ -64,6 +65,10 @@
 		user.visible_message(span_danger("\The [I.name] passes through the [src.name]!"))
 		return // Ignore attacks from weapons that are not silver
 	..()
+
+/mob/living/simple_animal/hostile/rogue/ghost/wraith/CanPass(atom/movable/mover, turf/target)
+	return 1
+
 
 /mob/living/simple_animal/hostile/rogue/ghost/wraith/electrocute_act(shock_damage, source, siemens_coeff = 1, flags = NONE)
 	return FALSE
