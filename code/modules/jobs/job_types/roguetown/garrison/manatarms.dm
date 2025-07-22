@@ -275,8 +275,8 @@
 	name = "Archer"
 	tutorial = "You are trained in fighting using bows and also short blades should your foe get too close. You are also trained with novice \
 	horseriding skills in order to serve as a scout cavalry in time of need.\
-	However, you are not trained in the use of shields and are only able to wear light armor, but, you are very good at dodging.\
-	You are also given basic training on how to use firearms."
+	However, you are not trained in the use of shields, but you make up for this by being good at dodging.\
+	You are also given basic training on how to use bows and crossbows."
 
 	outfit = /datum/outfit/job/roguetown/manatarms/archer
 
@@ -332,7 +332,7 @@
 	var/armors = list(
 		"Leather Armor" = /obj/item/clothing/suit/roguetown/armor/leather/heavy,	
 		"Studded Armor"	= /obj/item/clothing/suit/roguetown/armor/leather/studded,
-		"Leather Coat"	= /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat,
+		"Iron Breastplate"	= /obj/item/clothing/suit/roguetown/armor/plate/half/iron,
 		"Studded Leather Armor" = /obj/item/clothing/suit/roguetown/armor/leather/studded
 	)
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
@@ -346,8 +346,8 @@
 	name = "Arbalestier"
 	tutorial = "You are trained in fighting using crossbows and also short blades should your foe get too close. You are also trained with novice \
 	horseriding skills in order to serve as a scout cavalry in time of need.\
-	However, you are not trained in the use of shields and are only able to wear light armor, but, you are very good at dodging.\
-	You are also given basic training on how to use firearms."
+	However, you are not trained in the use of shields, but you make up for this by being good at dodging.\
+	You are also given basic training on how to use bows and crossbows."
 	outfit = /datum/outfit/job/roguetown/manatarms/arbalestier
 
 	category_tags = list(CTAG_MENATARMS)
@@ -402,20 +402,20 @@
 	var/armors = list(
 		"Leather Armor" = /obj/item/clothing/suit/roguetown/armor/leather/heavy,	
 		"Studded Armor"	= /obj/item/clothing/suit/roguetown/armor/leather/studded,
-		"Leather Coat"	= /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat,
+		"Iron Breastplate"	= /obj/item/clothing/suit/roguetown/armor/plate/half/iron,
 		"Studded Leather Armor" = /obj/item/clothing/suit/roguetown/armor/leather/studded
 	)
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
 
-/*
+
 /// ARQUEBUSIER
 /datum/advclass/manatarms/arquebusier
 	name = "Arquebusier"
-	tutorial = "You are trained in fighting using firearms and also short blades should your foe get too close. You are also trained with novice \
+	tutorial = "You are trained in fighting using firearms and also knives should your foe get too close. You are also trained with novice \
 	horseriding skills in order to serve as a scout cavalry in time of need.\
-	However, you are not trained in the use of shields and are only able to wear light armor, but, you are very good at dodging.\
+	However, you are not trained in the use of shields, but you make up for this by being good at dodging.\
 	You are also given basic training on how to use bows and crossbows."
 	outfit = /datum/outfit/job/roguetown/manatarms/arquebusier
 
@@ -450,9 +450,9 @@
 	H.change_stat("perception", 4)
 
 	r_hand = /obj/item/gun/ballistic/arquebus
-	l_hand = /obj/item/powderflask
+	l_hand = /obj/item/rogueweapon/sword/short
 	beltl = /obj/item/ammopouch/bullets
-	beltr = /obj/item/rogueweapon/sword/short
+	beltr = /obj/item/powderflask
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	cloak = /obj/item/clothing/cloak/stabard/guard
 	H.adjust_blindness(-3)
@@ -472,10 +472,10 @@
 	var/armors = list(
 		"Leather Armor" = /obj/item/clothing/suit/roguetown/armor/leather/heavy,	
 		"Studded Armor"	= /obj/item/clothing/suit/roguetown/armor/leather/studded,
-		"Leather Coat"	= /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat,
+		"Iron Breastplate"	= /obj/item/clothing/suit/roguetown/armor/plate/half/iron,
 		"Studded Leather Armor" = /obj/item/clothing/suit/roguetown/armor/leather/studded
 	)
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/sund/sund_gate)
-*/
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
+
