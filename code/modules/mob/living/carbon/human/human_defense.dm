@@ -167,6 +167,14 @@
 		if(check_shields(P, P.damage, "the [P.name]", PROJECTILE_ATTACK, P.armor_penetration))
 			P.on_hit(src, 100, def_zone)
 			return BULLET_ACT_HIT
+		if(HAS_TRAIT(src, TRAIT_MAGEARMOR))
+			if(magearmor == 0)
+				magearmor = 1
+				apply_status_effect(/datum/status_effect/buff/magearmor)
+				to_chat(src, span_boldwarning("My mage armor absorbs the hit and dissipates!"))
+				return BULLET_ACT_BLOCK
+			else
+				return BULLET_ACT_HIT	
 	return ..(P, def_zone)
 
 /mob/living/carbon/human/proc/check_reflect(def_zone) //Reflection checks for anything in my l_hand, r_hand, or wear_armor based on the reflection chance of the object
