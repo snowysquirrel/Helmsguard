@@ -77,3 +77,9 @@
 	result = /obj/item/storage/belt/rogue/leather/knifebelt
 	reqs = list(/obj/item/natural/hide/cured = 2,
 				/obj/item/natural/fibers = 2)
+
+/datum/crafting_recipe/roguetown/leather/ammopouch
+	name = "ammo pouch"
+	result = /obj/item/ammopouch
+	reqs = list (/obj/item/natural/hide/cured = 4,
+				/obj/item/natural/fibers = 3)

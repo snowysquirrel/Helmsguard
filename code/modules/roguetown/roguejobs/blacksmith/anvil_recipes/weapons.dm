@@ -899,6 +899,15 @@
 	i_type = "Ammo"
 	craftdiff = 0
 
+// MUSKET AMMUNITION
+/datum/anvil_recipe/weapons/iron/bullets
+	name = "Iron Spheres 5x"
+	req_bar = /obj/item/ingot/iron
+	created_item = /obj/item/ammo_casing/caseless/rogue/bullet
+	createditem_num = 5
+	i_type = "Ammo"
+	craftdiff = 0
+
 //Rarity
 /datum/anvil_recipe/valuables/steel/execution
 	name = "Execution Sword (+1 Steel, +1 Iron)"

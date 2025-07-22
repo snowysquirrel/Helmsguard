@@ -413,13 +413,15 @@
 	hitsound = 'sound/combat/hits/hi_arrow2.ogg'
 	embedchance = 100
 	woundclass = BCLASS_STAB
-	flag = "bullet"
+	flag = "piercing"
 	armor_penetration = 75	//Crossbow-on-crack AP. Armor only goes up to 100 protection normally; so this ignores most of it but not all. Wear good armor!
 	speed = 0.1		//ZOOM!!!!!
 
-/obj/projectile/bullet/rogue/on_hit(atom/target, blocked = FALSE)
+/obj/projectile/bullet/rogue/on_hit(atom/target, mob/living/shooter, blocked = FALSE)
 	. = ..()
-	if(istype(target, /mob/living/carbon/human))
+	if(!shooter)
+		shooter = src.firer
+	if(ismob(target))
 		var/mob/living/carbon/human/M = target
 		var/list/screams = list("painscream", "paincrit")
 		if(isliving(target))
@@ -427,19 +429,27 @@
 				M.emote(screams)
 				M.Knockdown(rand(15,30))
 				M.Immobilize(rand(30,60))
+			
+		if(shooter && shooter.client)
+			target.visible_message(
+				span_danger("[shooter] hits [M] with a [src.name]!"),
+				span_warning("You shoot [M] with your [src.name]!")
+			)
 
 
 /obj/item/ammo_casing/caseless/rogue/bullet
-	name = "lead sphere"
-	desc = "A small lead sphere. This should go well with gunpowder."
+	name = "iron sphere"
+	desc = "A small iron sphere to be used for firearms."
 	projectile_type = /obj/projectile/bullet/rogue
 	caliber = "musketball"
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball"
 	dropshrink = 0.5
-	max_integrity = 0.1
+	possible_item_intents = list(/datum/intent/use)
+	max_integrity = 0
 
-
+	armor_penetration = 70
+	w_class = WEIGHT_CLASS_TINY
 //mob projectiles
 
 /obj/projectile/bullet/reusable/arrow/orc

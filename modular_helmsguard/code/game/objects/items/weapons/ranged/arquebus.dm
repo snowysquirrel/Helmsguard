@@ -89,24 +89,35 @@
 			return FALSE
 		return TRUE
 
+/datum/intent/shoot/arquebus/prewarning()
+	if(mastermob)
+		mastermob.visible_message(span_warning("[mastermob] prepares [masteritem] to fire!"))
+		playsound(mastermob, pick('modular_helmsguard/sound/arquebus/musketcock.ogg'), 100, FALSE)
+
+
 /datum/intent/shoot/arquebus/get_chargetime()
 	if(mastermob && chargetime)
 		var/newtime = chargetime
 		//skill block
-		newtime = newtime + 80
-		newtime = newtime - (mastermob.get_skill_level(/datum/skill/combat/firearms) * 20)
+		newtime = newtime + 120
+		newtime = newtime - (mastermob.get_skill_level(/datum/skill/combat/firearms) * 25)
 		//per block
 		newtime = newtime + 20
-		newtime = newtime - ((mastermob.STAPER)*1.5)
+		newtime = newtime - ((mastermob.STAPER)*2)
 		if(newtime > 0)
 			return newtime
 		else
-			return 0.1
+			return 1
 	return chargetime
 
 /datum/intent/arc/arquebus
 	chargetime = 1
 	chargedrain = 0
+
+/datum/intent/arc/arquebus/prewarning()
+	if(mastermob)
+		mastermob.visible_message(span_warning("[mastermob] prepares [masteritem] to fire!"))
+		playsound(mastermob, pick('modular_helmsguard/sound/arquebus/musketcock.ogg'), 100, FALSE)
 
 /datum/intent/arc/arquebus/can_charge()
 	if(mastermob && masteritem.wielded)
@@ -122,11 +133,11 @@
 	if(mastermob && chargetime)
 		var/newtime = chargetime
 		//skill block
-		newtime = newtime + 80
-		newtime = newtime - (mastermob.get_skill_level(/datum/skill/combat/firearms) * 20)
+		newtime = newtime + 120
+		newtime = newtime - (mastermob.get_skill_level(/datum/skill/combat/firearms) * 25)
 		//per block
 		newtime = newtime + 20
-		newtime = newtime - ((mastermob.STAPER)*1.5)
+		newtime = newtime - ((mastermob.STAPER)*2)
 		if(newtime > 0)
 			return newtime
 		else
@@ -304,12 +315,45 @@
 /datum/intent/shoot/arquebus_pistol
 	chargedrain = 0
 
+
+/datum/intent/shoot/arquebus_pistol/get_chargetime()
+	if(mastermob && chargetime)
+		var/newtime = chargetime
+    	//skill block
+		newtime = newtime + 50
+		newtime = newtime - (mastermob.get_skill_level(/datum/skill/combat/firearms) * 10)
+    	//per block
+		newtime = newtime + 8
+		newtime = newtime - ((mastermob.STAPER)*1)
+		if(newtime > 0)
+			return newtime
+		else
+			return 1
+	return chargetime
+
 /datum/intent/shoot/arquebus_pistol/can_charge()
 	if(mastermob)
 		return TRUE
 
 /datum/intent/arc/arquebus_pistol
 	chargedrain = 0
+
+
+/datum/intent/arc/arquebus_pistol/arquebus_pistol/get_chargetime()
+	if(mastermob && chargetime)
+		var/newtime = chargetime
+    	//skill block
+		newtime = newtime + 50
+		newtime = newtime - (mastermob.get_skill_level(/datum/skill/combat/firearms) * 10)
+    	//per block
+		newtime = newtime + 8
+		newtime = newtime - ((mastermob.STAPER)*1)
+		if(newtime > 0)
+			return newtime
+		else
+			return 1
+	return chargetime
+
 
 /datum/intent/arc/arquebus_pistol/can_charge()
 	if(mastermob)
@@ -319,6 +363,15 @@
 	. = ..()
 	myrod = new /obj/item/ramrod(src)
 
+/datum/intent/shoot/arquebus_pistol/prewarning()
+	if(mastermob)
+		mastermob.visible_message(span_warning("[mastermob] prepares [masteritem] to fire!"))
+		playsound(mastermob, pick('modular_helmsguard/sound/arquebus/musketcock.ogg'), 100, FALSE)
+
+/datum/intent/arc/arquebus_pistol/prewarning()
+	if(mastermob)
+		mastermob.visible_message(span_warning("[mastermob] prepares [masteritem] to fire!"))
+		playsound(mastermob, pick('modular_helmsguard/sound/arquebus/musketcock.ogg'), 100, FALSE)
 
 /obj/item/gun/ballistic/arquebus_pistol/shoot_live_shot(mob/living/user as mob|obj, pointblank = 0, mob/pbtarget = null, message = 1)
 	fire_sound = pick("modular_helmsguard/sound/arquebus/arquefire.ogg", "modular_helmsguard/sound/arquebus/arquefire2.ogg", "modular_helmsguard/sound/arquebus/arquefire3.ogg",

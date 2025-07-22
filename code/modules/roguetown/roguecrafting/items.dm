@@ -454,3 +454,13 @@
 		)
 	skillcraft = /datum/skill/craft/cooking
 	craftdiff = 4
+
+//gunmaking slop
+/*/datum/crafting_recipe/roguetown/firingpim
+	name = "Firing pin"
+	reqs = list(/obj/item/ingot/iron = 1)
+	result = list(/obj/item/firing_pin)
+	skillcraft = /datum/skill/craft/engineering
+	structurecraft = /obj/machinery/light/rogue/smelter
+	craftdiff = 2
+*/ 
