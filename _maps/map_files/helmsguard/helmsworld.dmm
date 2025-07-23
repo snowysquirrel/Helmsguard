@@ -107,7 +107,6 @@
 "aeb" = (
 /obj/item/grown/log/tree/small,
 /obj/structure/curtain/black,
-/obj/item/natural/glass/shard,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors/town)
 "aeo" = (
@@ -479,16 +478,11 @@
 /turf/open/floor/rogue/ruinedwood/nosmooth/wooden_floor2,
 /area/rogue/indoors/town)
 "arg" = (
-/obj/structure/roguewindow{
-	brokenstate = 1;
-	obj_broken = 1;
-	icon_state = "window-solidbr";
-	climbable = 1
+/obj/structure/fluff/railing/wood{
+	dir = 8
 	},
-/obj/structure/curtain/black,
-/obj/item/natural/glass/shard,
-/turf/open/floor/rogue/ruinedwood/nosmooth/turned,
-/area/rogue/outdoors/mountains)
+/turf/open/floor/rogue/blocks/green,
+/area/rogue/outdoors/town/riverstead)
 "arh" = (
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/general_loot_low,
@@ -3386,16 +3380,6 @@
 /obj/structure/fluff/wallclock/l,
 /turf/open/floor/rogue/carpet/lord/left,
 /area/rogue/indoors/town/manor)
-"ciE" = (
-/obj/structure/roguewindow{
-	brokenstate = 1;
-	obj_broken = 1;
-	icon_state = "window-solidbr";
-	climbable = 1
-	},
-/obj/item/natural/glass/shard,
-/turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
 "ciR" = (
 /obj/machinery/light/rogue/torchholder/c{
 	dir = 8;
@@ -5081,16 +5065,6 @@
 "dle" = (
 /turf/closed/wall/mineral/rogue/decostone/mossy/long,
 /area/rogue/outdoors/mountains)
-"dls" = (
-/obj/structure/roguewindow{
-	brokenstate = 1;
-	obj_broken = 1;
-	icon_state = "window-solidbr";
-	climbable = 1
-	},
-/obj/item/natural/glass/shard,
-/turf/open/floor/rogue/ruinedwood/platform,
-/area/rogue/indoors)
 "dlz" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -9412,16 +9386,9 @@
 /turf/open/floor/rogue/blocks/stone/stonepattern3,
 /area/rogue/indoors/fallen_gate)
 "fEt" = (
-/obj/structure/curtain/black,
-/obj/structure/roguewindow{
-	brokenstate = 1;
-	obj_broken = 1;
-	icon_state = "window-solidbr";
-	climbable = 1
-	},
-/obj/item/natural/glass/shard,
-/turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors/town)
+/obj/structure/roguemachine/headeater,
+/turf/open/floor/rogue/blocks/green,
+/area/rogue/outdoors/town/riverstead)
 "fEA" = (
 /obj/structure/fluff/statue/knight/r,
 /turf/open/floor/rogue/cobble,
@@ -17412,15 +17379,9 @@
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town)
 "kvM" = (
-/obj/structure/roguewindow{
-	brokenstate = 1;
-	obj_broken = 1;
-	icon_state = "window-solidbr";
-	climbable = 1
-	},
-/obj/item/natural/glass/shard,
-/turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors/town)
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/blocks/green,
+/area/rogue/outdoors/town/riverstead)
 "kwv" = (
 /obj/machinery/light/rogue/smelter,
 /obj/effect/decal/border/stone/inverted{
@@ -20433,7 +20394,6 @@
 	icon_state = "window-solidbr";
 	climbable = 1
 	},
-/obj/item/natural/glass/shard,
 /obj/structure/curtain/black,
 /turf/open/floor/rogue/ruinedwood/nosmooth/turned,
 /area/rogue/indoors)
@@ -22288,16 +22248,6 @@
 /obj/effect/landmark/start/farmer,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town)
-"nle" = (
-/obj/structure/roguewindow{
-	brokenstate = 1;
-	obj_broken = 1;
-	icon_state = "window-solidbr";
-	climbable = 1
-	},
-/obj/item/natural/glass/shard,
-/turf/open/floor/rogue/ruinedwood/nosmooth/turned,
-/area/rogue/indoors)
 "nli" = (
 /obj/effect/decal/wood/ruinedwood/turned{
 	dir = 1
@@ -177902,7 +177852,7 @@ nfc
 dBA
 iXs
 hxI
-jnl
+arg
 jnl
 jnl
 ezX
@@ -178304,7 +178254,7 @@ epy
 dko
 aGk
 hxI
-ezX
+fEt
 tLC
 oxY
 oxY
@@ -178706,7 +178656,7 @@ raF
 dko
 mYB
 hxI
-ezX
+kvM
 bvU
 cjs
 cjs
@@ -192398,7 +192348,7 @@ uOr
 iCO
 iCO
 kFf
-kvM
+mgj
 vnV
 gJB
 tfF
@@ -202436,7 +202386,7 @@ cSb
 cSb
 lxa
 oLL
-dls
+dYj
 oLL
 oLL
 rzj
@@ -262712,7 +262662,7 @@ peM
 qQn
 ond
 ond
-arg
+dqA
 txw
 jER
 jER
@@ -294105,7 +294055,7 @@ hAQ
 iTc
 deh
 qhY
-fEt
+qSA
 jER
 jER
 jER
@@ -294504,7 +294454,7 @@ jER
 gQf
 ikQ
 luQ
-fEt
+qSA
 sZV
 luQ
 ikQ
@@ -300524,7 +300474,7 @@ jER
 jER
 jER
 ued
-nle
+aCY
 aCY
 oLL
 oLL
@@ -304962,7 +304912,7 @@ vmY
 spB
 spB
 spB
-ciE
+sSL
 jER
 jER
 jER
