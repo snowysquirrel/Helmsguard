@@ -1,6 +1,6 @@
 /obj/structure/roguemachine/noticeboard
 	name = "Notice Board"
-	desc = "A large wooden notice board, carrying postings from all across Helmsguard. A ZAD perch sits atop it."
+	desc = "A large wooden notice board, carrying postings from all across Azurea. A ZAD perch sits atop it."
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "noticeboard0"
 	density = TRUE
@@ -16,7 +16,7 @@
 
 /obj/structure/roguemachine/boardbarrier //Blocks sprite locations
 	name = ""
-	desc = "A large wooden notice board, carrying postings from all across Helmsguard. A ZAD perch sits atop it."
+	desc = "A large wooden notice board, carrying postings from all across Azurea. A ZAD perch sits atop it."
 	icon = 'icons/roguetown/underworld/underworld.dmi'
 	icon_state = "spiritpart"
 	density = TRUE
@@ -25,11 +25,6 @@
 /obj/structure/roguemachine/noticeboard/Initialize()
 	. = ..()
 	SSroguemachine.noticeboards += src
-	input_point = locate(x, y - 1, z)
-	var/obj/effect/decal/marker_export/marker = new(get_turf(input_point))
-	marker.name = "Scroll submission point."
-	marker.desc = "Place completed quest scrolls here to turn them in."
-	marker.layer = ABOVE_OBJ_LAYER
 
 /obj/structure/roguemachine/noticeboard/attackby(obj/item/P, mob/living/carbon/human/user, params)
 	. = .. ()
