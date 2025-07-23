@@ -2,8 +2,13 @@
 	name = "quest landmark"
 	icon = 'code/modules/roguetown/roguemachine/questing/questing.dmi'
 	icon_state = "quest_marker"
+<<<<<<< HEAD
 	var/quest_difficulty = list("Easy", "Medium", "Hard")
 	var/quest_type = list("Fetch", "Courier", "Clear Out", "Kill", "Beacon", "Miniboss")
+=======
+	var/quest_difficulty = list(QUEST_DIFFICULTY_EASY, QUEST_DIFFICULTY_MEDIUM, QUEST_DIFFICULTY_HARD)
+	var/quest_type = list(QUEST_FETCH, QUEST_COURIER, QUEST_CLEAR_OUT, QUEST_KILL, QUEST_BEACON, QUEST_MINIBOSS)
+>>>>>>> upstream/main
 	var/list/fetch_items = list(
 		/obj/item/rogueweapon/huntingknife/throwingknife/steel,
 		/obj/item/rogueweapon/huntingknife,
@@ -14,7 +19,21 @@
 		/mob/living/carbon/human/species/skeleton/npc/ambush,
 		/mob/living/carbon/human/species/human/northern/searaider/ambush
 	)
+<<<<<<< HEAD
 	var/miniboss_mob = /mob/living/carbon/human/species/elf/dark/drowraider/ambush
+=======
+	var/miniboss_mobs = list(
+		/mob/living/carbon/human/species/human/northern/deranged_knight
+	)
+
+/obj/effect/landmark/quest_spawner/Initialize()
+	. = ..()
+	GLOB.quest_landmarks_list += src
+
+/obj/effect/landmark/quest_spawner/Destroy()
+	GLOB.quest_landmarks_list -= src
+	return ..()
+>>>>>>> upstream/main
 
 /obj/effect/landmark/quest_spawner/proc/generate_quest(datum/quest/new_quest, mob/user)
 	new_quest.quest_receiver_reference = user ? WEAKREF(user) : null
@@ -22,6 +41,7 @@
 	new_quest.target_spawn_area = get_area_name(get_turf(src))
 
 	switch(new_quest.quest_difficulty)
+<<<<<<< HEAD
 		if("Easy")
 			new_quest.reward_amount = rand(15, 25)
 		if("Medium")
@@ -31,20 +51,41 @@
 
 	switch(new_quest.quest_type)
 		if("Fetch")
+=======
+		if(QUEST_DIFFICULTY_EASY)
+			new_quest.reward_amount = rand(QUEST_REWARD_EASY_LOW, QUEST_REWARD_EASY_HIGH)
+		if(QUEST_DIFFICULTY_MEDIUM)
+			new_quest.reward_amount = rand(QUEST_REWARD_MEDIUM_LOW, QUEST_REWARD_MEDIUM_HIGH)
+		if(QUEST_DIFFICULTY_HARD)
+			new_quest.reward_amount = rand(QUEST_REWARD_HARD_LOW, QUEST_REWARD_HARD_HIGH)
+
+	switch(new_quest.quest_type)
+		if(QUEST_FETCH)
+>>>>>>> upstream/main
 			new_quest.title = "Retrieve [pick("an ancient", "a rare", "a stolen", "a magical")] [pick("artifact", "relic", "doohickey", "treasure")]"
 			new_quest.target_item_type = pick(fetch_items)
 			new_quest.target_amount = rand(1, 3)
 			spawn_fetch_items(new_quest.target_item_type, new_quest.target_amount, new_quest)
+<<<<<<< HEAD
 		if("Kill")
 			new_quest.title = "Slay [pick("a dangerous", "a fearsome", "a troublesome", "an elusive")] [pick("beast", "monster", "brigand", "creature")]"
 			new_quest.target_mob_type = pick(kill_mobs)
 			new_quest.target_amount = 1
 			spawn_kill_mob(new_quest.target_mob_type, new_quest)
 		if("Clear Out")
+=======
+		if(QUEST_KILL)
+			new_quest.title = "Slay [pick("a dangerous", "a fearsome", "a troublesome", "an elusive")] [pick("beast", "monster", "brigand", "creature")]"
+			new_quest.target_mob_type = pick(kill_mobs)
+			new_quest.target_amount = rand(1, 3)
+			spawn_kill_mob(new_quest.target_mob_type, new_quest)
+		if(QUEST_CLEAR_OUT)
+>>>>>>> upstream/main
 			new_quest.title = "Clear out [pick("a nest of", "a den of", "a group of", "a pack of")] [pick("monsters", "bandits", "creatures", "vermin")]"
 			new_quest.target_mob_type = pick(kill_mobs)
 			new_quest.target_amount = rand(3, 6)
 			spawn_clear_out_mobs(new_quest.target_mob_type, new_quest.target_amount, new_quest)
+<<<<<<< HEAD
 		if("Courier")
 			new_quest.title = "Deliver [pick("an important", "a sealed", "a confidential", "a valuable")] [pick("package", "parcel", "letter", "delivery")]"
 			new_quest.target_delivery_location = pick(
@@ -83,6 +124,30 @@
 			new_quest.target_mob_type = miniboss_mob
 			new_quest.target_amount = 1
 			spawn_miniboss(new_quest)
+=======
+		if(QUEST_COURIER)
+			new_quest.title = "Deliver [pick("an important", "a sealed", "a confidential", "a valuable")] [pick("package", "parcel", "letter", "delivery")]"
+			new_quest.target_delivery_location = pick(
+				/area/rogue/indoors/town/tavern,
+				/area/rogue/indoors/town/church,
+				/area/rogue/indoors/town/dwarfin,
+				/area/rogue/indoors/town/shop,
+				/area/rogue/indoors/town/manor,
+				/area/rogue/indoors/town/magician,
+			)
+			spawn_courier_item(new_quest, new_quest.target_delivery_location)
+		if(QUEST_MINIBOSS)
+			new_quest.title = "Defeat [pick("the terrible", "the dreadful", "the monstrous", "the infamous")] [pick("warlord", "beast", "sorcerer", "abomination")]"
+			new_quest.target_mob_type = pick(miniboss_mobs)
+			new_quest.target_amount = 1
+			spawn_miniboss(new_quest, new_quest.target_mob_type)
+
+	// Initialize compass data for the quest
+	if(new_quest.quest_scroll_ref)
+		var/obj/item/paper/scroll/quest/scroll = new_quest.quest_scroll_ref.resolve()
+		if(scroll)
+			scroll.update_compass(user)
+>>>>>>> upstream/main
 
 	return new_quest
 
@@ -94,6 +159,7 @@
 	for(var/i in 1 to amount)
 		var/obj/item/new_item = new item_type(spawn_turf)
 		new_item.AddComponent(/datum/component/quest_object, quest)
+<<<<<<< HEAD
 
 /obj/effect/landmark/quest_spawner/proc/spawn_kill_mob(mob_type, datum/quest/quest)
 	var/turf/spawn_turf = get_safe_spawn_turf()
@@ -104,6 +170,22 @@
 	new_mob.faction |= "quest"
 	new_mob.AddComponent(/datum/component/quest_object, quest)
 	add_quest_faction_to_nearby_mobs(spawn_turf)
+=======
+		quest.add_tracked_atom(new_item)
+
+/obj/effect/landmark/quest_spawner/proc/spawn_kill_mob(mob_type, datum/quest/quest)
+	for(var/i in 1 to quest.target_amount)
+		var/turf/spawn_turf = get_safe_spawn_turf()
+		if(!spawn_turf)
+			return
+
+		var/mob/living/new_mob = new mob_type(spawn_turf)
+		new_mob.faction |= "quest"
+		new_mob.AddComponent(/datum/component/quest_object, quest)
+		add_quest_faction_to_nearby_mobs(spawn_turf)
+		quest.add_tracked_atom(new_mob)
+		sleep(1)
+>>>>>>> upstream/main
 
 /obj/effect/landmark/quest_spawner/proc/add_quest_faction_to_nearby_mobs(turf/center)
 	for(var/mob/living/M in view(7, center))
@@ -112,7 +194,11 @@
 
 /obj/effect/landmark/quest_spawner/proc/get_safe_spawn_turf()
 	var/list/possible_landmarks = list()
+<<<<<<< HEAD
 	for(var/obj/effect/landmark/quest_spawner/landmark in GLOB.landmarks_list)
+=======
+	for(var/obj/effect/landmark/quest_spawner/landmark in GLOB.quest_landmarks_list)
+>>>>>>> upstream/main
 		if((quest_difficulty in landmark.quest_difficulty) || (landmark.quest_difficulty in quest_difficulty))
 			possible_landmarks += landmark
 
@@ -123,11 +209,21 @@
 	var/list/possible_turfs = list()
 
 	for(var/turf/open/T in view(7, selected_landmark))
+<<<<<<< HEAD
 		if(!T.density)
 			for(var/mob/M in view(9, T))
 				if(!M.ckey)
 					possible_turfs += T
 					break
+=======
+		if(T.density || istransparentturf(T))
+			continue
+
+		for(var/mob/M in view(9, T))
+			if(!M.ckey)
+				possible_turfs += T
+				break
+>>>>>>> upstream/main
 
 	return length(possible_turfs) ? pick(possible_turfs) : get_turf(src)
 
@@ -135,6 +231,7 @@
 	if(!quest || !delivery_area)
 		return null
 
+<<<<<<< HEAD
 	// Get the turf where the scroll is located
 	var/obj/item/paper/scroll/quest/scroll = quest.quest_scroll_ref?.resolve()
 	if(!scroll)
@@ -145,17 +242,33 @@
 		return null
 
 	var/obj/item/parcel/delivery_parcel = new(scroll_turf)
+=======
+	var/turf/spawn_turf = get_safe_spawn_turf()
+	if(!spawn_turf)
+		return
+
+	var/obj/item/parcel/delivery_parcel = new(spawn_turf)
+>>>>>>> upstream/main
 	var/static/list/area_delivery_items = list(
 		/area/rogue/indoors/town/tavern = list(
 			/obj/item/cooking/pan,
 			/obj/item/reagent_containers/glass/bottle/rogue/beer/aurorian,
 			/obj/item/reagent_containers/food/snacks/rogue/cheddar,
 		),
+<<<<<<< HEAD
+=======
+		/area/rogue/indoors/town/bath = list(
+			/obj/item/reagent_containers/glass/bottle/rogue/beer/aurorian,
+			/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/crab,
+			/obj/item/perfume/random,
+		),
+>>>>>>> upstream/main
 		/area/rogue/indoors/town/church = list(
 			/obj/item/natural/cloth,
 			/obj/item/reagent_containers/powder/ozium,
 			/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
 		),
+<<<<<<< HEAD
 /*
 		/area/rogue/indoors/town/farm = list(
 			/obj/item/seeds/wheat,
@@ -163,6 +276,8 @@
 			/obj/item/reagent_containers/food/snacks/egg/mothcat,
 		),
 */
+=======
+>>>>>>> upstream/main
 		/area/rogue/indoors/town/dwarfin = list(
 			/obj/item/ingot/iron,
 			/obj/item/ingot/bronze,
@@ -177,17 +292,24 @@
 			/obj/item/clothing/cloak/raincloak/furcloak,
 			/obj/item/reagent_containers/glass/bottle/rogue/whitewine,
 			/obj/item/reagent_containers/food/snacks/rogue/cheddar/aged,
+<<<<<<< HEAD
 			/obj/item/clothing/ring/silver,
 			/obj/item/reagent_containers/glass/cup/silver,
 			/obj/item/reagent_containers/glass/cup/golden,
+=======
+			/obj/item/perfume/random,
+>>>>>>> upstream/main
 		),
 		/area/rogue/indoors/town/magician = list(
 			/obj/item/book/spellbook,
 			/obj/item/roguegem/yellow,
 			/obj/item/reagent_containers/glass/bottle/rogue/manapot,
+<<<<<<< HEAD
 			/obj/item/alch/waterdust,
 			/obj/item/alch/viscera,
 			/obj/item/alch/seeddust,
+=======
+>>>>>>> upstream/main
 		),
 		/area/rogue/indoors/town = list(
 			/obj/item/ration,
@@ -214,6 +336,10 @@
 	quest.target_delivery_item = contained_item_type
 	delivery_parcel.AddComponent(/datum/component/quest_object, quest)
 	contained_item.AddComponent(/datum/component/quest_object, quest)
+<<<<<<< HEAD
+=======
+	quest.add_tracked_atom(delivery_parcel)
+>>>>>>> upstream/main
 
 	return delivery_parcel
 
@@ -226,35 +352,63 @@
 		var/mob/living/new_mob = new mob_type(spawn_turf)
 		new_mob.faction |= "quest"
 		new_mob.AddComponent(/datum/component/quest_object, quest)
+<<<<<<< HEAD
 		add_quest_faction_to_nearby_mobs(spawn_turf)
 		sleep(1)
 
 /obj/effect/landmark/quest_spawner/proc/spawn_miniboss(datum/quest/quest)
+=======
+		quest.add_tracked_atom(new_mob)
+		add_quest_faction_to_nearby_mobs(spawn_turf)
+		sleep(1)
+
+/obj/effect/landmark/quest_spawner/proc/spawn_miniboss(datum/quest/quest, boss_type)
+>>>>>>> upstream/main
 	var/turf/spawn_turf = get_safe_spawn_turf()
 	if(!spawn_turf)
 		return
 	
+<<<<<<< HEAD
 	var/mob/living/new_mob = new miniboss_mob(spawn_turf)
+=======
+	var/mob/living/new_mob = new boss_type(spawn_turf)
+>>>>>>> upstream/main
 	new_mob.faction |= "quest"
 	new_mob.AddComponent(/datum/component/quest_object, quest)
 	new_mob.maxHealth *= 2
 	new_mob.health = new_mob.maxHealth
 	add_quest_faction_to_nearby_mobs(spawn_turf)
+<<<<<<< HEAD
+=======
+	quest.add_tracked_atom(new_mob)
+>>>>>>> upstream/main
 
 /obj/effect/landmark/quest_spawner/easy
 	name = "easy quest landmark"
 	icon_state = "quest_marker_low"
 	quest_difficulty = "Easy"
+<<<<<<< HEAD
 	quest_type = list("Fetch", "Courier", "Kill", "Beacon")
+=======
+	quest_type = list(QUEST_FETCH, QUEST_COURIER, QUEST_KILL, QUEST_BEACON)
+>>>>>>> upstream/main
 
 /obj/effect/landmark/quest_spawner/medium
 	name = "medium quest landmark"
 	icon_state = "quest_marker_mid"
 	quest_difficulty = "Medium"
+<<<<<<< HEAD
 	quest_type = list("Kill", "Clear Out", "Beacon")
+=======
+	quest_type = list(QUEST_KILL, QUEST_CLEAR_OUT, QUEST_BEACON)
+>>>>>>> upstream/main
 
 /obj/effect/landmark/quest_spawner/hard
 	name = "hard quest landmark"
 	icon_state = "quest_marker_high"
 	quest_difficulty = "Hard"
+<<<<<<< HEAD
 	quest_type = list("Clear Out", "Beacon", "Miniboss")
+=======
+	quest_type = list(QUEST_CLEAR_OUT, QUEST_BEACON, QUEST_MINIBOSS)
+>>>>>>> upstream/main

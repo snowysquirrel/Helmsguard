@@ -12,8 +12,9 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	
 
-	tutorial = "As a Wench, you are a master of charm and allure, skilled in the art of companionship. Your role is to provide comfort, entertainment, and solace to those who seek your services. Whether through conversation, music, or more intimate means, you ensure your patrons leave with their spirits lifted and their burdens lightened. Your craft is as much about understanding the human heart as it is about physical skill."
+	tutorial = "Dancing, music, or practicioners of the body. You've worked up a reputation as an entertainer, and sometime in life, the bathmaster has chosen to onboard you for one of these talents. In the bathhouse, your place on the hierarchy is determined by how long you've been in the game - and how much mammon you're worth."
 
 	outfit = /datum/outfit/job/roguetown/nightmaiden
 	advclass_cat_rolls = list(CTAG_NIGHTMAIDEN = 20)
@@ -24,6 +25,7 @@
 	max_pq = null
 	round_contrib_points = 2
 	advjob_examine = TRUE
+	cmode_music = 'sound/music/cmode/towner/combat_towner.ogg'
 
 /datum/job/roguetown/nightmaiden/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	. = ..()
@@ -55,11 +57,10 @@
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy/random
 		pants = /obj/item/clothing/under/roguetown/skirt/brown
-	else if(H.gender == MALE)
-		shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/random
-	backpack_contents = list(
-		/obj/item/soap/bath = 1
-	)
+		belt =	/obj/item/storage/belt/rogue/leather/cloth/lady
+	else
+		belt = /obj/item/storage/belt/rogue/leather
+		pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/shorts
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
@@ -95,14 +96,8 @@
 
 /datum/outfit/job/roguetown/nightmaiden/concubine/pre_equip(mob/living/carbon/human/H)
 	..()
-	mask = /obj/item/clothing/mask/rogue/exoticsilkmask
-	neck = /obj/item/clothing/neck/roguetown/collar
-	belt = /obj/item/storage/belt/rogue/leather/exoticsilkbelt
 	beltl = /obj/item/roguekey/nightmaiden
-	shoes = /obj/item/clothing/shoes/roguetown/anklets
 	backl = /obj/item/storage/backpack/rogue/satchel
-	shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra
-	pants = /obj/item/clothing/under/roguetown/tights/stockings/silk
 	backpack_contents = list(
 		/obj/item/rope = 1,
 		/obj/item/candle/eora = 1,
@@ -110,24 +105,35 @@
 		/obj/item/clothing/mask/rogue/blindfold = 1,
 		/obj/item/storage/keyring/sund/sund_bawdyroom = 1
 	)
-	
-	if(H.mind)
-		H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/stealing, 2, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
-		H.change_stat("constitution", 1)
-		H.change_stat("endurance", 1)
-		H.change_stat("speed", 1)
-		H.change_stat("strength", 1)
+	if(should_wear_femme_clothes(H))
+		mask = /obj/item/clothing/mask/rogue/exoticsilkmask
+		neck = /obj/item/clothing/neck/roguetown/collar
+		shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra
+		pants = /obj/item/clothing/under/roguetown/tights/stockings/silk
+		shoes = /obj/item/clothing/shoes/roguetown/anklets
+		belt = /obj/item/storage/belt/rogue/leather/exoticsilkbelt
+	else
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/lowcut
+		neck = /obj/item/clothing/neck/roguetown/collar/bell_collar
+		pants = /obj/item/clothing/under/roguetown/trou/leathertights
+		belt = /obj/item/storage/belt/rogue/leather/black
+		shoes = /obj/item/clothing/shoes/roguetown/sandals
+	H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/stealing, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
+	H.change_stat("perception", 3)
+	H.change_stat("strength", 1)
+	H.change_stat("endurance", 2)
+	ADD_TRAIT(H, TRAIT_LIGHT_STEP, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_EMPATH, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_BEAUTIFUL, TRAIT_GENERIC)
@@ -161,31 +167,42 @@
 
 /datum/outfit/job/roguetown/nightmaiden/courtesan/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/lockpick/goldpin
-	if(prob(5))
-		head = /obj/item/lockpick/goldpin/silver
-	armor = /obj/item/clothing/suit/roguetown/shirt/dress/silkydress/random
-	shirt = /obj/item/clothing/suit/roguetown/armor/corset
-	belt = /obj/item/storage/belt/rogue/leather/cloth/lady
+	var/pinroll = rand(1, 20)
+	switch(pinroll)
+		if(1 to 19)
+			head = /obj/item/lockpick/goldpin
+		if(20)
+			head = /obj/item/lockpick/goldpin/silver
+	var/ringroll = rand(1, 100)
+	switch(ringroll)
+		if(1 to 25)
+			id = /obj/item/clothing/ring/gold
+		if(26 to 50)
+			id = /obj/item/clothing/ring/emerald
+		if(51 to 80)
+			id = /obj/item/clothing/ring/topaz
+		if(81 to 95)
+			id = /obj/item/clothing/ring/silver
+		if(96 to 100)
+			id = /obj/item/clothing/ring/diamond
 	beltl = /obj/item/roguekey/nightmaiden
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
-	id = /obj/item/clothing/ring/gold
-	if(prob(50))
-		id = /obj/item/clothing/ring/emerald
-	if(prob(30))
-		id = /obj/item/clothing/ring/topaz
-	if(prob(15))
-		id = /obj/item/clothing/ring/silver
-	if(prob(5))
-		id = /obj/item/clothing/ring/diamond
-	shoes = /obj/item/clothing/shoes/roguetown/anklets
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(
 		/obj/item/reagent_containers/powder/moondust = 2,
 		/obj/item/reagent_containers/glass/bottle/rogue/wine = 1,
 		/obj/item/toy/cards/deck = 1,
 	)
-
+	if(should_wear_femme_clothes(H))
+		armor = /obj/item/clothing/suit/roguetown/shirt/dress/silkydress/random
+		shirt = /obj/item/clothing/suit/roguetown/armor/corset
+		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
+		shoes = /obj/item/clothing/shoes/roguetown/anklets
+	else
+		shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/random
+		pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/otavan
+		belt = /obj/item/storage/belt/rogue/leather/black
+		shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced/short
 	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/lockpicking, 3, TRUE)

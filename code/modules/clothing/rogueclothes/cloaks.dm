@@ -856,6 +856,9 @@
 
 
 
+/obj/item/clothing/cloak/stabard/black
+	color = CLOTHING_BLACK
+
 /obj/item/clothing/cloak/lordcloak
 	name = "lordly cloak"
 	desc = "Ermine trimmed, handed down."

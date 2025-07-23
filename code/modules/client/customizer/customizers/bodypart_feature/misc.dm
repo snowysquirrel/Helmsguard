@@ -56,3 +56,21 @@
 	customizer_choices = list(/datum/customizer_choice/bodypart_feature/accessory)
 	allows_disabling = TRUE
 	default_disabled = TRUE
+
+/datum/customizer/bodypart_feature/underwear
+	name = "Underwear"
+	customizer_choices = list(/datum/customizer_choice/bodypart_feature/underwear)
+	allows_disabling = TRUE
+	default_disabled = FALSE
+
+/datum/customizer_choice/bodypart_feature/underwear
+	name = "Underwear"
+	feature_type = /datum/bodypart_feature/underwear
+	default_accessory = /datum/sprite_accessory/underwear/athletic_leotard
+	sprite_accessories = list(
+		/datum/sprite_accessory/underwear/briefs,
+		/datum/sprite_accessory/underwear/panties,
+		/datum/sprite_accessory/underwear/bikini,
+		/datum/sprite_accessory/underwear/leotard,
+		/datum/sprite_accessory/underwear/athletic_leotard,
+		)
