@@ -165,6 +165,7 @@
 
 	r_hand = /obj/item/rogueweapon/sword
 	backl = /obj/item/rogueweapon/shield/heater
+	beltl = /obj/item/rogueweapon/scabbard/sword
 	beltr = /obj/item/rogueweapon/mace/cudgel
 	pants = /obj/item/clothing/under/roguetown/chainlegs/iron
 	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
@@ -192,7 +193,7 @@
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1,  /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
 	
 // AXEMAN
 
@@ -312,6 +313,7 @@
 
 	r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 	backl = /obj/item/quiver/arrows
+	beltl = /obj/item/rogueweapon/scabbard/sword
 	beltr = /obj/item/rogueweapon/sword/short
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	cloak = /obj/item/clothing/cloak/stabard/guard
@@ -382,6 +384,7 @@
 
 	r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 	backl = /obj/item/quiver/bolts
+	beltl =  /obj/item/rogueweapon/scabbard/sword
 	beltr = /obj/item/rogueweapon/sword/short
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	cloak = /obj/item/clothing/cloak/stabard/guard
