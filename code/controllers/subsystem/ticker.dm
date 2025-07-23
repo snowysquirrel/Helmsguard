@@ -751,8 +751,10 @@ SUBSYSTEM_DEF(ticker)
 /// Wrapper for setting rulermob and rulertype
 /datum/controller/subsystem/ticker/proc/set_ruler_mob(mob/newruler)
 	rulermob = newruler
-	if(should_wear_femme_clothes(rulermob))
-		SSticker.rulertype = "Grand Duchess"
-	else
-		SSticker.rulertype = "Grand Duke"
+	if(istype(rulermob, /mob))
+		var/mob/M = rulermob
+		if(M.gender == FEMALE)
+			SSticker.rulertype = "Grand Duchess"
+		else
+			SSticker.rulertype = "Grand Duke"
 	SEND_GLOBAL_SIGNAL(COMSIG_TICKER_RULERMOB_SET, rulermob)

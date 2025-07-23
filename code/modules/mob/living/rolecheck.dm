@@ -7,8 +7,8 @@
 
 	return noble
 
-/mob/living/carbon/human/proc/is_yeoman()
-	return job in GLOB.yeoman_positions
-
 /mob/living/carbon/human/proc/is_courtier()
 	return job in GLOB.courtier_positions
+
+/mob/living/carbon/human/proc/is_towner()
+	return job in GLOB.towner_positions

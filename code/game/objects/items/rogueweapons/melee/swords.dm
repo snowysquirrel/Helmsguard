@@ -137,7 +137,7 @@
 	grid_width = 32
 	grid_height = 64
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_sword.ogg'
-	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_sword.ogg'
+	holster_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_sword.ogg'
 
 	equip_delay_self = 1.5 SECONDS
 	unequip_delay_self = 1.5 SECONDS
@@ -158,12 +158,12 @@
 
 /obj/item/rogueweapon/sword/equipped(mob/user, slot, initial = FALSE)
 	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_sword.ogg", "modular_helmsguard/sound/sheath_sounds/draw_sword2.ogg", "modular_helmsguard/sound/sheath_sounds/draw_sword3.ogg")
-	sheathe_sound = pick("modular_helmsguard/sound/sheath_sounds/put_back_sword.ogg", "modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg")
+	holster_sound = pick("modular_helmsguard/sound/sheath_sounds/put_back_sword.ogg", "modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg")
 	. = ..()
 
 /obj/item/rogueweapon/sword/equipped(mob/user, slot, initial = FALSE)
 	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_sword.ogg", "modular_helmsguard/sound/sheath_sounds/draw_sword2.ogg", "modular_helmsguard/sound/sheath_sounds/draw_sword3.ogg")
-	sheathe_sound = pick("modular_helmsguard/sound/sheath_sounds/put_back_sword.ogg", "modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg")
+	holster_sound = pick("modular_helmsguard/sound/sheath_sounds/put_back_sword.ogg", "modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg")
 	. = ..()
 
 /obj/item/rogueweapon/sword/falchion
@@ -282,7 +282,7 @@
 	dropshrink = 0.75
 	smeltresult = /obj/item/ingot/steel
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_greatsword.ogg'
-	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg'
+	holster_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg'
 
 /obj/item/rogueweapon/sword/long/death
 	color = CLOTHING_BLACK
@@ -304,7 +304,7 @@
 
 /obj/item/rogueweapon/sword/long/equipped(mob/user, slot, initial = FALSE)
 	pickup_sound = pickup_sound
-	sheathe_sound = pick("sound/foley/equip/swordlarge1.ogg", "sound/foley/equip/swordlarge2.ogg")
+	holster_sound = pick("sound/foley/equip/swordlarge1.ogg", "sound/foley/equip/swordlarge2.ogg")
 	. = ..()
 
 /obj/item/rogueweapon/sword/long/malumflamm

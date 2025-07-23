@@ -16,11 +16,6 @@
 	var/mob/target_mob_type
 	/// Number of targets needed
 	var/target_amount = 1
-<<<<<<< HEAD
-	/// Location for beacon quests
-	var/area/beacon_activation_location
-=======
->>>>>>> upstream/main
 	/// Location for courier quests
 	var/area/rogue/indoors/town/target_delivery_location
 	/// Location name for kill/clear quests
@@ -29,19 +24,8 @@
 	var/obj/item/paper/scroll/quest/quest_scroll
 	/// Weak reference to the quest scroll
 	var/datum/weakref/quest_scroll_ref
-<<<<<<< HEAD
-	/// Target beacon for beacon quests
-	var/obj/structure/roguemachine/teleport_beacon/target_beacon
-	/// Whether this is a beacon connection quest
-	var/beacon_connection = FALSE
-	/// List of possible beacons for connection quests
-	var/list/possible_beacons = list()
-	/// Whether the beacon has been activated for this quest
-	var/beacon_activated = FALSE
-=======
 	/// List of weakrefs to actual quest items/mobs for reducing overhead of compass.
 	var/list/datum/weakref/tracked_atoms = list()
->>>>>>> upstream/main
 
 /datum/quest/Destroy()
 	// Clean up mobs with quest components
@@ -51,15 +35,6 @@
 			M.remove_filter("quest_item_outline")
 			qdel(Q)
 
-<<<<<<< HEAD
-	// Clean up items with quest components carefully
-	for(var/obj/item/I in world)
-		var/datum/component/quest_object/Q = I.GetComponent(/datum/component/quest_object)
-		if(Q && Q.quest_ref?.resolve() == src && !QDELETED(I))
-			I.remove_filter("quest_item_outline")
-			qdel(Q)
-			// Don't delete the item itself here to prevent loops
-=======
 	for(var/datum/weakref/tracked_weakref in tracked_atoms)
 		var/atom/target_atom = tracked_weakref.resolve()
 		if(QDELETED(target_atom))
@@ -73,7 +48,6 @@
 
 		tracked_atoms -= tracked_weakref
 		qdel(tracked_weakref)
->>>>>>> upstream/main
 
 	// Clean up references
 	quest_scroll = null
@@ -83,17 +57,8 @@
 			Q.assigned_quest = null
 			qdel(Q)
 		quest_scroll_ref = null
-<<<<<<< HEAD
-	
-	// Clean up beacon references
-	target_beacon = null
-	possible_beacons = null
-	
-	return ..()
-=======
 		
 	return ..()
 
 /datum/quest/proc/add_tracked_atom(atom/movable/to_track)
 	tracked_atoms += WEAKREF(to_track)
->>>>>>> upstream/main

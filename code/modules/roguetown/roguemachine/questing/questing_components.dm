@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 GLOBAL_LIST_EMPTY(quest_components)
 
->>>>>>> upstream/main
 /datum/component/quest_object
 	var/datum/weakref/quest_ref
 	var/is_mob = FALSE
@@ -28,15 +25,10 @@ GLOBAL_LIST_EMPTY(quest_components)
 		RegisterSignal(parent, COMSIG_MOVABLE_MOVED, PROC_REF(on_item_dropped))
 	
 	RegisterSignal(target_quest, COMSIG_PARENT_QDELETING, PROC_REF(on_quest_deleted))
-<<<<<<< HEAD
-
-/datum/component/quest_object/Destroy()
-=======
 	GLOB.quest_components += src
 
 /datum/component/quest_object/Destroy()
 	GLOB.quest_components -= src
->>>>>>> upstream/main
 	if(QDELETED(parent))
 		return ..()
 		
@@ -44,11 +36,7 @@ GLOBAL_LIST_EMPTY(quest_components)
 	if(Q && !Q.complete && isitem(parent))
 		var/obj/item/I = parent
 		I.remove_filter(outline_filter_id)
-<<<<<<< HEAD
-		if(Q.quest_type == "Courier" && (Q.target_delivery_item && istype(I, Q.target_delivery_item)) && !QDELETED(I))
-=======
 		if(Q.quest_type == QUEST_COURIER && (Q.target_delivery_item && istype(I, Q.target_delivery_item)) && !QDELETED(I))
->>>>>>> upstream/main
 			Q.target_delivery_item = null
 			qdel(I)
 	
@@ -64,13 +52,8 @@ GLOBAL_LIST_EMPTY(quest_components)
 	var/list/user_scrolls = find_quest_scrolls(user)
 	for(var/obj/item/paper/scroll/quest/scroll in user_scrolls)
 		var/datum/quest/user_quest = scroll.assigned_quest
-<<<<<<< HEAD
-		if(user_quest && ((user_quest.quest_type == "Fetch" && istype(parent, user_quest.target_item_type)) || \
-						(user_quest.quest_type == "Courier" && istype(parent, user_quest.target_delivery_item))))
-=======
 		if(user_quest && ((user_quest.quest_type == QUEST_FETCH && istype(parent, user_quest.target_item_type)) || \
 						(user_quest.quest_type == QUEST_COURIER && istype(parent, user_quest.target_delivery_item))))
->>>>>>> upstream/main
 			examine_list += span_notice("This looks like an item you need for your quest: [user_quest.title]!")
 			break
 
@@ -84,11 +67,7 @@ GLOBAL_LIST_EMPTY(quest_components)
 	var/list/user_scrolls = find_quest_scrolls(user)
 	for(var/obj/item/paper/scroll/quest/scroll in user_scrolls)
 		var/datum/quest/user_quest = scroll.assigned_quest
-<<<<<<< HEAD
-		if(user_quest && (user_quest.quest_type in list("Kill", "Clear Out", "Miniboss")) && istype(parent, user_quest.target_mob_type))
-=======
 		if(user_quest && (user_quest.quest_type in list(QUEST_KILL, QUEST_CLEAR_OUT, QUEST_MINIBOSS)) && istype(parent, user_quest.target_mob_type))
->>>>>>> upstream/main
 			examine_list += span_notice("This looks like the target of your quest: [user_quest.title]!")
 			if(Q.target_spawn_area != get_area(get_turf(src)))
 				examine_list += span_notice("It was last reported in the [Q.target_spawn_area] area, however.")
@@ -129,13 +108,8 @@ GLOBAL_LIST_EMPTY(quest_components)
 	var/turf/drop_turf = get_turf(dropped_item)
 	
 	// Handle fetch quests (dropping item on quest machine input)
-<<<<<<< HEAD
-	if(Q.quest_type == "Fetch")
-		for(var/obj/structure/roguemachine/questgiver/quest_machine in SSroguemachine.questgivers)
-=======
 	if(Q.quest_type == QUEST_FETCH)
 		for(var/obj/structure/roguemachine/noticeboard/quest_machine in SSroguemachine.noticeboards)
->>>>>>> upstream/main
 			if(get_turf(quest_machine.input_point) == drop_turf)
 				if(Q.target_item_type && istype(dropped_item, Q.target_item_type))
 					Q.target_amount--
@@ -149,11 +123,7 @@ GLOBAL_LIST_EMPTY(quest_components)
 					return
 	
 	// Handle courier quests (dropping in target area)
-<<<<<<< HEAD
-	if(Q.quest_type == "Courier")
-=======
 	if(Q.quest_type == QUEST_COURIER)
->>>>>>> upstream/main
 		var/area/drop_area = get_area(drop_turf)
 		if(!istype(drop_area, Q.target_delivery_location))
 			return
@@ -190,23 +160,15 @@ GLOBAL_LIST_EMPTY(quest_components)
 	if(QDELETED(parent))
 		return
 	
-<<<<<<< HEAD
-=======
 	var/datum/quest/Q = quest_ref?.resolve()
 	
->>>>>>> upstream/main
 	if(ismob(parent))
 		var/mob/M = parent
 		M.remove_filter(outline_filter_id)
 	else if(isitem(parent))
 		var/obj/item/I = parent
 		I.remove_filter(outline_filter_id)
-<<<<<<< HEAD
-		var/datum/quest/Q = quest_ref?.resolve()
-		if(!Q?.complete)
-=======
 		// Only delete the item if it's part of an incomplete fetch or courier quest
 		if(Q && !Q.complete && ((Q.quest_type == QUEST_FETCH && istype(I, Q.target_item_type)) || (Q.quest_type == QUEST_COURIER && istype(I, Q.target_delivery_item))))
->>>>>>> upstream/main
 			qdel(I)
 	qdel(src)

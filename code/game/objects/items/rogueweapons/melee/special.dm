@@ -21,7 +21,7 @@
 	grid_height = 96
 	grid_width = 32
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_blunt.ogg'
-	sheathe_sound = 'sound/items/wood_sharpen.ogg'
+	holster_sound = 'sound/items/wood_sharpen.ogg'
 
 /datum/intent/lordbash
 	name = "bash"
@@ -232,7 +232,7 @@
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/steel
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_dagger.ogg'
-	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_dagger.ogg'
+	holster_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_dagger.ogg'
 
 /datum/intent/katar
 	clickcd = 8

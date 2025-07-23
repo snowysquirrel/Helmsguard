@@ -33,7 +33,6 @@
 	var/obj/item/rogueweapon/sword/valid_sword = /obj/item/rogueweapon/sword
 	var/obj/item/rogueweapon/sword/sheathed
 	var/sheathe_time = 0.1 SECONDS
-	var/sheathe_sound = 'sound/foley/equip/scabbard_holster.ogg'
 
 
 /obj/item/rogueweapon/scabbard/attack_obj(obj/O, mob/living/user)
@@ -78,9 +77,10 @@
 		span_notice("[user] sheathes [A] into [src]."),
 		span_notice("I sheathe [A] into [src].")
 	)
-
-	playsound(src, sheathe_sound, 100, TRUE)
-	return TRUE
+	if(istype(A, /obj/item/rogueweapon))
+		var/obj/item/rogueweapon/weapon = A
+		playsound(src, weapon.holster_sound, 100, TRUE)
+		return TRUE
 
 
 /obj/item/rogueweapon/scabbard/proc/pukesword(mob/living/user)

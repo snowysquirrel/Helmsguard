@@ -76,7 +76,7 @@
 	gripped_intents = list(/datum/intent/axe/chop/stone)
 	resistance_flags = FLAMMABLE
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg'
-	sheathe_sound = 'sound/items/wood_sharpen.ogg'	
+	holster_sound = 'sound/items/wood_sharpen.ogg'	
 	blade_dulling = DULLING_SHAFT_WOOD
 
 
@@ -160,7 +160,7 @@
 
 /obj/item/rogueweapon/stoneaxe/battle/equipped(mob/user, slot, initial = FALSE)
 	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg", "modular_helmsguard/sound/sheath_sounds/draw_spear.ogg")
-	sheathe_sound = 'sound/items/wood_sharpen.ogg'
+	holster_sound = 'sound/items/wood_sharpen.ogg'
 	. = ..()
 
 /obj/item/rogueweapon/stoneaxe/oath
@@ -200,7 +200,7 @@
 
 /obj/item/rogueweapon/stoneaxe/oath/equipped(mob/user, slot, initial = FALSE)
 	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg", "modular_helmsguard/sound/sheath_sounds/draw_spear.ogg")
-	sheathe_sound = 'sound/items/wood_sharpen.ogg'
+	holster_sound = 'sound/items/wood_sharpen.ogg'
 	. = ..()
 
 
@@ -218,7 +218,7 @@
 
 /obj/item/rogueweapon/stoneaxe/woodcut/equipped(mob/user, slot, initial = FALSE)
 	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg", "modular_helmsguard/sound/sheath_sounds/draw_spear.ogg")
-	sheathe_sound = 'sound/items/wood_sharpen.ogg'
+	holster_sound = 'sound/items/wood_sharpen.ogg'
 	. = ..()
 
 /obj/item/rogueweapon/stoneaxe/woodcut/aaxe
@@ -278,7 +278,7 @@
 
 /obj/item/rogueweapon/stoneaxe/handaxe/equipped(mob/user, slot, initial = FALSE)
 	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg", "modular_helmsguard/sound/sheath_sounds/draw_spear.ogg")
-	sheathe_sound = 'sound/items/wood_sharpen.ogg'
+	holster_sound = 'sound/items/wood_sharpen.ogg'
 	. = ..()
 
 /obj/item/rogueweapon/stoneaxe/woodcut/steel
@@ -421,7 +421,7 @@
 	blade_dulling = DULLING_SHAFT_WOOD
 	wdefense = 6
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_greatsword.ogg'
-	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_to_leather.ogg'
+	holster_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_to_leather.ogg'
 	demolition_mod = 1.5
 
 /obj/item/rogueweapon/greataxe/getonmobprop(tag)
