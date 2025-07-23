@@ -13,14 +13,10 @@
 	allowed_sexes = list(MALE, FEMALE)
 	tutorial = "The Divine is all that matters in a world of the immoral. The Weeping God left his children to rule over us mortals--and you will preach their wisdom to any who still heed their will. The faithless are growing in number. It is up to you to shepard them toward a Gods-fearing future; for you are a priest of Astrata."
 	whitelist_req = FALSE
+	cmode_music = 'sound/music/cmode/church/combat_astrata.ogg'
 
-	spells = list(/obj/effect/proc_holder/spell/invoked/cure_rot,
-	/obj/effect/proc_holder/spell/invoked/heal, 
-	/obj/effect/proc_holder/spell/invoked/revive,
-	/obj/effect/proc_holder/spell/self/convertrole/templar,
-	/obj/effect/proc_holder/spell/self/convertrole/monk)
+	spells = list(/obj/effect/proc_holder/spell/invoked/cure_rot, /obj/effect/proc_holder/spell/self/convertrole/templar, /obj/effect/proc_holder/spell/self/convertrole/monk, /obj/effect/proc_holder/spell/invoked/projectile/divineblast)
 	outfit = /datum/outfit/job/roguetown/priest
-
 	display_order = JDO_PRIEST
 	give_bank_account = 115
 	min_pq = 5 // You should know the basics of things if you're going to lead the town's entire religious sector
@@ -52,11 +48,11 @@
 		/obj/item/natural/worms/leech/cheele = 1, //little buddy
 		/obj/item/ritechalk = 1,
 		/obj/item/rogueweapon/huntingknife/idagger/steel/holysee = 1,	//Unique knife from the Holy See
+		/obj/item/rogueweapon/scabbard/sheath = 1
 	)
 	ADD_TRAIT(H, TRAIT_CHOSEN, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
-	H.cmode_music = 'sound/music/combat_holy.ogg' 
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/polearms, 5, TRUE)
@@ -68,6 +64,7 @@
 	H.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/magic/holy, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
+	H.grant_language(/datum/language/grenzelhoftian)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
 	H.change_stat("strength", -1)
@@ -117,6 +114,7 @@
 	mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/cure_rot) 
 	mind.AddSpell(new /obj/effect/proc_holder/spell/self/convertrole/monk) 
 	mind.AddSpell(new /obj/effect/proc_holder/spell/self/convertrole/templar)
+	mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/divineblast)
 
 /mob/living/carbon/human/proc/coronate_lord()
 	set name = "Coronate"
@@ -153,11 +151,7 @@
 		//Coronate new King (or Queen)
 		HU.mind.assigned_role = "Grand Duke"
 		HU.job = "Grand Duke"
-		if(HU.gender == FEMALE)
-			SSticker.rulertype = "Lord Castellanin"
-		else
-			SSticker.rulertype = "Grand Duke"
-		SSticker.rulermob = HU
+		SSticker.set_ruler_mob(HU)
 		SSticker.regentmob = null
 		var/dispjob = mind.assigned_role
 		removeomen(OMEN_NOLORD)

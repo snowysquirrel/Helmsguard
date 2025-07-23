@@ -15,7 +15,7 @@
 	sewrepair = TRUE
 	flags_inv = HIDEBOOB
 	experimental_inhand = FALSE
-	
+
 	grid_width = 64
 	grid_height = 64
 
@@ -588,8 +588,8 @@
 //tattoo code
 /obj/item/clothing/suit/roguetown/shirt/undershirt/easttats/Initialize(mapload)
 	. = ..()
-	name = "lenticular tattoos"
-	desc = "It's styled into the shapes of clouds. You shudder as the ink moves and condenses into areas where the skin is struck."
+	name = "Ichizoku Warrior Tattoos"
+	desc = "A mystic style of tattoos adopted by soldiers of the Hasikobe Clan, emulating a practice performed by warrior monks of the former Zhongese Dynasty on the mainland, these tattoos are created with a secretive and mystical ink which shifts and moves like ripples in a pond as the skin hardens when and where the bearer is struck, serving as rudimentary, and weightless, armour.."
 	resistance_flags = FIRE_PROOF
 	icon_state = "easttats"
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
@@ -601,6 +601,8 @@
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
 	allowed_race = NON_DWARVEN_RACE_TYPES
+	flags_inv = null //free the breast
+	surgery_cover = FALSE // cauterize and surgery through it.
 
 /obj/item/clothing/suit/roguetown/shirt/easttats/easttats/dropped(mob/living/carbon/human/user)
 	. = ..()

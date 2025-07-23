@@ -56,7 +56,7 @@
 		"Stewardess",
 		"Court Physician",
 		"Town Elder",
-		"Captain",
+		"Knight Captain",
 		"Archivist",
 		"Knight",
 		"Court Magician",

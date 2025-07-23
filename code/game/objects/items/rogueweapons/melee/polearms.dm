@@ -212,7 +212,7 @@
 	anvilrepair = /datum/skill/craft/carpentry
 	resistance_flags = FLAMMABLE
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_blunt.ogg'
-	sheathe_sound = 'sound/items/wood_sharpen.ogg'
+	holster_sound = 'sound/items/wood_sharpen.ogg'
 
 
 /obj/item/rogueweapon/woodstaff/getonmobprop(tag)
@@ -284,7 +284,7 @@
 	throwforce = 25
 	resistance_flags = FLAMMABLE
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg'
-	sheathe_sound = 'sound/foley/equip/swordlarge1.ogg'
+	holster_sound = 'sound/foley/equip/swordlarge1.ogg'
 
 /obj/item/rogueweapon/spear/aalloy
 	name = "decrepit spear"
@@ -341,7 +341,7 @@
 
 /obj/item/rogueweapon/spear/equipped(mob/user, slot, initial = FALSE)
 	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg", "modular_helmsguard/sound/sheath_sounds/draw_spear.ogg")
-	sheathe_sound = pick("sound/foley/equip/swordlarge1.ogg", "sound/foley/equip/swordlarge2.ogg")
+	holster_sound = pick("sound/foley/equip/swordlarge1.ogg", "sound/foley/equip/swordlarge2.ogg")
 	. = ..()
 
 
@@ -452,7 +452,7 @@
 	throwforce = 35
 	resistance_flags = FLAMMABLE
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg'
-	sheathe_sound = 'sound/foley/equip/swordlarge1.ogg'
+	holster_sound = 'sound/foley/equip/swordlarge1.ogg'
 
 /obj/item/rogueweapon/fishspear/depthseek //DO NOT ADD RECIPE. MEANT TO BE AN ABYSSORITE RELIC. IDEA COURTESY OF LORDINQPLAS
 	force = 45
@@ -518,8 +518,14 @@
 							fishchance -= fpp // Deduct a penalty the lower our fishing level is (-0 at legendary)
 					var/mob/living/fisherman = user
 					if(prob(fishchance)) // Finally, roll the dice to see if we fish.
+						var/A
 						if(target.type in frwt)
-							var/A = pickweight(freshfishloot)
+							A = pickweight(freshfishloot)
+						else if(target.type in salwt)
+							A = pickweight(seafishloot)
+						else if(target.type in mud)
+							A = pickweight(mudfishloot)
+						if(A)
 							var/ow = 30 + (sl * 10) // Opportunity window, in ticks. Longer means you get more time to cancel your bait
 							to_chat(user, "<span class='notice'>You see something!</span>")
 							playsound(src.loc, 'sound/items/fishing_plouf.ogg', 100, TRUE)
@@ -535,49 +541,11 @@
 									new A(user.loc)
 									to_chat(user, "<span class='warning'>Pull 'em in!</span>")
 									user.mind.add_sleep_experience(/datum/skill/labor/fishing, round(fisherman.STAINT, 2), FALSE) // Level up!
+									record_featured_stat(FEATURED_STATS_FISHERS, fisherman)
+									GLOB.azure_round_stats[STATS_FISH_CAUGHT]++
 									playsound(src.loc, 'sound/items/Fish_out.ogg', 100, TRUE)	
 							else
 								to_chat(user, "<span class='warning'>Damn, it got away... I should <b>pull away</b> next time.</span>")								
-						if(target.type in salwt)
-							var/A = pickweight(seafishloot)
-							var/ow = 30 + (sl * 10) // Opportunity window, in ticks. Longer means you get more time to cancel your bait
-							to_chat(user, "<span class='notice'>You see something!</span>")
-							playsound(src.loc, 'sound/items/fishing_plouf.ogg', 100, TRUE)
-							if(!do_after(user,ow, target = target))
-								if(ismob(A)) // TODO: Baits with mobs on their fishloot lists OR water tiles with their own fish loot pools
-									var/mob/M = A
-									if(M.type in subtypesof(/mob/living/simple_animal/hostile))
-										new M(target)
-									else
-										new M(user.loc)
-									user.mind.add_sleep_experience(/datum/skill/labor/fishing, fisherman.STAINT*2) // High risk high reward
-								else
-									new A(user.loc)
-									to_chat(user, "<span class='warning'>Pull 'em in!</span>")
-									user.mind.add_sleep_experience(/datum/skill/labor/fishing, round(fisherman.STAINT, 2), FALSE) // Level up!
-									playsound(src.loc, 'sound/items/Fish_out.ogg', 100, TRUE)	
-							else
-								to_chat(user, "<span class='warning'>Damn, it got away... I should <b>pull away</b> next time.</span>")							
-						if(target.type in mud)
-							var/A = pickweight(mudfishloot)
-							var/ow = 30 + (sl * 10) // Opportunity window, in ticks. Longer means you get more time to cancel your bait
-							to_chat(user, "<span class='notice'>You see something!</span>")
-							playsound(src.loc, 'sound/items/fishing_plouf.ogg', 100, TRUE)
-							if(!do_after(user,ow, target = target))
-								if(ismob(A)) // TODO: Baits with mobs on their fishloot lists OR water tiles with their own fish loot pools
-									var/mob/M = A
-									if(M.type in subtypesof(/mob/living/simple_animal/hostile))
-										new M(target)
-									else
-										new M(user.loc)
-									user.mind.add_sleep_experience(/datum/skill/labor/fishing, fisherman.STAINT*2) // High risk high reward
-								else
-									new A(user.loc)
-									to_chat(user, "<span class='warning'>Pull 'em in!</span>")
-									user.mind.add_sleep_experience(/datum/skill/labor/fishing, round(fisherman.STAINT, 2), FALSE) // Level up!
-									playsound(src.loc, 'sound/items/Fish_out.ogg', 100, TRUE)
-							else
-								to_chat(user, "<span class='warning'>Damn, it got away... I should <b>pull away</b> next time.</span>")
 					else
 						to_chat(user, "<span class='warning'>Not a single fish...</span>")
 						user.mind.add_sleep_experience(/datum/skill/labor/fishing, fisherman.STAINT/2) // Pity XP.
@@ -664,7 +632,7 @@
 	walking_stick = TRUE
 	wdefense = 6
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg'
-	sheathe_sound = 'sound/foley/equip/swordlarge1.ogg'
+	holster_sound = 'sound/foley/equip/swordlarge1.ogg'
 
 /obj/item/rogueweapon/halberd/getonmobprop(tag)
 	. = ..()
@@ -679,7 +647,7 @@
 
 /obj/item/rogueweapon/halberd/equipped(mob/user, slot, initial = FALSE)
 	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg", "modular_helmsguard/sound/sheath_sounds/draw_spear.ogg")
-	sheathe_sound = pick("sound/foley/equip/swordlarge1.ogg", "sound/foley/equip/swordlarge2.ogg")
+	holster_sound = pick("sound/foley/equip/swordlarge1.ogg", "sound/foley/equip/swordlarge2.ogg")
 	. = ..()
 
 /obj/item/rogueweapon/halberd/holysee
@@ -783,11 +751,11 @@
 	wbalance = WBALANCE_HEAVY
 	sellprice = 60
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg'
-	sheathe_sound = 'sound/foley/equip/swordlarge1.ogg'
+	holster_sound = 'sound/foley/equip/swordlarge1.ogg'
 
 /obj/item/rogueweapon/eaglebeak/equipped(mob/user, slot, initial = FALSE)
 	pickup_sound = pick("modular_helmsguard/sound/sheath_sounds/draw_polearm.ogg", "modular_helmsguard/sound/sheath_sounds/draw_spear.ogg")
-	sheathe_sound = pick("sound/foley/equip/swordlarge1.ogg", "sound/foley/equip/swordlarge2.ogg")
+	holster_sound = pick("sound/foley/equip/swordlarge1.ogg", "sound/foley/equip/swordlarge2.ogg")
 	. = ..()
 
 	intdamage_factor = 1.2
@@ -869,7 +837,7 @@
 	wdefense = 5
 	smelt_bar_num = 3
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_greatsword.ogg'
-	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg'
+	holster_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg'
 
 /obj/item/rogueweapon/greatsword/getonmobprop(tag)
 	. = ..()
@@ -903,7 +871,7 @@
 	smeltresult = /obj/item/ingot/aaslag
 /obj/item/rogueweapon/greatsword/equipped(mob/user, slot, initial = FALSE)
 	pickup_sound = pickup_sound
-	sheathe_sound = pick("sound/foley/equip/swordlarge1.ogg", "sound/foley/equip/swordlarge2.ogg", "	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg'")
+	holster_sound = pick("sound/foley/equip/swordlarge1.ogg", "sound/foley/equip/swordlarge2.ogg", "	holster_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg'")
 	. = ..()
 
 /obj/item/rogueweapon/greatsword/zwei
@@ -969,7 +937,7 @@
 	wdefense = 5
 	smelt_bar_num = 2
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_greatsword.ogg'
-	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg'
+	holster_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg'
 
 /obj/item/rogueweapon/estoc/getonmobprop(tag)
 	. = ..()
@@ -1026,7 +994,7 @@
 				
 /obj/item/rogueweapon/estoc/equipped(mob/user, slot, initial = FALSE)
 	pickup_sound = pickup_sound
-	sheathe_sound = pick("sound/foley/equip/swordlarge1.ogg", "sound/foley/equip/swordlarge2.ogg", "	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg'")
+	holster_sound = pick("sound/foley/equip/swordlarge1.ogg", "sound/foley/equip/swordlarge2.ogg", "	holster_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_sword2.ogg'")
 	. = ..()
 
 /obj/item/rogueweapon/woodstaff/naledi
@@ -1075,7 +1043,7 @@
 	force_wielded = 25
 	gripped_intents = list(/datum/intent/spear/bash/ranged/quarterstaff, /datum/intent/spear/thrust/quarterstaff)
 	icon_state = "quarterstaff_steel"
-	max_integrity = 500
+	max_integrity = 400
 	blade_dulling = DULLING_SHAFT_REINFORCED
 	intdamage_factor = 1.2
 

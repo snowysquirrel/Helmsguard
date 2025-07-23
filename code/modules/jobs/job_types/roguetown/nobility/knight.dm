@@ -65,6 +65,9 @@
 	belt = /obj/item/storage/belt/rogue/leather/steel
 	backr = /obj/item/storage/backpack/rogue/satchel/black
 	id = /obj/item/scomstone/bad/garrison
+	backpack_contents = list(
+		/obj/item/storage/keyring/guardcastle
+	)
 
 /datum/outfit/job/roguetown/knight/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -160,12 +163,12 @@
 	)
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
-	
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/guardcastle = 1)
 
-
-/// SCHOOL OF THE SWORD
-
+	backpack_contents = list(
+		/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, 
+		/obj/item/rope/chain = 1, 
+		/obj/item/rogueweapon/scabbard/sheath = 1
+	)
 
 /datum/advclass/knight/sword
 	name = "School of the Sword"
@@ -206,7 +209,7 @@
 	var/weapons = list("Zweihander","Bastard Sword","Steel Greatsword")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
-	switch(weapon_choice)
+	switch(weapon_choice)	
 		if("Zweihander")
 			r_hand = /obj/item/rogueweapon/greatsword/zwei
 			backl = /obj/item/gwstrap
@@ -247,12 +250,11 @@
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/guardcastle = 1)
-
-
-
-/// SCHOOL OF THE AXE
-
+	backpack_contents = list(
+		/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, 
+		/obj/item/rope/chain = 1, 
+		/obj/item/rogueweapon/scabbard/sheath = 1
+	)
 
 /datum/advclass/knight/axe
 	name = "School of the Axe"
@@ -294,14 +296,12 @@
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
-		if("Battle Axe")
-			r_hand = /obj/item/rogueweapon/stoneaxe/battle
-			backl = /obj/item/rogueweapon/shield/heater
-		if("Steel Great Axe")
-			r_hand = /obj/item/rogueweapon/greataxe/steel
-			backl = /obj/item/gwstrap
-		if("Great Double-Headed Axe")
-			r_hand = /obj/item/rogueweapon/greataxe/steel/doublehead
+		if("Longsword + Crossbow")
+			beltl = /obj/item/rogueweapon/sword/long
+			beltr = /obj/item/quiver/bolts
+			backl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
+		if("Billhook + Recurve Bow")
+			r_hand = /obj/item/rogueweapon/spear/billhook
 			backl = /obj/item/gwstrap
 
 	neck = /obj/item/clothing/neck/roguetown/bevor
@@ -334,10 +334,11 @@
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/guardcastle = 1)
-
-
-/// SCHOOL OF THE MACE
+	backpack_contents = list(
+		/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, 
+		/obj/item/rope/chain = 1, 
+		/obj/item/rogueweapon/scabbard/sheath = 1
+	)
 
 
 /datum/advclass/knight/mace
@@ -384,11 +385,22 @@
 		if("Goden Mace")
 			r_hand = /obj/item/rogueweapon/mace/goden
 			backl = /obj/item/gwstrap
-		if("Steel Warhammer")
-			r_hand = /obj/item/rogueweapon/mace/warhammer/steel
-			backl = /obj/item/rogueweapon/shield/heater
-		if("Flail")
-			r_hand = /obj/item/rogueweapon/flail
+			beltr = /obj/item/quiver/arrows
+			beltl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
+		
+		if("Sabre + Buckler")
+			beltl = /obj/item/rogueweapon/sword/sabre
+			backl = /obj/item/rogueweapon/shield/buckler
+
+		if("Whip + Crossbow")
+			beltl = /obj/item/rogueweapon/whip
+			backl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
+			beltr = /obj/item/quiver/bolts
+		
+		if("Greataxe + Sling")
+			H.adjust_skillrank(/datum/skill/combat/slings, 4, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/axes, 4, TRUE)
+			r_hand = /obj/item/rogueweapon/greataxe/steel
 			backl = /obj/item/gwstrap
 
 	neck = /obj/item/clothing/neck/roguetown/bevor
