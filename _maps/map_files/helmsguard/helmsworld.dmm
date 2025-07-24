@@ -8830,7 +8830,7 @@
 "flP" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "royal";
+	lockid = "physician";
 	name = "physician room"
 	},
 /turf/open/floor/rogue/church,
@@ -10882,7 +10882,7 @@
 "gCx" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "royal"
+	lockid = "physician"
 	},
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/manor)
@@ -20445,7 +20445,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 1
 	},
-/mob/living/simple_animal/hostile/retaliate/rogue/horse/black,
+/mob/living/simple_animal/hostile/retaliate/rogue/horse/black/tame,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town/manor)
 "mnq" = (
