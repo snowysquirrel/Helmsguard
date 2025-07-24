@@ -404,7 +404,7 @@
 
 /obj/projectile/bullet/rogue
 	name = "lead ball"
-	damage = 75	//higher damage than crossbow
+	damage = 80	//higher damage than crossbow
 	damage_type = BRUTE
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj"
@@ -412,9 +412,9 @@
 	range = 25		//Higher than arrow, but not halfway through the entire town.
 	hitsound = 'sound/combat/hits/hi_arrow2.ogg'
 	embedchance = 100
-	woundclass = BCLASS_STAB
+	woundclass = BCLASS_PIERCE
 	flag = "piercing"
-	armor_penetration = 75	//Crossbow-on-crack AP. Armor only goes up to 100 protection normally; so this ignores most of it but not all. Wear good armor!
+	armor_penetration = 100	//Crossbow-on-crack AP. Armor only goes up to 100 protection normally; so this ignores most of it but not all. Wear good armor!
 	speed = 0.1		//ZOOM!!!!!
 
 /obj/projectile/bullet/rogue/on_hit(atom/target, mob/living/shooter, blocked = FALSE)
