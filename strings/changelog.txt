@@ -11,3 +11,8 @@
 - Iron breastplate has been reclassified as light armor
 - Scabbards added to all combat roles
 - HEADEATER added under the Marshall's Tower, just behind the gallows scaffold.
+- Refactored firearms damage, they can now pierce plate armor and cause piercing damage
+- Reverted TGUI for anvil
+- Added cheat tunnel at Fallen Gate
+- Added mana fountain at hotspring
+- Added lava in the western caves.
