@@ -2459,6 +2459,7 @@
 #include "modular_helmsguard\code\game\objects\structures\mobspawners\monster_spawner.dm"
 #include "modular_helmsguard\code\game\objects\structures\mobspawners\orcs_spawner.dm"
 #include "modular_helmsguard\code\game\objects\structures\mobspawners\undead_spawner.dm"
+#include "modular_helmsguard\code\game\objects\structures\mobspawners\magical_spawner.dm"
 #include "modular_helmsguard\code\game\turfs\open\floor\roguefloor.dm"
 #include "modular_helmsguard\code\modules\clothing\ammopouch.dm"
 #include "modular_helmsguard\code\modules\mobs\farm\horse.dm"
