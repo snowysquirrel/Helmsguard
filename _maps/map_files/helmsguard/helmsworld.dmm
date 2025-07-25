@@ -5323,10 +5323,9 @@
 "dkV" = (
 /obj/machinery/light/rogue/torchholder/c{
 	dir = 4;
-	pixel_y = 0;
-	no_refuel = 0
+	pixel_y = 0
 	},
-/turf/open/floor/rogue/naturalstone,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/under/cave/elemental_cave)
 "dle" = (
 /turf/closed/wall/mineral/rogue/decostone/mossy/long,
@@ -40044,13 +40043,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
-"xqQ" = (
-/obj/effect/decal/dirt{
-	icon_state = "dirtedge-n"
-	},
-/obj/machinery/light/rogue/torchholder/c,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/under/cave/elemental_cave)
 "xqU" = (
 /obj/structure/spider/stickyweb{
 	dir = 4
@@ -112958,12 +112950,12 @@ mre
 wtq
 wtq
 sVf
-sVf
+dkV
 cVa
 vmL
 hyk
 wVd
-nhV
+wVd
 vNa
 wtq
 mre
@@ -116192,7 +116184,7 @@ sVf
 wVd
 wVd
 wVd
-dkV
+wVd
 wVd
 qLJ
 qLJ
@@ -119004,7 +118996,7 @@ oUu
 mre
 mre
 vNa
-xqQ
+lsQ
 wVd
 wVd
 aVl
