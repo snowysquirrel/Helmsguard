@@ -60,7 +60,10 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		else
 			GLOB.lordsurname = "of [L.real_name]"
 		SSticker.set_ruler_mob(L)
-		to_chat(world, "<b><span class='notice'><span class='big'>[L.real_name] is [SSticker.rulertype] of Helmsguard.</span></span></b>")
+		for(var/mob/living/player in GLOB.player_list)
+			var/channel = SSsounds.random_available_channel()
+			player.playsound_local(get_turf(player), 'sound/misc/newduke.ogg', 100, FALSE, pressure_affected = FALSE, channel = channel)
+		to_chat(world, "<b><span class='notice'><span class='big'>Divines be praised! [L.real_name], the [SSticker.rulertype] has returned to rule Helmsguard!</span></span></b>")
 		if(istype(SSticker.regentmob, /mob/living/carbon/human))
 			var/mob/living/carbon/human/regentbuddy = SSticker.regentmob
 			to_chat(L, span_notice("Word reached me on the approach that [regentbuddy.real_name], the [regentbuddy.job], served as regent in my absence."))
@@ -71,11 +74,8 @@ GLOBAL_LIST_EMPTY(lord_titles)
 			addtimer(CALLBACK(L, TYPE_PROC_REF(/mob, lord_color_choice)), 50)
 
 /datum/outfit/job/roguetown/lord
-	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
-	cloak = /obj/item/clothing/cloak/lordcloak
 	belt = /obj/item/storage/belt/rogue/leather/plaquegold
 	beltl = /obj/item/storage/keyring/lord
-	l_hand = /obj/item/rogueweapon/lordscepter
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1)
 	id = /obj/item/scomstone/garrison
 
@@ -87,17 +87,9 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	else
 		to_chat(H, span_warning("My crown must be yet in the realm. I shall search it out."))
 	if(H.gender == FEMALE)
-		pants = /obj/item/clothing/under/roguetown/tights/black
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/royal
 		cloak = /obj/item/clothing/cloak/lordcloak/ladycloak
-		wrists = /obj/item/clothing/wrists/roguetown/royalsleeves
-		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	else if(H.gender == MALE)
-		pants = /obj/item/clothing/under/roguetown/tights/black
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
-		shoes = /obj/item/clothing/shoes/roguetown/boots
+	else
+		cloak = /obj/item/clothing/cloak/lordcloak
 	if(H.wear_mask)
 		if(istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch))
 			qdel(H.wear_mask)
@@ -106,7 +98,6 @@ GLOBAL_LIST_EMPTY(lord_titles)
 			qdel(H.wear_mask)
 			mask = /obj/item/clothing/mask/rogue/lordmask/l
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
-
 //	SSticker.rulermob = H
 /** 
 	Warrior Lord subclass. An evolution from the Daring Twit. This is the original Lord Class.
@@ -119,7 +110,17 @@ GLOBAL_LIST_EMPTY(lord_titles)
 
 /datum/outfit/job/roguetown/lord/warrior/pre_equip(mob/living/carbon/human/H)
 	..()
+	gloves = /obj/item/clothing/gloves/roguetown/plate
+	backl = /obj/item/rogueweapon/sword/long/heirloom/royal
+	wrists = /obj/item/clothing/wrists/roguetown/bracers
+	neck = /obj/item/clothing/neck/roguetown/gorget/steel
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/full/royal
+	pants = /obj/item/clothing/under/roguetown/platelegs
+	r_hand = /obj/item/clothing/head/roguetown/helmet/heavy/royalhelms
+	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
 	l_hand = /obj/item/rogueweapon/lordscepter
+	backpack_contents += list(/obj/item/storage/belt/rogue/pouch/coins/rich = 1)
 
 	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
@@ -142,7 +143,8 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	H.change_stat("perception", 2)
 	H.change_stat("fortune", 5)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
-
+	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)	
 /** 
 	Merchant Lord subclass. Consider this an evolution from Sheltered Aristocrat.
 	Gets the same weighted 12 statspread + 5 fortune, but no strength. +2 Int, trade 2 End for 2 Perception. Keep speed. Deals gotta be quick. 
@@ -160,8 +162,19 @@ GLOBAL_LIST_EMPTY(lord_titles)
 
 /datum/outfit/job/roguetown/lord/merchant/pre_equip(mob/living/carbon/human/H)
 	..()
-	l_hand = /obj/item/rogueweapon/lordscepter
 
+	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
+	if(H.gender == FEMALE)
+		pants = /obj/item/clothing/under/roguetown/tights/black
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
+		wrists = /obj/item/clothing/wrists/roguetown/royalsleeves
+		shoes = /obj/item/clothing/shoes/roguetown/shortboots
+	else if(H.gender == MALE)
+		pants = /obj/item/clothing/under/roguetown/tights/black
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
+		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
+		shoes = /obj/item/clothing/shoes/roguetown/boots
+	l_hand = /obj/item/rogueweapon/lordscepter
 	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE) // Weapons suitable for defending yourself as a merchant.
@@ -201,8 +214,8 @@ GLOBAL_LIST_EMPTY(lord_titles)
 
 /datum/outfit/job/roguetown/lord/inbred/pre_equip(mob/living/carbon/human/H)
 	..()
+	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 	l_hand = /obj/item/rogueweapon/lordscepter
-
 	ADD_TRAIT(H, TRAIT_CRITICAL_WEAKNESS, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NORUN, TRAIT_GENERIC)
 	H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)

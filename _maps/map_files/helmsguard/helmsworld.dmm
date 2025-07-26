@@ -147,6 +147,10 @@
 /obj/item/clothing/suit/roguetown/shirt/dress/silkdress/random,
 /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat,
 /obj/item/clothing/suit/roguetown/shirt/tunic/silktunic,
+/obj/item/clothing/suit/roguetown/shirt/dress/royal,
+/obj/item/clothing/suit/roguetown/armor/leather/vest/black,
+/obj/item/clothing/under/roguetown/tights/black,
+/obj/item/clothing/wrists/roguetown/royalsleeves,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/manor)
 "afK" = (
@@ -1048,6 +1052,13 @@
 /obj/machinery/light/rogue/wallfire/candle,
 /turf/open/water/bath,
 /area/rogue/indoors/town/bath)
+"aGP" = (
+/obj/structure/table/wood{
+	icon_state = "longtable";
+	dir = 1
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/town/roofs/keep)
 "aGS" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -4276,9 +4287,11 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/toll_dread)
 "cGC" = (
-/obj/structure/table/wood,
 /obj/item/candle/candlestick/gold/single/lit{
 	pixel_y = 13
+	},
+/obj/structure/table/wood{
+	icon_state = "tablewood1"
 	},
 /turf/open/floor/rogue/tile/masonic/single,
 /area/rogue/indoors/town/manor)
@@ -5231,7 +5244,9 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/scouttower)
 "djg" = (
-/obj/structure/table/wood,
+/obj/structure/table/wood{
+	icon_state = "longtable"
+	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town/roofs/keep)
 "djl" = (
@@ -6519,7 +6534,9 @@
 /turf/open/floor/rogue/ruinedwood/nosmooth/herringbone2,
 /area/rogue/indoors/town/tavern)
 "dQT" = (
-/obj/structure/fluff/railing/border,
+/obj/structure/roguemachine/scomm{
+	pixel_y = -32
+	},
 /turf/open/floor/rogue/tile{
 	icon_state = "bfloorz"
 	},
@@ -8676,9 +8693,11 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave)
 "eXp" = (
-/obj/structure/table/wood,
 /obj/item/candle/candlestick/gold/lit{
 	pixel_y = 16
+	},
+/obj/structure/table/wood{
+	icon_state = "tablewood1"
 	},
 /turf/open/floor/rogue/tile/masonic/single,
 /area/rogue/indoors/town/manor)
@@ -10550,6 +10569,7 @@
 /obj/item/candle/candlestick/gold/single/lit{
 	pixel_y = 13
 	},
+/obj/item/scomstone,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town/manor)
 "gaO" = (
@@ -17520,9 +17540,12 @@
 /turf/open/floor/rogue/ruinedwood/nosmooth/turned,
 /area/rogue/indoors/town)
 "keV" = (
-/obj/structure/table/wood,
 /obj/item/candle/candlestick/gold/single/lit{
 	pixel_y = 13
+	},
+/obj/structure/table/wood{
+	dir = 1;
+	icon_state = "longtable"
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/manor)
@@ -17559,6 +17582,7 @@
 /obj/structure/bed/rogue/inn/double,
 /obj/item/bedsheet/rogue/fabric_double,
 /obj/machinery/light/rogue/wallfire/candle/r,
+/obj/item/clothing/wrists/roguetown/royalsleeves,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/manor)
 "kgw" = (
@@ -22191,6 +22215,9 @@
 /obj/machinery/light/rogue/wallfire/candle{
 	pixel_y = -32
 	},
+/obj/structure/roguemachine/scomm{
+	pixel_y = -32
+	},
 /turf/open/floor/rogue/tile/masonic/single,
 /area/rogue/indoors/town/manor)
 "mMR" = (
@@ -23254,6 +23281,9 @@
 "nph" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
+	},
+/obj/structure/roguemachine/scomm{
+	pixel_y = -32
 	},
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/manor)
@@ -24459,9 +24489,12 @@
 /turf/open/floor/rogue/blocks/stone/nosmooth,
 /area/rogue/outdoors/fallen_gate)
 "oaB" = (
-/obj/structure/table/wood,
 /obj/item/candle/candlestick/gold/lit{
 	pixel_y = 16
+	},
+/obj/structure/table/wood{
+	dir = 2;
+	icon_state = "longtable"
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/manor)
@@ -34046,6 +34079,10 @@
 /obj/item/clothing/suit/roguetown/shirt/dress/royal/prince,
 /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat,
 /obj/item/clothing/suit/roguetown/shirt/tunic/silktunic,
+/obj/item/scomstone,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/ridingboots,
+/obj/item/clothing/shoes/roguetown/boots/nobleboot,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/manor)
 "tQF" = (
@@ -34430,6 +34467,10 @@
 /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat,
 /obj/item/clothing/suit/roguetown/shirt/dress/royal/prince,
 /obj/item/clothing/suit/roguetown/shirt/dress/royal/princess,
+/obj/item/clothing/wrists/roguetown/royalsleeves,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/ridingboots,
+/obj/item/clothing/shoes/roguetown/boots/nobleboot,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town/manor)
 "udm" = (
@@ -38071,7 +38112,16 @@
 /area/rogue/indoors/forgotten_refuge)
 "wjF" = (
 /obj/structure/fireaxecabinet/south,
-/obj/structure/bookcase/random/adult,
+/obj/structure/rack/rogue,
+/obj/item/clothing/shoes/roguetown/ridingboots{
+	pixel_y = -8;
+	pixel_x = 3
+	},
+/obj/item/clothing/shoes/roguetown/boots/nobleboot{
+	pixel_y = -7;
+	pixel_x = -11
+	},
+/obj/item/clothing/shoes/roguetown/shortboots,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/manor)
 "wjM" = (
@@ -294362,7 +294412,7 @@ jER
 jER
 jER
 jER
-jER
+vGJ
 gZh
 erO
 nra
@@ -395268,10 +395318,10 @@ jER
 jER
 sIa
 aPQ
-djg
+aGP
 jsm
 jsm
-djg
+aGP
 wCq
 jkp
 vjL

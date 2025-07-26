@@ -104,6 +104,11 @@
 	strip_delay = 6 SECONDS
 	smelt_bar_num = 4
 
+/obj/item/clothing/suit/roguetown/armor/plate/full/royal
+	name = "royal plate armor"
+	desc = "Full steel plate armor adorned in gold to befit the ruler and protector of Helmsguard."
+	icon_state = "royal"
+
 /obj/item/clothing/suit/roguetown/armor/plate/full/iron
 	name = "iron plate armor"
 	icon_state = "iplate"

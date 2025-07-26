@@ -364,6 +364,11 @@
 	dropshrink = 0.75
 	smeltresult = /obj/item/ingot/steel
 
+/obj/item/rogueweapon/sword/long/heirloom/royal
+	name = "royal heirloom longsword"
+	desc = "A very old steel longsword that has passed down through generations of Helmsguard nobility."
+
+
 /obj/item/rogueweapon/sword/long/heirloom/getonmobprop(tag)
 	. = ..()
 	if(tag)
