@@ -97,7 +97,7 @@
 		for(var/datum/reagent/path as anything in age_times)
 			html += "After aging for [age_times[path] * 0.1] Seconds, becomes [initial(path.name)].<br>"
 	if(sell_value)
-		html += "A barrel sells for: [sell_value] mammons.<br>"
+		html += "A barrel sells for: [sell_value] groschens.<br>"
 
 	html += {"
 		</div>

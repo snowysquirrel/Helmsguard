@@ -325,7 +325,7 @@
 	var/list/difficulty_choices = list()
 	for(var/difficulty in difficulty_data)
 		var/deposit = difficulty_data[difficulty]["deposit"]
-		difficulty_choices["[difficulty] ([deposit] mammon deposit)"] = difficulty
+		difficulty_choices["[difficulty] ([deposit] groschens deposit)"] = difficulty
 
 	var/selection = input(user, "Select quest difficulty (deposit required)", src) as null|anything in difficulty_choices
 	if(!selection)
@@ -336,7 +336,7 @@
 	var/deposit = difficulty_data[actual_difficulty]["deposit"]
 
 	if(SStreasury.bank_accounts[user] < deposit)
-		say("Insufficient balance funds. You need [deposit] mammons in your meister.")
+		say("Insufficient balance funds. You need [deposit] groschens in your meister.")
 		return
 
 	var/list/type_choices = list(
@@ -486,8 +486,8 @@
 
 	if(reward > 0)
 		say(reward != original_reward ? \
-			"Your handler assistance-increased reward of [reward] mammons has been dispensed! The difference is [reward - original_reward] mammons." : \
-			"Your reward of [reward] mammons has been dispensed.")
+			"Your handler assistance-increased reward of [reward] groschens has been dispensed! The difference is [reward - original_reward] groschens." : \
+			"Your reward of [reward] groschens has been dispensed.")
 
 /obj/structure/roguemachine/noticeboard/proc/abandon_quest(mob/user)
 	var/obj/item/paper/scroll/quest/abandoned_scroll = locate() in input_point
@@ -521,12 +521,12 @@
 			SStreasury.bank_accounts[receiver] += refund
 			SStreasury.treasury_value -= refund
 			SStreasury.log_entries += "-[refund] from treasury (quest refund to volunteer)"
-			to_chat(user, span_notice("You receive a [refund] mammon refund for abandoning the quest."))
+			to_chat(user, span_notice("You receive a [refund] groschen refund for abandoning the quest."))
 		else
 			cash_in(refund)
 			SStreasury.treasury_value -= refund
 			SStreasury.log_entries += "-[refund] from treasury (quest refund)"
-			to_chat(user, span_notice("Your refund of [refund] mammon has been dispensed."))
+			to_chat(user, span_notice("Your refund of [refund] groschen has been dispensed."))
 
 	// Clean up quest items
 	if(quest.quest_type == QUEST_COURIER && quest.target_delivery_item)
@@ -568,7 +568,7 @@
 		report_text += "<b>Type:</b> [quest.quest_type].<br>"
 		report_text += "<b>Difficulty:</b> [quest.quest_difficulty].<br>"
 		report_text += "<b>Last Known Location:</b> [quest_area ? quest_area.name : "Unknown Location"].<br>"
-		report_text += "<b>Reward:</b> [quest.reward_amount] mammons.<br><br>"
+		report_text += "<b>Reward:</b> [quest.reward_amount] groschens.<br><br>"
 
 	report.info = report_text
 	say("Quest report printed.")

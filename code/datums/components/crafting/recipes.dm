@@ -138,7 +138,7 @@
 		html += "<strong class=class='scroll'>start the process next to a wall</strong> <br>"
 
 	if(final_sellprice)
-		html += "<strong class=class='scroll'>You can sell this for [final_sellprice] mammons at a normal quality</strong> <br>"
+		html += "<strong class=class='scroll'>You can sell this for [final_sellprice] groschens at a normal quality</strong> <br>"
 	else(
 		html += "<strong class=class='scroll'>This is worthless for export</strong> <br>"
 	)

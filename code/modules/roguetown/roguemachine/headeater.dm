@@ -55,6 +55,6 @@
 				eathead(I, user, TRUE, FALSE)
 	if(topay > 0)
 		topay = round(topay)
-		to_chat(user, span_danger("The [src] spits out [topay] mammons!"))
+		to_chat(user, span_danger("The [src] spits out [topay] groschens!"))
 		budget2change(topay, user)
 		topay = 0

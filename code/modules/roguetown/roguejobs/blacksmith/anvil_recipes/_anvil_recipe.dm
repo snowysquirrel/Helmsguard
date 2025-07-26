@@ -204,7 +204,7 @@
 		html += "<strong class=class='scroll'>and then you get</strong> <br> [icon2html(new created_item, user)] <br> [initial(created_item.name)]<br>"
 
 	if(created_item.sellprice)
-		html += "<strong class=class='scroll'>You can sell this for [created_item.sellprice] mammons at a normal quality</strong> <br>"
+		html += "<strong class=class='scroll'>You can sell this for [created_item.sellprice] groschens at a normal quality</strong> <br>"
 	else
 		html += "<strong class=class='scroll'>This is worthless for export</strong> <br>"
 

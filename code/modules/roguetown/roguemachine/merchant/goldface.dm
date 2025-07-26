@@ -252,7 +252,7 @@
 		contents = "<center>SILVERFACE - In the name of greed.<BR>"
 	else
 		contents = "<center>GOLDFACE - In the name of greed.<BR>"
-	contents += "<a href='?src=[REF(src)];change=1'>MAMMON LOADED:</a> [budget]<BR>"
+	contents += "<a href='?src=[REF(src)];change=1'>GROSCHEN LOADED:</a> [budget]<BR>"
 
 	var/mob/living/carbon/human/H = user
 	if(H.job in list("Merchant","Shophand"))

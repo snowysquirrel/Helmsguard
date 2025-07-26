@@ -369,7 +369,7 @@
 		info += "<ul>"
 		for(var/atom/type_path as anything in sell_prices)
 			var/list/prices = sell_prices[type_path]
-			info += "<li style='color:#06080F;font-size:9px;font-family:\"Segoe Script\"'>[initial(type_path.name)] [prices[1]] > [prices[2]] mammons</li><br/>"
+			info += "<li style='color:#06080F;font-size:9px;font-family:\"Segoe Script\"'>[initial(type_path.name)] [prices[1]] > [prices[2]] groschens</li><br/>"
 		info += "</ul>"
 
 	info += "<br/></font>"
