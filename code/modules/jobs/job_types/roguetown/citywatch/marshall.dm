@@ -43,6 +43,7 @@
 	..() 
 
 	head = /obj/item/clothing/head/roguetown/helmet/sallet
+	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/marshall
 	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/sheriff
 	cloak = /obj/item/clothing/cloak/stabard/surcoat/marshall
@@ -56,7 +57,7 @@
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	id = /obj/item/scomstone
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1,  /obj/item/storage/keyring/sheriff = 1)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1,  /obj/item/storage/keyring/sheriff = 1, /obj/item/storage/belt/rogue/pouch/coins/rich = 1)
 	if(H.mind)
 		
 		H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
