@@ -171,3 +171,16 @@
 	spookynight = SPOOKY_DUNGEON
 	converted_type = /area/rogue/outdoors/dungeon1
 	ceiling_protected = TRUE
+
+/area/rogue/under/cave/elemental_cave
+	name = "Elemental Cave"
+	icon_state = "caverogue"
+	ambientsounds = AMB_GENCAVE
+	ambientnight = AMB_GENCAVE
+	spookysounds = SPOOKY_CAVE
+	spookynight = SPOOKY_CAVE
+	first_time_text = "THE SOUTHGUARD CAVERNS"
+	discover_sound = 'sound/misc/area_2.ogg'
+	droning_sound = 'sound/music/area/somethingevile.ogg'
+	converted_type = /area/rogue/outdoors/dungeon1
+	ceiling_protected = TRUE
