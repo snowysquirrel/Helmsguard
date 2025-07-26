@@ -6103,12 +6103,6 @@
 "dDp" = (
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/woods/dread)
-"dDr" = (
-/obj/structure/stairs{
-	dir = 1
-	},
-/turf/open/floor/rogue/ruinedwood/nosmooth/wooden_floor2turned,
-/area/rogue/indoors/town/church)
 "dDE" = (
 /obj/structure/mirror,
 /turf/open/floor/rogue/ruinedwood{
@@ -15859,7 +15853,9 @@
 	locked = 1;
 	lockid = "church"
 	},
-/turf/open/floor/rogue/blocks/stone,
+/turf/open/floor/rogue/blocks/stone/stonepattern3{
+	dir = 4
+	},
 /area/rogue/indoors/town/church/basement)
 "jbL" = (
 /obj/effect/decal/cobbleedge{
@@ -21371,7 +21367,9 @@
 /area/rogue/indoors/town/manor)
 "mpD" = (
 /obj/structure/bars/cemetery,
-/turf/open/floor/rogue/blocks/stone,
+/turf/open/floor/rogue/blocks/stone/stonepattern3{
+	dir = 4
+	},
 /area/rogue/indoors/town/church/basement)
 "mpH" = (
 /obj/effect/decal/border/stone{
@@ -425454,8 +425452,8 @@ dLY
 dLY
 oOu
 qQt
-qQt
-qQt
+fCq
+oOu
 qQt
 oOu
 uAU
@@ -525151,8 +525149,8 @@ jER
 jER
 oOu
 nSG
-xEj
-dDr
+nSG
+nSG
 jUl
 oOu
 bAZ
