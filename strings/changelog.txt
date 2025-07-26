@@ -20,3 +20,4 @@
 - Vaquero class reactivated
 - Grudgebearer armor max integrity set to 4000
 - Swashbuckler now has a pistol with expert firearms skill
+- Added musketeer class for adventurer ranger

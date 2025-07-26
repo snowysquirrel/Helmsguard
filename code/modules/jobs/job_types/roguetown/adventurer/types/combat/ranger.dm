@@ -14,7 +14,7 @@
 /datum/outfit/job/roguetown/adventurer/ranger/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_blindness(-3)
-	var/classes = list("Sentinel","Assassin","Bombadier","Biome Wanderer")
+	var/classes = list("Sentinel","Assassin","Bombadier","Biome Wanderer", "Musketeer")
 	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 
 	switch(classchoice)
@@ -219,4 +219,41 @@
 			H.change_stat("perception", 2) // Look far, but not too far.
 			H.change_stat("endurance", 2)
 			H.change_stat("intelligence", 1) // Adaptive to their surroundings.
-
+		if("Musketeer")
+			to_chat(H, span_warning("You've spent years training with firearms, you know how to load and fire them faster than any common rabble"))
+			shoes = /obj/item/clothing/shoes/roguetown/boots
+			neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+			head = /obj/item/clothing/head/roguetown/helmet/tricorn
+			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+			gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
+			cloak = /obj/item/clothing/cloak/raincloak/mortus
+			pants = /obj/item/clothing/under/roguetown/trou/leather
+			armor = /obj/item/clothing/suit/roguetown/armor/leather/cuirass
+			shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
+			belt = /obj/item/storage/belt/rogue/leather
+			backr = /obj/item/gun/ballistic/arquebus
+			backl = /obj/item/storage/backpack/rogue/satchel
+			beltr = /obj/item/flashlight/flare/torch/lantern
+			beltl = /obj/item/ammopouch/bullets
+			backpack_contents = list(
+				/obj/item/rogueweapon/huntingknife/idagger/steel = 1,
+				/obj/item/powderflask = 1,
+				/obj/item/rogueweapon/scabbard/sheath = 1
+				)
+			H.adjust_skillrank(/datum/skill/combat/firearms, 4, TRUE)
+			H.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
+			H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+			H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+			H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+			H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+			H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
+			H.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE)
+			H.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)
+			H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
+			H.cmode_music = 'sound/music/combat_veteran.ogg'
+			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+			H.change_stat("constitution", 1)
+			H.change_stat("perception", 2)
+			H.change_stat("intelligence", 2)
+			H.set_blindness(0)
+		
