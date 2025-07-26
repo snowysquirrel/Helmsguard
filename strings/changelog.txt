@@ -1,7 +1,3 @@
-- Warscholar mercenary class renenabled
-- Loots from hostile carbon skeletons and ambient corpses have a high probabiltiy of being "tainted"
-- Tainted items only have half of the maximum integrity of its non-tainted counterpart.
-- Simple skeletons now drop decrepit loots only.
 - Manatarms latespawns on the carriage only.
 - Apothecary and Blacksmith can now access their peddler.
 - Added Arquebusier class for Man-at-Arms
@@ -16,3 +12,6 @@
 - Added cheat tunnel at Fallen Gate
 - Added mana fountain at hotspring
 - Added lava in the western caves.
+- Marshall no longer gets advanced classes, they spawn with Justice, Marshall jupon and brigandine.
+- Marshall gets expert firearms skill.
+- New elemental dungeon added in Dreadwood, THE SOUTHGUARD CAVERNS by Dino

@@ -6,7 +6,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = NOBLE_RACES_TYPES
+	allowed_races = RACES_ALL_KINDS
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 	display_order = JDO_MARSHAL
 	selection_color = JCOLOR_SOLDIER
@@ -44,15 +44,15 @@
 
 	head = /obj/item/clothing/head/roguetown/helmet/sallet
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/marshall
-	cloak = /obj/item/clothing/cloak/raincloak/furcloak/red
-	armor = /obj/item/clothing/suit/roguetown/armor/plate/half
+	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/sheriff
+	cloak = /obj/item/clothing/cloak/stabard/surcoat/marshall
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot
-	backr = /obj/item/rogueweapon/shield/buckler	
+	backr = /obj/item/rogueweapon/mace/cudgel/justice
 	backl = /obj/item/storage/backpack/rogue/satchel
-	beltr = /obj/item/rogueweapon/mace/cudgel
-	beltl = /obj/item/rogueweapon/sword
-	belt = /obj/item/storage/belt/rogue/leather/black
+	belt = /obj/item/storage/belt/rogue/leather/plaquegold
+	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
+	beltl = /obj/item/storage/keyring/sheriff
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	id = /obj/item/scomstone
@@ -64,7 +64,7 @@
 		H.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
 		H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
 		H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/firearms, 1, TRUE)
+		H.adjust_skillrank(/datum/skill/combat/firearms, 4, TRUE)
 		H.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/combat/slings, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
@@ -89,32 +89,6 @@
 	ADD_TRAIT(H, TRAIT_PERFECT_TRACKER, TRAIT_GENERIC)
 	H.verbs |= /mob/proc/haltyell
 	H.verbs |= list(/mob/living/carbon/human/proc/request_outlaw, /mob/living/carbon/human/proc/request_law, /mob/living/carbon/human/proc/request_law_removal, /mob/living/carbon/human/proc/request_purge)
-
-/datum/job/roguetown/marshal/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
-	. = ..()
-	if(ishuman(L))
-		var/mob/living/carbon/human/H = L
-		H.advsetup = 1
-		H.invisibility = INVISIBILITY_MAXIMUM
-		H.become_blind("advsetup")
-
-/datum/advclass/marshal/classic
-	name = "Marshal"
-	tutorial = "You've spent your daes in the courts and garrisons of the city. You've studied the law tome from back to front and enforce your word with the iron hand of justice, and the iron mace in your hands. \
-	More men have spent days rotting in the dungeon than that Knight Commander could ever have claimed, and every person in the realm respects your authority in matters of law and order."
-	outfit = /datum/outfit/job/roguetown/marshal/classic
-
-	category_tags = list(CTAG_MARSHAL)
-
-/datum/outfit/job/roguetown/marshal/classic/pre_equip(mob/living/carbon/human/H)
-	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/sheriff
-	cloak = /obj/item/clothing/cloak/stabard/surcoat/marshall
-	backr = /obj/item/rogueweapon/mace/cudgel/justice
-	belt = /obj/item/storage/belt/rogue/leather/plaquegold
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
-	beltl = /obj/item/storage/keyring/sheriff
-	if(H.mind)
-		H.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
 
 /*
 /datum/advclass/marshal/kcommander
