@@ -9,7 +9,7 @@
 	classes = list("Treasure Hunter" = "You are a treasure hunter trained in hunting for valuables. Discern what is treasure or not, your fortune could be hidden anywhere.",
 					"Thief" = "You are a scoundrel and a thief. A master in getting into places you shouldn't be and taking things that aren't rightfully yours.",
 					"Bard" = "You make your fortune in brothels, flop houses, and taverns – gaining fame for your songs and legends. If there is any truth to them, that is.",
-					"Swashbuckler" = "You are a daring rogue of the seas! Swashbucklers wield agile swordplay and acrobatic prowess - fighting dirty to outmaneuver foes with flair.")
+					"Swashbuckler" = "You are a daring rogue of the seas! Swashbucklers wield agile swordplay, expert firearms skill and acrobatic prowess - fighting dirty to outmaneuver foes with flair.")
 
 /datum/outfit/job/roguetown/adventurer/rogue/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -215,14 +215,14 @@
 			shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 			neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-			beltl = /obj/item/flashlight/flare/torch/lantern
+			beltl = /obj/item/ammopouch/bullets
 			beltr = /obj/item/rogueweapon/sword/cutlass
+			l_hand = /obj/item/gun/ballistic/arquebus_pistol
 			backpack_contents = list(
 				/obj/item/bomb = 1,
 				/obj/item/lockpick = 1,
-				/obj/item/rogueweapon/huntingknife/idagger/steel/parrying = 1,
-				/obj/item/recipe_book/survival = 1,
-				/obj/item/rogueweapon/scabbard/sheath = 1
+				/obj/item/rogueweapon/scabbard/sheath = 1,
+				/obj/item/powderflask = 1,
 				)
 			H.cmode_music = 'sound/music/jukeboxes/oldschool/Sea_Shanty2.ogg'
 			H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
@@ -231,6 +231,7 @@
 			H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+			H.adjust_skillrank(/datum/skill/combat/firearms, 4, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)

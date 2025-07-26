@@ -1,5 +1,3 @@
-- Manatarms latespawns on the carriage only.
-- Apothecary and Blacksmith can now access their peddler.
 - Added Arquebusier class for Man-at-Arms
 - Ported gunsmithing recipes from Solaris
 - Iron spheres can be smithed using the anvil in a batch of 5 per 1 iron bar
@@ -15,3 +13,10 @@
 - Marshall no longer gets advanced classes, they spawn with Justice, Marshall jupon and brigandine.
 - Marshall gets expert firearms skill.
 - New elemental dungeon added in Dreadwood, THE SOUTHGUARD CAVERNS by Dino
+- Marshall spawns with rich pouch in their backpack
+- Duke's arrival is announced with a cool sound
+- Duke's subclass Valiant Warrior spawns with a set of royal armor and a royal heirloom sword
+-- They gain heavy armor and medium armor trait
+- Vaquero class reactivated
+- Grudgebearer armor max integrity set to 4000
+- Swashbuckler now has a pistol with expert firearms skill
