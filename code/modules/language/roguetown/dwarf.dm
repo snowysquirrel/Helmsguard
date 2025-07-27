@@ -1,6 +1,6 @@
 /datum/language/dwarvish
-	name = "Khazul"
-	desc = "The common tongue of both Zium and Zhan-Khazad; the dwarven language is only engraved in consonants, written vowels being considered product of illiteracy."
+	name = "Dwarvish"
+	desc = "The common tongue of the hardy stunted dwarvenfolk; the dwarven language is only engraved in consonants, written vowels being considered product of illiteracy."
 	speech_verb = "rumbles"
 	ask_verb = "asks"
 	exclaim_verb = "shouts"

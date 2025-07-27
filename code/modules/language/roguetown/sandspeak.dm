@@ -1,6 +1,6 @@
 /datum/language/celestial
-	name = "Alasturian"
-	desc = "The luxurious tongue of the bright-elves living east of the Sea of Tears, the slightest twist in tone separates truth from lies."
+	name = "Assarian"
+	desc = "An ancient language spoken by the nomadic tribes of the desert, its words are as fluid as the sands and as sharp as the sun's rays."
 	speech_verb = "says"
 	ask_verb = "asks"
 	exclaim_verb = "yells"

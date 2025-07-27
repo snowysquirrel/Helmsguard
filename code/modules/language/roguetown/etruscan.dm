@@ -1,6 +1,6 @@
 /datum/language/etruscan
-	name = "Tyrian"
-	desc = "The language of Tyre, man's empire and civilization, as eternal as bronze and as sharp as iron."
+	name = "Etruscan"
+	desc = "A language that originated from an ancient and mighty empire that is said to be carved from marble, its tongue is as eternal as bronze and as sharp as iron."
 	speech_verb = "remarks"
 	ask_verb = "inquires"
 	exclaim_verb = "asserts"
