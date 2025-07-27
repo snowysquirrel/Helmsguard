@@ -117,7 +117,7 @@
 	H.change_stat("intelligence", 1)
 
 	H.adjust_blindness(-3)
-	var/weapons = list("Halberd","Bardische","Eaglebeak")
+	var/weapons = list("Halberd","Bardische","Eaglebeak", "Partizan")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
@@ -296,12 +296,14 @@
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
-		if("Longsword + Crossbow")
-			beltl = /obj/item/rogueweapon/sword/long
-			beltr = /obj/item/quiver/bolts
-			backl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
-		if("Billhook + Recurve Bow")
-			r_hand = /obj/item/rogueweapon/spear/billhook
+		if("Battle Axe")
+			beltl = /obj/item/rogueweapon/stoneaxe/battle
+			backl = /obj/item/rogueweapon/shield/heater
+		if("Steel Great Axe")
+			r_hand = /obj/item/rogueweapon/greataxe/steel
+			backl = /obj/item/gwstrap
+		if("Great Double-Headed Axe")
+			r_hand = /obj/item/rogueweapon/greataxe/steel/doublehead
 			backl = /obj/item/gwstrap
 
 	neck = /obj/item/clothing/neck/roguetown/bevor
@@ -385,23 +387,14 @@
 		if("Goden Mace")
 			r_hand = /obj/item/rogueweapon/mace/goden
 			backl = /obj/item/gwstrap
-			beltr = /obj/item/quiver/arrows
-			beltl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 		
-		if("Sabre + Buckler")
-			beltl = /obj/item/rogueweapon/sword/sabre
-			backl = /obj/item/rogueweapon/shield/buckler
+		if("Steel Warhammer")
+			r_hand = /obj/item/rogueweapon/mace/warhammer/steel
+			backl = /obj/item/rogueweapon/shield/heater
 
-		if("Whip + Crossbow")
-			beltl = /obj/item/rogueweapon/whip
-			backl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
-			beltr = /obj/item/quiver/bolts
-		
-		if("Greataxe + Sling")
-			H.adjust_skillrank(/datum/skill/combat/slings, 4, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/axes, 4, TRUE)
-			r_hand = /obj/item/rogueweapon/greataxe/steel
-			backl = /obj/item/gwstrap
+		if("Flail")
+			r_hand = /obj/item/rogueweapon/flail
+			backl = /obj/item/rogueweapon/shield/heater
 
 	neck = /obj/item/clothing/neck/roguetown/bevor
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
