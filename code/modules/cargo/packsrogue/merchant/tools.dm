@@ -177,10 +177,11 @@
 	cost = 20
 	contains = list(/obj/item/cooking/pan)
 
+/* which fucking retard thought this was a good idea?
 /datum/supply_pack/rogue/tools/shopkeyy
 	name = "Spare Shopkey"
 	cost = 10
-	contains = list(/obj/item/roguekey/sund/sund_shop)
+	contains = list(/obj/item/roguekey/sund/sund_shop)*/
 
 /datum/supply_pack/rogue/tools/alch_bottle
 	name = "Alchemy Bottle"
