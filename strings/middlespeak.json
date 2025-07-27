@@ -284,7 +284,6 @@
         "true": "treu",
         "truth": "trouthe",
         "human": "humayne",
-        "human": "humain",
         "elf": "elve",
         "elfs": "elves",
         "dwarf": "dwer",
@@ -320,6 +319,9 @@
     "end": {
 
     },
+	"multiword": {
+
+	},
     "syllable": {
 
     }
