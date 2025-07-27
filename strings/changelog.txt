@@ -1,5 +1,3 @@
-- Added Arquebusier class for Man-at-Arms
-- Ported gunsmithing recipes from Solaris
 - Iron spheres can be smithed using the anvil in a batch of 5 per 1 iron bar
 - Gunparts can be made by an artificer
 - Iron breastplate has been reclassified as light armor
@@ -21,3 +19,6 @@
 - Grudgebearer armor max integrity set to 4000
 - Swashbuckler now has a pistol with expert firearms skill
 - Added musketeer class for adventurer ranger
+- Restored selectable accents
+- Restored all the languages from Roguetown
+- Fixed knight loadout for School of the Axes and School of the Maces

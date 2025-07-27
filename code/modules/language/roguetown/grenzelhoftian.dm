@@ -1,6 +1,6 @@
 /datum/language/grenzelhoftian
-	name = "Eislersprech"
-	desc = "The mother-tongue of Eislers, a robust human language filled with hearty vowels and enthusiastic enunciation. It is notorious for its abuse of compound words."
+	name = "Grenzelprech"
+	desc = "The mother-tongue of Grenzels, a robust human language filled with hearty vowels and enthusiastic enunciation. It is notorious for its abuse of compound words."
 	speech_verb = "remarks"
 	ask_verb = "inquires"
 	exclaim_verb = "asserts"
