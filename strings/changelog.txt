@@ -22,3 +22,5 @@
 - Restored selectable accents
 - Restored all the languages from Roguetown
 - Fixed knight loadout for School of the Axes and School of the Maces
+- Add a new shortcut between the town and the monastery, east from the spawn carriage
+-- Beware of the goblin cave along the route
