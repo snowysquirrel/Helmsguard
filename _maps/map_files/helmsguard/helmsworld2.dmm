@@ -15634,6 +15634,10 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/churchmarble/nosmooth,
 /area/rogue/indoors/town/church)
+"ipH" = (
+/obj/machinery/light/rogue/firebowl/standing/blue,
+/turf/open/floor/rogue/dirt,
+/area/rogue/under/underdark)
 "ipR" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/mountains/scorned_highland)
@@ -40484,6 +40488,10 @@
 	dir = 8
 	},
 /area/rogue/outdoors/town/roofs/keep)
+"vLL" = (
+/obj/machinery/light/rogue/firebowl/standing/blue,
+/turf/open/floor/rogue/dirt,
+/area/rogue/under/cave)
 "vMg" = (
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/general_loot_low/x3,
@@ -60966,7 +60974,7 @@ mtO
 mtO
 mtO
 mtO
-qXT
+oNZ
 qXT
 qXT
 qXT
@@ -61431,7 +61439,7 @@ mtO
 mtO
 mtO
 mtO
-sAR
+ipH
 sAR
 sAR
 qXT
@@ -61854,7 +61862,7 @@ mtO
 xxE
 xxE
 qXT
-qXT
+oNZ
 qXT
 qXT
 qXT
@@ -65032,7 +65040,7 @@ mtO
 mtO
 mtO
 xxE
-qXT
+oNZ
 sAR
 sAR
 sAR
@@ -68209,7 +68217,7 @@ qXT
 qXT
 qXT
 qXT
-qXT
+oNZ
 mtO
 mtO
 mtO
@@ -74537,7 +74545,7 @@ mtO
 mtO
 mtO
 mtO
-qXT
+oNZ
 iZo
 iZo
 mtO
@@ -164017,7 +164025,7 @@ tbt
 kXW
 sqg
 sqg
-tbt
+vLL
 tbt
 tbt
 mSj
@@ -164036,7 +164044,7 @@ sqg
 sqg
 sqg
 sqg
-sqg
+nwq
 sqg
 sqg
 sqg
@@ -168532,7 +168540,7 @@ sqg
 sqg
 sqg
 sqg
-tbt
+vLL
 tbt
 tbt
 tbt
@@ -172162,7 +172170,7 @@ hdO
 hdO
 sqg
 sqg
-sqg
+nwq
 sqg
 bRF
 bRF
@@ -431133,7 +431141,7 @@ daZ
 daZ
 daZ
 lne
-nBn
+uzo
 uxY
 rCP
 nUL

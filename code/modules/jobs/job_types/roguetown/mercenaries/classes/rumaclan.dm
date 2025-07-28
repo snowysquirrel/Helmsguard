@@ -22,7 +22,7 @@
 			H.set_blindness(0)
 			to_chat(H, span_warning("You are a foot soldier in the mercenary armies of the Hasikobe Clan. You are issued with a blade, and provided with the traditional tattoos befitting a soldier of the Hasikobe clan, but not much else. Nevertheless, your duty is to bring honour and coin to the clan name- even if the other Daimyos do not see the Hasikobe that way."))
 			belt = /obj/item/storage/belt/rogue/leather
-			beltr = /obj/item/rogueweapon/scabbard/kazengun/steel
+			beltr = /obj/item/rogueweapon/scabbard/sword/kazengun/steel
 			beltl = /obj/item/rogueweapon/sword/sabre/mulyeog/rumahench
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/eastshirt2
 			cloak = /obj/item/clothing/cloak/eastcloak1
