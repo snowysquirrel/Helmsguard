@@ -139,3 +139,6 @@
 
 	/// Whether our FOV cone is overridden to be hidden. Simple bool.
 	var/viewcone_override
+
+	// tainting
+	var/tainted_chance = 0	//The probability that the equipment spawned will be tainted

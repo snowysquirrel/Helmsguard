@@ -744,6 +744,13 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 	if(dna?.species)
 		dna.species.after_creation(src)
 	roll_stats()
+	for(var/obj/item/W in contents)	//TAINTED CODES
+		if(prob(tainted_chance))
+			W.max_integrity = W.max_integrity/2
+			W.obj_integrity = W.max_integrity/2
+			W.tainted = TRUE
+			W.color = "#554338"
+			W.name = "Tainted [W.name] "
 
 /mob/dead/new_player/proc/transfer_character()
 	. = new_character

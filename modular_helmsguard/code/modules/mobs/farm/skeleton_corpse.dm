@@ -623,3 +623,12 @@
 
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC);
 	H.grant_language(/datum/language/grenzelhoftian)
+
+//OUTFIT DEAD JESTER
+/datum/outfit/job/roguetown/npc/skeleton/dead/jester/pre_equip(mob/living/carbon/human/H)
+	shoes = /obj/item/clothing/shoes/roguetown/jester
+	pants = /obj/item/clothing/under/roguetown/tights
+	armor = /obj/item/clothing/suit/roguetown/shirt/jester
+	belt = /obj/item/storage/belt/rogue/leather
+	head = /obj/item/clothing/head/roguetown/jester
+	neck = /obj/item/clothing/neck/roguetown/coif
