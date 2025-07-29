@@ -104,6 +104,14 @@
 		ignore_grab ||= TRUE
 	return ..(ignore_grab = ignore_grab)
 
+/mob/living/carbon/human/species/npc/deadite/handle_combat()
+	if(mode == NPC_AI_HUNT)
+		if(prob(30)) // do not make this big or else they NEVER SHUT UP
+			emote(pick("scream", "rage"))
+	. = ..()
+
+
+
 /mob/living/carbon/human/proc/deadite_get_aimheight(victim)
 	if(!(mobility_flags & MOBILITY_STAND))
 		return rand(1, 2) // Bite their ankles!
