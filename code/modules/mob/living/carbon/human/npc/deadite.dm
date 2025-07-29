@@ -8,6 +8,9 @@
 	flee_in_pain = FALSE
 	ambushable = FALSE
 	wander = TRUE
+	tainted_chance = 80 //The probability that the equipment spawned will be tainted
+	faction = list("undead", "station")
+	var/outfit = /datum/outfit/job/roguetown/vagrant
 
 /mob/living/carbon/human/species/npc/deadite/Initialize()
 	. = ..()
@@ -21,7 +24,14 @@
 		/datum/species/halforc,
 		/datum/species/tieberian,
 	)
-
+	outfit = pickweight(list(/datum/outfit/job/roguetown/vagrant = 10,
+	/datum/outfit/job/roguetown/npc/skeleton/dead/adventurer = 5,
+	/datum/outfit/job/roguetown/npc/skeleton/dead/manatarms = 5,
+	/datum/outfit/job/roguetown/npc/skeleton/dead/freitrupp = 5,
+	/datum/outfit/job/roguetown/npc/skeleton/dead/noble = 5,
+	/datum/outfit/job/roguetown/npc/skeleton/dead/peasant = 8,
+	/datum/outfit/job/roguetown/npc/skeleton/dead/jester = 3,
+	))
 	set_species(pick(species))
 	gender = pick(MALE, FEMALE)
 
@@ -32,9 +42,58 @@
 	src.mind_initialize()
 	mob_biotypes |= MOB_UNDEAD
 	var/datum/zombie_antag = src.mind.add_antag_datum(/datum/antagonist/zombie, team = FALSE, admin_panel = TRUE)
-	equipOutfit(new /datum/outfit/job/roguetown/deadite)
+	equipOutfit(outfit)
 	//Make sure deadite NPCs don't show up in the antag listings
 	GLOB.antagonists -= zombie_antag
+
+
+	var/obj/item/bodypart/head/head = get_bodypart(BODY_ZONE_HEAD)
+	var/hairf = pick(list(/datum/sprite_accessory/hair/head/himecut, 
+						/datum/sprite_accessory/hair/head/countryponytailalt, 
+						/datum/sprite_accessory/hair/head/stacy, 
+						/datum/sprite_accessory/hair/head/kusanagi_alt,
+						/datum/sprite_accessory/hair/head/largebun,
+						/datum/sprite_accessory/hair/head/drillhair,
+						/datum/sprite_accessory/hair/head/longemo,
+						/datum/sprite_accessory/hair/head/ponytail3,))
+	var/hairm = pick(list(/datum/sprite_accessory/hair/head/ponytailwitcher, 
+						/datum/sprite_accessory/hair/head/dave, 
+						/datum/sprite_accessory/hair/head/emo, 
+						/datum/sprite_accessory/hair/head/spiky3,
+						/datum/sprite_accessory/hair/head/parted,
+						/datum/sprite_accessory/hair/head/shorthair3,
+						/datum/sprite_accessory/hair/head/sabitsuki))
+	var/beard = pick(list(/datum/sprite_accessory/hair/facial/fullbeard,
+						/datum/sprite_accessory/hair/facial/shaved, 
+						/datum/sprite_accessory/hair/facial/croppedfullbeard, 
+						/datum/sprite_accessory/hair/facial/longbeard, 
+						/datum/sprite_accessory/hair/facial/fiveoclock,
+						/datum/sprite_accessory/hair/facial/threeoclock,
+						/datum/sprite_accessory/hair/facial/manly))
+
+	var/datum/bodypart_feature/hair/head/new_hair = new()
+	var/datum/bodypart_feature/hair/facial/new_beard = new()
+
+	if(gender == FEMALE)
+		new_hair.set_accessory_type(hairf, null, src)
+	else
+		new_hair.set_accessory_type(hairm, null, src)
+		new_beard.set_accessory_type(beard, null, src)
+
+	new_hair.accessory_colors = pick("#000000", "#5f5a40", "#6e3615")
+	new_hair.hair_color = new_hair.accessory_colors 
+	hair_color = new_hair.accessory_colors 
+
+	new_beard.accessory_colors = new_hair.accessory_colors
+	new_beard.hair_color = new_hair.accessory_colors	
+
+	head.add_bodypart_feature(new_hair)
+	head.add_bodypart_feature(new_beard)
+
+	dna.update_ui_block(DNA_HAIR_COLOR_BLOCK)
+	dna.species.handle_body(src)
+
+	update_hair()
 	update_body()
 
 /mob/living/carbon/human/species/npc/deadite/npc_try_backstep()
@@ -44,34 +103,6 @@
 	if(!check_mouth_grabbed())
 		ignore_grab ||= TRUE
 	return ..(ignore_grab = ignore_grab)
-
-/datum/outfit/job/roguetown/deadite/pre_equip(mob/living/carbon/human/H)
-	..()
-	head = null
-	beltr = null
-	beltl = null
-	if(prob(30))
-		cloak = /obj/item/clothing/cloak/raincloak/brown
-	else
-		cloak = null
-	if(prob(10))
-		gloves = /obj/item/clothing/gloves/roguetown/fingerless
-	else
-		gloves = null
-
-	if(H.gender == FEMALE)
-		armor = /obj/item/clothing/suit/roguetown/shirt/rags
-	else
-		armor = null
-		pants = /obj/item/clothing/under/roguetown/tights/vagrant
-		if(prob(50))
-			pants = /obj/item/clothing/under/roguetown/tights/vagrant/l
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/vagrant
-		if(prob(50))
-			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/vagrant/l
-
-	r_hand = null
-	l_hand = null
 
 /mob/living/carbon/human/proc/deadite_get_aimheight(victim)
 	if(!(mobility_flags & MOBILITY_STAND))
