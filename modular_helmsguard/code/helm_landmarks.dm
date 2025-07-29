@@ -20,7 +20,9 @@
 	name = "Apprentice"
 	icon_state = "arrow"
 
-
+/obj/effect/landmark/start/manatarms
+	name = "Apprentice"
+	icon_state = "arrow"
 ///////////////////////
 /* LATEJOIN HELMSGUARD */
 ///////////////////////

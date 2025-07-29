@@ -164,7 +164,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/magician
-	name = "Court Magician"
+	name = "Archmage"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/physician
@@ -176,7 +176,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/manorguardsman
-	name = "Man at Arms"
+	name = "Man-at-Arms"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/bogmaster
