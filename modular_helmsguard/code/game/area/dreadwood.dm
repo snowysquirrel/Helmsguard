@@ -36,6 +36,7 @@
 	location_name = "Somewhere in Dreadwood"
 
 
+
 /// CHURCH
 
 
@@ -103,3 +104,52 @@
 	droning_sound_night = 'sound/music/area/dreadwood_night.ogg'
 	location_name = "Mercenary Camp"
 */
+
+// FETID MIRE
+/area/rogue/outdoors/woods/dread/fetid_mire
+	name = "Fetid Mire"
+	icon = 'modular_helmsguard/icons/turf/dreadareas.dmi'
+	icon_state = "fetidmire"
+	discover_sound = 'sound/misc/area_2.ogg'
+	ambientsounds = AMB_BOGDAY
+	ambientnight = AMB_BOGNIGHT
+	spookysounds = SPOOKY_FROG
+	spookynight = SPOOKY_GEN
+	droning_sound = 'sound/music/area/dreadwood.ogg'
+	droning_sound_dusk = 'sound/music/area/dreadwood.ogg'
+	droning_sound_night = 'sound/music/area/dreadwood_night.ogg'
+	location_name = "Fetid Mire"
+	first_time_text = "FETID MIRE"
+	converted_type = /area/rogue/indoors/shelter/woods/dread
+	ambush_mobs = list(
+				/mob/living/simple_animal/hostile/retaliate/rogue/saiga/undead= 30,
+				/mob/living/simple_animal/hostile/retaliate/rogue/wolf_undead = 20,
+				/mob/living/simple_animal/hostile/rogue/skeleton/axe = 40,)
+
+// SCORNED HIGHLAND
+/area/rogue/outdoors/mountains/scorned_highland
+	name = "Scorned Highland"
+	icon = 'modular_helmsguard/icons/turf/dreadareas.dmi'
+	icon_state = "highland"
+	discover_sound = 'sound/misc/area_3.ogg'
+	ambientsounds = AMB_MOUNTAIN
+	ambientnight = AMB_MOUNTAIN
+	spookysounds = SPOOKY_FROG
+	spookynight = SPOOKY_FOREST
+	droning_sound = 'sound/music/area/dreadwood.ogg'
+	droning_sound_dusk = 'sound/music/area/dreadwood.ogg'
+	droning_sound_night = 'sound/music/area/dreadwood_night.ogg'
+	location_name = "Scorned Highland"
+	first_time_text = "SCORNED HIGHLAND"
+	converted_type = /area/rogue/indoors/shelter/mountains/scorned_highland
+	ambush_mobs = list(
+				/mob/living/simple_animal/hostile/retaliate/rogue/minotaur/axe= 30,
+				/mob/living/simple_animal/hostile/retaliate/rogue/minotaur/axe/female = 30,
+				/mob/living/simple_animal/hostile/retaliate/rogue/minotaur = 30,
+				/mob/living/simple_animal/hostile/retaliate/rogue/minotaur/female = 30,)
+
+/area/rogue/indoors/shelter/mountains/scorned_highland
+	icon_state = "mountains"
+	droning_sound = 'sound/music/area/townstreets.ogg'
+	droning_sound_dusk = 'sound/music/area/septimus.ogg'
+	droning_sound_night = 'sound/music/area/sleeping.ogg'
