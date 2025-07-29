@@ -18,7 +18,7 @@
 	selection_color = JCOLOR_RABBLE
 	display_order = JDO_BANDIT
 	announce_latejoin = FALSE
-	min_pq = 0
+	min_pq = 6
 	max_pq = null
 	round_contrib_points = 5
 
@@ -60,7 +60,7 @@
 
 // Changed up proc from Wretch to suit bandits bit more
 /proc/bandit_select_bounty(mob/living/carbon/human/H)
-	var/bounty_poster = input(H, "Who placed a bounty on you?", "Bounty Poster") as anything in list("The Justiciary of Azuria", "The Grenzelhoftian Holy See")
+	var/bounty_poster = input(H, "Who placed a bounty on you?", "Bounty Poster") as anything in list("The Justiciary of Helmsguard", "The Grenzelhoftian Holy See")
 	var/bounty_severity = input(H, "How notorious are you?", "Bounty Amount") as anything in list("Small Fish", "Bay Butcher", "Helmsguardian Boogeyman")
 	var/bounty_total = rand(300, 600) // Just in case
 	switch(bounty_severity)
