@@ -96,6 +96,14 @@
 	update_hair()
 	update_body()
 
+	for(var/obj/item/W in contents)	//TAINTED CODES
+		if(prob(tainted_chance))
+			W.max_integrity = W.max_integrity/2
+			W.obj_integrity = W.max_integrity/2
+			W.tainted = TRUE
+			W.color = "#554338"
+			W.name = "Tainted [W.name] "
+
 /mob/living/carbon/human/species/npc/deadite/npc_try_backstep()
 	return FALSE // deadites cannot juke
 
