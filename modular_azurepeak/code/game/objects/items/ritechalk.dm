@@ -15,6 +15,8 @@
 	switch (user.patron?.type)
 		if(/datum/patron/inhumen/zizo)
 			ritechoices+="Rune of the Undead"
+		if(/datum/patron/inhumen/graggar)
+			ritechoices+="Rune of Violence"
 		if(/datum/patron/inhumen/matthios)
 			ritechoices+="Rune of Transaction"
 		if(/datum/patron/divine/astrata)
@@ -91,7 +93,7 @@
 			if(do_after(user, 30, src))
 				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
 				new /obj/structure/ritualcircle/abyssor(step_turf)
-		if("Rune of ZIZO")
+		if("Rune of the Undead")
 			to_chat(user,span_cultsmall("I begin inscribing the rune of Her Knowledge..."))
 			if(do_after(user, 30, src))
 				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
