@@ -20,8 +20,6 @@
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
-	beltl = /obj/item/quiver/arrows
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/heavy
 	backpack_contents = list(
 		/obj/item/bait = 1,
@@ -31,7 +29,6 @@
 		/obj/item/rope/chain = 1,
 		)
 	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
@@ -49,8 +46,8 @@
 	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 	H.adjust_skillrank(/datum/skill/labor/butchering, 1, TRUE)
 	H.cmode_music = 'sound/music/combat_poacher.ogg'
-	var/weapons = list("Dagger","Axe", "Cudgel", "My Bow Is Enough")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapons = list("Dagger","Axe", "Cudgel", "None")
+	var/weapon_choice = input("Choose your weapon.", "MELEE WEAPON") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Dagger")
@@ -63,9 +60,27 @@
 		if ("Cudgel")
 			H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
 			beltr = /obj/item/rogueweapon/mace/cudgel
-		if ("My Bow Is Enough")
+		if ("None")
 			H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
 			head = /obj/item/clothing/head/roguetown/duelhat
+	var/weapons_ranged = list("Bow", "Crossbow", "Arquebus", "None")
+	var/weapon_choice_ranged = input("Choose your weapon.", "RANGED WEAPON") as anything in weapons_ranged
+	switch(weapon_choice_ranged)
+		if("Bow")
+			H.adjust_skillrank(/datum/skill/combat/bows, 4, TRUE)
+			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
+			beltl = /obj/item/quiver/arrows
+		if("Crossbow")
+			H.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE)
+			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
+			beltl = /obj/item/quiver/bolts
+		if ("Arquebus")
+			H.adjust_skillrank(/datum/skill/combat/firearms, 4, TRUE)
+			backr = /obj/item/gun/ballistic/arquebus
+			beltl = /obj/item/ammopouch/bullets
+			r_hand = /obj/item/powderflask
+		if ("None")
+			H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
 	H.change_stat("endurance", 2)
 	H.change_stat("constitution", 1) // No straight upgrade to perception / speed to not stack one stat too high, but still stronger than MAA Skirm out of town.
 	H.change_stat("perception", 2)

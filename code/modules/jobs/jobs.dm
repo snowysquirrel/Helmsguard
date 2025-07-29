@@ -126,7 +126,8 @@ GLOBAL_LIST_INIT(rabble_positions, list(
 	"Adventurer",
 	"Pilgrim",
 	"Mercenary",
-	"Vagrant",
+	"Wretch",
+//	"Bandit",
 ))
 
 GLOBAL_LIST_INIT(mercenary_positions, list(

@@ -4,8 +4,8 @@
 	flag = WRETCH
 	department_flag = RABBLE
 	faction = "Station"
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 4
+	spawn_positions = 4
 	allowed_races = RACES_ALL_KINDS
 	tutorial = "Somewhere in your lyfe, you fell to the wrong side of civilization. Hounded by the consequences of your actions, you now threaten the peace of those who still heed the authority that condemned you."
 	outfit = null
@@ -14,7 +14,7 @@
 	selection_color = JCOLOR_RABBLE
 	
 	show_in_credits = FALSE
-	min_pq = 20
+	min_pq = 6
 	max_pq = null
 
 	obsfuscated_job = TRUE
@@ -44,8 +44,8 @@
 
 // Proc for wretch to select a bounty
 /proc/wretch_select_bounty(mob/living/carbon/human/H)
-	var/bounty_poster = input(H, "Who placed a bounty on you?", "Bounty Poster") as anything in list("The Justiciary of Azuria", "The Grenzelhoftian Holy See", "The Otavan Holy See")
-	if(bounty_poster == "The Justiciary of Azuria")
+	var/bounty_poster = input(H, "Who placed a bounty on you?", "Bounty Poster") as anything in list("The Justiciary of Helmsguard", "The Grenzelhoftian Holy See", "The Otavan Holy See")
+	if(bounty_poster == "The Justiciary of Helmsguard")
 		GLOB.outlawed_players += H.real_name
 	else
 		GLOB.excommunicated_players += H.real_name
@@ -61,6 +61,6 @@
 			bounty_total = rand(300, 400) // Let's not make it TOO profitable
 	var/my_crime = input(H, "What is your crime?", "Crime") as text|null
 	if (!my_crime)
-		my_crime = "crimes against the Crown"
+		my_crime = "crimes against the Province"
 	add_bounty(H.real_name, bounty_total, FALSE, my_crime, bounty_poster)
 	to_chat(H, span_danger("You are an Antagonistic role. You are expected, by choosing to be a wretch, to sow chaos and division amongst the town while driving a story. Failure to use proper gravitas for this may get you punished for Low Role Play standards."))
