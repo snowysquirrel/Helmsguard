@@ -156,6 +156,8 @@
 	var/fertilize_amount = 0
 	if(istype(attacking_item, /obj/item/ash))
 		fertilize_amount = 80
+	else if (istype(attacking_item, /obj/item/alch/bonemeal))
+		fertilize_amount = 80
 	else if (istype(attacking_item, /obj/item/natural/poo))
 		fertilize_amount = 150
 	else if (istype(attacking_item, /obj/item/compost))
