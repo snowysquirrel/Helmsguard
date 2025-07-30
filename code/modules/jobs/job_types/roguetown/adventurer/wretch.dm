@@ -14,7 +14,7 @@
 	selection_color = JCOLOR_RABBLE
 	
 	show_in_credits = FALSE
-	min_pq = 6
+	min_pq = 20
 	max_pq = null
 
 	obsfuscated_job = TRUE

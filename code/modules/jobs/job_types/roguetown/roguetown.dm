@@ -4,9 +4,9 @@
 /datum/job/roguetown/New()
 	. = ..()
 	if(give_bank_account)
-		for(var/X in GLOB.rabble_positions)
-			peopleiknow += X
-			peopleknowme += X
+//		for(var/X in GLOB.rabble_positions)
+//			peopleiknow += X
+//			peopleknowme += X
 		for(var/X in GLOB.mages_positions)
 			peopleiknow += X
 			peopleknowme += X
