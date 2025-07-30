@@ -26,3 +26,6 @@
 - Poacher can choose their ranged weapons (Bow, Crossbow, Arquebus)
 - Added the Scorned Highland and the Fetid Mire area
 - Adventurer spawn moved
+- Wretch PQ req bumped to 20
+- Lux revival skill requirement reduced to level 3
+- Ported Azure's RCP fix
