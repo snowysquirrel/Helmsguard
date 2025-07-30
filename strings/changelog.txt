@@ -1,7 +1,3 @@
-- Scabbards added to all combat roles
-- HEADEATER added under the Marshall's Tower, just behind the gallows scaffold.
-- Refactored firearms damage, they can now pierce plate armor and cause piercing damage
-- Reverted TGUI for anvil
 - Added cheat tunnel at Fallen Gate
 - Added mana fountain at hotspring
 - Added lava in the western caves.
@@ -29,3 +25,6 @@
 - Wretch PQ req bumped to 20
 - Lux revival skill requirement reduced to level 3
 - Ported Azure's RCP fix
+- You can now grind bone into bonemeal with mortar and pestle
+- You can also use millstone to grind bones into bonemeal
+- Bonemeal can be used as fertilizers
