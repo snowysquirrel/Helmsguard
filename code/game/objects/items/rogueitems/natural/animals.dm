@@ -131,6 +131,15 @@
 	gripped_intents = null
 	slot_flags = ITEM_SLOT_MOUTH|ITEM_SLOT_HIP
 	bundletype = /obj/item/natural/bundle/bone
+	mill_result = /obj/effect/spawner/lootdrop/bonemeal
+
+/obj/effect/spawner/lootdrop/bonemeal
+	name = "millbone spawner"
+	lootcount = 2
+	loot = list(
+		/obj/item/alch/bonemeal = 10
+	)
+
 
 /obj/item/natural/bone/Initialize()
 	. = ..()
