@@ -19,9 +19,9 @@
 							/obj/structure/flora/roguegrass/herb/random = 7,
 							/obj/structure/flora/roguetree/stump = 4,
 							/obj/structure/flora/roguetree/elder = 14,
+							/obj/structure/flora/roguetree/sapling = 20,
+							/obj/structure/flora/roguetree/stump/sapling = 16,
 							/obj/structure/flora/roguetree = 19,
-							/obj/structure/flora/roguetree/pine = 18,
-							/obj/structure/flora/roguetree/pine/dead = 15,
 							/obj/structure/flora/roguegrass/bush/random = 13,
 							/obj/structure/flora/roguegrass = 40,
 							/obj/structure/flora/roguegrass/maneater = 16,
@@ -55,8 +55,6 @@
 	allowed_turfs = list(/turf/open/floor/rogue/dirt,/turf/open/floor/rogue/grass,/turf/open/floor/rogue/grassred,/turf/open/floor/rogue/grassyel,/turf/open/floor/rogue/grasscold)
 	excluded_turfs = list(/turf/open/floor/rogue/dirt/road)
 	spawnableAtoms = list(/obj/structure/flora/roguetree/elder = 20,
-						/obj/structure/flora/roguetree/pine = 25,
-						/obj/structure/flora/roguetree/pine/dead = 15,
 						/obj/structure/flora/roguetree = 20,
 						/obj/structure/flora/roguegrass/bush/random = 41,
 						/obj/effect/spawner/lootdrop/ausflora = 50,)
@@ -68,9 +66,9 @@
 	excluded_turfs = list(/turf/open/floor/rogue/dirt/road)
 	spawnableAtoms = list(/obj/structure/flora/roguegrass = 40,
 						/obj/structure/flora/roguetree/elder = 17,
+						/obj/structure/flora/roguetree/sapling = 20,
+						/obj/structure/flora/roguetree/stump/sapling = 16,
 						/obj/structure/flora/roguetree = 19,
-						/obj/structure/flora/roguetree/pine = 25,
-						/obj/structure/flora/roguetree/pine/dead = 15,
 						/obj/structure/flora/roguegrass/bush/random = 31,
 						/obj/structure/flora/roguegrass/herb/random = 25,
 						/obj/effect/spawner/lootdrop/ausflora = 30,
