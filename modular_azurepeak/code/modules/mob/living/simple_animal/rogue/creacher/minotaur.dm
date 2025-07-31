@@ -74,9 +74,15 @@
 	icon_state = "MinotaurFem"
 	icon_living = "MinotaurFem"
 	icon_dead = "MinotaurFem_dead"
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 10,
-						/obj/item/natural/hide = 10, /obj/item/natural/bundle/bone/full = 2, /obj/item/natural/head/minotaur = 1)
-
+	base_intents = list(/datum/intent/simple/minotaur_unarmed)
+	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 2,
+						/obj/item/natural/hide = 2, /obj/item/natural/bundle/bone/full = 2) // Made in-line w/ troll..
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 3,
+						/obj/item/natural/hide = 3, /obj/item/natural/bundle/bone/full = 2,
+						/obj/item/natural/head/minotaur = 1)
+	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 5,
+						/obj/item/natural/hide = 5, /obj/item/natural/bundle/bone/full = 2,
+						/obj/item/natural/head/minotaur/female = 1)
 
 /mob/living/simple_animal/hostile/retaliate/rogue/minotaur/axe
 	loot = list(/obj/item/rogueweapon/greataxe/steel/doublehead/minotaur = 1) //Acquiring an axe from their cold, dead hands.
@@ -92,9 +98,15 @@
 	icon_state = "MinotaurFem_Axe"
 	icon_living = "MinotaurFem_Axe"
 	icon_dead = "MinotaurFem_dead"
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 10,
-						/obj/item/natural/hide = 10, /obj/item/natural/bundle/bone/full = 2, /obj/item/natural/head/minotaur = 1, /obj/item/rogueweapon/greataxe/steel/doublehead = 1)
-
+	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 2,
+						/obj/item/natural/hide = 2, /obj/item/natural/bundle/bone/full = 2) // Made in-line w/ troll..
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 3,
+						/obj/item/natural/hide = 3, /obj/item/natural/bundle/bone/full = 2,
+						/obj/item/natural/head/minotaur = 1)
+	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 5,
+						/obj/item/natural/hide = 5, /obj/item/natural/bundle/bone/full = 2,
+						/obj/item/natural/head/minotaur/female = 1)
+						
 /mob/living/simple_animal/hostile/retaliate/rogue/minotaur/death(gibbed)
 	..()
 	update_icon()
@@ -200,6 +212,7 @@
 	AIStatus = AI_ON
 	can_have_ai = TRUE
 
+/*
 // Dungeon-taur - Less health then normal.
 /mob/living/simple_animal/hostile/retaliate/rogue/minotaur/wounded
 	name = "Wounded Minotaur"
@@ -222,3 +235,4 @@
 	icon_living = "chainedminotaur"
 	icon_dead = "chainedminotaur_dead"
 	faction = list("orcs", "caves")
+*/

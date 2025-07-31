@@ -27,3 +27,4 @@
 - You can also use millstone to grind bones into bonemeal
 - Bonemeal can be used as fertilizers
 - Replaced pine trees with young trees (trees from Solaris but recolored)
+- Reverted minotaur sprites to older minotaur sprites

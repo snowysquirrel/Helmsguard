@@ -233,15 +233,17 @@
 			belt = /obj/item/storage/belt/rogue/leather
 			backr = /obj/item/gun/ballistic/arquebus
 			backl = /obj/item/storage/backpack/rogue/satchel
-			beltr = /obj/item/flashlight/flare/torch/lantern
+			beltr = /obj/item/rogueweapon/scabbard/sword
 			beltl = /obj/item/ammopouch/bullets
 			backpack_contents = list(
 				/obj/item/rogueweapon/huntingknife/idagger/steel = 1,
 				/obj/item/powderflask = 1,
-				/obj/item/rogueweapon/scabbard/sheath = 1
+				/obj/item/flashlight/flare/torch/lantern = 1,
 				)
+			l_hand = /obj/item/rogueweapon/sword/falchion
 			H.adjust_skillrank(/datum/skill/combat/firearms, 4, TRUE)
-			H.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
+			H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+			H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
