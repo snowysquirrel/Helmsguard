@@ -38485,10 +38485,6 @@
 /obj/effect/spawner/dungeons/maybechest,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/riftwatch)
-"vuQ" = (
-/obj/effect/landmark/start/artificer,
-/turf/open/transparent/openspace,
-/area/rogue/outdoors/mountains)
 "vvl" = (
 /obj/structure/flora/roguegrass,
 /obj/structure/flora/roguegrass,
@@ -293791,7 +293787,7 @@ jER
 jER
 jER
 jER
-vuQ
+jER
 jER
 jER
 jER
