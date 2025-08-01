@@ -119,7 +119,7 @@
 
 
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
+	backpack_contents += list(/obj/item/flashlight/flare/torch/lantern = 1, /obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
 	H.verbs |= /mob/proc/haltyell
 
 
@@ -193,7 +193,7 @@
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1,  /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
+	backpack_contents += list(/obj/item/flashlight/flare/torch/lantern = 1, /obj/item/rogueweapon/huntingknife/idagger = 1,  /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
 	
 // AXEMAN
 
@@ -263,7 +263,7 @@
 	)
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
+	backpack_contents += list(/obj/item/flashlight/flare/torch/lantern = 1, /obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
 	H.verbs |= /mob/proc/haltyell
 
 
@@ -340,7 +340,7 @@
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
+	backpack_contents += list(/obj/item/flashlight/flare/torch/lantern = 1, /obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
 /// ARBALESTIER
 
 
@@ -410,7 +410,7 @@
 	)
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
+	backpack_contents += list(/obj/item/flashlight/flare/torch/lantern = 1, /obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
 
 
 /// ARQUEBUSIER
@@ -480,5 +480,5 @@
 	)
 	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
+	backpack_contents += list(/obj/item/flashlight/flare/torch/lantern = 1, /obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/mguard)
 
