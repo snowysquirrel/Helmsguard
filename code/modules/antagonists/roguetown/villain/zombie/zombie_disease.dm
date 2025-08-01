@@ -80,12 +80,20 @@
 		wake_delay, 
 		infection_type == "wound"
 	)
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 56010348c (<3 me some zombie code)
 	switch(infection_type)
 		if("bite")
 			to_chat(src, span_danger("A growing cold seeps into my body. I feel horrible... REALLY horrible..."))
 		if("wound")
 			flash_fullscreen("redflash3")
 			to_chat(src, span_danger("Ow! It hurts. I feel horrible... REALLY horrible..."))
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 56010348c (<3 me some zombie code)
 	return TRUE
