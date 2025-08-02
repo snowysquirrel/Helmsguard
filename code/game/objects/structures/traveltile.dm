@@ -166,3 +166,42 @@
 	bound_width = 96
 	appearance_flags = NONE
 	opacity = FALSE
+
+
+/// THE MIST TRAVEL TILE
+
+/obj/structure/travel_mist
+	name = "shimmering mist"
+	desc = "A shimmering mist that seems to beckon you to step through it."
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "smoke"
+
+/obj/structure/mist_destination
+	name = "mist destination"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = ""
+	nomouseover = TRUE
+	anchored = TRUE
+	density = FALSE
+
+/obj/structure/travel_mist/Crossed(mob/living/player)
+	var/choices = list("Yes", "No")
+	var/warning = input("Once crossed, thou shalt not return...", "Proceed?") in choices
+	switch(warning)
+		if("Yes")
+			to_chat(player, "<b>You begin to cross the mist...</b>")
+			if(do_after(player, 50, needhand = FALSE, target = src))
+				teleport(player)
+		if("No")
+			return
+
+/obj/structure/travel_mist/proc/teleport(mob/living/player)
+	var/list/dests = list()
+	for(var/obj/structure/mist_destination/dest in world)
+		dests += dest
+	if(dests.len)
+		var/obj/structure/mist_destination/target = pick(dests)
+		playsound(player, 'sound/magic/shadowstep.ogg', 100, TRUE)
+		player.forceMove(target.loc)
+		player.Knockdown(2 SECONDS)
+		to_chat(player, "<b>You awake in a place so familiar yet so strange...</b>")
