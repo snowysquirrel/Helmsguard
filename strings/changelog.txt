@@ -1,8 +1,3 @@
-- Marshall spawns with rich pouch in their backpack
-- Duke's arrival is announced with a cool sound
-- Duke's subclass Valiant Warrior spawns with a set of royal armor and a royal heirloom sword
--- They gain heavy armor and medium armor trait
-- Vaquero class reactivated
 - Grudgebearer armor max integrity set to 4000
 - Swashbuckler now has a pistol with expert firearms skill
 - Added musketeer class for adventurer ranger
@@ -28,3 +23,6 @@
 - Smithy overhauled to be more space efficient
 - Added a ladder in the marshall's tower that leads up to the equipment storage for Marshall
 - Added lampterns to MAA's starting loadouts
+- Wretch latespawn Fixed
+- Dreadwood massively expanded and overhauled
+- Smithy fixed up a little
