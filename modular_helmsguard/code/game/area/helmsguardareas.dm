@@ -116,3 +116,16 @@
 	ambientnight = AMB_BEACH
 	spookysounds = null
 	spookynight = null
+
+
+// ADVENTURER SPAWN
+
+/area/rogue/under/cave/adventurer_cave
+	name = "inhumen"
+	icon_state = "cave"
+	first_time_text = "THE BORDER OF HELMSGUARD"
+	discover_sound = 'sound/misc/area_3.ogg'
+	droning_sound = 'sound/music/unholy.ogg'
+	droning_sound_dusk = 'sound/music/unholy.ogg'
+	droning_sound_night = 'sound/music/unholy.ogg'
+	converted_type = /area/rogue/outdoors/dungeon1
