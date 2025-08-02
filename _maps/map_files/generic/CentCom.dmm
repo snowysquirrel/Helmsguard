@@ -1599,6 +1599,10 @@
 /obj/item/roguebin/water,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/banditcamp)
+"ht" = (
+/obj/structure/fluff/statue/knight/r,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "hy" = (
 /obj/structure/fluff/railing/border{
 	icon_state = "border";
@@ -1661,8 +1665,14 @@
 /area/rogue/indoors/banditcamp)
 "iH" = (
 /obj/effect/landmark/start/wretch,
+/obj/effect/landmark/start/wretchlate,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/inhumen)
+"iM" = (
+/turf/closed/wall/mineral/rogue/decostone/mossy/end{
+	dir = 4
+	},
+/area/rogue/under/cave/adventurer_cave)
 "jg" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/banditcamp)
@@ -1685,6 +1695,10 @@
 /obj/item/rogueweapon/flail/sflail,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"jP" = (
+/obj/machinery/gear_painter,
+/turf/open/floor/rogue/blocks/green,
+/area/rogue/under/cave/adventurer_cave)
 "jQ" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -1779,6 +1793,11 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/inhumen)
+"mo" = (
+/turf/closed/wall/mineral/rogue/decostone/mossy/end{
+	dir = 1
+	},
+/area/rogue/under/cave/adventurer_cave)
 "ms" = (
 /obj/structure/mineral_door/bars{
 	locked = 1;
@@ -1836,6 +1855,10 @@
 	icon_state = "chess"
 	},
 /area/rogue/indoors)
+"nw" = (
+/obj/structure/travel_mist,
+/turf/open/floor/rogue/dirt,
+/area/rogue/under/cave/adventurer_cave)
 "nA" = (
 /obj/structure/fluff/psycross/zizocross,
 /turf/open/floor/rogue/dirt,
@@ -2031,6 +2054,25 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/cave/inhumen)
+"pW" = (
+/obj/structure/table/church{
+	dir = 8;
+	icon_state = "churchtable_end"
+	},
+/obj/item/clothing/neck/roguetown/psicross/wood{
+	pixel_x = -13;
+	pixel_y = 6
+	},
+/obj/item/skull{
+	pixel_x = -5;
+	pixel_y = 9
+	},
+/obj/item/skull{
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "qh" = (
 /obj/structure/stairs,
 /obj/structure/fluff/railing/border{
@@ -2075,6 +2117,15 @@
 /obj/machinery/light/rogue/wallfire/candle/blue/r,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors)
+"qK" = (
+/obj/effect/landmark/start/adventurer{
+	dir = 1
+	},
+/obj/effect/landmark/start/adventurerlate{
+	dir = 1
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "qO" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/inhumen)
@@ -2103,6 +2154,10 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/inhumen)
+"rM" = (
+/obj/machinery/light/rogue/wallfire/candle/floorcandle,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "rN" = (
 /obj/machinery/light/rogue/oven/south,
 /turf/open/floor/rogue/tile{
@@ -2270,6 +2325,12 @@
 "uJ" = (
 /turf/open/water/cleanshallow,
 /area/rogue/under/cave/inhumen)
+"uM" = (
+/obj/machinery/light/rogue/firebowl{
+	light_color = "#b30202"
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "uV" = (
 /obj/machinery/light/rogue/torchholder/c,
 /turf/open/floor/rogue/dirt/road,
@@ -2324,6 +2385,9 @@
 	dir = 1
 	},
 /area/rogue/outdoors/woods)
+"vJ" = (
+/turf/closed/mineral/rogue/bedrock,
+/area/rogue/under/cave/adventurer_cave)
 "vP" = (
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue)
@@ -2428,6 +2492,11 @@
 /obj/structure/fluff/psycross/crafted,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
+"xv" = (
+/turf/closed/wall/mineral/rogue/decostone/mossy/end{
+	dir = 8
+	},
+/area/rogue/under/cave/adventurer_cave)
 "xA" = (
 /obj/machinery/gear_painter,
 /turf/open/floor/rogue/cobble,
@@ -2576,6 +2645,10 @@
 /obj/item/reagent_containers/glass/bottle/rogue/healthpot,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/banditcamp)
+"zr" = (
+/obj/structure/far_travel,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "zs" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/hexstone,
@@ -2795,8 +2868,13 @@
 /area/rogue/under/cave/inhumen)
 "DG" = (
 /obj/effect/landmark/start/wretch,
+/obj/effect/landmark/start/wretchlate,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/inhumen)
+"DI" = (
+/obj/structure/fluff/statue/knight,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "DM" = (
 /turf/closed/wall/mineral/rogue/decostone/mossy/red/end,
 /area/rogue/under/cave/inhumen)
@@ -2973,6 +3051,7 @@
 /area/rogue/under/cave/inhumen)
 "HA" = (
 /obj/effect/landmark/start/wretch,
+/obj/effect/landmark/start/wretchlate,
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/cave/inhumen)
 "HD" = (
@@ -3027,6 +3106,10 @@
 	icon_state = "chess"
 	},
 /area/rogue/indoors/banditcamp)
+"Im" = (
+/obj/structure/travel_mist,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "Io" = (
 /obj/structure/fluff/statue/gargoyle,
 /turf/open/floor/rogue/blocks,
@@ -3114,6 +3197,13 @@
 /obj/item/quiver/arrows,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"JB" = (
+/obj/structure/fluff/statue/knight/interior,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
+"JD" = (
+/turf/closed/wall/mineral/rogue/decostone/mossy/cand,
+/area/rogue/under/cave/adventurer_cave)
 "JJ" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -3136,6 +3226,9 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/banditcamp)
+"JN" = (
+/turf/open/floor/rogue/dirt,
+/area/rogue/under/cave/adventurer_cave)
 "Kd" = (
 /obj/structure/flora/roguetree,
 /turf/open/water/cleanshallow,
@@ -3244,6 +3337,37 @@
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/woods)
+"ME" = (
+/obj/structure/table/church,
+/obj/item/flashlight/flare/torch,
+/obj/item/flashlight/flare/torch,
+/obj/item/flashlight/flare/torch{
+	pixel_x = -11
+	},
+/obj/item/flashlight/flare/torch{
+	pixel_x = -3;
+	pixel_y = 4
+	},
+/obj/item/flashlight/flare/torch{
+	pixel_x = -3;
+	pixel_y = 8
+	},
+/obj/item/flashlight/flare/torch{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/flashlight/flare/torch{
+	pixel_y = 6;
+	pixel_x = 10
+	},
+/obj/item/flashlight/flare/torch{
+	pixel_x = -11
+	},
+/obj/item/flashlight/flare/torch{
+	pixel_x = -11
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "MM" = (
 /obj/structure/mineral_door/wood{
 	lockid = "mansionvampire"
@@ -3308,6 +3432,10 @@
 	},
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/outdoors/banditcamp)
+"Oy" = (
+/obj/structure/fluff/statue/knight/interior/r,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "OC" = (
 /obj/structure/fluff/railing/border{
 	dir = 4;
@@ -3348,6 +3476,15 @@
 /obj/machinery/light/rogue/wallfire/candle/blue/r,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors)
+"PN" = (
+/obj/structure/table/church{
+	icon_state = "churchtable_mid"
+	},
+/obj/structure/fluff/psycross{
+	pixel_y = 17
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "PU" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -3496,6 +3633,13 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/cave/inhumen)
+"Tv" = (
+/obj/structure/fluff/signage/template{
+	name = "WELCOME TO HELMSGUARD";
+	written = "Remember yer prayers, do not linger in the dark and never sing to the dead and ye shall live."
+	},
+/turf/open/floor/rogue/blocks/green,
+/area/rogue/under/cave/adventurer_cave)
 "Tw" = (
 /obj/structure/fluff/railing/fence{
 	icon_state = "fence";
@@ -3638,6 +3782,9 @@
 /obj/item/rogueweapon/sword/iron/short/gladius,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"Vo" = (
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "Vp" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/hexstone,
@@ -3665,6 +3812,13 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/banditcamp)
+"We" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood1";
+	pixel_y = -4
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "Wf" = (
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors/banditcamp)
@@ -3693,6 +3847,7 @@
 /area/rogue/under/cave/inhumen)
 "WE" = (
 /obj/effect/landmark/start/wretch,
+/obj/effect/landmark/start/wretchlate,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/cave/inhumen)
 "WO" = (
@@ -3866,6 +4021,10 @@
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/inhumen)
+"YP" = (
+/obj/structure/roguemachine/scomm,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/adventurer_cave)
 "YQ" = (
 /obj/machinery/light/rogue/hearth,
 /obj/machinery/light/rogue/oven/east,
@@ -18355,20 +18514,20 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+bX
+bX
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
 "}
 (112,1,1) = {"
 rQ
@@ -18487,18 +18646,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
 "}
 (113,1,1) = {"
 rQ
@@ -18617,18 +18776,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+vJ
+vJ
+vJ
+JN
+JN
+JN
+JN
+JN
+vJ
+vJ
+vJ
+vJ
 "}
 (114,1,1) = {"
 rQ
@@ -18747,18 +18906,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+vJ
+nw
+JN
+JN
+Vo
+JB
+uM
+JN
+JN
+vJ
+vJ
+vJ
 "}
 (115,1,1) = {"
 rQ
@@ -18877,18 +19036,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+vJ
+nw
+uM
+DI
+Vo
+Vo
+Vo
+Vo
+Vo
+vJ
+vJ
+vJ
 "}
 (116,1,1) = {"
 rQ
@@ -19007,18 +19166,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+vJ
+Im
+Vo
+Vo
+Vo
+Vo
+Vo
+Vo
+qK
+zr
+vJ
+vJ
 "}
 (117,1,1) = {"
 rQ
@@ -19137,18 +19296,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+vJ
+Im
+Vo
+Vo
+Vo
+Vo
+Vo
+Vo
+qK
+zr
+vJ
+vJ
 "}
 (118,1,1) = {"
 rQ
@@ -19267,18 +19426,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+iM
+mo
+YP
+Vo
+jP
+Vo
+Vo
+Vo
+qK
+zr
+vJ
+vJ
 "}
 (119,1,1) = {"
 rQ
@@ -19397,18 +19556,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+xv
+ME
+Vo
+Vo
+We
+Vo
+Vo
+Vo
+qK
+zr
+vJ
+vJ
 "}
 (120,1,1) = {"
 rQ
@@ -19527,18 +19686,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+JD
+PN
+rM
+Vo
+Tv
+Vo
+Vo
+Vo
+qK
+zr
+vJ
+vJ
 "}
 (121,1,1) = {"
 rQ
@@ -19657,18 +19816,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+iM
+pW
+Vo
+Vo
+We
+Vo
+Vo
+Vo
+qK
+zr
+vJ
+vJ
 "}
 (122,1,1) = {"
 rQ
@@ -19787,18 +19946,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+xv
+mo
+Vo
+Vo
+jP
+Vo
+Vo
+Vo
+qK
+zr
+vJ
+vJ
 "}
 (123,1,1) = {"
 rQ
@@ -19917,18 +20076,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+vJ
+Im
+Vo
+Vo
+Vo
+Vo
+Vo
+Vo
+Vo
+vJ
+vJ
+vJ
 "}
 (124,1,1) = {"
 rQ
@@ -20047,18 +20206,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+vJ
+Im
+Vo
+Vo
+Vo
+Oy
+uM
+JN
+vJ
+vJ
+vJ
+vJ
 "}
 (125,1,1) = {"
 rQ
@@ -20177,18 +20336,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+vJ
+nw
+uM
+ht
+Vo
+JN
+JN
+JN
+vJ
+vJ
+vJ
+vJ
 "}
 (126,1,1) = {"
 tN
@@ -20307,18 +20466,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+vJ
+nw
+JN
+JN
+JN
+JN
+JN
+JN
+vJ
+vJ
+vJ
+vJ
 "}
 (127,1,1) = {"
 wO
@@ -20437,18 +20596,18 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+vJ
+vJ
+JN
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
 "}
 (128,1,1) = {"
 yK
@@ -20567,16 +20726,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
+vJ
 "}
