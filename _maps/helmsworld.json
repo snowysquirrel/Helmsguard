@@ -1,7 +1,7 @@
 {
     "map_name": "Helmsworld",
     "map_path": "map_files/helmsguard",
-    "map_file": "helmsworld.dmm",
+    "map_file": "helmsworld2.dmm",
 	"traits": [{"Name": "Helmsguard", "Up": true}, {"Up": true, "Down": true}, {"Up": true, "Down": true}, {"Up": true, "Down": true}, {"Down": true}],
 	"minetype": null,
 	"space_empty_levels": 0,
