@@ -1,6 +1,3 @@
-- Grudgebearer armor max integrity set to 4000
-- Swashbuckler now has a pistol with expert firearms skill
-- Added musketeer class for adventurer ranger
 - Restored selectable accents
 - Restored all the languages from Roguetown
 - Fixed knight loadout for School of the Axes and School of the Maces
@@ -26,3 +23,8 @@
 - Wretch latespawn Fixed
 - Dreadwood massively expanded and overhauled
 - Smithy fixed up a little
+- Zombie infection refactored: You'll be given warnings and a status effect if you're infected
+- Zombie infection takes about 5 minutes to progress into full zombification
+- Zombie infection can only be cured with Rotcure potion before they turn
+- Ported Shamisen instrument from Kaizoku
+- Pies and pastry are now properly labelled according to their ingredients and types
