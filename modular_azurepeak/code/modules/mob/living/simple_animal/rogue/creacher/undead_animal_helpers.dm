@@ -29,7 +29,7 @@
 	if(QDELETED(H) || !H.zombie_check_can_convert())
 		return
 	to_chat(H, span_danger("A growing cold seeps into my body. I feel horrible... REALLY horrible..."))
-	H.infected = TRUE
+//	H.infected = TRUE
 	H.apply_status_effect(/datum/status_effect/zombie_infection, infection_timer, "wound")
 
 GLOBAL_LIST_INIT(animal_to_undead, list(

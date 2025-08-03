@@ -214,7 +214,7 @@
 	to_chat(src, span_danger("I feel horrible... REALLY horrible..."))
 	mob_timers["puke"] = world.time
 	vomit(1, blood = TRUE, stun = FALSE)
-	src.infected = TRUE //Is this in use? Just in case it is
+//	src.infected = TRUE //Is this in use? Just in case it is
 	apply_status_effect(/datum/status_effect/zombie_infection, 5 MINUTES, "wound")
 	return zombie_antag
 

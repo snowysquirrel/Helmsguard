@@ -22,7 +22,7 @@
 	remove_rot_component(target)
 
 	// Remove Infected var
-	target.infected = FALSE
+//	target.infected = FALSE
 	target.remove_status_effect(/datum/status_effect/zombie_infection)
 
 	// Clean body parts
