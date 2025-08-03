@@ -20,4 +20,5 @@
 	if(volume > 8)	//Roughly 1 sip from vial.
 		M.remove_status_effect(/datum/status_effect/debuff/rotted)	//Removes de-rot debuff, which is otherwise perminant.
 		M.remove_status_effect(/datum/status_effect/debuff/revived)	//Removes the 15-minute temp revive debuff
+		M.remove_status_effect(/datum/status_effect/zombie_infection)	//Removes the zombie infection status effect.
 	..()

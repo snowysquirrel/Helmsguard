@@ -209,10 +209,13 @@
 		return
 	if(stat >= DEAD) //do shit the natural way i guess
 		return
+	if(!prob(ZOMBIE_INFECTION_PROBABILITY))	//Failed the probability of infection
+		return
 	to_chat(src, span_danger("I feel horrible... REALLY horrible..."))
 	mob_timers["puke"] = world.time
 	vomit(1, blood = TRUE, stun = FALSE)
-	addtimer(CALLBACK(src, PROC_REF(wake_zombie)), 1 MINUTES)
+//	src.infected = TRUE //Is this in use? Just in case it is
+	apply_status_effect(/datum/status_effect/zombie_infection, 5 MINUTES, "wound")
 	return zombie_antag
 
 /mob/living/carbon/human/proc/wake_zombie()
