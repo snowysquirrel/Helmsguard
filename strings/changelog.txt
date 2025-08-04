@@ -1,5 +1,3 @@
-- Restored selectable accents
-- Restored all the languages from Roguetown
 - Fixed knight loadout for School of the Axes and School of the Maces
 - Add a new shortcut between the town and the monastery, east from the spawn carriage
 -- Beware of the goblin cave along the route
@@ -28,3 +26,5 @@
 - Zombie infection can only be cured with Rotcure potion before they turn
 - Ported Shamisen instrument from Kaizoku
 - Pies and pastry are now properly labelled according to their ingredients and types
+- Koto scabbard fixed
+- Ladder added in Helmskeep's barracks to access the attic
