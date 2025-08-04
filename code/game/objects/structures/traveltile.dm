@@ -185,6 +185,13 @@
 	density = FALSE
 
 /obj/structure/travel_mist/Crossed(mob/living/player)
+	..()
+	warn_player(player)
+
+
+/obj/structure/travel_mist/proc/warn_player(mob/living/player)
+	if(!player || !ishuman(player))
+		return
 	var/choices = list("Yes", "No")
 	var/warning = input("Once crossed, thou shalt not return...", "Proceed?") in choices
 	switch(warning)
@@ -194,6 +201,8 @@
 				teleport(player)
 		if("No")
 			return
+
+
 
 /obj/structure/travel_mist/proc/teleport(mob/living/player)
 	var/list/dests = list()
