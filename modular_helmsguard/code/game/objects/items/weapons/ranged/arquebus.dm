@@ -293,7 +293,7 @@
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_from_holster.ogg'
 	holster_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_to_holster.ogg'
 	slot_flags = ITEM_SLOT_HIP
-	var/damfactor = 2
+	var/damfactor = 5
 	var/reloaded = FALSE
 	var/load_time = 50
 	var/gunpowder = FALSE
