@@ -1,5 +1,3 @@
-- Consort role enabled again
-- Wretch role enabled, 4 slots only, spawns in the Dreadwood
 - Poacher can choose their ranged weapons (Bow, Crossbow, Arquebus)
 - Added the Scorned Highland and the Fetid Mire area
 - Adventurer spawn moved
@@ -29,3 +27,4 @@
 - Constructs removed from combat-centric roles
 - You can now select your own combat music on the preference menu and change it anytime under the options tab
 - Servant loadouts restored to the way it was on Azure
+- Grand Duke reflavored to Lord Elector, they're still functionally the same
