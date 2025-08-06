@@ -28,3 +28,4 @@
 - You can now select your own combat music on the preference menu and change it anytime under the options tab
 - Servant loadouts restored to the way it was on Azure
 - Grand Duke reflavored to Lord Elector, they're still functionally the same
+- Guns damage factor fixed, for real this time, trust
