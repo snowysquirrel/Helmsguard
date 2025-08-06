@@ -166,7 +166,7 @@
 
 /obj/structure/trap/stun/hunter/flare()
 	..()
-	stored_item.forceMove(get_turf(src))
+	//stored_item.forceMove(get_turf(src)) //causing issues, disabling for now
 	forceMove(stored_item)
 	if(caught)
 		stored_item.announce_fugitive()

@@ -33,6 +33,8 @@
 	glide_size = 6
 	appearance_flags = TILE_BOUND|PIXEL_SCALE
 	var/datum/forced_movement/force_moving = null	//handled soley by forced_movement.dm
+	///Holds information about any movement loops currently running/waiting to run on the movable. Lazy, will be null if nothing's going on (pulled in from Vanderlin)
+	var/datum/movement_packet/move_packet
 	var/movement_type = GROUND		//Incase you have multiple types, you automatically use the most useful one. IE: Skating on ice, flippers on water, flying over chasm/space, etc.
 	var/atom/movable/pulling
 	var/nodirchange = FALSE
@@ -239,14 +241,13 @@
 		pulledby.stop_pulling()
 
 /atom/movable/proc/set_glide_size(target = 0)
-    if(glide_size == target)
-        return // Loop protection
-
-    SEND_SIGNAL(src, COMSIG_MOVABLE_UPDATE_GLIDE_SIZE, target)
-    glide_size = target
-
-    for(var/atom/movable/AM in buckled_mobs)
-        AM.set_glide_size(target)
+	SEND_SIGNAL(src, COMSIG_MOVABLE_UPDATE_GLIDE_SIZE, target)
+	if(glide_size == target)
+		return // Loop protection
+	glide_size = target
+	
+	for(var/atom/movable/AM in buckled_mobs)
+		AM.set_glide_size(target)
 ////////////////////////////////////////
 // Here's where we rewrite how byond handles movement except slightly different
 // To be removed on step_ conversion
@@ -312,7 +313,6 @@
 
 //Early override for some cases like diagonal movement
 	if(glide_size_override)
-		testing("GSO 1 [glide_size_override]")
 		set_glide_size(glide_size_override)
 
 	if(loc != newloc)
