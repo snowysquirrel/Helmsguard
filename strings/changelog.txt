@@ -29,3 +29,4 @@
 - Servant loadouts restored to the way it was on Azure
 - Grand Duke reflavored to Lord Elector, they're still functionally the same
 - Guns damage factor fixed, for real this time, trust
+- Mouthgrab now take coverage into account, in line with strangling
