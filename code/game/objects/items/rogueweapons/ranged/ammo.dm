@@ -402,7 +402,7 @@
 // GUNPOWDER AMMO
 
 
-/obj/projectile/bullet/rogue
+/obj/projectile/bullet/reusable/bullet/rogue
 	name = "lead ball"
 	damage = 80	//higher damage than crossbow
 	damage_type = BRUTE
@@ -417,7 +417,9 @@
 	armor_penetration = 100	//Crossbow-on-crack AP. Armor only goes up to 100 protection normally; so this ignores most of it but not all. Wear good armor!
 	speed = 0.1		//ZOOM!!!!!
 
-/obj/projectile/bullet/rogue/on_hit(atom/target, mob/living/shooter, blocked = FALSE)
+
+
+/obj/projectile/bullet/reusable/bullet/rogue/on_hit(atom/target, mob/living/shooter, blocked = FALSE)
 	. = ..()
 	if(!shooter)
 		shooter = src.firer
@@ -440,7 +442,7 @@
 /obj/item/ammo_casing/caseless/rogue/bullet
 	name = "iron sphere"
 	desc = "A small iron sphere to be used for firearms."
-	projectile_type = /obj/projectile/bullet/rogue
+	projectile_type = /obj/projectile/bullet/reusable/bullet/rogue
 	caliber = "musketball"
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball"

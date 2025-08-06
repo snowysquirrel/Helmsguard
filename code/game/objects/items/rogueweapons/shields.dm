@@ -65,7 +65,7 @@
 		P = hitby
 		attacker = P.firer
 	// Musket bullets penetrate shields
-	if(istype(P, /obj/projectile/bullet/rogue))
+	if(istype(P, /obj/projectile/bullet/reusable/bullet))
 		return FALSE
 	if(attacker && istype(attacker))
 		if (!owner.can_see_cone(attacker))
