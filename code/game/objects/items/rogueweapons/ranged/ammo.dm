@@ -425,13 +425,6 @@
 		shooter = src.firer
 	if(ismob(target))
 		var/mob/living/carbon/human/M = target
-		var/list/screams = list("painscream", "paincrit")
-		if(isliving(target))
-			if(prob(70))
-				M.emote(screams)
-				M.Knockdown(rand(15,30))
-				M.Immobilize(rand(30,60))
-			
 		if(shooter && shooter.client)
 			target.visible_message(
 				span_danger("[shooter] hits [M] with a [src.name]!"),
