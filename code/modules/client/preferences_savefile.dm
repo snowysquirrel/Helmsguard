@@ -409,6 +409,14 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if (preview_height)
 		preview_height = new preview_height()
 
+/datum/preferences/proc/_load_combat_music(S)
+	var/combat_music_type
+	S["combat_music"] >> combat_music_type
+	if (GLOB.cmode_tracks_by_type[combat_music_type])
+		combat_music = GLOB.cmode_tracks_by_type[combat_music_type]
+	else
+		combat_music = GLOB.cmode_tracks_by_type[default_cmusic_type]
+
 /datum/preferences/proc/_load_appearence(S)
 	S["real_name"]			>> real_name
 	S["gender"]				>> gender
@@ -474,6 +482,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	_load_loadout(S)
 	_load_loadout2(S)
 	_load_loadout3(S)
+	_load_combat_music(S)
 
 	if(!S["features["mcolor"]"] || S["features["mcolor"]"] == "#000")
 		WRITE_FILE(S["features["mcolor"]"]	, "#FFF")
@@ -488,7 +497,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//Character
 	_load_appearence(S)
 	_load_height(S)
-
+	
 	var/patron_typepath
 	S["selected_patron"]	>> patron_typepath
 	if(patron_typepath)
@@ -697,6 +706,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["statpack"] , statpack.type)
 	WRITE_FILE(S["virtue"] , virtue.type)
 	WRITE_FILE(S["virtuetwo"], virtuetwo.type)
+	WRITE_FILE(S["combat_music"], combat_music.type)
 	WRITE_FILE(S["body_size"] , features["body_size"])
 	if(loadout)
 		WRITE_FILE(S["loadout"] , loadout.type)

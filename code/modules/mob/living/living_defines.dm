@@ -186,3 +186,6 @@
 	var/domhand = 0
 	var/mounted = FALSE
 	var/del_on_deaggro = 0
+
+	var/cmode_music_override = list() // set by prefs or the verb, ignored if empty
+	var/cmode_music_override_name // solely for autoselecting as a spawned-in mob
