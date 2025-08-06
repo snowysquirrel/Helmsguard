@@ -21,8 +21,8 @@
 	typepath = /datum/round_event/antagonist/solo/vampires_and_werewolves
 
 	restricted_roles = list(
-		"Grand Duke",
-		"Grand Duchess",
+		"Lord Elector",
+		"Lady Elector",
 		"Lord Consort",
 		"Lady Consort",
 		"Dungeoneer",

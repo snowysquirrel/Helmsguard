@@ -10,11 +10,11 @@
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 	display_order = JDO_MARSHAL
 	selection_color = JCOLOR_SOLDIER
-	tutorial = "As the Marshall of Helmsguard, you owe your allegiance to the Grand Duke and their family, you are charged with the crucial duty of enforcing the Grand Duke's law upon the province however necessary. \
-	Headquartered in the village of Riverstead, your authority encompasses the entire province. You have the authority to directly recommend a law for the duke to pass, or an outlaw to be declared. \
-	The Men-At-Arms are your subordinates, but they answer to the Grand Duke first and foremost. And should there be a shortage of guardsmen at your disposal, \
+	tutorial = "As the Marshall of Helmsguard, you owe your allegiance to the Lord Elector and their family, you are charged with the crucial duty of enforcing the Lord Elector's law upon the province however necessary. \
+	Headquartered in the village of Riverstead, your authority encompasses the entire province. You have the authority to directly recommend a law for the Elector to pass, or an outlaw to be declared. \
+	The Men-At-Arms are your subordinates, but they answer to the Lord Elector first and foremost. And should there be a shortage of guardsmen at your disposal, \
 	you are charged with the authority of levying the local populace to assist you in your duties. \
-	In the absence of a Grand Duke, you must rely on the Tome of Justice for guidance, but take their texts as suggestions rather than commands."	
+	In the absence of a Lord Elector, you must rely on the Tome of Justice for guidance, but take their texts as suggestions rather than commands."	
 
 	whitelist_req = FALSE
 
@@ -174,7 +174,7 @@
 /proc/find_lord(required_stat = CONSCIOUS)
 	var/mob/living/lord
 	for(var/mob/living/carbon/human/H in GLOB.human_list)
-		if(!H.mind || H.job != "Grand Duke" || (H.stat > required_stat))
+		if(!H.mind || H.job != "Lord Elector" || (H.stat > required_stat))
 			continue
 		lord = H
 		break

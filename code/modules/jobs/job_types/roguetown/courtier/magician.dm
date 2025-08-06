@@ -12,7 +12,7 @@
 	spells = list(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 	display_order = JDO_MAGICIAN
 	tutorial = "As a considerably powerful spellcaster, the Order of the Mages has placed you in charge of the Mages Guild in Helmsguard,\
-	 Though the Order is generally shunned here, the Duke has granted you the rights to use the ancient cliffside Mage Tower as your headquarter \
+	 Though the Order is generally shunned here, the Lord Elector has granted you the rights to use the ancient cliffside Mage Tower as your headquarter \
 	in exchange for your service. \
 	You are expected to provide magical services to the people of Helmsguard, and to protect the town from any magical threats that may arise. \
 	You are also expected to train any aspiring mages who wish to learn the ways of the arcane."

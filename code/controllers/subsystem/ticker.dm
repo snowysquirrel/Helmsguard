@@ -64,7 +64,7 @@ SUBSYSTEM_DEF(ticker)
 	var/end_state = "undefined"
 	var/job_change_locked = FALSE
 	var/list/royals_readied = list()
-	var/rulertype = "Grand Duke" // reports whether king or queen rules
+	var/rulertype = "Lord Elector" // reports whether king or queen rules
 	var/rulermob = null // reports what the ruling mob is.
 	var/regentmob = null // keeps track of regent mob
 	var/regentday = -1 // to prevent regent shuffling
@@ -751,10 +751,8 @@ SUBSYSTEM_DEF(ticker)
 /// Wrapper for setting rulermob and rulertype
 /datum/controller/subsystem/ticker/proc/set_ruler_mob(mob/newruler)
 	rulermob = newruler
-	if(istype(rulermob, /mob))
-		var/mob/M = rulermob
-		if(M.gender == FEMALE)
-			SSticker.rulertype = "Grand Duchess"
-		else
-			SSticker.rulertype = "Grand Duke"
+	if(should_wear_femme_clothes(rulermob))
+		SSticker.rulertype = "Lady Elector"
+	else
+		SSticker.rulertype = "Lord Elector"
 	SEND_GLOBAL_SIGNAL(COMSIG_TICKER_RULERMOB_SET, rulermob)

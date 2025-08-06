@@ -2,8 +2,8 @@ GLOBAL_VAR(lordsurname)
 GLOBAL_LIST_EMPTY(lord_titles)
 
 /datum/job/roguetown/lord
-	title = "Grand Duke"
-	f_title = "Grand Duchess"
+	title = "Lord Elector"
+	f_title = "Lady Elector"
 	flag = LORD
 	department_flag = NOBLEMEN
 	faction = "Station"
@@ -24,7 +24,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	visuals_only_outfit = /datum/outfit/job/roguetown/lord/visuals
 
 	display_order = JDO_LORD
-	tutorial = "Elevated upon your throne through a web of intrigue and political upheaval, you are the absolute authority of these lands and at the center of every plot within it. Every man, woman and child is envious of your position and would replace you in less than a heartbeat: Show them the error of their ways."
+	tutorial = "As an elector of the Aensver Empire; You are granted lordship over the Province of Helmsguard, including all of its estates. You are expected to lead the province, protect it from threats, and manage its affairs. This role has style options for warrior lords, merchant lords, and inbred lords. You are granted nobility by bloodrights and has the authority to elect the Emperor of Aensver."
 	whitelist_req = FALSE
 	min_pq = 10
 	max_pq = null
@@ -35,8 +35,8 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	allowed_patrons = NON_PSYDON_PATRONS		//No Psydonites - Lore reason: Town is Astratan town, you are crowned by Astrata for right to rule. (Inhuman people pose as Ten worshipers.)
 
 /datum/job/roguetown/exlord //just used to change the lords title
-	title = "Grand Duke Emeritus"
-	f_title = "Grand Duchess Emeritus"
+	title = "Elector Emeritus"
+	f_title = "Electress Emeritus"
 	flag = LORD
 	department_flag = NOBLEMEN
 	faction = "Station"

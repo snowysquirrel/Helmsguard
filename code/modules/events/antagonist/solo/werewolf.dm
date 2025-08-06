@@ -22,8 +22,8 @@
 	antag_datum = /datum/antagonist/werewolf
 
 	restricted_roles = list(
-		"Grand Duke",
-		"Grand Duchess",
+		"Lord Elector",
+		"Lady Elector",
 		"Lord Consort",
 		"Lady Consort",
 		"Dungeoneer",

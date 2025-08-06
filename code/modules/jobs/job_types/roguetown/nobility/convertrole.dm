@@ -78,7 +78,7 @@
 	new_role = "Man-at-Arms"
 	overlay_state = "recruit_guard"
 	recruitment_faction = "garrison"
-	recruitment_message = "Serve the Duke, %RECRUIT!"
+	recruitment_message = "Serve the Province, %RECRUIT!"
 	accept_message = "FOR THE PROVINCE!"
 	refuse_message = "I refuse."
 

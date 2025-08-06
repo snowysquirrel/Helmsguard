@@ -31,7 +31,7 @@
 	name = "Manorlate"
 	icon_state = "arrow"
 	delete_after_roundstart = FALSE
-	jobspawn_override = list("Grand Duke", "Lord Consort", "Lord Heir", "Hand", "Steward", "Knight", "Court Physician", "Butler", "Dungeoneer")
+	jobspawn_override = list("Lord Elector", "Lord Consort", "Lord Heir", "Hand", "Steward", "Knight", "Court Physician", "Butler", "Dungeoneer")
 
 
 
@@ -44,7 +44,7 @@
 	name = "Noble Late (Helm)"
 	icon_state = "arrow"
 	jobspawn_override = list(
-	"Grand Duke",
+	"Lord Elector",
 	"Lord Consort",
 	"Lord Heir",
 	"Hand",
@@ -157,7 +157,7 @@
 //These are roles exclusive to Helmsguard//
 
 /obj/effect/landmark/start/helms/noble/markgraf
-	name = "Grand Duke"
+	name = "Lord Elector"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/helms/noble/consort

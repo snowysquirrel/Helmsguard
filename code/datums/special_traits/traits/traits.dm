@@ -396,9 +396,9 @@
 	else
 		employer_gender = FEMALE
 	if(employer_gender == MALE)
-		employer = pick(list("Baron", "Lord", "Nobleman", "Prince"))
+		employer = pick(list("Lord Elector", "Lord", "Nobleman", "Prince"))
 	else
-		employer = pick(list("Duchess", "Lady", "Noblelady", "Princess"))
+		employer = pick(list("Lady Elector", "Lady", "Noblelady", "Princess"))
 	employer = "[employer] [random_human_name(employer_gender, FALSE, FALSE)]"
 	var/amount = rand(40,100)
 	switch(rand(1,7))

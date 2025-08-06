@@ -130,7 +130,7 @@
 	for(var/mob/living/carbon/human/HU in get_step(src, src.dir))
 		if(!HU.mind)
 			continue
-		if(HU.mind.assigned_role == "Grand Duke")
+		if(HU.mind.assigned_role == "Lord Elector")
 			continue
 		if(!HU.head)
 			continue
@@ -140,17 +140,17 @@
 		//Abdicate previous King
 		for(var/mob/living/carbon/human/HL in GLOB.human_list)
 			if(HL.mind)
-				if(HL.mind.assigned_role == "Grand Duke" || HL.mind.assigned_role == "Lord Consort")
+				if(HL.mind.assigned_role == "Lord Elector" || HL.mind.assigned_role == "Lord Consort")
 					HL.mind.assigned_role = "Villager" //So they don't get the innate traits of the king
 			//would be better to change their title directly, but that's not possible since the title comes from the job datum
-			if(HL.job == "Grand Duke")
-				HL.job = "Grand Duke Emeritus"
+			if(HL.job == "Lord Elector")
+				HL.job = "Lord Elector Emeritus"
 			if(HL.job == "Lord Consort")
-				HL.job = "Grand Duke Dowager"
+				HL.job = "Lord Elector Dowager"
 
 		//Coronate new King (or Queen)
-		HU.mind.assigned_role = "Grand Duke"
-		HU.job = "Grand Duke"
+		HU.mind.assigned_role = "Lord Elector"
+		HU.job = "Lord Elector"
 		SSticker.set_ruler_mob(HU)
 		SSticker.regentmob = null
 		var/dispjob = mind.assigned_role

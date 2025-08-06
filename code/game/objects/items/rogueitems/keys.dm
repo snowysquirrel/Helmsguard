@@ -488,7 +488,7 @@
 
 /obj/item/roguekey/hand
 	name = "hand's key"
-	desc = "This regal key belongs to the Grand Duke's Right Hand."
+	desc = "This regal key belongs to the Lord Elector's Right Hand."
 	icon_state = "cheesekey"
 	lockid = "hand"
 
