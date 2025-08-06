@@ -341,14 +341,6 @@
 	skillcraft = /datum/skill/craft/engineering
 	craftdiff = 5 //le ultimate challenge
 
-/datum/crafting_recipe/roguetown/engineering/handgonne
-	name = "Handgonne"
-	category = "Firearms"
-	reqs = list(/obj/item/ingot/iron = 4, /obj/item/weaponcrafting/barrel = 1, /obj/item/weaponcrafting/receiver = 1, /obj/item/grown/log/tree/small = 1, /obj/item/weaponcrafting/stock = 1)
-	result = list(/obj/item/gun/ballistic/handgonne)
-	skillcraft = /datum/skill/craft/engineering
-	craftdiff = 3
-
 /datum/crafting_recipe/roguetown/engineering/arquebuspistol
 	name = "Arquebus pistol"
 	category = "Firearms"

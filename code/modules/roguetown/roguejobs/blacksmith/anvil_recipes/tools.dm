@@ -325,7 +325,7 @@
 	name = "Iron Fork x3"
 	category = "Tools"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/kitchen/fork/ironfork
+	created_item = /obj/item/kitchen/fork/iron
 	createditem_num = 3
 	craftdiff = 1
 
@@ -333,7 +333,7 @@
 	name = "Iron Spoon x3"
 	category = "Tools"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/kitchen/spoon/ironspoon
+	created_item = /obj/item/kitchen/spoon/iron
 	createditem_num = 3
 	craftdiff = 1
 

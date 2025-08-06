@@ -23,7 +23,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	var/obj/item/contraption/linker/multitool = I
 	if(!multitool.current_charge)
 		return
-	if(user.mind?.get_skill_level(/datum/skill/craft/engineering) < 3)
+	if(user.get_skill_level(/datum/skill/craft/engineering) < 3)
 		to_chat(user, span_warning("I have no idea how to use [multitool]!"))
 		return
 	user.visible_message("[user] starts tinkering with [src].", "You start tinkering with [src].")

@@ -241,15 +241,13 @@
 		pulledby.stop_pulling()
 
 /atom/movable/proc/set_glide_size(target = 0)
-    if(glide_size == target)
-        return // Loop protection
-
 	SEND_SIGNAL(src, COMSIG_MOVABLE_UPDATE_GLIDE_SIZE, target)
+	if(glide_size == target)
+		return // Loop protection
 	glide_size = target
 	
 	for(var/atom/movable/AM in buckled_mobs)
 		AM.set_glide_size(target)
-
 ////////////////////////////////////////
 // Here's where we rewrite how byond handles movement except slightly different
 // To be removed on step_ conversion

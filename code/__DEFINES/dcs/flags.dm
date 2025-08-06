@@ -2,18 +2,9 @@
 /// `parent` must not be modified if this is to be returned.
 /// This will be noted in the runtime logs
 
-//pulled in from Vanderlin, commenting out dupes to avoid conflicts
-/* Dup commend out
-#define COMPONENT_INCOMPATIBLE 1
-/// Returned in PostTransfer to prevent transfer, similar to `COMPONENT_INCOMPATIBLE`
-#define COMPONENT_NOTRANSFER 2
-
-/// Return value to cancel attaching
-#define ELEMENT_INCOMPATIBLE 1
-
 /// /datum/element flags
 #define ELEMENT_DETACH		(1 << 0)
-*/
+
 
 /* Dup commend out
 // How multiple components of the exact same type are handled in the same datum

@@ -997,7 +997,7 @@
 	category = "Armor"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/wolfplate
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/volfplate
 	craftdiff = 3
 	i_type = "Armor"
 
@@ -1017,10 +1017,10 @@
 	additional_items = list(/obj/item/natural/cloth)
 	created_item = /obj/item/clothing/under/roguetown/splintlegs
 
-/datum/anvil_recipe/armor/vambraces
+/datum/anvil_recipe/armor/iron/bracers
 	name = "Iron Bracers"
 	category = "Armor"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/wrists/roguetown/vambraces
+	created_item = /obj/item/clothing/wrists/roguetown/bracers/iron
 	craftdiff = 1
 	i_type = "Armor"
