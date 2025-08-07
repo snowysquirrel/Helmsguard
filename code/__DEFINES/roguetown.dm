@@ -186,6 +186,7 @@
 	/datum/species/halforc,\
 	/datum/species/kobold,\
 	/datum/species/goblinp,\
+	/datum/species/aasimar,\
 )
 
 #define RACES_RESPECTED \
@@ -193,6 +194,7 @@
 	/datum/species/elf/wood,\
 	/datum/species/human/halfelf,\
 	/datum/species/dwarf/mountain,\
+	/datum/species/aasimar,\
 
 #define RACES_TOLERATED \
 	/datum/species/demihuman,\
@@ -230,6 +232,7 @@
 	/datum/species/elf/wood,\
 	/datum/species/dwarf/mountain,\
 	/datum/species/demihuman,\
+	/datum/species/aasimar,\
 )
 
 #define TRUSTED_CLEARANCE list(\
@@ -262,6 +265,7 @@
 	/datum/species/elf/dark,\
 	/datum/species/elf/wood,\
 	/datum/species/dwarf/mountain,\
+	/datum/species/aasimar,\
 	/datum/species/tieberian,\
 	/datum/species/lizardfolk,\
 	/datum/species/lupian,\
@@ -293,6 +297,7 @@
 #define HUMANLIKE_RACE_TYPES list(\
 	/datum/species/human/northern,\
 	/datum/species/tieberian,\
+	/datum/species/aasimar,\
 	/datum/species/lizardfolk,\
 	/datum/species/lupian,\
 	/datum/species/tabaxi,\
