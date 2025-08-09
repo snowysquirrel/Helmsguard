@@ -34,3 +34,4 @@
 - Minecarts and rotation stuff from vanderlin
 - Vampire Lord fix from Azure
 - Vampire and WW wretch added
+- Decrepit needle sprite fix
