@@ -31,3 +31,6 @@
 - Guns damage factor fixed, for real this time, trust
 - Mouthgrab now take coverage into account, in line with strangling
 - Pestra's cure rot spell now removes zombie rot and zombified status, but does not revive
+- Minecarts and rotation stuff from vanderlin
+- Vampire Lord fix from Azure
+- Vampire and WW wretch added
