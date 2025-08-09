@@ -107,7 +107,7 @@
 			var/const/SEW_REPAIR_PER_LEVEL = 10
 			/// How many seconds does unskilled sewing take?
 			var/const/BASE_SEW_TIME = 6 SECONDS
-			/// At what (combined) level do we 
+			/// At what (combined) level do we
 			var/const/SKILL_FASTEST_SEW = SKILL_LEVEL_LEGENDARY
 			/// The reduction in sewing time for each (combined) level in sewing/tanning.
 			var/const/SEW_TIME_REDUCTION_PER_LEVEL = 1 SECONDS
@@ -231,5 +231,5 @@
 	name = "decrepit needle"
 	icon_state = "aneedle"
 	desc = "This decrepit old needle doesn't seem helpful for much."
-	stringamt = 5
-	maxstring = 5
+	stringamt = 7
+	maxstring = 7
