@@ -9,8 +9,8 @@
 	classes = list("Sentinel" = "You are a ranger well-versed in traversing untamed lands, with years of experience taking odd jobs as a pathfinder and bodyguard in areas of wilderness untraversable to common soldiery.",
 					"Assassin" = "You've lived the life of a hired killer and have spent your time training with blades and crossbows alike.",
 					"Bombadier" = "Bombs? You've got them. Plenty of them - and the skills to make more. You've spent years training under skilled alchemists and have found the perfect mix to create some chaos - now go blow something up!",
-					"Biome Wanderer" = "The dangers of the wilds vary upon the plains they rest upon, You happen to be experienced in many.")
-
+					"Biome Wanderer" = "The dangers of the wilds vary upon the plains they rest upon, You happen to be experienced in many.",
+					"Musketeer" = "Armed with an arquebus and a keen eye, you are a master of ranged combat. You have trained extensively in the use of firearms and are skilled in marksmanship, making you a formidable opponent at any distance.")
 /datum/outfit/job/roguetown/adventurer/ranger/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_blindness(-3)
