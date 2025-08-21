@@ -4,7 +4,6 @@
 	desc = "A gunpowder weapon that shoots an armor piercing metal ball."
 	icon = 'modular_helmsguard/icons/weapons/arquebus.dmi'
 	icon_state = "arquebus"
-	item_state = "arquebus"
 	force = 10
 	force_wielded = 15
 	possible_item_intents = list(/datum/intent/mace/strike/wood)
@@ -29,7 +28,11 @@
 	experimental_onback = TRUE
 	cartridge_wording = "musketball"
 	load_sound = 'modular_helmsguard/sound/arquebus/musketload.ogg'
-	fire_sound = "modular_helmsguard/sound/arquebus/arquefire.ogg"
+	fire_sound = list('modular_helmsguard/sound/arquebus/arquefire.ogg', 
+				'modular_helmsguard/sound/arquebus/arquefire2.ogg', 
+				'modular_helmsguard/sound/arquebus/arquefire3.ogg',
+				'modular_helmsguard/sound/arquebus/arquefire4.ogg', 
+				'modular_helmsguard/sound/arquebus/arquefire5.ogg')
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/steel
 	bolt_type = BOLT_TYPE_NO_BOLT
@@ -37,33 +40,31 @@
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_from_holster.ogg'
 	holster_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_to_holster.ogg'
 	var/spread_num = 10
-	var/damfactor = 3
+	var/damfactor = 4
 	var/reloaded = FALSE
 	var/load_time = 50
 	var/gunpowder = FALSE
 	var/obj/item/ramrod/myrod = null
 	var/gunchannel
+	associated_skill = /datum/skill/combat/firearms // NPC related
+	npc_reload_sound = 'modular_helmsguard/sound/NPC_reload/npc_musket_reload.ogg'
+	npc_aim_sound = 'modular_helmsguard/sound/arquebus/musketcock.ogg'
+	muzzle = TRUE // Whether the gun has a muzzle effect when firing, used for NPCs
 
 /obj/item/gun/ballistic/arquebus/getonmobprop(tag)
 	. = ..()
 	if(tag)
 		switch(tag)
 			if("gen")
-				return list("shrink" = 0.6,"sx" = -7,"sy" = 6,"nx" = 7,"ny" = 6,"wx" = -2,"wy" = 3,"ex" = 1,"ey" = 3,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -43,"sturn" = 43,"wturn" = 30,"eturn" = -30, "nflip" = 0, "sflip" = 8,"wflip" = 8,"eflip" = 0)
+				return list("shrink" = 0.6,"sx" = -7,"sy" = 2,"nx" = 7,"ny" = 3,"wx" = -2,"wy" = 1,"ex" = 1,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -38,"sturn" = 37,"wturn" = 30,"eturn" = -30,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 			if("wielded")
 				return list("shrink" = 0.6,"sx" = 5,"sy" = -2,"nx" = -5,"ny" = -1,"wx" = -8,"wy" = 2,"ex" = 8,"ey" = 2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 1,"nturn" = -45,"sturn" = 45,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
-			if("onback")
-				return list("shrink" = 0.5,"sx" = -1,"sy" = 2,"nx" = 0,"ny" = 2,"wx" = 2,"wy" = 1,"ex" = 0,"ey" = 1,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 15,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
+			if("onbelt")
+				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/gun/ballistic/arquebus/Initialize()
 	. = ..()
 	myrod = new /obj/item/ramrod(src)
-
-
-/obj/item/gun/ballistic/arquebus/shoot_live_shot(mob/living/user as mob|obj, pointblank = 0, mob/pbtarget = null, message = 1)
-	fire_sound = pick("modular_helmsguard/sound/arquebus/arquefire.ogg", "modular_helmsguard/sound/arquebus/arquefire2.ogg", "modular_helmsguard/sound/arquebus/arquefire3.ogg",
-				"modular_helmsguard/sound/arquebus/arquefire4.ogg", "modular_helmsguard/sound/arquebus/arquefire5.ogg")
-	. = ..()
 
 /obj/item/gun/ballistic/arquebus/attack_right(mob/user)
 	if(user.get_active_held_item())
@@ -161,9 +162,7 @@
 	update_icon()
 
 /obj/item/gun/ballistic/arquebus/attackby(obj/item/A, mob/user, params)
-	user.stop_sound_channel(gunchannel)
-	var/firearm_skill = (user?.mind ? user.get_skill_level(/datum/skill/combat/firearms) : 1)
-	var/load_time_skill = load_time - (firearm_skill*2)
+	var/load_time_skill = get_reloading_time(user)
 	gunchannel = SSsounds.random_available_channel()
 
 	if(istype(A, /obj/item/ammo_box) || istype(A, /obj/item/ammo_casing))
@@ -214,9 +213,23 @@
 			return
 		user.stop_sound_channel(gunchannel)
 
+
+
+/obj/item/gun/ballistic/arquebus/proc/get_reloading_time(mob/living/carbon/human/user)
+	var/firearms_skill = (user.get_skill_level(/datum/skill/combat/firearms))
+	if(firearms_skill >= 5)
+		return 2 SECONDS
+	else if(firearms_skill >= 3)
+		return 3 SECONDS
+	else if(firearms_skill >= 1)
+		return 6 SECONDS
+	if(!firearms_skill)
+		return 6 SECONDS
+
+
 /obj/item/gun/ballistic/arquebus/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 
-	var/firearm_skill = (user?.mind ? user.get_skill_level(/datum/skill/combat/firearms) : 1)
+	var/firearm_skill = (user.get_skill_level(/datum/skill/combat/firearms))
 	spread = (spread_num - firearm_skill)
 	if(user.client)
 		if(user.client.chargedprog >= 100)
@@ -285,7 +298,11 @@
 	walking_stick = FALSE
 	cartridge_wording = "musketball"
 	load_sound = 'modular_helmsguard/sound/arquebus/musketload.ogg'
-	fire_sound = "modular_helmsguard/sound/arquebus/arquefire.ogg"
+	fire_sound = list('modular_helmsguard/sound/arquebus/arquefire.ogg', 
+				'modular_helmsguard/sound/arquebus/arquefire2.ogg', 
+				'modular_helmsguard/sound/arquebus/arquefire3.ogg',
+				'modular_helmsguard/sound/arquebus/arquefire4.ogg', 
+				'modular_helmsguard/sound/arquebus/arquefire5.ogg')
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/steel
 	bolt_type = BOLT_TYPE_NO_BOLT
@@ -302,6 +319,8 @@
 	var/can_spin = TRUE
 	var/last_spunned
 	var/spin_cooldown = 3 SECONDS
+	associated_skill = /datum/skill/combat/firearms // NPC related
+	muzzle = TRUE // Whether the gun has a muzzle effect when firing, used for NPCs
 
 /obj/item/gun/ballistic/arquebus_pistol/getonmobprop(tag)
 	. = ..()
@@ -373,11 +392,6 @@
 		mastermob.visible_message(span_warning("[mastermob] prepares [masteritem] to fire!"))
 		playsound(mastermob, pick('modular_helmsguard/sound/arquebus/musketcock.ogg'), 100, FALSE)
 
-/obj/item/gun/ballistic/arquebus_pistol/shoot_live_shot(mob/living/user as mob|obj, pointblank = 0, mob/pbtarget = null, message = 1)
-	fire_sound = pick("modular_helmsguard/sound/arquebus/arquefire.ogg", "modular_helmsguard/sound/arquebus/arquefire2.ogg", "modular_helmsguard/sound/arquebus/arquefire3.ogg",
-				"modular_helmsguard/sound/arquebus/arquefire4.ogg", "modular_helmsguard/sound/arquebus/arquefire5.ogg")
-	. = ..()
-
 /obj/item/gun/ballistic/arquebus_pistol/attack_right(mob/user)
 	if(user.get_active_held_item())
 		return
@@ -399,9 +413,7 @@
 	update_icon()
 
 /obj/item/gun/ballistic/arquebus_pistol/attackby(obj/item/A, mob/user, params)
-
-	var/firearm_skill = (user?.mind ? user.get_skill_level(/datum/skill/combat/firearms) : 1)
-	var/load_time_skill = load_time - (firearm_skill*2)
+	var/load_time_skill = get_reloading_time(user)
 	if(istype(A, /obj/item/ammo_box) || istype(A, /obj/item/ammo_casing))
 		if(chambered)
 			to_chat(user, "<span class='warning'>There is already a [chambered] in the [src]!</span>")
@@ -448,6 +460,18 @@
 		if(!myrod == null)
 			to_chat(user, span_warning("There's already a [R.name] inside of the [name]."))
 			return
+
+
+/obj/item/gun/ballistic/arquebus_pistol/proc/get_reloading_time(mob/living/carbon/human/user)
+	var/firearms_skill = (user.get_skill_level(/datum/skill/combat/firearms))
+	if(firearms_skill >= 5)
+		return 2 SECONDS
+	else if(firearms_skill >= 3)
+		return 3 SECONDS
+	else if(firearms_skill >= 1)
+		return 6 SECONDS
+	if(!firearms_skill)
+		return 6 SECONDS
 
 
 /obj/item/gun/ballistic/arquebus_pistol/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)

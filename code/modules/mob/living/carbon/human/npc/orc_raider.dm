@@ -66,6 +66,7 @@ GLOBAL_LIST_INIT(orcraider_aggro, world.file2list("strings/rt/orcraideraggroline
 
 /mob/living/carbon/human/species/orc/npc/after_creation()
 	..()
+	src.mind_initialize()
 	job = "Orc Marauder"
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
@@ -219,6 +220,7 @@ GLOBAL_LIST_INIT(orcraider_aggro, world.file2list("strings/rt/orcraideraggroline
 
 /mob/living/carbon/human/species/orc/npc/brute/after_creation()
 	..()
+	src.mind_initialize()
 	job = "Orc Brute"
 	equipOutfit(new /datum/outfit/job/roguetown/orc/brute)
 
@@ -337,3 +339,15 @@ GLOBAL_LIST_INIT(orcraider_aggro, world.file2list("strings/rt/orcraideraggroline
 	/datum/rmb_intent/riposte,\
 	/datum/rmb_intent/weak)
 	H.swap_rmb_intent(num=1)
+
+
+/mob/living/carbon/human/species/orc/npc/shooter
+	attack_mode = "ranged"
+
+///mob/living/carbon/human/species/orc/npc/shooter/after_creation()
+//	..()
+//	equipOutfit(new /datum/outfit/job/roguetown/orc/shooter)
+
+
+///datum/outfit/job/roguetown/orc/shooter/pre_equip(mob/living/carbon/human/H)
+//	r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
