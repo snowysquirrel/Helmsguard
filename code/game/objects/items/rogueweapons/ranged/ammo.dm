@@ -9,6 +9,9 @@
 /obj/item/ammo_casing/caseless/rogue/
 	firing_effect_type = null
 
+	/// FOR NPC USE ONLY
+//	var/fire_sound
+//	var/
 //bolts ฅ^•ﻌ•^ฅ
 
 /obj/item/ammo_casing/caseless/rogue/bolt
@@ -416,11 +419,9 @@
 	flag = "piercing"
 	armor_penetration = 100	//Crossbow-on-crack AP. Armor only goes up to 100 protection normally; so this ignores most of it but not all. Wear good armor!
 	speed = 0.1		//ZOOM!!!!!
-
-
+	drop_ammo = FALSE // Don't drop ammo on hit, as this is a reusable bullet
 
 /obj/projectile/bullet/reusable/bullet/rogue/on_hit(atom/target, mob/living/shooter, blocked = FALSE)
-	. = ..()
 	if(!shooter)
 		shooter = src.firer
 	if(ismob(target))
@@ -430,7 +431,14 @@
 				span_danger("[shooter] hits [M] with a [src.name]!"),
 				span_warning("You shoot [M] with your [src.name]!")
 			)
+	dropped = null
+	qdel(src) // Delete the bullet after it hits something, as it is a reusable bullet and not a projectile that should persist
+	..()
 
+/obj/projectile/bullet/reusable/on_range()
+	. = ..()
+	spark_act()
+	qdel(src)
 
 /obj/item/ammo_casing/caseless/rogue/bullet
 	name = "iron sphere"
