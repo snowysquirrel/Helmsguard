@@ -62,6 +62,7 @@
 	var/reload_time = 0 // How long it takes to reload, in deciseconds	
 	var/reload_sound = null // sound to play when reloading
 	var/min_reload_time = 3 SECONDS // How long it takes to reload, in deciseconds
+	var/reloading = FALSE // Whether the NPC is currently reloading
 
 	var/aim_sound = null // sound to play when aiming
 	var/fire_sound = null
@@ -657,13 +658,18 @@
 					return TRUE
 			if(attack_mode == "ranged" && get_dist(src, target) > 1 && istype(get_active_held_item(), /obj/item/gun/ballistic))  
 				var/obj/item/gun/ballistic/gun = get_active_held_item()
+				if(get_dist(src, target) <= 1)
+					if(prob(50))
+						var/steps = rand(1, 3)
+						walk_away(src, target, steps, cached_multiplicative_slowdown)
+						return TRUE
 				face_atom(target)
-				if(!gun.gripsprite)
+				if(can_fire)
+					if(gun.gripsprite)
+						gun.wield(src)
 					OpenFire(target)
 				else
-					gun.wield(src) // if we have a gun with a grip, wield it
-					if(gun.wielded)
-						OpenFire(target)
+					reload()
 				return TRUE
 			if(!get_active_held_item() && !HAS_TRAIT(src, TRAIT_CHUNKYFINGERS) && (mobility_flags & MOBILITY_PICKUP))
 				attack_mode = "melee" // if we don't have a weapon, switch to melee
@@ -687,7 +693,7 @@
 								var/obj/item/ammo_casing/caseless/rogue/ammo = M.ammo_type
 								projectile_type = ammo.projectile_type
 								shots_until_reload = M.max_ammo
-							if(G.gripsprite)
+							if(G.gripsprite && can_fire)
 								G.wield(src)								
 							attack_mode = "ranged"
 						else
@@ -703,7 +709,6 @@
 			// if we COULD attack, check rection time
 			var/should_frustrate = TRUE
 			if(Adjacent(target) && isturf(target.loc))	// if right next to perp
-				attack_mode = "melee"
 				frustration = 0
 				face_atom(target)
 				. = monkey_attack(target)
@@ -759,12 +764,15 @@
 
 
 /mob/living/carbon/human/proc/OpenFire(atom/A)
+	var/list/dirs = GLOB.cardinals
 	if(shots_fired >= shots_until_reload)
 		can_fire = FALSE
-		NPC_THINK("Out of ammo, reloading!")
-		reload()
 		return
 	if(can_fire)
+		if(prob(40))
+			dirs -= src.dir
+			step(src, pick(dirs), cached_multiplicative_slowdown) // try to move out of the way
+			return
 		playsound(src, aim_sound, 100, TRUE)
 		if(do_after(src, get_aiming_time(), src))
 			if(CheckFriendlyFire(A))
@@ -778,6 +786,7 @@
 				Shoot(A)
 			ranged_cooldown = world.time + ranged_cooldown_time
 
+
 /mob/living/carbon/human/proc/get_aiming_time()
 	if(reload_skill)
 		var/skill_level = get_reloading_skill_npc()
@@ -790,17 +799,22 @@
 	return 3 SECONDS
 		
 /mob/living/carbon/human/proc/reload()
-	if(istype(get_active_held_item(), /obj/item/gun/ballistic))
-		var/obj/item/gun/ballistic/G = get_active_held_item()
-		if(G.gripsprite)
-			G.ungrip(src) // if we have a gun with a grip, unwield it
-		playsound(src, reload_sound, 100, TRUE)
-		visible_message(span_danger("<b>[src]</b> is reloading!"))
-		if(do_after(src, get_reloading_time_npc(), src))
-			can_fire = TRUE // don't block firing if we failed to reload
-			shots_fired = 0
-			if(G.gripsprite)
-				G.wield(src) // re-wield the gun if we had a grip
+	spawn(1 SECONDS) // wait a bit before reloading
+		if(!can_fire) // if not reloaded
+			if(istype(get_active_held_item(), /obj/item/gun/ballistic))
+				var/obj/item/gun/ballistic/G = get_active_held_item()
+				if(G.gripsprite && !can_fire)
+					G.ungrip(src) // if we have a gun with a grip, unwield it
+				if(!reloading)
+					playsound(src, reload_sound, 100, TRUE)  
+					reloading = TRUE
+					visible_message(span_danger("<b>[src]</b> is reloading!"))
+				if(do_after(src, get_reloading_time_npc(), src))
+					can_fire = TRUE // don't block firing if we failed to reload
+					shots_fired = 0
+					reloading = FALSE
+					if(G.gripsprite && can_fire)
+						G.wield(src) // re-wield the gun if we had a grip
 
 /mob/living/carbon/human/proc/get_reloading_skill_npc()
 	return get_skill_level(reload_skill)

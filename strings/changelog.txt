@@ -1,7 +1,3 @@
-- Poacher can choose their ranged weapons (Bow, Crossbow, Arquebus)
-- Added the Scorned Highland and the Fetid Mire area
-- Adventurer spawn moved
-- Wretch PQ req bumped to 20
 - Lux revival skill requirement reduced to level 3
 - Ported Azure's RCP fix
 - You can now grind bone into bonemeal with mortar and pestle
@@ -35,3 +31,6 @@
 - Vampire Lord fix from Azure
 - Vampire and WW wretch added
 - Decrepit needle sprite fix
+- Guns no longer drop reusable iron spheres after firing
+- Reloading time improved for firearms based on the firearms skill
+- Carbon NPCs can now wield and shoot ranged weapons, still WIP

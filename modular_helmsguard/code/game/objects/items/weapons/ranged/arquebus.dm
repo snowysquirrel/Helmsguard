@@ -321,6 +321,8 @@
 	var/spin_cooldown = 3 SECONDS
 	associated_skill = /datum/skill/combat/firearms // NPC related
 	muzzle = TRUE // Whether the gun has a muzzle effect when firing, used for NPCs
+	npc_reload_sound = 'modular_helmsguard/sound/NPC_reload/npc_musket_reload.ogg'
+	npc_aim_sound = 'modular_helmsguard/sound/arquebus/musketcock.ogg'
 
 /obj/item/gun/ballistic/arquebus_pistol/getonmobprop(tag)
 	. = ..()
