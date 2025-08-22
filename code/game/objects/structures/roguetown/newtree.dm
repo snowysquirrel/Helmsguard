@@ -199,6 +199,8 @@
 				var/obj/structure/flora/newleaf/corner/T = new(NT)
 				T.dir = D
 
+/obj/structure/flora/newtree/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -15, 8, 0.7)
 
 ///BRANCHES
 
@@ -283,3 +285,4 @@
 	. = ..()
 	icon_state = "center-leaf[rand(1,2)]"
 	update_icon()
+

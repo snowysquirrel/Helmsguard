@@ -538,7 +538,8 @@
 	. = ..()
 	icon_state = "tallbush[pick(1,4)]"
 
-
+/obj/structure/flora/roguegrass/bush/wall/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -10, 5, 1)
 
 /obj/structure/flora/rogueshroom
 	name = "mushroom"

@@ -91,6 +91,7 @@
 			else
 				break
 
+
 /turf/closed/mineral/attack_right(mob/user)
 	var/obj/item = user.get_active_held_item()
 	if(user.used_intent.type == /datum/intent/pick && (user.get_skill_level(/datum/skill/labor/mining) >= SKILL_LEVEL_JOURNEYMAN))
@@ -359,3 +360,7 @@
 /turf/closed/mineral/rogue/bedrock/Melt()
 	to_be_destroyed = FALSE
 	return src
+
+
+/turf/closed/mineral/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -10, 5, 1)

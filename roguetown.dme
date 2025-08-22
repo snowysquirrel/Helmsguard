@@ -632,6 +632,7 @@
 #include "code\datums\elements\retaliate.dm"
 #include "code\datums\elements\snail_crawl.dm"
 #include "code\datums\elements\mob_overlay_effect.dm"
+#include "code\datums\elements\debris.dm"
 #include "code\datums\event_groups\_base.dm"
 #include "code\datums\gods\_faith.dm"
 #include "code\datums\gods\_patron.dm"
