@@ -27,6 +27,10 @@
 	. = ..()
 
 
+/turf/closed/wall/mineral/rogue/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -10, 5, 1)
+
+
 /turf/closed/wall/mineral/rogue/stone
 	name = "stone wall"
 	desc = "A wall of smooth, unyielding stone."
@@ -50,6 +54,7 @@
 	desc = "A window with solid and sturdy stone frame."
 	opacity = FALSE
 	max_integrity = 1300
+
 
 /turf/closed/wall/mineral/rogue/stone/window/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && ((mover.pass_flags & PASSTABLE) || (mover.pass_flags & PASSGRILLE)) )
@@ -162,6 +167,10 @@
 	var/mutable_appearance/M = mutable_appearance(icon, "woodhole", layer = ABOVE_NORMAL_TURF_LAYER)
 	add_overlay(M)
 
+/turf/closed/wall/mineral/rogue/wood/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -10, 5, 1)
+
+
 /turf/closed/wall/mineral/rogue/tent
 	name = "tent"
 	desc = "Made from durable fabric and wooden branches."
@@ -218,6 +227,13 @@
 		return 1
 	return ..()
 
+
+/turf/closed/wall/mineral/rogue/wooddark/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -10, 5, 1)
+
+/turf/closed/wall/mineral/rogue/tent/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -10, 5, 1)
+
 /turf/closed/wall/mineral/rogue/roofwall
 	name = "wooden wall"
 	icon = 'icons/turf/roguewall.dmi'
@@ -244,6 +260,9 @@
 /turf/closed/wall/mineral/rogue/roofwall/innercorner
 	icon_state = "roofTurf_IC"
 
+/turf/closed/wall/mineral/rogue/roofwall/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -10, 5, 1)
+
 /turf/closed/wall/mineral/rogue/decowood
 	name = "decorated wooden wall"
 	desc = "Meticulously designed by an professional carpenter."
@@ -267,6 +286,9 @@
 /turf/closed/wall/mineral/rogue/decowood/vert
 	name = "decorated wooden wall"
 	icon_state = "decowood-vert"
+
+/turf/closed/wall/mineral/rogue/decowood/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -10, 5, 1)
 
 /turf/closed/wall/mineral/rogue/decostone
 	name = "decorated stone wall"
@@ -429,3 +451,4 @@
 
 /turf/closed/wall/mineral/rogue/decostone/mossy/red/cand
     icon_state = "decostone-cand-red"
+

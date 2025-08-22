@@ -109,6 +109,10 @@
 		if(istype(target))
 			target.ChangeTurf(above_floor)
 
+/turf/closed/Initialize(mapload)
+	. = ..()
+	add_debris_element()
+
 /turf/closed/Destroy()
 	if(above_floor)
 		var/turf/above = get_step_multiz(src, UP)
