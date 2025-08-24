@@ -673,6 +673,7 @@
 				return TRUE
 			if(!get_active_held_item() && !HAS_TRAIT(src, TRAIT_CHUNKYFINGERS) && (mobility_flags & MOBILITY_PICKUP))
 				attack_mode = "melee" // if we don't have a weapon, switch to melee
+				min_distance = 1
 				// pickup any nearby weapon
 				for(var/obj/item/I in view(1,src))
 					if(!isturf(I.loc))
@@ -680,8 +681,7 @@
 					if(blacklistItems[I])
 						continue
 					if(I.force > 7 && equip_item(I))
-						// if we picked up a weapon, switch to ranged if it's a ranged weapon
-						if(istype(I, /obj/item/gun/ballistic))
+						if(istype(I, /obj/item/gun/ballistic)) // if we picked up a weapon, switch to ranged if it's a ranged weapon
 							var/obj/item/gun/ballistic/G = I
 							reload_skill = G.associated_skill
 							reload_sound = G.npc_reload_sound
@@ -696,8 +696,10 @@
 							if(G.gripsprite && can_fire)
 								G.wield(src)								
 							attack_mode = "ranged"
+							min_distance = 5
 						else
 							attack_mode = "melee"
+							min_distance = 1
 						// Picked up an item, end turn.	
 						return TRUE
 
