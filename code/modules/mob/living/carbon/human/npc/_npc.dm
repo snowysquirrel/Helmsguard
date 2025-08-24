@@ -627,7 +627,7 @@
 				var/turf/my_turf = get_turf(src)
 				var/turf/target_turf = get_turf(target)
 				// only path if we're more than one tile away
-				if(my_turf.Distance_cardinal_3d(target_turf, src) > min_distance)
+				if(my_turf.Distance_cardinal_3d(target_turf, src) > 1)
 					if(!length(myPath)) // create a new path to the target
 						switch(attack_mode)
 							if("melee")
