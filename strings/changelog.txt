@@ -34,3 +34,4 @@
 - Guns no longer drop reusable iron spheres after firing
 - Reloading time improved for firearms based on the firearms skill
 - Carbon NPCs can now wield and shoot ranged weapons, still WIP
+- Carbon NPCs pathing fixed
