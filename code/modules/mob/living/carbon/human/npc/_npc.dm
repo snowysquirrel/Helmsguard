@@ -47,7 +47,7 @@
 
 
 // RANGED	
-	var/min_distance = 5 // minimum distance to target before we start pathing
+	var/min_distance = 1 // minimum distance to target before we start pathing
 	var/attack_mode = "melee" // attack mode, either melee or ranged
 	var/projectile_type = null // type of projectile to fire, if ranged
 	var/rapid = 0 //How many shots per volley.
@@ -852,13 +852,19 @@
 			P.preparePixelProjectile(targeted_atom, src)
 			P.speed = 1.5
 			if(G.muzzle)
-				new /obj/effect/particle_effect/sparks/muzzle(get_ranged_target_turf(src, src.dir, 1))
-				spawn (5)
-					new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(src, src.dir, 1))
-				spawn (10)
-					new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(src, src.dir, 2))
-				spawn (16)
-					new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(src, src.dir, 1))
+				switch(G.muzzle)
+					if("light")
+//						new /obj/effect/particle_effect/sparks/muzzle(get_ranged_target_turf(src, src.dir, 1))
+						spawn (5)
+							new/obj/effect/particle_effect/smoke/revolver(get_ranged_target_turf(src, src.dir, 1))
+					if("heavy")	
+						new /obj/effect/particle_effect/sparks/muzzle(get_ranged_target_turf(src, src.dir, 1))
+						spawn (5)
+							new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(src, src.dir, 1))
+						spawn (10)
+							new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(src, src.dir, 2))
+						spawn (16)
+							new/obj/effect/particle_effect/smoke/arquebus(get_ranged_target_turf(src, src.dir, 1))
 			P.fire()
 
 			shots_fired++
