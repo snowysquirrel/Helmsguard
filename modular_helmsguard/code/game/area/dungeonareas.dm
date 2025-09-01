@@ -184,3 +184,11 @@
 	droning_sound = 'sound/music/area/somethingevile.ogg'
 	converted_type = /area/rogue/outdoors/dungeon1
 	ceiling_protected = TRUE
+
+/area/rogue/outdoors/beach/longship
+	name = "longship"
+	icon_state = "longship"
+	first_time_text = "THE SEA SERPENT"
+	warden_area = TRUE
+	ambientsounds = AMB_BOAT
+	ambientnight = AMB_BOAT
